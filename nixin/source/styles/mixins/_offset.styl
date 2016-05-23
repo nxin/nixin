@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.offset
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [offsets description]
+ * @return {[type]} [description]
+ */
+nix-offsets()
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      &--33\\@{breakpoint}
+        padding-left: 33%
+
+      &--66\\@{breakpoint}
+        padding-left: 66%
+
+      for cols in 1..(nix.grid.cols / nix.grid.interval)
+        cols = cols * nix.grid.interval
+        &--{cols}\\@{breakpoint}
+          padding-left: (100 / nix.grid.cols) * cols * 1%

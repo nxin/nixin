@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.color
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [setColors description]
+ * @param {[type]} background [description]
+ * @param {[type]} color      [description]
+ * @param {[type]} border     [description]
+ */
+nix-setColors(background, color, border)
+  background-color: background
+  color: color
+  border-color: border
+
+
+/**
+ * [setGradient description]
+ * @param {[type]} color1   [description]
+ * @param {[type]} color2   [description]
+ * @param {[type]} strength [description]
+ */
+nix-setGradient(color1, color2, strength)
+  gradient(color1, color2, strength)

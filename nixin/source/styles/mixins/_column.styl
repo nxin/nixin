@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.column
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [setCols description]
+ * @param {[type]} cols       [description]
+ * @param {[type]} breakpoint [description]
+ */
+nix-setCols(cols, breakpoint)
+  +above(nix.mq[breakpoint])
+    if cols != nix.grid.cols
+      float: left
+    position: relative
+    top: 0
+    left: 0
+    padding-right: nix.grid.gutter
+    padding-left: nix.grid.gutter
+    min-height: 1px
+    width: (100 / nix.grid.cols) * cols * 1%
+
+
+/**
+ * [lastCol description]
+ * @param  {[type]} nth [description]
+ * @return {[type]}     [description]
+ */
+nix-lastCol(nth)
+  &:nth-child({nth})
+    clear: left
+
+
+/**
+ * [equalCol description]
+ * @param  {[type]} parent [description]
+ * @return {[type]}        [description]
+ */
+nix-equalCol(parent) // @TODO doesn't work with jeet cols
+  / .{parent}
+    overflow-y: hidden
+  &
+    margin-bottom: -9999px
+    padding-bottom: 9999px
+    height: 100%

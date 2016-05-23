@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.border
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [setBorderRadius description]
+ * @param {[type]} radius [description]
+ */
+nix-setBorderRadius(radius)
+  border-radius: radius
+  -webkit-border-radius: radius
+  -moz-border-radius: radius
+  -ms-border-radius: radius
+
+
+/**
+ * [setBorder description]
+ * @param {[type]} radius  [description]
+ * @param {[type]} args... [description]
+ */
+nix-setBorder(radius, args...)
+  border: args
+  nix-setBorderRadius(radius)

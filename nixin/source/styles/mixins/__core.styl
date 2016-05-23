@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.core
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [pseudoParent description]
+ * @param  {[type]} depth =             1 [description]
+ * @return {[type]}       [description]
+ */
+nix-pseudoParent(depth = 1)
+  selectors = split(",", selector())
+  for selector, i in selectors
+    selector = split(" ", selector)
+    selector = selector[0..length(selector) - (1 + depth)]
+    selectors[i] = join(" ", selector)
+  return "/" + join(",", selectors)
+
+
+/**
+ * [calcPercentage description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcPercentage(n)
+  (n * 100) %
+
+
+/**
+ * [calcHalf description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcHalf(n)
+  return round(n / 2)
+
+/**
+ * [calcQuarter description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcQuarter(n)
+  return round(n / 4)
+
+
+/**
+ * [calcDouble description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcDouble(n)
+  return round(n * 2)
+
+
+/**
+ * [calcQuadruple description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcQuadruple(n)
+  return round(n * 4)

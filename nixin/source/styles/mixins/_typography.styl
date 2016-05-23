@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.typography
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [setFont description]
+ * @param {[type]} family [description]
+ * @param {[type]} size   [description]
+ * @param {[type]} style  =             normal [description]
+ * @param {[type]} weight =             normal [description]
+ */
+nix-setFont(family, size, style = normal, weight = normal)
+  font-family: family, nix.fonts.stack.default
+  font-style: style
+  font-weight: weight
+  fs: size
+
+
+/**
+ * [setFontFamily description]
+ * @param {[type]} family [description]
+ */
+nix-setFontFamily(family)
+  font-family: family, nix.fonts.stack.default
+
+
+/**
+ * [setFontSize description]
+ * @param {[type]} size [description]
+ */
+nix-setFontSize(size)
+  fs: size
+
+
+/**
+ * [setFontSmoothing description]
+ * @param {[type]} value = true [description]
+ */
+nix-setFontSmoothing(value = true)
+  if value
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+  else
+    -webkit-font-smoothing: subpixel-antialiased
+    -moz-osx-font-smoothing: auto
+
+
+/**
+ * [createTypography description]
+ * @param  {[type]} type [description]
+ * @return {[type]}      [description]
+ */
+nix-setTypography(type)
+  font-size: type.size
+  font-weight: type.weight
+  font-family: type.family
+  line-height: type.height
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -webkit-tap-highlight-color: rgba(128, 203, 196, .1)
+  nix-setFontSmoothing(type.smoothing)
+
+
+/**
+ * [typography description]
+ * @param  {[type]} type [description]
+ * @return {[type]}      [description]
+ */
+nix-typography()
+  html
+    if(!nix.fonts.responsive)
+      nix-createTypography(nix.typography)
+
+    line-height: 1.75
+
+  h1, h2, h3, h4, h5, h6, p, .heading, .text
+    margin: 0 0 .67em 0
+    font-weight: 200
+    font-family: nix.typography.family
+
+  h1
+    font-size: nix.fonts.sizes["lg"]
+
+  h2
+    font-size: nix.fonts.sizes["md"]
+
+  h3
+    font-size: nix.fonts.sizes["sm"]
+
+  h4
+    font-size: nix.fonts.sizes["xs"]
+
+  h5
+    font-size: nix.fonts.sizes["xxs"]
+
+  h6
+    font-size: nix.fonts.sizes["xxxs"]
+
+  p
+    font-size: nix.fonts.sizes["xs"]
+    letter-spacing: .3px
+
+    &:last-child, &[class*="__cell"]
+      margin-bottom: 0
+
+  code, kbd, pre, samp
+    font-family: monospace, monospace
+    font-size: 1em
+
+  b, optgroup, strong, legend, th, dt
+    font-weight: 500
+
+  .u-text
+    nix-text--sizes()

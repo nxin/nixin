@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.font
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [fontFace description]
+ * @param  {[type]} name   [description]
+ * @param  {[type]} path   [description]
+ * @param  {[type]} weight =             "normal" [description]
+ * @param  {[type]} style  =             "normal" [description]
+ * @return {[type]}        [description]
+ */
+nix-fontFace(name, path, weight = "normal", style = "normal")
+  url-fallback = "url('" + path + ".eot')"
+  url = "url('" + path + ".eot?#iefix') format('embedded-opentype'), "
+  url = url + "url('" + path + ".woff') format('woff'), "
+  url = url + "url('" + path + ".ttf') format('truetype'), "
+  url = url + "url('" + path + ".svg#svg" + name + "') format('svg')"
+
+  @font-face
+    src: unquote(url-fallback)
+    src: unquote(url)
+    font-family: name
+    font-style: unquote(style)
+    font-weight: unquote(weight)

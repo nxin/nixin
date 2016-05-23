@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.media
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [createMedia description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+nix-createMedia(class)
+  .{class}
+    display: block
+    overflow: hidden
+    nix-setPosition(relative)
+    nix-reset(padding, height)
+
+  .{class}__item, iframe, embed, object, video
+    width: 100%
+    height: 100%
+    border: none
+    nix-setPosition(absolute top = 0 bottom = 0 left = 0)
+
+    &--21\\/9
+      padding-bottom: nix-calcPercentage(9 / 21)
+
+    &--16\\/9
+      padding-bottom: nix-calcPercentage(9 / 16)
+
+    &--4\\/3
+      padding-bottom: nix-calcPercentage(3 / 4)
+
+    &--1\\/1
+      padding-bottom: nix-calcPercentage(1 / 1)

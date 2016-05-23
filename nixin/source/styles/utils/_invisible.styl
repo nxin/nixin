@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------------------ *\
+   utils.invisible
+\* ------------------------------------------------------------------------ */
+
+/**
+ * settings
+ */
+prefix = nix.prefix.util
+name = "invisible"
+class = prefix + name
+
+
+/**
+ * [createVisibility description]
+ * @param  {[type]} prefix [description]
+ * @param  {[type]} name   [description]
+ * @return {[type]}        [description]
+ */
+.{class}
+  nix-visibility(prefix, name)

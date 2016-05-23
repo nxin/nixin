@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.padding
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [setPadding description]
+ * @param {[type]} direction [description]
+ * @param {[type]} size      [description]
+ */
+nix-setPadding(direction, size)
+  if direction == "all"
+    padding: size
+  else if direction == "vertical"
+    padding-top: size
+    padding-bottom: size
+  else if direction == "horizontal"
+    padding-right: size
+    padding-left: size
+  else if direction == "top"
+    padding-top: size
+  else if direction == "right"
+    padding-right: size
+  else if direction == "bottom"
+    padding-bottom: size
+  else
+    padding-left: size
+
+
+/**
+ * [createPadding description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+nix-padding()
+  for dk, dv in nix.directions
+    for sk, sv in nix.sizes
+      &--{dv}{sk}
+        nix-setPadding(dk, sv)

@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------------------ *\
+   utils.align
+\* ------------------------------------------------------------------------ */
+
+/**
+ * settings
+ */
+prefix = nix.prefix.util
+name = "align"
+class = prefix + name
+
+
+/**
+ * styles
+ */
+.{class}
+  &.--center
+    nix-align("all")
+
+  &.--vertical
+    nix-align("vertical")
+
+  &.--horizontal
+    nix-align("horizontal")
+
+  &.--flex
+    nix-alignFlex()

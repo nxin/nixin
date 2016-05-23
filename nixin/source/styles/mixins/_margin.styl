@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.margin
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [setMargin description]
+ * @param {[type]} direction [description]
+ * @param {[type]} size      [description]
+ */
+nix-setMargin(direction, size)
+  if direction == "all"
+    margin: size
+  else if direction == "vertical"
+    margin-top: size
+    margin-bottom: size
+  else if direction == "horizontal"
+    margin-right: size
+    margin-left: size
+  else if direction == "top"
+    margin-top: size
+  else if direction == "right"
+    margin-right: size
+  else if direction == "bottom"
+    margin-bottom: size
+  else
+    margin-left: size
+
+
+/**
+ * [createMargin description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+nix-margin()
+  for dk, dv in nix.directions
+    for sk, sv in nix.sizes
+      &--{dv}{sk}
+        nix-setMargin(dk, sv)

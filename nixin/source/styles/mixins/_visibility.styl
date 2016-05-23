@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.visibility
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [visibility description]
+ * @param  {[type]} prefix [description]
+ * @param  {[type]} name   [description]
+ * @return {[type]}        [description]
+ */
+nix-visibility(prefix, name)
+  class = prefix + name
+  property = null
+  value = null
+
+  if (name == "hide")
+    property = display
+    value = none
+
+  else if (name == "show")
+    property = display
+    value = block
+
+  else if (name == "visible")
+    property = visibility
+    value = visible
+
+  else if (name == "invisible")
+    property = visibility
+    value = hidden
+
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      &\\@{breakpoint}
+        {property}: value

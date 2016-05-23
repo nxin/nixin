@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.space
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [spaces description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+nix-spaces()
+  &
+    {clearFix}
+
+  for key, value in nix.sizes
+    &--{key}
+      height: value

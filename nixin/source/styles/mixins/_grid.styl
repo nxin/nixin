@@ -1,0 +1,101 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.grid
+\* ------------------------------------------------------------------------ */
+
+
+nix-grid()
+  display: flex
+  margin-right: - nix.grid.gutter
+  margin-left: - nix.grid.gutter
+
+
+nix-grid--wrap()
+  flex-wrap: wrap
+
+
+nix-grid--top()
+  align-items: flex-start
+
+
+nix-grid--center()
+  align-items: center
+
+
+nix-grid--bottom()
+  align-items: flex-end
+
+
+nix-grid__cell()
+  flex: 1
+  padding-right: nix.grid.gutter
+  padding-left: nix.grid.gutter
+
+
+nix-grid__cell--no-gutter()
+  padding-right: 0
+  padding-left: 0
+
+
+nix-grid__cell--top()
+  align-self: flex-start
+
+
+nix-grid__cell--center()
+  align-self: center
+
+
+nix-grid__cell--bottom()
+  align-self: flex-end
+
+
+nix-grid__cell--fit()
+  flex: 1
+
+
+nix-grid--full()
+  flex-wrap: wrap
+
+
+nix-grid__cell--full()
+  flex: 0 0 100%
+  margin-left: 0
+  max-width: 100%
+
+
+nix-grid__cell--width(cols)
+  cols = cols * 1%
+  max-width: cols
+
+  if cols == 100
+    flex: 1
+  else
+    flex: 0 0 cols
+    
+
+nix-grid__cell--offset(cols)
+  margin-left: cols * 1%
+
+
+nix-grid--cols()
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      &--width-33\\@{breakpoint}
+        nix-grid__cell--width(33)
+
+      &--offset-33\\@{breakpoint}
+        nix-grid__cell--offset(33)
+
+      &--width-66\\@{breakpoint}
+        nix-grid__cell--width(66)
+
+      &--offset-66\\@{breakpoint}
+        nix-grid__cell--offset(66)
+
+      for cols in 1..(nix.grid.cols / nix.grid.interval)
+        cols = cols * nix.grid.interval
+
+        &--width-{cols}\\@{breakpoint}
+          nix-grid__cell--width(cols)
+
+        &--offset-{cols}\\@{breakpoint}
+          nix-grid__cell--offset(cols)

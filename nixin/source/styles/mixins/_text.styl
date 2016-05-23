@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.text
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [text--ellipsis description]
+ * @param  {[type]}  nowrap =             true [description]
+ * @return {Boolean}        [description]
+ */
+nix-text--ellipsis($nowrap = true)
+  overflow: hidden
+  text-overflow: ellipsis
+  if $nowrap
+    white-space: nowrap
+
+
+/**
+ * [text--hide description]
+ * @return {[type]} [description]
+ */
+nix-text--hide()
+  overflow: hidden
+  text-indent: 110%
+  white-space: nowrap
+
+
+/**
+ * [sizes description]
+ * @return {[type]} [description]
+ */
+nix-text--sizes()
+  for size in nix.fonts.sizes
+    &--{size}
+      font-size: nix.fonts.sizes[size]

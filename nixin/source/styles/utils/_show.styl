@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------------------ *\
+   utils.show
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * settings
+ */
+prefix = nix.prefix.util
+name = "show"
+class = prefix + name
+
+
+/**
+ * [visibility description]
+ * @param  {[type]} prefix [description]
+ * @param  {[type]} name   [description]
+ * @return {[type]}        [description]
+ */
+.{class}
+  nix-visibility(prefix, name)

@@ -1,0 +1,96 @@
+/* ------------------------------------------------------------------------ *\
+   utils.grid
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * settings
+ */
+prefix = nix.prefix.util
+name = "grid"
+class = prefix + name
+
+
+/**
+ * grid system
+ */
+.{class}
+  nix-grid()
+
+  &--wrap
+    nix-grid--wrap()
+
+  &--top
+    nix-grid--top()
+
+  &--center
+    nix-grid--center()
+
+  &--bottom
+    nix-grid--bottom()
+
+  &--no-gutter
+    .{class}__cell
+      nix-grid__cell--no-gutter()
+
+
+  +above(nix.mq.xxs)
+    &--xs-fit > .{class}__cell:not([class*="--width"])
+      nix-grid__cell--fit()
+
+    &--xs-full
+      nix-grid--full()
+
+    &--xs-full > .{class}__cell
+      nix-grid__cell--full()
+
+
+  +above(nix.mq.sm)
+    &--sm-fit > .{class}__cell:not([class*="--width"])
+      nix-grid__cell--fit()
+
+    &--sm-full
+      nix-grid--full()
+
+    &--sm-full > .{class}__cell
+      nix-grid__cell--full()
+
+
+  +above(nix.mq.md)
+    &--md-fit > .{class}__cell:not([class*="--width"])
+      nix-grid__cell--fit()
+
+    &--md-full
+      nix-grid--full()
+
+    &--md-full > .{class}__cell
+      nix-grid__cell--full()
+
+
+  +above(nix.mq.lg)
+    &--lg-fit > .{class}__cell:not([class*="--width"])
+      nix-grid__cell--fit()
+
+    &--lg-full
+      nix-grid--full()
+
+    &--lg-full > .{class}__cell
+      nix-grid__cell--full()
+
+
+.{class}__cell
+  nix-grid__cell()
+
+  &--top
+    nix-grid__cell--top()
+
+  &--center
+    nix-grid__cell--center()
+
+  &--bottom
+    nix-grid__cell--bottom()
+
+  &--no-gutter
+    nix-grid__cell--no-gutter()
+
+  nix-grid--cols()  

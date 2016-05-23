@@ -1,0 +1,56 @@
+{
+  "name": "nixin",
+  "version": "1.0.0",
+  "description": "Agnostic bemit framework",
+  "main": "index.js",
+  "scripts": {
+    "stylus": "stylus --sourcemap-inline nixin/source/styles/index.styl -o nixin/_dist/app.css",
+    "sass": "node-sass --include-path sass nixin/source/sass/**/*.{scss,sass} -o nixin/_dist/sass.css",
+    "pug": "pug nixin/source/markup/* nixin/source/markup/**/* -P -o nixin/_dist",
+    "browserify": "browserify -d nixin/source/scripts/index.js -o nixin/_dist/app.js",
+    "watch-stylus": "stylus --sourcemap-inline -w nixin/source/styles/index.styl -o nixin/_dist/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreo/nixin.git"
+  },
+  "keywords": [
+    "nixin",
+    "gulp",
+    "global",
+    "tasks",
+    "stylus",
+    "browserify",
+    "node",
+    "bemit",
+    "framework"
+  ],
+  "author": "@kreo - Fabio Cencetti <hey@kreo.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kreo/nixin/issues"
+  },
+  "homepage": "https://github.com/kreo/nixin#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "bin": {
+    "nix": "./bin/nix"
+  },
+  "config": {
+    "styles": {
+      "source": "nixin/source/styles/index.styl",
+      "dest": "nixin/_dist/app.css",
+      "opt": {}
+    },
+    "scripts": {
+      "source": "nixin/source/scripts/index.js",
+      "dest": "nixin/_dist/app.js",
+      "opt": {}
+    },
+    "port": "9001"
+  },
+  "preferGlobal": true,
+  "private": false,
+  "publishConfig": {},
+  "analyze": true
+}

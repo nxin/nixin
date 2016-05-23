@@ -1,0 +1,51 @@
+/* ------------------------------------------------------------------------ *\
+   structure.variables.plugins
+\* ------------------------------------------------------------------------ */
+
+@import "axis"
+@import "rupture"
+@import "jeet"
+@import "typographic"
+
+/* --- Axis --------------------------------------------------------------- */
+// $img-path = nix.images.path
+// $font-stack = nix.type.family
+// $font-size = nix.type.size
+// $font-color = nix.type.color
+
+normalize-css()
+border-box-html()
+fluid-media()
+
+
+/* --- Rupture ------------------------------------------------------------ */
+rupture.scale = nix.mq.xxs nix.mq.xs nix.mq.sm nix.mq.md nix.mq.lg
+rupture.scale-names = keys(nix.mq)
+rupture.enable-em-breakpoints = true
+
+
+/* --- Jeet --------------------------------------------------------------- */
+
+
+/* --- Typographic -------------------------------------------------------- */
+
+// fonts
+font-roboto = nix.fonts.stack.primary + "," + nix.fonts.stack.default
+font-fira = nix.fonts.stack.secondary + "," + nix.fonts.stack.default
+
+// config
+$line-height-ratio   = 1.75
+$heading-ratio       = $golden
+$body-font           = font-roboto
+$body-font-weight    = 300
+$body-color          = HSL(206, 8%, 59%)
+$heading-font        = font-fira
+$heading-font-weight = 300
+$heading-color       = HSL(220, 21%, 25%)
+$min-font            = 13px
+$max-font            = 17px
+$min-width           = 320px
+$max-width           = 1200px
+$vertical-rhythm     = true
+
+typographic()

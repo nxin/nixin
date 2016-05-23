@@ -1,0 +1,165 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.animation
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [animations description]
+ * @return {[type]} [description]
+ */
+nix-animation()
+  if nix.animations
+    body
+      -webkit-animation-duration: 4s
+      animation-duration: 4s
+      -webkit-animation-fill-mode: both
+      animation-fill-mode: both
+
+    a,
+    a:before,
+    a:after
+      transition(all .1s ease-in)
+
+
+/**
+ * [fadeIn description]
+ * @return {[type]} [description]
+ */
+nix-animation--fadeIn(class)
+  @-webkit-keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+  @keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+  .{class}.--fadeIn
+    -webkit-animation-name: fadeIn
+    animation-name: fadeIn
+
+
+/**
+ * [fadeInLeft description]
+ * @return {[type]} [description]
+ */
+nix-animation--fadeInLeft(class)
+  @-webkit-keyframes fadeInLeft
+    0%
+      opacity: 0
+      -webkit-transform: translate3d(-15px, 0, 0)
+      transform: translate3d(-15px, 0, 0)
+    100%
+      opacity: 1
+      -webkit-transform: none
+      transform: none
+
+  @keyframes fadeInLeft
+    0%
+      opacity: 0
+      -webkit-transform: translate3d(-15px, 0, 0)
+      transform: translate3d(-15px, 0, 0)
+    100%
+      opacity: 1
+      -webkit-transform: none
+      transform: none
+
+  .{class}.--fadeInLeft
+    -webkit-animation-name: fadeInLeft
+    animation-name: fadeInLeft
+
+
+/**
+ * [fadeInDown description]
+ * @return {[type]} [description]
+ */
+nix-animation--fadeInDown(class)
+  @-webkit-keyframes fadeInDown
+    0%
+      opacity: 0
+      -webkit-transform: translate3d(0, -10px, 0)
+      transform: translate3d(0, -10px, 0)
+    100%
+      opacity: 1
+      -webkit-transform: none
+      transform: none
+
+  @keyframes fadeInDown
+    0%
+      opacity: 0
+      -webkit-transform: translate3d(0, -10px, 0)
+      transform: translate3d(0, -10px, 0)
+    100%
+      opacity: 1
+      -webkit-transform: none
+      transform: none
+
+  .{class}.--fadeInDown
+    -webkit-animation-name: fadeInDown
+    animation-name: fadeInDown
+
+
+/**
+ * [fadeInUp description]
+ * @return {[type]} [description]
+ */
+nix-animation--fadeInUp(class)
+  @-webkit-keyframes fadeInUp
+    0%
+      opacity: 0
+      -webkit-transform: translate3d(0, 100%, 0)
+      transform: translate3d(0, 100%, 0)
+    100%
+      opacity: 1
+      -webkit-transform: none
+      transform: none
+
+  @keyframes fadeInUp
+    0%
+      opacity: 0
+      -webkit-transform: translate3d(0, 100%, 0)
+      transform: translate3d(0, 100%, 0)
+    100%
+      opacity: 1
+      -webkit-transform: none
+      transform: none
+
+  .{class}.--fadeInUp
+    -webkit-animation-name: fadeInUp
+    animation-name: fadeInUp
+
+
+/**
+ * [rainbow description]
+ * @return {[type]} [description]
+ */
+nix-animation--rainbow(class)
+  @-webkit-keyframes rainbow
+    0%,
+    100%
+      background-color: hsl(87, 50%, 52%)
+    16%
+      background-color: hsl(174, 41%, 64%)
+    32%
+      background-color: hsl(14, 100%, 62%)
+    48%
+      background-color: hsl(291, 63%, 42%)
+    64%
+      background-color: hsl(0, 69%, 67%)
+
+  @keyframes rainbow
+    0%,
+    100%
+      background-color: hsl(87, 50%, 52%)
+    16%
+      background-color: hsl(174, 41%, 64%)
+    32%
+      background-color: hsl(14, 100%, 62%)
+    48%
+      background-color: hsl(291, 63%, 42%)
+    64%
+      background-color: hsl(0, 69%, 67%)

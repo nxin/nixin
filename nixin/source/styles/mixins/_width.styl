@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.width
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [calcDynamicWidth description]
+ * @param  {[type]} property   [description]
+ * @param  {[type]} expression [description]
+ * @return {[type]}            [description]
+ */
+nix-calcDynamicWidth(property, expression)
+  property: -webkit-calc(expression)
+  property: calc(expression)
+
+
+/**
+ * [setDynamicWidth description]
+ * @param {[type]} list [description]
+ */
+nix-setDynamicWidth(list)
+  for size in list
+    .dynamicWidth{size}
+      width: size * 1px
+
+
+/**
+ * [setWidth description]
+ * @param {[type]} width      [description]
+ * @param {[type]} breakpoint [description]
+ */
+nix-setWidth(width, breakpoint)
+  +above(nix.mq[breakpoint])
+    width: (100 / nix.grid.cols) * width * 1%
+
+
+/**
+ * [width description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+nix-widths()
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      &--33\\@{breakpoint}
+        width: 33%
+
+      &--66\\@{breakpoint}
+        width: 66%
+
+      for cols in 1..(nix.grid.cols / nix.grid.interval)
+        cols = cols * nix.grid.interval
+        &--{cols}\\@{breakpoint}
+          width: (100 / nix.grid.cols) * cols * 1%
