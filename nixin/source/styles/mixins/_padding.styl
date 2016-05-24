@@ -28,12 +28,11 @@ nix-setPadding(direction, size)
 
 
 /**
- * [createPadding description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [padding description]
+ * @return {[type]} [description]
  */
-nix-padding()
+nix-padding(selector)
   for dk, dv in nix.directions
     for sk, sv in nix.sizes
-      &--{dv}{sk}
+      [{selector}~=\"--{dv}{sk}\"]
         nix-setPadding(dk, sv)

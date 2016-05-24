@@ -70,32 +70,37 @@ nix-grid__cell--width(cols)
     flex: 1
   else
     flex: 0 0 cols
-    
+
 
 nix-grid__cell--offset(cols)
   margin-left: cols * 1%
 
 
-nix-grid--cols()
+nix-grid--cols(selector)
   for breakpoint in nix.mq
     +above(nix.mq[breakpoint])
-      &--width-33\\@{breakpoint}
+      &[{selector}~=\"--width-33\\@{breakpoint}\"]
         nix-grid__cell--width(33)
 
-      &--offset-33\\@{breakpoint}
+      &[{selector}~=\"--offset-33\\@{breakpoint}\"]
         nix-grid__cell--offset(33)
 
-      &--width-66\\@{breakpoint}
+      &[{selector}~=\"--width-66\\@{breakpoint}\"]
         nix-grid__cell--width(66)
 
-      &--offset-66\\@{breakpoint}
+      &[{selector}~=\"--offset-66\\@{breakpoint}\"]
         nix-grid__cell--offset(66)
 
       for cols in 1..(nix.grid.cols / nix.grid.interval)
         cols = cols * nix.grid.interval
 
-        &--width-{cols}\\@{breakpoint}
-          nix-grid__cell--width(cols)
+        if(cols == 100)
+          &[{selector}~=\"--width-{cols}\\@{breakpoint}\"]
+            nix-grid__cell--full()
 
-        &--offset-{cols}\\@{breakpoint}
-          nix-grid__cell--offset(cols)
+        else
+          &[{selector}~=\"--width-{cols}\\@{breakpoint}\"]
+            nix-grid__cell--width(cols)
+
+          &[{selector}~=\"--offset-{cols}\\@{breakpoint}\"]
+            nix-grid__cell--offset(cols)

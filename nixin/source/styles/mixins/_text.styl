@@ -29,7 +29,7 @@ nix-text--hide()
  * [sizes description]
  * @return {[type]} [description]
  */
-nix-text--sizes()
+nix-text--sizes(selector)
   for size in nix.fonts.sizes
-    &--{size}
+    [{selector}~=\"--{size}\"]
       font-size: nix.fonts.sizes[size]

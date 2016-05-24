@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------------------ *\
+   utils.layout
+\* ------------------------------------------------------------------------ */
+
+/**
+ * settings
+ */
+prefix = nix.prefix.root + nix.prefix.util
+name = "layout"
+selector = prefix + name
+
+
+/**
+ * page
+ * a. default: 100% content
+ */
+[{selector}~="page"]
+  position: relative
+  margin: auto
+  min-height: 1px
+
+
+/**
+ * page
+ * b. --unboxed: 100% with boxed content
+ */
+[{selector}~="--unboxed"] [{selector}~="__wrap"]
+  max-width: nix.grid.max-width
+
+
+/**
+ * page
+ * c. --boxed: totally boxed content
+ */
+[{selector}~="--boxed"]
+  max-width: nix.grid.max-width
+
+
+/**
+ * __wrap
+ * boxed: boxed content
+ */
+[{selector}~="__wrap"]
+  position: relative
+  overflow-x: hidden
+  box-sizing: border-box
+  margin: auto
+  padding-right: nix.grid.gutter
+  padding-left: nix.grid.gutter
+  min-width: nix.grid.min-width
+  min-height: 1px
+  max-width: 100%
+  width: nix.grid.width
+  nix-clearFix()
+
+
+/**
+ * __row
+ * boxed: boxed cols
+ */
+[{selector}~="__row"]
+  min-height: 1px
+  max-width: 100%
+  width: auto
+  nix-clearFix()

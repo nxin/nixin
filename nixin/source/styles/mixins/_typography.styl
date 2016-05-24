@@ -101,7 +101,7 @@ nix-typography()
     font-size: nix.fonts.sizes["xs"]
     letter-spacing: .3px
 
-    &:last-child, &[class*="__cell"]
+    &:last-child, &[nix-u-grid~="__cell"]
       margin-bottom: 0
 
   code, kbd, pre, samp
@@ -111,5 +111,4 @@ nix-typography()
   b, optgroup, strong, legend, th, dt
     font-weight: 500
 
-  .u-text
-    nix-text--sizes()
+  nix-text--sizes("nix-u-text")

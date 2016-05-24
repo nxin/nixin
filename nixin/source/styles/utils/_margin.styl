@@ -6,15 +6,13 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "margin"
-class = prefix + name
+selector = prefix + name
 
 
 /**
- * [createMargin description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [margin description]
+ * @return {[type]} [description]
  */
-.{class}
-  nix-margin()
+nix-margin(selector)

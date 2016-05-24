@@ -6,9 +6,13 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "text"
-class = prefix + name
+selector = prefix + name
 
-.{class}
-  //nix-text--sizes()
+
+/**
+ * [sizes description]
+ * @return {[type]} [description]
+ */
+// nix-text--sizes(selector)

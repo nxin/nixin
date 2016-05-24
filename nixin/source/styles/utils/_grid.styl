@@ -6,91 +6,98 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "grid"
-class = prefix + name
+selector = prefix + name
 
 
 /**
  * grid system
  */
-.{class}
+[{selector}~="container"]
   nix-grid()
 
-  &--wrap
+
+  &[{selector}~="--wrap"]
     nix-grid--wrap()
 
-  &--top
+
+  &[{selector}~="--top"]
     nix-grid--top()
 
-  &--center
+
+  &[{selector}~="--center"]
     nix-grid--center()
 
-  &--bottom
+
+  &[{selector}~="--bottom"]
     nix-grid--bottom()
 
-  &--no-gutter
-    .{class}__cell
+
+  &[{selector}~="--no-gutter"]
+    [{selector}~="__cell"]
       nix-grid__cell--no-gutter()
 
 
   +above(nix.mq.xxs)
-    &--xs-fit > .{class}__cell:not([class*="--width"])
+    &[{selector}~="--fit@xs"] > [{selector}~="__cell"]:not("--width")
       nix-grid__cell--fit()
 
-    &--xs-full
+    &[{selector}~="--full@xs"]
       nix-grid--full()
 
-    &--xs-full > .{class}__cell
-      nix-grid__cell--full()
+      > [{selector}~="__cell"]
+        nix-grid__cell--full()
 
 
   +above(nix.mq.sm)
-    &--sm-fit > .{class}__cell:not([class*="--width"])
+    &[{selector}~="--fit@sm"] > [{selector}~="__cell"]:not("--width")
       nix-grid__cell--fit()
 
-    &--sm-full
+    &[{selector}~="--full@sm"]
       nix-grid--full()
 
-    &--sm-full > .{class}__cell
-      nix-grid__cell--full()
+      > [{selector}~="__cell"]
+        nix-grid__cell--full()
 
 
   +above(nix.mq.md)
-    &--md-fit > .{class}__cell:not([class*="--width"])
+    &[{selector}~="--fit@md"] > [{selector}~="__cell"]:not("--width")
       nix-grid__cell--fit()
 
-    &--md-full
+    &[{selector}~="--full@md"]
       nix-grid--full()
 
-    &--md-full > .{class}__cell
-      nix-grid__cell--full()
+      > [{selector}~="__cell"]
+        nix-grid__cell--full()
 
 
   +above(nix.mq.lg)
-    &--lg-fit > .{class}__cell:not([class*="--width"])
+    &[{selector}~="--fit@lg"] > [{selector}~="__cell"]:not("--width")
       nix-grid__cell--fit()
 
-    &--lg-full
+    &[{selector}~="--full@lg"]
       nix-grid--full()
 
-    &--lg-full > .{class}__cell
-      nix-grid__cell--full()
+      > [{selector}~="__cell"]
+        nix-grid__cell--full()
 
 
-.{class}__cell
-  nix-grid__cell()
+  [{selector}~="__cell"]
+    nix-grid__cell()
+    margin-bottom: 0
 
-  &--top
-    nix-grid__cell--top()
+    &[{selector}~="--top"]
+      nix-grid__cell--top()
 
-  &--center
-    nix-grid__cell--center()
+    &[{selector}~="--center"]
+      nix-grid__cell--center()
 
-  &--bottom
-    nix-grid__cell--bottom()
+    &[{selector}~="--bottom"]
+      nix-grid__cell--bottom()
 
-  &--no-gutter
-    nix-grid__cell--no-gutter()
+      &[{selector}~="--gutter"]
+        nix-grid__cell--no-gutter()
 
-  nix-grid--cols()  
+
+    nix-grid--cols(selector)

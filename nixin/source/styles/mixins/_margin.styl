@@ -28,12 +28,11 @@ nix-setMargin(direction, size)
 
 
 /**
- * [createMargin description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [margin description]
+ * @return {[type]} [description]
  */
-nix-margin()
+nix-margin(selector)
   for dk, dv in nix.directions
     for sk, sv in nix.sizes
-      &--{dv}{sk}
+      [{selector}~=\"--{dv}{sk}\"]
         nix-setMargin(dk, sv)

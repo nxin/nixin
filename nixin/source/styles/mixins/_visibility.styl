@@ -5,12 +5,9 @@
 
 /**
  * [visibility description]
- * @param  {[type]} prefix [description]
- * @param  {[type]} name   [description]
- * @return {[type]}        [description]
+ * @return {[type]} [description]
  */
-nix-visibility(prefix, name)
-  class = prefix + name
+nix-visibility(selector)
   property = null
   value = null
 
@@ -32,5 +29,5 @@ nix-visibility(prefix, name)
 
   for breakpoint in nix.mq
     +above(nix.mq[breakpoint])
-      &\\@{breakpoint}
+      [{selector}~=\"\\@{breakpoint}\"]
         {property}: value

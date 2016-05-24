@@ -4,29 +4,40 @@
 
 
 /**
- * [reset description]
+ * [clear description]
+ * @return {[type]} [description]
  */
-nix-reset()
-  properties = {
-    "border": none
-    "background": none
-    "border-radius": 0
-    "padding": 0
-    "margin": 0
-    "width": auto
-    "height": auto
-    "z-index": 0
-    "font-size": initial
-    "font-weight": normal
-    "text-shadow": none
-    "box-shadow": none
-    "visibility": visible
-    "display": inline-block
-    "position": static
-    "float": none
-  }
+nix-clear()
+  overflow: auto
+  zoom: 1
 
-  for prop, value in properties
+
+/**
+ * [clearFix description]
+ * @return {[type]} [description]
+ */
+nix-clearFix()
+  zoom: 1
+  &::after
+    display: table
+    clear: both
+    content: ""
+
+
+/**
+ * [setReset description]
+ */
+nix-setReset()
+  for prop, value in nix.reset
     for arg in arguments
       if(prop == arg[0])
         {arg[0]}: value
+
+
+/**
+ * [setReset description]
+ */
+nix-reset()
+  for prop, value in nix.reset
+    [{selector}~=\"--{prop}\"]
+      {prop}: value

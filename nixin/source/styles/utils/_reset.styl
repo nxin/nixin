@@ -1,21 +1,23 @@
 /* ------------------------------------------------------------------------ *\
-   utils.clear
+   utils.reset
 \* ------------------------------------------------------------------------ */
 
 
 /**
  * settings
  */
-prefix = nix.prefix.util
-name = "clear"
-class = prefix + name
+prefix = nix.prefix.root + nix.prefix.util
+name = "reset"
+selector = prefix + name
 
 
 /**
  * styles
  */
-.{class}
+[{selector}~="--clear"]
   nix-clear()
 
-  &--fix
-    nix-clearFix()
+[{selector}~="--clearfix"]
+  nix-clearFix()
+
+nix-reset()
