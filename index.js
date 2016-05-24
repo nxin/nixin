@@ -1,5 +1,9 @@
-exports = module.exports = function(opts) {
-  return function(style) {
+module.exports = function(opts) {
+  var implicit = (opts && opts.implicit == false) ? false : true;
+
+  return function(style){
     style.include(__dirname);
-  };
-};
+    if (implicit) { style.import("nixin/source/styles"); }
+  }
+
+}

@@ -33,9 +33,7 @@
   "homepage": "https://github.com/kreo/nixin#readme",
   "dependencies": {},
   "devDependencies": {},
-  "bin": {
-    "nix": "./bin/nix"
-  },
+  "bin": {},
   "config": {
     "styles": {
       "source": "nixin/source/styles/index.styl",
