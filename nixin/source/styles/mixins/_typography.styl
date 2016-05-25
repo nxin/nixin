@@ -4,13 +4,14 @@
 
 
 /**
- * [setFont description]
- * @param {[type]} family [description]
- * @param {[type]} size   [description]
- * @param {[type]} style  =             normal [description]
- * @param {[type]} weight =             normal [description]
+ * [font description]
+ * @param  {[type]} family [description]
+ * @param  {[type]} size   [description]
+ * @param  {[type]} style  =             normal [description]
+ * @param  {[type]} weight =             normal [description]
+ * @return {[type]}        [description]
  */
-nix-setFont(family, size, style = normal, weight = normal)
+nix-typography--font(family, size, style = normal, weight = normal)
   font-family: family, nix.fonts.stack.default
   font-style: style
   font-weight: weight
@@ -18,26 +19,68 @@ nix-setFont(family, size, style = normal, weight = normal)
 
 
 /**
- * [setFontFamily description]
- * @param {[type]} family [description]
+ * [face description]
+ * @param  {[type]} name   [description]
+ * @param  {[type]} path   [description]
+ * @param  {[type]} weight =             "normal" [description]
+ * @param  {[type]} style  =             "normal" [description]
+ * @return {[type]}        [description]
  */
-nix-setFontFamily(family)
+nix-typography--face(name, path, weight = "normal", style = "normal")
+  url-fallback = "url('" + path + ".eot')"
+  url = "url('" + path + ".eot?#iefix') format('embedded-opentype'), "
+  url = url + "url('" + path + ".woff') format('woff'), "
+  url = url + "url('" + path + ".ttf') format('truetype'), "
+  url = url + "url('" + path + ".svg#svg" + name + "') format('svg')"
+
+  @font-face
+    src: unquote(url-fallback)
+    src: unquote(url)
+    font-family: name
+    font-style: unquote(style)
+    font-weight: unquote(weight)
+
+
+/**
+ * [family description]
+ * @param  {[type]} family [description]
+ * @return {[type]}        [description]
+ */
+nix-typography--family(family)
   font-family: family, nix.fonts.stack.default
 
 
 /**
- * [setFontSize description]
- * @param {[type]} size [description]
+ * [size description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
  */
-nix-setFontSize(size)
+nix-typography--size(size)
   fs: size
 
 
 /**
- * [setFontSmoothing description]
- * @param {[type]} value = true [description]
+ * [typography description]
+ * @param  {[type]} type [description]
+ * @return {[type]}      [description]
  */
-nix-setFontSmoothing(value = true)
+nix-typography(type)
+  font-size: type.size
+  font-weight: type.weight
+  font-family: type.family
+  line-height: type.height
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -webkit-tap-highlight-color: rgba(128, 203, 196, .1)
+  nix-typography--smoothing(type.smoothing)
+
+
+/**
+ * [smoothing description]
+ * @param  {[type]} value =             true [description]
+ * @return {[type]}       [description]
+ */
+nix-typography--smoothing(value = true)
   if value
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -47,30 +90,13 @@ nix-setFontSmoothing(value = true)
 
 
 /**
- * [createTypography description]
- * @param  {[type]} type [description]
- * @return {[type]}      [description]
+ * [create description]
+ * @return {[type]} [description]
  */
-nix-setTypography(type)
-  font-size: type.size
-  font-weight: type.weight
-  font-family: type.family
-  line-height: type.height
-  -ms-text-size-adjust: 100%
-  -webkit-text-size-adjust: 100%
-  -webkit-tap-highlight-color: rgba(128, 203, 196, .1)
-  nix-setFontSmoothing(type.smoothing)
-
-
-/**
- * [typography description]
- * @param  {[type]} type [description]
- * @return {[type]}      [description]
- */
-nix-typography()
+nix-typography--create(selector)
   html
     if(!nix.fonts.responsive)
-      nix-createTypography(nix.typography)
+      nix-typography(nix.typography)
 
     line-height: 1.75
 
@@ -101,7 +127,7 @@ nix-typography()
     font-size: nix.fonts.sizes["xs"]
     letter-spacing: .3px
 
-    &:last-child, &[nix-u-grid~="__cell"]
+    &:last-child, &[nix.prefix.root + nix.prefix.util + "-grid"~="__cell"]
       margin-bottom: 0
 
   code, kbd, pre, samp
@@ -111,4 +137,4 @@ nix-typography()
   b, optgroup, strong, legend, th, dt
     font-weight: 500
 
-  nix-text--sizes("nix-u-text")
+  nix-text--create(nix.prefix.root + nix.prefix.util + "text")

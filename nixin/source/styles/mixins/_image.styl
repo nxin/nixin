@@ -4,13 +4,14 @@
 
 
 /**
- * [setBackground description]
- * @param {[type]} name     [description]
- * @param {[type]} size     =             null      [description]
- * @param {[type]} position =             center    [description]
- * @param {[type]} repeat   =             no-repeat [description]
+ * [background description]
+ * @param  {[type]} name     [description]
+ * @param  {[type]} size     =             null      [description]
+ * @param  {[type]} position =             center    [description]
+ * @param  {[type]} repeat   =             no-repeat [description]
+ * @return {[type]}          [description]
  */
-nix-setBackground(name, size = null, position = center, repeat = no-repeat)
+nix-image--background(name, size = null, position = center, repeat = no-repeat)
   bg = nix.images.path + name
   background-image: url(bg)
   if size !null

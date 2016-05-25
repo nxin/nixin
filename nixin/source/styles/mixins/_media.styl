@@ -4,31 +4,49 @@
 
 
 /**
- * [createMedia description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [container description]
+ * @return {[type]} [description]
  */
-nix-createMedia(class)
-  .{class}
+nix-media--container()
+  [{selector}~=\"container\"]
     display: block
     overflow: hidden
-    nix-setPosition(relative)
-    nix-reset(padding, height)
+    nix-set--position(relative)
+    nix-set--reset(padding, height)
 
-  .{class}__item, iframe, embed, object, video
+
+/**
+ * [media__item description]
+ * @param  {[type]} size =             "all" [description]
+ * @return {[type]}      [description]
+ */
+nix-media__item(size = "all")
+  baseStyle =
     width: 100%
     height: 100%
     border: none
-    nix-setPosition(absolute top = 0 bottom = 0 left = 0)
+    nix-set--position(absolute top = 0 bottom = 0 left = 0)
 
-    &--21\\/9
-      padding-bottom: nix-calcPercentage(9 / 21)
+  iframe, embed, object, video
+    {baseStyle}
 
-    &--16\\/9
-      padding-bottom: nix-calcPercentage(9 / 16)
+  for key, value in nix.media.sizes
+    if size == key
+      [{selector}~=\"__item--{key}\"]
+        {baseStyle}
+        padding-bottom: nix-core--calcPercentage(value)
+      return
 
-    &--4\\/3
-      padding-bottom: nix-calcPercentage(3 / 4)
+    else if size == "all"
+      [{selector}~=\"__item--{key}\"]
+        {baseStyle}
+        padding-bottom: nix-core--calcPercentage(value)
 
-    &--1\\/1
-      padding-bottom: nix-calcPercentage(1 / 1)
+
+/**
+ * [create description]
+ * @return {[type]} [description]
+ */
+nix-media--create(selector)
+  nix-media--container()
+  nix-media__item()

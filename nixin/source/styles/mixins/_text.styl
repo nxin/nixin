@@ -8,10 +8,10 @@
  * @param  {[type]}  nowrap =             true [description]
  * @return {Boolean}        [description]
  */
-nix-text--ellipsis($nowrap = true)
+nix-text--ellipsis(no-wrap = true)
   overflow: hidden
   text-overflow: ellipsis
-  if $nowrap
+  if no-wrap
     white-space: nowrap
 
 
@@ -26,10 +26,11 @@ nix-text--hide()
 
 
 /**
- * [sizes description]
- * @return {[type]} [description]
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
  */
-nix-text--sizes(selector)
+nix-text--create(selector)
   for size in nix.fonts.sizes
     [{selector}~=\"--{size}\"]
       font-size: nix.fonts.sizes[size]

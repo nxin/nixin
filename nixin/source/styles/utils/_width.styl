@@ -6,15 +6,13 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "width"
-class = prefix + name
+selector = prefix + name
 
 
 /**
- * [createWidth description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [create description]
+ * @return {[type]} [description]
  */
-.{class}
-  nix-widths()
+nix-width--create(selector)

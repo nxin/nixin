@@ -3,65 +3,122 @@
 \* ------------------------------------------------------------------------ */
 
 
+/**
+ * [grid description]
+ * @return {[type]} [description]
+ */
 nix-grid()
   display: flex
   margin-right: - nix.grid.gutter
   margin-left: - nix.grid.gutter
 
 
+/**
+ * [wrap description]
+ * @return {[type]} [description]
+ */
 nix-grid--wrap()
   flex-wrap: wrap
 
 
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
 nix-grid--top()
   align-items: flex-start
 
 
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
 nix-grid--center()
   align-items: center
 
 
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
 nix-grid--bottom()
   align-items: flex-end
 
 
+/**
+ * [grid__cell description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell()
   flex: 1
   padding-right: nix.grid.gutter
   padding-left: nix.grid.gutter
 
 
+/**
+ * [gutter description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell--no-gutter()
   padding-right: 0
   padding-left: 0
 
 
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell--top()
   align-self: flex-start
 
 
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell--center()
   align-self: center
 
 
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell--bottom()
   align-self: flex-end
 
 
+/**
+ * [fit description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell--fit()
   flex: 1
 
 
+/**
+ * [full description]
+ * @return {[type]} [description]
+ */
 nix-grid--full()
   flex-wrap: wrap
 
 
+/**
+ * [full description]
+ * @return {[type]} [description]
+ */
 nix-grid__cell--full()
   flex: 0 0 100%
   margin-left: 0
   max-width: 100%
 
 
+/**
+ * [width description]
+ * @param  {[type]} cols [description]
+ * @return {[type]}      [description]
+ */
 nix-grid__cell--width(cols)
   cols = cols * 1%
   max-width: cols
@@ -72,11 +129,20 @@ nix-grid__cell--width(cols)
     flex: 0 0 cols
 
 
+/**
+ * [offset description]
+ * @param {[type]} cols [description]
+ */
 nix-grid__cell--offset(cols)
   margin-left: cols * 1%
 
 
-nix-grid--cols(selector)
+
+/**
+ * [create description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--create(selector)
   for breakpoint in nix.mq
     +above(nix.mq[breakpoint])
       &[{selector}~=\"--width-33\\@{breakpoint}\"]

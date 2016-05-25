@@ -7,16 +7,16 @@
  * [clear description]
  * @return {[type]} [description]
  */
-nix-clear()
+nix-reset--clear()
   overflow: auto
   zoom: 1
 
 
 /**
- * [clearFix description]
+ * [clearfix description]
  * @return {[type]} [description]
  */
-nix-clearFix()
+nix-reset--clearfix()
   zoom: 1
   &::after
     display: table
@@ -25,9 +25,9 @@ nix-clearFix()
 
 
 /**
- * [setReset description]
+ * [reset description]
  */
-nix-setReset()
+nix-reset()
   for prop, value in nix.reset
     for arg in arguments
       if(prop == arg[0])
@@ -35,9 +35,10 @@ nix-setReset()
 
 
 /**
- * [setReset description]
+ * [create description]
+ * @return {[type]} [description]
  */
-nix-reset()
+nix-reset--create(selector)
   for prop, value in nix.reset
     [{selector}~=\"--{prop}\"]
       {prop}: value

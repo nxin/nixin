@@ -4,11 +4,12 @@
 
 
 /**
- * [setPadding description]
- * @param {[type]} direction [description]
- * @param {[type]} size      [description]
+ * [padding description]
+ * @param  {[type]} direction [description]
+ * @param  {[type]} size      [description]
+ * @return {[type]}           [description]
  */
-nix-setPadding(direction, size)
+nix-padding(direction, size)
   if direction == "all"
     padding: size
   else if direction == "vertical"
@@ -28,11 +29,11 @@ nix-setPadding(direction, size)
 
 
 /**
- * [padding description]
+ * [create description]
  * @return {[type]} [description]
  */
-nix-padding(selector)
+nix-padding--create(selector)
   for dk, dv in nix.directions
     for sk, sv in nix.sizes
       [{selector}~=\"--{dv}{sk}\"]
-        nix-setPadding(dk, sv)
+        nix-padding(dk, sv)

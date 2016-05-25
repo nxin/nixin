@@ -6,14 +6,13 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "media"
-class = prefix + name
+selector = prefix + name
 
 
 /**
- * [createMedia description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [media description]
+ * @return {[type]} [description]
  */
-nix-createMedia(class)
+nix-media--create(selector)

@@ -4,10 +4,34 @@
 
 
 /**
- * [skin description]
+ * [color description]
+ * @param  {[type]} background [description]
+ * @param  {[type]} color      [description]
+ * @param  {[type]} border     [description]
+ * @return {[type]}            [description]
+ */
+nix-skin--color(background, color, border)
+  background-color: background
+  color: color
+  border-color: border
+
+
+/**
+ * [gradient description]
+ * @param  {[type]} color1   [description]
+ * @param  {[type]} color2   [description]
+ * @param  {[type]} strength [description]
+ * @return {[type]}          [description]
+ */
+nix-skin--gradient(color1, color2, strength)
+  gradient(color1, color2, strength)
+
+
+/**
+ * [create description]
  * @return {[type]} [description]
  */
-nix-skin()
+nix-skin--create(selector)
   selection =
     background-color: lighten(nix.skin.primary, 40%)
     color: hsl(0, 0, 100%)

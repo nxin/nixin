@@ -4,10 +4,10 @@
 
 
 /**
- * [offsets description]
+ * [create description]
  * @return {[type]} [description]
  */
-nix-offsets(selector)
+nix-offset--create(selector)
   for breakpoint in nix.mq
     +above(nix.mq[breakpoint])
       [{selector}~=\"--33\\@{breakpoint}\"]

@@ -5,23 +5,12 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "align"
-class = prefix + name
+selector = prefix + name
 
 
 /**
  * styles
  */
-.{class}
-  &.--center
-    nix-align("all")
-
-  &.--vertical
-    nix-align("vertical")
-
-  &.--horizontal
-    nix-align("horizontal")
-
-  &.--flex
-    nix-alignFlex()
+nix-align--create(selector)

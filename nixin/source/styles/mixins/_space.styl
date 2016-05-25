@@ -4,13 +4,12 @@
 
 
 /**
- * [spaces description]
- * @param  {[type]} class [description]
- * @return {[type]}       [description]
+ * [create description]
+ * @return {[type]} [description]
  */
-nix-spaces()
+nix-space--create(selector)
   &
-    {clearFix}
+    {nix-reset--clearfix}
 
   for key, value in nix.sizes
     [{selector}~=\"--{key}\"]

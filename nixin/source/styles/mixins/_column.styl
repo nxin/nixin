@@ -4,11 +4,12 @@
 
 
 /**
- * [setCols description]
- * @param {[type]} cols       [description]
- * @param {[type]} breakpoint [description]
+ * [column description]
+ * @param  {[type]} cols       [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
  */
-nix-setCols(cols, breakpoint)
+nix-column(cols, breakpoint)
   +above(nix.mq[breakpoint])
     if cols != nix.grid.cols
       float: left
@@ -22,23 +23,23 @@ nix-setCols(cols, breakpoint)
 
 
 /**
- * [lastCol description]
+ * [last description]
  * @param  {[type]} nth [description]
  * @return {[type]}     [description]
  */
-nix-lastCol(nth)
+nix-column--last(nth)
   &:nth-child({nth})
     clear: left
 
 
 /**
- * [equalCol description]
+ * [equal description]
  * @param  {[type]} parent [description]
  * @return {[type]}        [description]
  */
-nix-equalCol(parent) // @TODO doesn't work with jeet cols
-  / .{parent}
-    overflow-y: hidden
+nix-column--equal() // @TODO doesn't work with jeet cols
+  / nix-core--getParent()
+      overflow-y: hidden
   &
     margin-bottom: -9999px
     padding-bottom: 9999px

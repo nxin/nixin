@@ -6,13 +6,12 @@
 /**
  * settings
  */
-prefix = nix.prefix.util
+prefix = nix.prefix.root + nix.prefix.util
 name = "animation"
-class = prefix + name
+selector = prefix + name
 
 
-.{class}
-  nix-animation--fadeIn(class)
-  nix-animation--fadeInLeft(class)
-  nix-animation--fadeInDown(class)
-  nix-animation--fadeInUp(class)
+/**
+ * styles
+ */
+nix-animation--create(selector)

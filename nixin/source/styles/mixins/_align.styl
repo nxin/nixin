@@ -4,15 +4,29 @@
 
 
 /**
- * [align description]
- * @param  {[type]} direction =             "all" [description]
- * @param  {[type]} depth     =             1     [description]
- * @return {[type]}           [description]
+ * [container description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
  */
-nix-align(direction = "all", depth = 1)
+nix-align--container()
+  transform-style: preserve-3d
+
+
+/**
+ * [align__target description]
+ * @return {[type]} [description]
+ */
+nix-align__target()
   position: absolute
   margin: 0
 
+
+/**
+ * [direction description]
+ * @param  {[type]} direction =             "all" [description]
+ * @return {[type]}           [description]
+ */
+nix-align__target--direction(direction = "all")
   if(direction == "all")
     top: 50%
     left: 50%
@@ -32,16 +46,34 @@ nix-align(direction = "all", depth = 1)
     -webkit-transform: translateY(-50%)
     -ms-transform: translateY(-50%)
 
-  {nix-pseudoParent(depth)}
-    transform-style: preserve-3d
-
 
 /**
- * [alignFlex description]
+ * [flex description]
  * @return {[type]} [description]
  */
-nix-alignFlex()
+nix-align--flex()
   display: flex
   align-items: center
   justify-content: center
   padding: 0
+
+
+/**
+ * [create description]
+ * @return {[type]} [description]
+ */
+nix-align--create(selector)
+  [{selector}~="--center"]
+    nix-align__target--direction("all")
+
+  [{selector}~="--center"]
+    nix-align("all")
+
+  [{selector}~="--vertical"]
+    nix-align("vertical")
+
+  [{selector}~="--horizontal"]
+    nix-align("horizontal")
+
+  [{selector}~="--flex"]
+    nix-align--flex()

@@ -4,10 +4,11 @@
 
 
 /**
- * [setBorderRadius description]
- * @param {[type]} radius [description]
+ * [radius description]
+ * @param  {[type]} radius [description]
+ * @return {[type]}        [description]
  */
-nix-setBorderRadius(radius)
+nix-border--radius(radius)
   border-radius: radius
   -webkit-border-radius: radius
   -moz-border-radius: radius
@@ -15,10 +16,11 @@ nix-setBorderRadius(radius)
 
 
 /**
- * [setBorder description]
- * @param {[type]} radius  [description]
- * @param {[type]} args... [description]
+ * [border description]
+ * @param  {[type]} radius  [description]
+ * @param  {[type]} args... [description]
+ * @return {[type]}         [description]
  */
-nix-setBorder(radius, args...)
+nix-border(radius, args...)
   border: args
-  nix-setBorderRadius(radius)
+  nix-border--radius(radius)
