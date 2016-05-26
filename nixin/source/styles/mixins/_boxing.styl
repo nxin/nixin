@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.boxing
+\* ------------------------------------------------------------------------ */
+
+
+nix-boxing--create()
+  for key, value in nix.sizes
+    nix-boxing--{direction}-{key}()
+      if direction == ("vertical" || "all" )
+        padding-top: key
+        padding-bottom: key
+
+      else if direction == ("horizontal" || "all" )
+        padding-right: key
+        padding-left: key
+
+
+nix-boxing--create("all")
+nix-boxing--create("vertical")
+nix-boxing--create("horizontal")

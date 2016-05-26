@@ -4,34 +4,35 @@
 
 
 /**
- * [container description]
- * @param  {[type]} selector [description]
- * @return {[type]}          [description]
+ * [block description]
+ * @return {[type]} [description]
  */
-nix-align--container()
+nix-align--block()
+  position: relative
   transform-style: preserve-3d
 
 
 /**
- * [align__target description]
- * @return {[type]} [description]
+ * [block__content description]
+ * @param  {[type]} direction =             "center" [description]
+ * @return {[type]}           [description]
  */
-nix-align__target(direction = "all")
+nix-align--block__content(direction = "center")
   position: absolute
   margin: 0
 
-  if(direction == "all")
+  if direction == "center"
     top: 50%
     left: 50%
-    transform: translate(-50%, -50%)
+    transform: translate3d(-50%, -50%, 0)
 
-  if(direction == "horizontal")
-    left: 50%
-    transform: translateX(-50%)
-
-  else if (direction == "vertical")
-    top: 50%
+  else if direction == "vertical"
     transform: translateY(-50%)
+    left: auto
+
+  else if direction == "horizontal"
+    transform: translateX(-50%)
+    top: auto
 
 
 /**
@@ -50,21 +51,18 @@ nix-align--flex()
  * @return {[type]} [description]
  */
 nix-align--create(selector)
-  [{selector}~="container"]
-    nix-align--container()
+  [{selector}~="block"]
+    nix-align--block()
 
-  [{selector}~="__target"]
-    &[{selector}~="--all"]
-      nix-align__target("all")
-
+  [{selector}~="block__content"]
     &[{selector}~="--center"]
-      nix-align__target("center")
+      nix-align--block__content("center")
 
     &[{selector}~="--vertical"]
-      nix-align__target("vertical")
+      nix-align--block__content("vertical")
 
     &[{selector}~="--horizontal"]
-      nix-align__target("horizontal")
+      nix-align--block__content("horizontal")
 
     &[{selector}~="--flex"]
       nix-align__target("flex")
