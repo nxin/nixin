@@ -1,0 +1,43 @@
+/* ------------------------------------------------------------------------ *\
+   animations.overlay
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [overlay__keyframes description]
+ * @return {[type]} [description]
+ */
+nix-animation--overlay__keyframes()
+  @keyframes overlay
+    from
+      opacity: 0
+
+    to
+      opacity: 1
+
+
+/**
+ * [overlay description]
+ * @return {[type]} [description]
+ */
+nix-animation--overlay()
+  animation-name: overlay
+  animation-duration: nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: nix.animations.easing
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+nix-animation--overlay--slow()
+  animation-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+nix-animation--overlay--fast()
+  animation-duration: nix.animations.duration-fast

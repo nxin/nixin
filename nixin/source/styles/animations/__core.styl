@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------------------ *\
+   animations.core
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [animation description]
+ * @return {[type]} [description]
+ */
+nix-animation()
+  if nix.animations != ("off" || false)
+    body
+      animation-duration: 4s
+      animation-fill-mode: both
+
+    a,
+    a:before,
+    a:after
+      transition(all .1s ease-in)
+
+
+/**
+ * [create description]
+ * @return {[type]} [description]
+ */
+nix-animation--create(selector, opt)
+  [{selector}~=\"{opt}\"]
+    nix-animation--{opt}()
+    nix-animation--{opt}__keyframes()
