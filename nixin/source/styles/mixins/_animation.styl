@@ -10,9 +10,7 @@
 nix-animation()
   if nix.animations
     body
-      -webkit-animation-duration: 4s
       animation-duration: 4s
-      -webkit-animation-fill-mode: both
       animation-fill-mode: both
 
     a,
@@ -45,9 +43,7 @@ nix-animation--fadeIn__keyframes()
  * @return {[type]}       [description]
  */
 nix-animation--fadeIn()
-  [{selector}~="--fadeIn"]
-    -webkit-animation-name: fadeIn
-    animation-name: fadeIn
+  animation-name: fadeIn
 
 
 /**
@@ -58,21 +54,17 @@ nix-animation--fadeInLeft__keyframes()
   @-webkit-keyframes fadeInLeft
     0%
       opacity: 0
-      -webkit-transform: translate3d(-15px, 0, 0)
       transform: translate3d(-15px, 0, 0)
     100%
       opacity: 1
-      -webkit-transform: none
       transform: none
 
   @keyframes fadeInLeft
     0%
       opacity: 0
-      -webkit-transform: translate3d(-15px, 0, 0)
       transform: translate3d(-15px, 0, 0)
     100%
       opacity: 1
-      -webkit-transform: none
       transform: none
 
 
@@ -81,11 +73,7 @@ nix-animation--fadeInLeft__keyframes()
  * @return {[type]} [description]
  */
 nix-animation--fadeInLeft()
-  nix-animation--fadeInLeft__keyframes()
-
-  [{selector}~="--fadeInLeft"]
-    -webkit-animation-name: fadeInLeft
-    animation-name: fadeInLeft
+  animation-name: fadeInLeft
 
 
 /**
@@ -96,21 +84,17 @@ nix-animation--fadeInDown__keyframes()
   @-webkit-keyframes fadeInDown
     0%
       opacity: 0
-      -webkit-transform: translate3d(0, -10px, 0)
       transform: translate3d(0, -10px, 0)
     100%
       opacity: 1
-      -webkit-transform: none
       transform: none
 
   @keyframes fadeInDown
     0%
       opacity: 0
-      -webkit-transform: translate3d(0, -10px, 0)
       transform: translate3d(0, -10px, 0)
     100%
       opacity: 1
-      -webkit-transform: none
       transform: none
 
 
@@ -119,11 +103,7 @@ nix-animation--fadeInDown__keyframes()
  * @return {[type]} [description]
  */
 nix-animation--fadeInDown()
-  nix-animation--fadeInDown__keyframes()
-
-  [{selector}~="--fadeInDown"]
-    -webkit-animation-name: fadeInDown
-    animation-name: fadeInDown
+  animation-name: fadeInDown
 
 
 /**
@@ -134,21 +114,17 @@ nix-animation--fadeInUp__keyframes()
   @-webkit-keyframes fadeInUp
     0%
       opacity: 0
-      -webkit-transform: translate3d(0, 100%, 0)
       transform: translate3d(0, 100%, 0)
     100%
       opacity: 1
-      -webkit-transform: none
       transform: none
 
   @keyframes fadeInUp
     0%
       opacity: 0
-      -webkit-transform: translate3d(0, 100%, 0)
       transform: translate3d(0, 100%, 0)
     100%
       opacity: 1
-      -webkit-transform: none
       transform: none
 
 
@@ -157,11 +133,7 @@ nix-animation--fadeInUp__keyframes()
  * @return {[type]} [description]
  */
 nix-animation--fadeInUp()
-  nix-animation--fadeInUp__keyframes()
-
-  [{selector}~="--fadeInUp"]
-    -webkit-animation-name: fadeInUp
-    animation-name: fadeInUp
+  animation-name: fadeInUp
 
 
 /**
@@ -197,19 +169,29 @@ nix-animation--rainbow__keyframes()
 
 
 nix-animation--rainbow()
-  nix-animation--rainbow__keyframes()
-
-  [{selector}~="--fadeInUp"]
-    -webkit-animation-name: rainbow
-    animation-name: rainbow
+  animation-name: rainbow
 
 /**
  * [create description]
  * @return {[type]} [description]
  */
 nix-animation--create(selector)
-  nix-animation--fadeIn()
-  nix-animation--fadeInLeft()
-  nix-animation--fadeInDown()
-  nix-animation--fadeInUp()
-  nix-animation--rainbow()
+  [{selector}~="--fadeIn"]
+    nix-animation--fadeIn()
+    nix-animation--fadeIn__keyframes()
+
+  [{selector}~="--fadeInLeft"]
+    nix-animation--fadeInLeft()
+    nix-animation--fadeInLeft__keyframes()
+
+  [{selector}~="--fadeInDown"]
+    nix-animation--fadeInDown()
+    nix-animation--fadeInDown__keyframes()
+
+  [{selector}~="--fadeInUp"]
+    nix-animation--fadeInUp()
+    nix-animation--fadeInUp__keyframes()
+
+  [{selector}~="--rainbow"]
+    nix-animation--rainbow()
+    nix-animation--rainbow__keyframes()

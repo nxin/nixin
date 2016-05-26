@@ -31,13 +31,13 @@ nix-width--set(width, breakpoint)
 nix-width--create(selector)
   for breakpoint in nix.mq
     +above(nix.mq[breakpoint])
-      &--33\\@{breakpoint}
+      [{selector}~=\"--33\\@{breakpoint}\"]
         width: 33%
 
-      &--66\\@{breakpoint}
+      [{selector}~=\"--66\\@{breakpoint}\"]
         width: 66%
 
       for cols in 1..(nix.grid.cols / nix.grid.interval)
         cols = cols * nix.grid.interval
-        &--{cols}\\@{breakpoint}
+        [{selector}~=\"--{cols}\\@{breakpoint}\"]
           width: (100 / nix.grid.cols) * cols * 1%

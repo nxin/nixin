@@ -16,35 +16,22 @@ nix-align--container()
  * [align__target description]
  * @return {[type]} [description]
  */
-nix-align__target()
+nix-align__target(direction = "all")
   position: absolute
   margin: 0
 
-
-/**
- * [direction description]
- * @param  {[type]} direction =             "all" [description]
- * @return {[type]}           [description]
- */
-nix-align__target--direction(direction = "all")
   if(direction == "all")
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    -webkit-transform: translate(-50%, -50%)
-    -ms-transform: translate(-50%, -50%)
 
   if(direction == "horizontal")
     left: 50%
     transform: translateX(-50%)
-    -webkit-transform: translateX(-50%)
-    -ms-transform: translateX(-50%)
 
   else if (direction == "vertical")
     top: 50%
     transform: translateY(-50%)
-    -webkit-transform: translateY(-50%)
-    -ms-transform: translateY(-50%)
 
 
 /**
@@ -63,17 +50,21 @@ nix-align--flex()
  * @return {[type]} [description]
  */
 nix-align--create(selector)
-  [{selector}~="--center"]
-    nix-align__target--direction("all")
+  [{selector}~="container"]
+    nix-align--container()
 
-  [{selector}~="--center"]
-    nix-align("all")
+  [{selector}~="__target"]
+    &[{selector}~="--all"]
+      nix-align__target("all")
 
-  [{selector}~="--vertical"]
-    nix-align("vertical")
+    &[{selector}~="--center"]
+      nix-align__target("center")
 
-  [{selector}~="--horizontal"]
-    nix-align("horizontal")
+    &[{selector}~="--vertical"]
+      nix-align__target("vertical")
 
-  [{selector}~="--flex"]
-    nix-align--flex()
+    &[{selector}~="--horizontal"]
+      nix-align__target("horizontal")
+
+    &[{selector}~="--flex"]
+      nix-align__target("flex")
