@@ -3,18 +3,32 @@
 \* ------------------------------------------------------------------------ */
 
 
-nix-boxing--create()
-  for key, value in nix.sizes
-    nix-boxing--{direction}-{key}()
-      if direction == ("vertical" || "all" )
-        padding-top: key
-        padding-bottom: key
+/**
+ * [boxing description]
+ * @param  {[type]} direction [description]
+ * @param  {[type]} size      [description]
+ * @return {[type]}           [description]
+ */
+nix-boxing(direction, size)
+  if direction == "all"
+    padding: size
 
-      else if direction == ("horizontal" || "all" )
-        padding-right: key
-        padding-left: key
+  if direction == "vertical"
+    padding-top: size
+    padding-bottom: size
+
+  else if direction == "horizontal"
+    padding-right: size
+    padding-left: size
 
 
-nix-boxing--create("all")
-nix-boxing--create("vertical")
-nix-boxing--create("horizontal")
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-boxing--create(selector)
+  for sk, sv in nix.sizes
+    for dk, vk in nix.directions
+      [{selector}~=\"--{dk}-{sk}\"]
+        nix-boxing(dk, sv)
