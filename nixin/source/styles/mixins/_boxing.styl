@@ -29,6 +29,6 @@ nix-boxing(direction, size)
  */
 nix-boxing--create(selector)
   for sk, sv in nix.sizes
-    for dk, vk in nix.directions
-      [{selector}~=\"--{dk}-{sk}\"]
+    for dk, dv in nix.directions
+      [{selector}~=\"--{dv}-{sk}\"]
         nix-boxing(dk, sv)

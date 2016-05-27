@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   utils.border
+   utils.debug
 \* ------------------------------------------------------------------------ */
 
 
@@ -7,5 +7,13 @@
  * settings
  */
 prefix = nix.prefix.root + nix.prefix.util
-name = "border"
+name = "debug"
 selector = prefix + name
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-debug--create(selector)

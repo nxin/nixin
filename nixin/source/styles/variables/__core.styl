@@ -11,7 +11,7 @@ nix = {}
  */
 nix.debug = {
   "tags": false
-  "mq": false
+  "mq": true
   "depth": false
 }
 
@@ -59,8 +59,8 @@ nix.grid = {
   "interval": 5
   "gutter": 0.9375rem
   "width": 100%
-  "min-width": 0.3rem
-  "max-width": 80rem
+  "min-width": 320px //0.3rem
+  "max-width": 1280px //80rem
 }
 
 /**
@@ -68,12 +68,12 @@ nix.grid = {
  * @type {Object}
  */
 nix.mq = {
-  "xxs": 0 // Mediaqueries entry level
-  "xs": 33.9rem // XSmall devices (portrait phones, less than 34rem)
-  "sm": 47.9rem // Small devices (landscape phones, less than 48rem)
-  "md": 61.9rem // Medium devices (tablets, less than 62rem)
-  "lg": 79.9rem // Large devices (desktops, less than 80rem - 1280px)
-  "xl": 119.9rem // XLarge devices (desktops, less than 120rem - 1980px)
+  "xxs": 0 // Entry
+  "xs": nix.grid.min-width //34rem // XSmall (portrait phones)
+  "sm": 480px //48rem // Small (landscape phones)
+  "md": 768px //62rem // Medium (tablet)
+  "lg": 992px //80rem // Large (desktop)
+  "xl": nix.grid.max-width //120rem // XLarge (super)
 }
 
 

@@ -34,3 +34,12 @@ nix-text--create(selector)
   for size in nix.fonts.sizes
     [{selector}~=\"--{size}\"]
       font-size: nix.fonts.sizes[size]
+
+
+/**
+ * [direction description]
+ * @param  {[type]} direction [description]
+ * @return {[type]}           [description]
+ */
+nix-text--direction(direction)
+  text-align: direction
