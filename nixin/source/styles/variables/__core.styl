@@ -2,6 +2,11 @@
    structure.variables.core
 \* ------------------------------------------------------------------------ */
 
+
+/**
+ * [nix description]
+ * @type {Object}
+ */
 nix = {}
 
 
@@ -51,6 +56,20 @@ nix.prefix = {
 
 
 /**
+ * [mq description]
+ * @type {Object}
+ */
+nix.mq = {
+  "xxs": 0    // Entry (0)
+  "xs": 34em  // XSmall (portrait phones 544px)
+  "sm": 48em  // Small (landscape phones 768px)
+  "md": 62em  // Medium (tablet 992px)
+  "lg": 80em  // Large (desktop 1280px)
+  "xl": 116em // XLarge (super 1920px)
+}
+
+
+/**
  * [grid description]
  * @type {Object}
  */
@@ -59,21 +78,8 @@ nix.grid = {
   "interval": 5
   "gutter": 0.9375rem
   "width": 100%
-  "min-width": 320px //0.3rem
-  "max-width": 1280px //80rem
-}
-
-/**
- * [mq description]
- * @type {Object}
- */
-nix.mq = {
-  "xxs": 0 // Entry
-  "xs": nix.grid.min-width //34rem // XSmall (portrait phones)
-  "sm": 480px //48rem // Small (landscape phones)
-  "md": 768px //62rem // Medium (tablet)
-  "lg": 992px //80rem // Large (desktop)
-  "xl": nix.grid.max-width //120rem // XLarge (super)
+  "min-width": 20em //0.3rem
+  "max-width": nix.mq.lg //80rem
 }
 
 
@@ -83,7 +89,7 @@ nix.mq = {
  */
 nix.z = {
   "under": -1
-  "default": 0
+  "base": 0
   "bottom": 1
   "middle": 10
   "top": 100
