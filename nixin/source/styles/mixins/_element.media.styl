@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.media
+\* ------------------------------------------------------------------------ */
+
+
+media--container()
+  [{selector}~=\"container\"]
+    display: block
+    overflow: hidden
+    position(relative)
+    reset(padding, height)
+
+
+media__item(size = "all")
+  baseStyle =
+    width: 100%
+    height: 100%
+    border: none
+    position(absolute top = 0 bottom = 0 left = 0)
+
+  iframe, embed, object, video
+    {baseStyle}
+
+  for key, value in nix.media.sizes
+    if size == key
+      [{selector}~=\"__item--{key}\"]
+        {baseStyle}
+        padding-bottom: calcPercentage(value)
+      return
+
+    else if size == "all"
+      [{selector}~=\"__item--{key}\"]
+        {baseStyle}
+        padding-bottom: calcPercentage(value)
+
+
+media--create(selector)
+  media--container()
+  media__item()

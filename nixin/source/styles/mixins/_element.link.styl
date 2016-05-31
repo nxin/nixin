@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.link
+\* ------------------------------------------------------------------------ */
+
+
+link--color($fg-color: $color-dark-primary)
+  color: $fg-color
+  background-color: transparent
+
+  &:visited
+    color: darken($fg-color, $color-tint)
+
+
+  &:hover
+    color: lighten($fg-color, $color-tint)
+
+
+  &:active
+    color: lighten($fg-color, $color-tint)
+
+
+link()
+  link--color()
+  text-decoration: none
+  cursor: pointer
+
+  &:hover
+    text-decoration: underline

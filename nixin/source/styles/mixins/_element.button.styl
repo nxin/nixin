@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.button
+\* ------------------------------------------------------------------------ */
+
+
+button--color(bg-color: color-default, fg-color: color-white)
+  background-color: bg-color
+  color: fg-color
+  border: 1px solid transparent
+
+  &:not(:disabled)
+    &:hover
+      background-color: lighten(bg-color, color-tint)
+
+    &:focus
+      border: 1px solid color-blue
+      box-shadow: inset 0 0 0 2px color-light-blue
+
+    &:active, .button--active
+      background-color: darken(bg-color, color-tint)
+
+
+button--ghost(color: color-default, hover-text-color: color-white)
+  background-color: transparent
+  border: 1px solid color
+  color: color
+
+  &:not(:disabled)
+    &:hover
+      background-color: color
+      color: hover-text-color
+
+    &:focus {
+      border: 1px solid color-blue;
+      box-shadow: inset 0 0 0 2px color-light-blue;
+    }
+
+    &:active, .button--active
+      background-color: darken(color, color-tint)
+      border: 1px solid darken(color, color-tint)
+      color: hover-text-color
+
+
+button()
+  outline: 0
+  display: inline
+  margin: 0
+  max-width: 100%
+  border: 0
+  border-radius: border-radius
+  text-decoration: none
+  text-transform: uppercase
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  vertical-align: middle
+  cursor: pointer
+  user-select: none
+  appearance: none
+  +window-box--small()
+  +text-size--medium()
+  +button--color()
+
+
+  &:disabled
+    background-color: color-lighter-grey
+    font-style: italic
+    cursor: not-allowed
+    +text--quiet()
+
+
+button--rounded()
+  border-radius: border-radius-rounded
+
+
+button--close()
+  outline: 0
+  position: absolute
+  right: spacing-medium
+  font-size: 1.4em
+  line-height: 1
+  +button--color(transparent, inherit);
+  +text--loud()
+  +window-box--none()
+
+
+button--block()
+  display: inline-block
+  width: 100%
+
+
+button-group()
+  display: inline-flex
+
+
+button--grouped()
+  border-radius: 0
+
+  &:first-child
+    border-radius: border-radius 0 0 border-radius
+
+
+  &:last-child {
+    border-radius: 0 border-radius border-radius 0
+
+
+button-group--rounded()
+  border-radius: 0
+
+  &:first-child
+    border-radius: border-radius-rounded 0 0 border-radius-rounded
+
+  &:last-child
+    border-radius: 0 border-radius-rounded border-radius-rounded 0
+
+
+button__icon-left()
+  padding-right: spacing-small
+
+
+button__icon-right()
+  padding-left: spacing-small

@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.calendar
+\* ------------------------------------------------------------------------ */
+
+
+calendar()
+  text-align: center
+  background-color: color-white
+  border: 1px solid border-color
+  border-radius: border-radius
+  max-width: 400px
+  z-index: z-over-control
+  grid()
+  grid--wrap()
+  grid--center()
+  grid__cell--no-gutter()
+  window-box--xsmall()
+
+
+calendar__control(bg-color = color-white, fg-color = color-black)
+  flex: 0 0 14.28%
+  max-width: 14.28%
+  margin: 0
+  outline: 0
+  display: inline
+  border: 1px solid transparent
+  border-radius: border-radius
+  cursor: pointer
+  user-select: none
+  button--color(bg-color, fg-color)
+  letter-box--medium()
+  pillar-box--small()
+  text-size--medium()
+
+
+ calendar__header()
+  grid__cell()
+  grid__cell--no-gutter()
+  grid__cell--width-70()
+  letter-box--small()
+
+
+calendar__day()
+  flex: 0 0 14.28%
+  max-width: 14.28%
+  font-weight: text-font-weight-heavy
+  grid__cell()
+  grid__cell--no-gutter()
+  letter-box--small()
+
+
+calendar__date()
+  calendar__control(color-white, color-default)
+
+
+calendar__date--hover()
+  border: 1px solid border-color
+
+
+calendar__date--in-month()
+  color: color-black
+
+
+calendar__date--today()
+  border-color: color-light-grey
+
+
+calendar__date--selected()
+  border-color: color-primary
+  button--color(color-primary, color-white)
+
+
+calendar--high()
+  box-shadow: box-shadow-high
+
+
+calendar--higher()
+  box-shadow: box-shadow-higher
+
+
+calendar--highest()
+  box-shadow: box-shadow-highest

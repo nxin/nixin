@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.module.modal
+\* ------------------------------------------------------------------------ */
+
+
+modal()
+  center-block__content()
+  display: block
+  width: 80%
+  background-color: $color-white
+  border-radius: $border-radius
+  z-index: $z-over-everything
+  overflow: hidden
+
+
+modal__header()
+  position: relative
+  text-align: center
+
+
+modal__close()
+  top: .7em
+
+
+modal__body()
+  window-box--medium()
+
+
+modal__footer()
+  window-box--medium()
+
+
+modal__footer--block()
+  grid()
+  grid__cell--no-gutter()
+  padding: $spacing-large 0 0 0
+
+
+modal__footer-button--block
+  grid__cell()
+  border-radius: 0
+
+
+modal--ghost()
+  background-color: transparent
+  color: $color-white
+
+
+modal__heading--ghost()
+  color: $color-white
+
+
+modal--high()
+  box-shadow: $box-shadow-high-solid
+
+
+modal--higher()
+  box-shadow: $box-shadow-higher-solid
+
+
+modal--highest()
+  box-shadow: $box-shadow-highest-solid

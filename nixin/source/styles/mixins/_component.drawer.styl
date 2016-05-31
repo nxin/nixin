@@ -1,0 +1,93 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.drawer
+\* ------------------------------------------------------------------------ */
+
+
+drawer()
+  position: absolute
+  overflow-y: auto
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  background-color: $color-white
+  color: $color-black
+  z-index: $z-over-everything
+
+
+drawer--bottom()
+  top: 100%
+  left: 0
+  height: auto
+  width: 80%
+  margin-left: 10%
+  transform: translate3d(0, 0, 0)
+
+
+drawer--bottom--visible()
+  transform: translate3d(0, -99%, 0)
+
+
+drawer--top()
+  bottom: 100%
+  left: 0
+  height: auto
+  width: 80%
+  margin-left: 10%
+  transform: translate3d(0, 0, 0)
+
+
+drawer--top--visible()
+  transform: translate3d(0, 99%, 0)
+
+
+drawer--left()
+  top: 0
+  left: 0
+  height: 100%
+  width: 260px
+  transform: translate3d(-100%, 0, 0)
+
+
+drawer--left--visible()
+  transform: translate3d(-1%, 0, 0)
+
+
+drawer--right()
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 260px;
+  transform: translate3d(0, 0, 0)
+
+
+drawer--right--visible()
+  transform: translate3d(-99%, 0, 0)
+
+
+drawer__heading()
+  window-box--medium()
+  margin: 0
+  text-align: center
+
+
+drawer__menu()
+  display: block
+  margin: 0
+  border-left: 0
+  border-right: 0
+  border-radius: 0
+
+
+drawer__body()
+  window-box--medium()
+
+
+drawer--high()
+  box-shadow: $box-shadow-high-solid
+
+
+drawer--higher()
+  box-shadow: $box-shadow-higher-solid
+
+
+drawer--highest()
+  box-shadow: $box-shadow-highest-solid

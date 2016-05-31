@@ -1,0 +1,193 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.global
+\* ------------------------------------------------------------------------ */
+
+
+
+
+// Colors
+$color-black: #111111 !default;
+$color-white: #FFFFFF !default;
+$color-red: #EF4F52 !default;
+$color-pink: #EC65C3 !default;
+$color-purple: #AB47BC !default;
+$color-blue: #42A5F5 !default;
+$color-green: #66BB6A !default;
+$color-yellow: #F6ED30 !default;
+$color-orange: #FF7043 !default;
+$color-brown: #8D6E63 !default;
+$color-grey: lighten($color-black, 70) !default;
+
+$color-tint: 9 !default;
+
+$color-dark-grey: darken($color-grey, $color-tint);
+$color-dark-red: darken($color-red, $color-tint);
+$color-dark-pink: darken($color-pink, $color-tint);
+$color-dark-purple: darken($color-purple, $color-tint);
+$color-dark-blue: darken($color-blue, $color-tint);
+$color-dark-green: darken($color-green, $color-tint);
+$color-dark-yellow: darken($color-yellow, $color-tint);
+$color-dark-orange: darken($color-orange, $color-tint);
+$color-dark-brown: darken($color-brown, $color-tint);
+
+$color-darker-grey: darken($color-dark-grey, $color-tint);
+$color-darker-red: darken($color-dark-red, $color-tint);
+$color-darker-pink: darken($color-dark-pink, $color-tint);
+$color-darker-purple: darken($color-dark-purple, $color-tint);
+$color-darker-blue: darken($color-dark-blue, $color-tint);
+$color-darker-green: darken($color-dark-green, $color-tint);
+$color-darker-yellow: darken($color-dark-yellow, $color-tint);
+$color-darker-orange: darken($color-dark-orange, $color-tint);
+$color-darker-brown: darken($color-dark-brown, $color-tint);
+
+$color-light-grey: lighten($color-grey, $color-tint);
+$color-light-red: lighten($color-red, $color-tint);
+$color-light-pink: lighten($color-pink, $color-tint);
+$color-light-purple: lighten($color-purple, $color-tint);
+$color-light-blue: lighten($color-blue, $color-tint);
+$color-light-green: lighten($color-green, $color-tint);
+$color-light-yellow: lighten($color-yellow, $color-tint);
+$color-light-orange: lighten($color-orange, $color-tint);
+$color-light-brown: lighten($color-brown, $color-tint);
+
+$color-lighter-grey: lighten($color-light-grey, $color-tint);
+$color-lighter-red: lighten($color-light-red, $color-tint);
+$color-lighter-pink: lighten($color-light-pink, $color-tint);
+$color-lighter-purple: lighten($color-light-purple, $color-tint);
+$color-lighter-blue: lighten($color-light-blue, $color-tint);
+$color-lighter-green: lighten($color-light-green, $color-tint);
+$color-lighter-yellow: lighten($color-light-yellow, $color-tint);
+$color-lighter-orange: lighten($color-light-orange, $color-tint);
+$color-lighter-brown: lighten($color-light-brown, $color-tint);
+
+$color-default: $color-darker-grey !default;
+$color-primary: $color-blue !default;
+$color-secondary: $color-orange !default;
+$color-success: $color-green !default;
+$color-error: $color-red !default;
+
+$color-dark-primary: darken($color-primary, $color-tint);
+$color-darker-primary: darken($color-dark-primary, $color-tint);
+$color-light-primary: lighten($color-primary, $color-tint);
+$color-lighter-primary: lighten($color-light-primary, $color-tint);
+
+$color-dark-secondary: darken($color-secondary, $color-tint);
+$color-darker-secondary: darken($color-dark-secondary, $color-tint);
+$color-light-secondary: lighten($color-secondary, $color-tint);
+$color-lighter-secondary: lighten($color-light-secondary, $color-tint);
+
+$color-dark-success: darken($color-success, $color-tint);
+$color-darker-success: darken($color-dark-success, $color-tint);
+$color-light-success: lighten($color-success, $color-tint);
+$color-lighter-success: lighten($color-light-success, $color-tint);
+
+$color-dark-error: darken($color-error, $color-tint);
+$color-darker-error: darken($color-dark-error, $color-tint);
+$color-light-error: lighten($color-error, $color-tint);
+$color-lighter-error: lighten($color-light-error, $color-tint);
+
+// Borders
+$border-color: $color-grey !default;
+$border-radius: 4px !default;
+$border-radius-rounded: 30em !default;
+
+// Box shadows
+$box-shadow: 0 0 1px transparentize($color-black, .7) !default;
+$box-shadow-high: 0 0 1px transparentize($color-black, .7), 0 5px 10px -3px transparentize($color-black, .8) !default;
+$box-shadow-higher: 0 0 1px transparentize($color-black, .7), 0 10px 25px -4px transparentize($color-black, .8) !default;
+$box-shadow-highest: 0 0 1px transparentize($color-black, .7), 0 20px 55px -8px transparentize($color-black, .8) !default;
+
+$box-shadow-solid: 0 0 1px transparentize($color-black, .3) !default;
+$box-shadow-high-solid: 0 0 1px transparentize($color-black, .3), 0 5px 10px -3px transparentize($color-black, .2) !default;
+$box-shadow-higher-solid: 0 0 1px transparentize($color-black, .3), 0 10px 25px -4px transparentize($color-black, .2) !default;
+$box-shadow-highest-solid: 0 0 1px transparentize($color-black, .3), 0 20px 55px -8px transparentize($color-black, .2) !default;
+
+// Typography
+$text-font-family: -apple-system, ".SFNSText-Regular", "San Francisco", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif !default;
+$text-font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$text-font-family-mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+$text-font-size: 1em !default;
+$text-font-weight: normal !default;
+$text-font-weight-heavy: bold !default;
+$text-line-height: 1.55 !default;
+
+
+/**
+ * [getSize description]
+ * @param  {[type]} property   [description]
+ * @param  {[type]} expression [description]
+ * @return {[type]}            [description]
+ */
+nix-getSize(property, expression)
+  property: -webkit-calc(expression)
+  property: calc(expression)
+
+
+/**
+ * [replaceInSelector description]
+ * @param  {[type]} what [description]
+ * @param  {[type]} with =             "" [description]
+ * @return {[type]}      [description]
+ */
+nix-replaceInSelector(what, with = "")
+  /{replace(what, with , selector())}
+    {block}
+
+
+/**
+ * [getParent description]
+ * @param  {[type]} depth =             1 [description]
+ * @return {[type]}       [description]
+ */
+nix-getParent(depth = 1)
+  selectors = split(",", selector())
+  for selector, i in selectors
+    selector = split(" ", selector)
+    selector = selector[0..length(selector) - (1 + depth)]
+    selectors[i] = join(" ", selector)
+  return "/" + join(",", selectors)
+
+
+/**
+ * [calcPercentage description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcPercentage(n)
+  (n * 100) %
+
+
+/**
+ * [calcHalf description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcHalf(n)
+  return round(n / 2)
+
+
+/**
+ * [calcQuarter description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcQuarter(n)
+  return round(n / 4)
+
+
+/**
+ * [calcDouble description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcDouble(n)
+  return round(n * 2)
+
+
+/**
+ * [calcQuadruple description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+nix-calcQuadruple(n)
+  return round(n * 4)

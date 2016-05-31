@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.bubble
+\* ------------------------------------------------------------------------ */
+
+
+bubble()
+  position: relative
+  display: inline-block
+  background-color: color-black
+  color: $color-white
+  text-align: center
+  white-space: nowrap
+  border-radius: border-radius
+  +window-box--medium()
+
+
+bubble__arrow()
+  &:after
+    content: ""
+    position: absolute
+    display: block
+    width: 0
+    height: 0
+    border: 10px solid transparent
+
+
+bubble__arrow--top()
+  &:after
+    bottom: -20px
+    left: 50%
+    transform: translate3d(-50%, 0, 0)
+    border-top-color: color-black
+
+
+bubble__arrow--right()
+  &:after
+    top: 50%
+    left: -20px
+    transform: translate3d(0, -50%, 0)
+    border-right-color: color-black
+
+
+bubble__arrow--bottom()
+  &:after
+    top: -20px
+    left: 50%
+    transform: translate3d(-50%, 0, 0)
+    border-bottom-color: color-black
+
+
+
+bubble__arrow--left()
+  &:after
+    top: 50%
+    right: -20px
+    transform: translate3d(0, -50%, 0)
+    border-left-color: color-black

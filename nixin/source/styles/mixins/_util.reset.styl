@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.reset
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [reset description]
+ */
+reset()
+  for prop, value in nix.reset
+    for arg in arguments
+      if(prop == arg[0])
+        {arg[0]}: value
+
+
+/**
+ * [tags description]
+ * @return {[type]} [description]
+ */
+reset--tags()
+  html
+    box-sizing: border-box
+
+  *, *:before, *:after
+    box-sizing: inherit
+
+  body
+    margin: 0
+
+
+/**
+ * [clear description]
+ * @return {[type]} [description]
+ */
+reset--clear()
+  overflow: auto
+  zoom: 1
+
+
+/**
+ * [clearfix description]
+ * @return {[type]} [description]
+ */
+reset--clearfix()
+  zoom: 1
+  &::after
+    display: table
+    clear: both
+    content: ""
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+reset--create(selector)
+  for prop, value in nix.reset
+    [{selector}~=\"--{prop}\"]
+      {prop}: value

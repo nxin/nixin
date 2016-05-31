@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.pagination
+\* ------------------------------------------------------------------------ */
+
+
+pagination()
+  window-box--medium()
+  display: block
+  width: 100%
+  text-align: center
+  font-size: $text-font-size * .8
+
+
+pagination__controls()
+  display: inline-block
+  text-align: center
+
+
+pagination__controls--backward()
+  float: left
+  text-align: left
+
+
+pagination__controls--forward()
+  float: right
+  text-align: right
+
+
+pagination__control($color: $color-grey)
+  min-width: 2.4em
+  button()
+  button--ghost($color)
+  button--rounded()
+
+pagination__page()
+  pagination__control($color-primary)
+
+
+pagination__page--current()
+  background-color: $color-primary
+  color: $color-white
+
+
+pagination__ellipsis()
+  pillar-box--medium()

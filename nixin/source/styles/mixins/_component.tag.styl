@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.tag
+\* ------------------------------------------------------------------------ */
+
+
+tags()
+  position: relative
+  width: 100%
+  text-align: left
+
+
+tags-menu()
+  position: absolute
+  width: 100%
+
+
+tags__container()
+  display: inline-block
+  max-width: 70%
+  padding-right: $spacing-xsmall
+
+
+tag()
+  window-box--small()
+  padding-right: $spacing-large
+  position: relative
+  margin: $spacing-tiny
+  text-transform: none
+
+
+tag__close()
+  position: absolute
+  right: 5px
+  top: 7px
+  color: $color-light-grey
+
+
+tags__field-container()
+  position: absolute
+  width: 30%
+  display: inline-block
+  cursor: pointer

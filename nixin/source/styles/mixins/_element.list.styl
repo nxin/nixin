@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.list
+\* ------------------------------------------------------------------------ */
+
+
+list()
+  display: block
+  margin: 0
+  padding: 0 0 0 $spacing-medium
+  list-style-position: outside
+
+
+list--unstyled()
+  padding: 0
+  list-style: none
+
+
+list--nested()
+  padding: 0 0 0 $spacing-medium
+
+
+list__item()
+  padding: 0
+
+
+list__item--unstyled()
+  list-style: none
+
+
+list--ordered()
+  list--unstyled()
+  counter-reset: ordered
+
+
+list-ordered-item
+  &:before
+    counter-increment: ordered
+    content: counters(ordered, ".") " "
+    padding: 0 $spacing-small 0 0
+
+
+list--inline()
+  padding: 0
+
+
+list-inline-item()
+  display: inline-block
+  padding-right: $spacing-medium
+  width: auto
+
+
+list-inline-item-bullet()
+  content: "\2022"
+  padding: 0 $spacing-small 0 0

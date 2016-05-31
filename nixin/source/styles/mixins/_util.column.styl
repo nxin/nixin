@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.column
+\* ------------------------------------------------------------------------ */
+
+
+column(cols, breakpoint)
+  +above(nix.mq[breakpoint])
+    if cols != nix.grid.cols
+      float: left
+    position: relative
+    top: 0
+    left: 0
+    padding-right: nix.grid.gutter
+    padding-left: nix.grid.gutter
+    min-height: 1px
+    width: (100 / nix.grid.cols) * cols * 1%
+
+
+column--last(nth)
+  &:nth-child({nth})
+    clear: left
+
+
+column--equal() // @TODO doesn't work with jeet cols
+  / core--getParent()
+      overflow-y: hidden
+  &
+    margin-bottom: -9999px
+    padding-bottom: 9999px
+    height: 100%

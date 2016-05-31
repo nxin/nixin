@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.badge
+\* ------------------------------------------------------------------------ */
+
+
+badge--color(bg-color = color-default, fg-color = $color-white)
+  background-color: bg-color
+  color: fg-color
+
+
+badge()
+  display: inline-block
+  margin: 0
+  padding: spacing-xsmall spacing-small
+  border-radius: 4px
+  font-weight: text-font-weight-heavy
+  font-size: text-font-size * .8
+  +badge--color()

@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.tab
+\* ------------------------------------------------------------------------ */
+
+
+tabs()
+  display: block
+
+
+tabs__headings()
+  display: flex
+  text-align: center
+  cursor: pointer
+
+
+tab-heading()
+  window-box--medium()
+  flex: 1
+  margin: 0
+  box-shadow: 0 -.2em 0 0 $color-lighter-grey inset
+
+
+tab-heading--color($active-color: $color-default)
+  box-shadow: 0 -.2em 0 0 $active-color inset
+
+
+tab-heading--disabled()
+  text--quiet()
+  cursor: not-allowed
+
+
+tabs__tab()
+  display: none
+  window-box--medium()
+
+
+tabs__tab--active()
+  display: block

@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.card
+\* ------------------------------------------------------------------------ */
+
+
+card()
+  display: block
+  box-shadow: $box-shadow
+  border-radius: $border-radius
+  overflow: hidden
+  list--unstyled()
+
+
+card-spacing()
+  margin-top: spacing-medium
+
+
+card-first-last-paragraph()
+  padding: 0
+
+
+card__content()
+  window-box--small()
+
+
+card__content--divider()
+  background-color: color-dark-grey
+  color: color-white
+  font-weight: text-font-weight-heavy
+
+
+card__item()
+  window-box--small()
+  &:not(:last-child) {
+    border-bottom: 1px solid color-light-grey
+
+
+card__item--divider()
+  card__content--divider()
+
+
+card__item--hover()
+  cursor: pointer
+
+
+card__item--active()
+  background-color: color-light-grey
+
+
+card--high()
+  box-shadow: box-shadow-high
+
+
+card--higher()
+  box-shadow: box-shadow-higher
+
+
+card--highest()
+  box-shadow: box-shadow-highest

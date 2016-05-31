@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.border
+\* ------------------------------------------------------------------------ */
+
+
+border--radius(radius)
+  border-radius: radius
+  -webkit-border-radius: radius
+  -moz-border-radius: radius
+  -ms-border-radius: radius
+
+
+border(radius, args...)
+  border: args
+  border--radius(radius)

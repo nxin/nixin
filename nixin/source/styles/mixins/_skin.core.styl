@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.skin.core
+\* ------------------------------------------------------------------------ */
+
+
+skin--color(background, color, border)
+  background-color: background
+  color: color
+  border-color: border
+
+
+skin--gradient(color1, color2, strength)
+  gradient(color1, color2, strength)
+
+
+skin--create(selector)
+  selection =
+    background-color: lighten(nix.skin.primary, 40%)
+    color: hsl(0, 0, 100%)
+    text-shadow: none
+
+  background-color: hsl(0, 0, 100%)
+  color: nix.skin.default
+
+  ::selection
+    {selection}
+
+  ::-moz-selection
+    {selection}
+
+  h1, h2, h3, h4, h5, h6, .heading
+    color: nix.skin.heading
+
+  b, optgroup, strong, legend, th, dt, .text.--bold, .text.--strong
+    color: nix.skin.strong
+
+  hr
+    background-color: nix.skin.third
+
+  a
+    background-color: transparent
+    color: nix.skin.secondary
+
+    &:hover
+      color: darken(nix.skin.secondary, 30%)
+
+  fieldset
+    border-color: nix.skin.third

@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.toast
+\* ------------------------------------------------------------------------ */
+
+
+toasts()
+  display: block
+  position: absolute
+  width: 250px
+  max-height: 100%
+  overflow-y: auto
+  background-color: transparent
+  z-index: $z-over-page
+
+toasts--topleft()
+  top: 0
+  left: 0
+
+
+toasts--topright()
+  top: 0
+  right: 0
+
+
+toasts--bottomleft()
+  bottom: 0
+  left: 0
+
+
+toasts--bottomright()
+  bottom: 0
+  right: 0
+
+
+toast--color($bg-color: $color-default, $fg-color: $color-white)
+  background-color: $bg-color
+  color: $fg-color
+
+
+toast()
+  display: block
+  position: relative
+  @include window-box--medium
+  margin: $spacing-small
+  @include toast--color
+  border-radius: $border-radius
+  cursor: pointer

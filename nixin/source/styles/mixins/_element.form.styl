@@ -1,0 +1,224 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.form
+\* ------------------------------------------------------------------------ */
+
+
+label()
+  display: block
+  width: 100%
+
+
+labelfor()
+  label()
+  letter-box--small()
+  cursor: pointer
+
+
+field()
+  window-box--small()
+  text-size--medium()
+  outline: 0
+  display: block
+  width: 100%
+  margin: 0
+  font-weight: $text-font-weight
+  font-family: inherit
+  background-color: $color-white
+  border: 1px solid $border-color
+  border-radius: $border-radius
+  resize: vertical
+  appearance: none
+
+  &:focus
+    border: 1px solid $color-blue;
+    box-shadow: inset 0 0 0 2px $color-light-blue
+
+
+field-spacing()
+  margin-top: $spacing-medium
+
+
+label__field()
+  field()
+  margin-top: $spacing-small
+
+
+disabled()
+  text--quiet()
+  cursor: not-allowed
+
+
+field--disabled()
+  disabled()
+  background-color: $color-lighter-grey
+  border: 1px solid $border-color
+
+
+field--error()
+  border: 1px solid $color-error
+  color: $color-error
+
+
+field--success()
+  border: 1px solid $color-success
+
+
+choice()
+  letter-box--small()
+  text-size--medium()
+  outline: 0
+  display: block
+  margin: 0
+  cursor: pointer
+  appearance: none
+
+  &:focus
+    border: 1px solid $color-blue
+    box-shadow: inset 0 0 0 2px $color-light-blue
+
+
+
+choice--disabled()
+  disabled()
+
+
+choice--error()
+  color: $color-error
+
+
+choice--success()
+  color: $color-success
+
+
+select()
+  choice()
+  outline: 0
+  appearance: menulist
+  height: 2.5em
+
+  &:focus
+    border: 1px solid $color-blue
+    box-shadow: inset 0 0 0 2px $color-light-blue
+
+
+select--disabled()
+  field--disabled()
+
+
+select--error()
+  field--error()
+
+
+select--success()
+  field--success()
+
+
+checkbox()
+  outline: 0
+  margin-right: $spacing-tiny
+  font-size: $text-font-size * 2
+
+  &:focus
+    border: 1px solid $color-blue
+    box-shadow: inset 0 0 0 2px $color-light-blue
+
+
+
+input-group()
+  display: flex;
+
+
+input-group__field()
+  flex: 1
+  height: 100%
+
+
+input-group__field--center()
+  border-radius: 0
+  border-right: 0
+  border-left: 0
+
+
+input-group__field--left()
+  border-radius: $border-radius 0 0 $border-radius
+  border-right: 0
+
+
+input-group__field--right()
+  border-radius: 0 $border-radius $border-radius 0
+  border-left: 0
+
+
+input-group__button--left()
+  border-radius: $border-radius 0 0 $border-radius
+  border-width: 1px
+
+
+input-group__button--right()
+  border-radius: 0 $border-radius $border-radius 0
+  border-width: 1px
+
+
+input-group-rounded--left()
+  border-radius: $border-radius-rounded 0 0 $border-radius-rounded
+
+
+input-group-rounded--right()
+  border-radius: 0 $border-radius-rounded $border-radius-rounded 0
+
+
+field-group()
+  display: block
+
+
+field-group__field--center()
+  border-radius: 0
+
+
+field-group__field--top()
+  border-radius: $border-radius $border-radius 0 0
+
+
+field-group__field--bottom()
+  border-radius: 0 0 $border-radius $border-radius
+
+
+field-group__field()
+  border-top: 0
+
+
+field-group-inline()
+  display: flex
+
+
+field-group-inline__field--center()
+  border-radius: 0
+
+
+field-group-inline__field--left()
+  border-radius: $border-radius 0 0 $border-radius
+
+
+field-group-inline__field--right()
+  border-radius: 0 $border-radius $border-radius 0
+
+
+field-group-inline__field()
+  border-left: 0
+
+
+fieldset()
+  display: block
+  width: 100%
+  border: 0
+  padding: 0
+  margin: $spacing-small 0
+
+
+fieldset__legend()
+  label()
+  letter-box--xsmall()
+
+
+fieldset--disabled()
+  field--disabled()

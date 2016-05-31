@@ -1,0 +1,496 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.size
+\* ------------------------------------------------------------------------ */
+
+
+/// dependencies ///////////////////////////
+@import "_util.mediaquery"
+
+
+/**
+ * [size description]
+ * @param  {[type]} width  =             null [description]
+ * @param  {[type]} height =             null [description]
+ * @return {[type]}        [description]
+ */
+nix-size(width = null, height = null)
+  if width != null
+    width: width
+
+  if height != null
+    height: height
+
+
+/// size--width ////////////////////////////
+
+
+/**
+ * [width description]
+ * @param  {[type]} width =             100 [description]
+ * @return {[type]}       [description]
+ */
+nix-size--width(width = 100)
+  if width == 100
+    width: 100%
+
+  else
+    width: (100 / nix.grid.cols) * width * 1%
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-size--width--xxxl()
+  width: nix.sizes.xxxl
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-size--width--xxl()
+  width: nix.sizes.xxl
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-size--width--xl()
+  width: nix.sizes.xl
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-size--width--lg()
+  width: nix.sizes.lg
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-size--width--md()
+  width: nix.sizes.md
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-size--width--sm()
+  width: nix.sizes.sm
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-size--width--xs()
+  width: nix.sizes.xs
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-size--width--xxs()
+  width: nix.sizes.xxs
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-size--width--xxxs()
+  width: nix.sizes.xxxs
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--5()
+  width: 5%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--10()
+  width: 10%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--15()
+  width: 15%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--15()
+  width: 20%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--25()
+  width: 25%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--25()
+  width: 25%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--30()
+  width: 30%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--33()
+  width: 33.3333%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--35()
+  width: 35%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--40()
+  width: 40%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--45()
+  width: 45%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--50()
+  width: 50%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--55()
+  width: 55%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--60()
+  width: 60%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--65()
+  width: 65%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--66()
+  width: 66.6666%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--70()
+  width: 70%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--75()
+  width: 75%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--80()
+  width: 80%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--85()
+  width: 85%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--90()
+  width: 90%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--95()
+  width: 95%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-size--width--100()
+  width: 100%
+
+
+/// size--height ////////////////////////////
+
+
+/**
+ * [height description]
+ * @param  {[type]} height =             100 [description]
+ * @return {[type]}        [description]
+ */
+nix-size--height(height = 100)
+  if height == 100
+    height: 100%
+
+  else
+    height: (100 / nix.grid.cols) * height * 1%
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-size--height--xxxl()
+  height: nix.sizes.xxxl
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-size--height--xxl()
+  height: nix.sizes.xxl
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-size--height--xl()
+  height: nix.sizes.xl
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-size--height--lg()
+  height: nix.sizes.lg
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-size--height--md()
+  height: nix.sizes.md
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-size--height--sm()
+  height: nix.sizes.sm
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-size--height--xs()
+  height: nix.sizes.xs
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-size--height--xxs()
+  height: nix.sizes.xxs
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-size--height--xxxs()
+  height: nix.sizes.xxxs
+
+
+/// size--all ////////////////////////////
+
+/**
+ * [all description]
+ * @param  {[type]} width  =             null [description]
+ * @param  {[type]} height =             null [description]
+ * @return {[type]}        [description]
+ */
+nix-size--all(width = null, height = null)
+  nix-size--width(width)
+  nix-size--height(height)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-size--all--xxxl()
+  nix-size--width--xxxl()
+  nix-size--height--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-size--all--xxl()
+  nix-size--width--xxl()
+  nix-size--height--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-size--all--xl()
+  nix-size--width--xl()
+  nix-size--height--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-size--all--lg()
+  nix-size--width--lg()
+  nix-size--height--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-size--all--md()
+  nix-size--width--md()
+  nix-size--height--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-size--all--sm()
+  nix-size--width--sm()
+  nix-size--height--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-size--all--xs()
+  nix-size--width--xs()
+  nix-size--height--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-size--all--xxs()
+  nix-size--width--xxs()
+  nix-size--height--xxs()
+
+
+/**
+ * [xxxs description]
+ * @param  {[type]} breakpoint =             nix.mq.xxs [description]
+ * @return {[type]}            [description]
+ */
+nix-size--all--xxxs()
+  nix-size--width--xxxs()
+  nix-size--height--xxxs()
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-size--width--create(selector)
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      [{selector}~=\"--33\\@{breakpoint}\"]
+        width: 33%
+
+      [{selector}~=\"--66\\@{breakpoint}\"]
+        width: 66%
+
+      for cols in 1..(nix.grid.cols / nix.grid.interval)
+        cols = cols * nix.grid.interval
+        [{selector}~=\"--{cols}\\@{breakpoint}\"]
+          width: (100 / nix.grid.cols) * cols * 1%

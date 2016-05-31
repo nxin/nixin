@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.debug
+\* ------------------------------------------------------------------------ */
+
+
+debug()
+  if !nix.debug.mq
+    display: none
+
+  else
+    position: relative
+    color: white
+
+    +mq--max("sm")
+      text-align: center
+
+    &__heading
+      font-size: 18px
+
+    &__close
+      display: block
+      line-height: 1.5
+      position(absolute 0 5px auto auto)
+
+      .icon
+        color: white
+
+
+debug--create(selector)
+  [{selector}~="--xxs"]
+    background: nix.palettes.orange["10"]
+
+  [{selector}~="--xs"]
+    background: nix.palettes.orange["20"]
+
+  [{selector}~="--sm"]
+    background: nix.palettes.orange["30"]
+
+  [{selector}~="--md"]
+    background: nix.palettes.orange["40"]
+
+  [{selector}~="--lg"]
+    background: nix.palettes.orange["50"]
+
+  [{selector}~="--xl"]
+    background: nix.palettes.orange["60"]

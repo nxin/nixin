@@ -1,0 +1,93 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.nav
+\* ------------------------------------------------------------------------ */
+
+
+nav()
+  list()
+  list--unstyled()
+  list--inline()
+  width: 100%
+  color: $color-white
+  background-color: $color-black
+  z-index: $z-over-page
+
+
+nav__item($bg-color: $color-primary, $fg-color: $color-white)
+  window-box--medium()
+  color: $fg-color
+
+  &:not(:disabled)
+    &:hover
+      background-color: $bg-color
+
+    &:focus
+      box-shadow: inset 0 0 0 2px $color-light-blue
+
+    &:active
+      background-color: darken($bg-color, $color-tint)
+
+
+nav--inline()
+  list--inline()
+
+
+nav-inline-item()
+  list-inline-item()
+
+
+nav__item--hover()
+  background-color: $color-darker-primary
+  cursor: pointer
+
+
+nav__item--active()
+  background-color: $color-dark-primary
+
+
+nav__item--right()
+  float: right
+
+
+nav--top()
+  position: fixed
+  top: 0
+  bottom: auto
+  left: 0
+  right: 0
+
+
+nav--bottom()
+  position: fixed
+  top: auto
+  bottom: 0
+  left: 0
+  right: 0
+
+
+nav--left()
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: auto
+
+
+nav--right()
+  position: fixed
+  top: 0
+  bottom: 0
+  left: auto
+  right: 0
+
+
+nav--high()
+  box-shadow: $box-shadow-high-solid
+
+
+nav--higher()
+  box-shadow: $box-shadow-higher-solid
+
+
+nav--highest()
+  box-shadow: $box-shadow-highest-solid

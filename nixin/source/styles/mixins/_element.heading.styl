@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.heading
+\* ------------------------------------------------------------------------ */
+
+
+heading()
+  text-size--medium()
+  font-weight: $text-font-weight
+  margin: 0
+  padding: $spacing-medium 0 $spacing-small
+
+
+heading__subheading()
+  heading()
+  text--quiet()
+  padding: $spacing-small 0
+  font-size: $text-font-size * .8
+
+
+heading--super()
+  font-size: $text-font-size * 4
+
+
+heading--xlarge()
+  font-size: $text-font-size * 3
+
+
+heading--large()
+  font-size: $text-font-size * 2
+
+
+heading--medium()
+  font-size: $text-font-size * 1.5
+
+
+heading--small()
+  font-size: $text-font-size * 1.25
+
+
+heading--xsmall()
+  font-size: $text-font-size * 1.05

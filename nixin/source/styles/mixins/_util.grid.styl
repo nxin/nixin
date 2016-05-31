@@ -1,0 +1,541 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.grid
+\* ------------------------------------------------------------------------ */
+
+
+@import "_util.mediaquery"
+
+
+/**
+ * [grid description]
+ * @return {[type]} [description]
+ */
+nix-grid()
+  display: flex
+  margin-right: -(nix.grid.gutter)
+  margin-left: -(nix.grid.gutter)
+
+
+/**
+ * [wrap description]
+ * @return {[type]} [description]
+ */
+nix-grid--wrap()
+  flex-wrap: wrap
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+nix-grid--top()
+  align-items: flex-start
+
+
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+nix-grid--center()
+  align-items: center
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+nix-grid--bottom()
+  align-items: flex-end
+
+
+/**
+ * [grid__cell description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell()
+  flex: 1
+  padding-right: nix.grid.gutter
+  padding-left: nix.grid.gutter
+
+
+/**
+ * [gutter description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--no-gutter()
+  padding-right: 0
+  padding-left: 0
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--top()
+  align-self: flex-start
+
+
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--center()
+  align-self: center
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--bottom()
+  align-self: flex-end
+
+
+/**
+ * [fit description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--fit()
+  flex: 1
+
+
+/**
+ * [full description]
+ * @return {[type]} [description]
+ */
+nix-grid--full()
+  flex-wrap: wrap
+
+
+/**
+ * [full description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--full()
+  flex: 0 0 100%
+  margin-left: 0
+  max-width: 100%
+
+
+/**
+ * [width description]
+ * @param  {[type]} cols [description]
+ * @return {[type]}      [description]
+ */
+nix-grid__cell--width(cols)
+  cols = cols * 1%
+  max-width: cols
+
+  if cols == 100
+    flex: 1
+  else
+    flex: 0 0 cols
+
+
+/**
+ * [offset description]
+ * @param {[type]} cols [description]
+ */
+nix-grid__cell--offset(cols)
+  margin-left: cols * 1%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-5()
+  flex: 0 0 5%
+  max-width: 5%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-10()
+  flex: 0 0 10%
+  max-width: 10%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-15()
+  flex: 0 0 15%
+  max-width: 15%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-20()
+  flex: 0 0 20%
+  max-width: 20%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-25()
+  flex: 0 0 25%
+  max-width: 25%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-30()
+  flex: 0 0 30%
+  max-width: 30%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-33()
+  flex: 0 0 33.3333%
+  max-width: 33.3333%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-35()
+  flex: 0 0 35%
+  max-width: 35%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-40()
+  flex: 0 0 40%
+  max-width: 40%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-45()
+  flex: 0 0 45%
+  max-width: 45%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-50()
+  flex: 0 0 50%
+  max-width: 50%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-55()
+  flex: 0 0 55%
+  max-width: 55%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-60()
+  flex: 0 0 60%
+  max-width: 60%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-65()
+  flex: 0 0 65%
+  max-width: 65%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-66()
+  flex: 0 0 66.6666%
+  max-width: 66.6666%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-70()
+  flex: 0 0 70%
+  max-width: 70%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-75()
+  flex: 0 0 75%
+  max-width: 75%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-80()
+  flex: 0 0 80%
+  max-width: 80%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-85()
+  flex: 0 0 85%
+  max-width: 85%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-90()
+  flex: 0 0 90%
+  max-width: 90%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-95()
+  flex: 0 0 95%
+  max-width: 95%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--width-100()
+  flex: 0 0 100%
+  max-width: 100%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-5()
+  margin-left: 5%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-10()
+  margin-left: 10%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-15()
+  margin-left: 15%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-20()
+  margin-left: 20%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-25()
+  margin-left: 25%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-30()
+  margin-left: 30%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-33()
+  margin-left: 33.3333%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-35()-
+  margin-left: 35%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-40()
+  margin-left: 40%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-45()
+  margin-left: 45%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-50()
+  margin-left: 50%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-55()
+  margin-left: 55%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-60()
+  margin-left: 60%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-65()
+  margin-left: 65%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-66()
+  margin-left: 66.6666%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-70()
+  margin-left: 70%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-75()
+  margin-left: 75%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-80()
+  margin-left: 80%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-85()
+  margin-left: 85%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-90()
+  margin-left: 90%
+
+
+/**
+ * [description]
+ * @return {[type]} [description]
+ */
+nix-grid__cell--offset-95()
+  margin-left: 95%
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-grid__cell--create(selector)
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      &[{selector}~=\"--width-33\\@{breakpoint}\"]
+        nix-grid__cell--width(33)
+
+      &[{selector}~=\"--offset-33\\@{breakpoint}\"]
+        nix-grid__cell--offset(33)
+
+      &[{selector}~=\"--width-66\\@{breakpoint}\"]
+        nix-grid__cell--width(66)
+
+      &[{selector}~=\"--offset-66\\@{breakpoint}\"]
+        nix-grid__cell--offset(66)
+
+      for cols in 1..(nix.grid.cols / nix.grid.interval)
+        cols = cols * nix.grid.interval
+
+        if(cols == 100)
+          &[{selector}~=\"--width-{cols}\\@{breakpoint}\"]
+            nix-grid__cell--full()
+
+        else
+          &[{selector}~=\"--width-{cols}\\@{breakpoint}\"]
+            nix-grid__cell--width(cols)
+
+          &[{selector}~=\"--offset-{cols}\\@{breakpoint}\"]
+            nix-grid__cell--offset(cols)
