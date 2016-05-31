@@ -3,13 +3,89 @@
 \* ------------------------------------------------------------------------ */
 
 
-border--radius(radius)
+/**
+ * [radius description]
+ * @param  {[type]} radius [description]
+ * @return {[type]}        [description]
+ */
+nix-border--radius(radius)
   border-radius: radius
-  -webkit-border-radius: radius
-  -moz-border-radius: radius
-  -ms-border-radius: radius
 
 
-border(radius, args...)
-  border: args
+/**
+ * [color description]
+ * @return {[type]} [description]
+ */
+nix-border--color()
+  if null in arguments
+    border-top-color:      arguments[0] if arguments[0] != null
+    border-right-color:    arguments[1] if arguments[1] != null
+    if length(arguments)      == 2
+      border-bottom-color: arguments[0] if arguments[0] != null
+      border-left-color:   arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      border-bottom-color: arguments[2] if arguments[2] != null
+      border-left-color:   arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      border-bottom-color: arguments[2] if arguments[2] != null
+      border-left-color:   arguments[3] if arguments[3] != null
+  else
+    border-color: arguments
+
+
+/**
+ * [width description]
+ * @return {[type]} [description]
+ */
+nix-border-width()
+  if null in arguments
+    border-top-width:      arguments[0] if arguments[0] != null
+    border-right-width:    arguments[1] if arguments[1] != null
+    if length(arguments)      == 2
+      border-bottom-width: arguments[0] if arguments[0] != null
+      border-left-width:   arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      border-bottom-width: arguments[2] if arguments[2] != null
+      border-left-width:   arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      border-bottom-width: arguments[2] if arguments[2] != null
+      border-left-width:   arguments[3] if arguments[3] != null
+  else
+    border-width: arguments
+
+
+/**
+ * [style description]
+ * @return {[type]} [description]
+ */
+nix-border-style()
+  if null in arguments
+    border-top-style:      arguments[0] if arguments[0] != null
+    border-right-style:    arguments[1] if arguments[1] != null
+    if length(arguments)      == 2
+      border-bottom-style: arguments[0] if arguments[0] != null
+      border-left-style:   arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      border-bottom-style: arguments[2] if arguments[2] != null
+      border-left-style:   arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      border-bottom-style: arguments[2] if arguments[2] != null
+      border-left-style:   arguments[3] if arguments[3] != null
+  else
+    border-style: arguments
+
+
+/**
+ * [border description]
+ * @param  {[type]} radius  =             none [description]
+ * @param  {[type]} color   [description]
+ * @param  {[type]} args... [description]
+ * @return {[type]}         [description]
+ */
+border(radius = none, color, args...)
   border--radius(radius)
+
+  if color is a 'color'
+    border: 1px solid color args
+  else
+    border: arguments

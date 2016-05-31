@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.margin
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [margin description]
+ * @return {[type]} [description]
+ */
+nix-margin()
+  if null in arguments
+    margin-top: arguments[0] if arguments[0] != null
+    margin-right: arguments[1] if arguments[1] != null
+    if length(arguments) == 2
+      margin-bottom: arguments[0] if arguments[0] != null
+      margin-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      margin-bottom: arguments[2] if arguments[2] != null
+      margin-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      margin-bottom: arguments[2] if arguments[2] != null
+      margin-left: arguments[3] if arguments[3] != null
+  else
+    margin: arguments

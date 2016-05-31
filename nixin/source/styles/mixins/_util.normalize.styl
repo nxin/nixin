@@ -1,0 +1,182 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.normalize
+\* ------------------------------------------------------------------------ */
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-base()
+  html // Prevent iOS text size adjust after orientation change.
+    font-family sans-serif
+    -ms-text-size-adjust 100%
+    -webkit-text-size-adjust 100%
+  body
+    margin 0
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-embed()
+  img // No border when inside `a` in IE 8~10.
+    border 0
+
+  svg:not(:root) // Overflow should be hidden in IE 9~11.
+    overflow hidden
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-forms()
+  // Known limitation: Chrome and Safari on OS X allow very limited
+  // styling of `select`, unless a `border` property is set.
+  button, input, optgroup, select, textarea
+    color  inherit // Correct color not being inherited.
+    font   inherit // Correct font properties not being inherited.
+    margin 0 // Fix margins in FF 4+, Safari, and Chrome.
+
+  button // Fix `overflow` set to `hidden` in IE 8/9/10/11.
+    overflow visible
+
+  button, select // Consistent text-transform across browsers.
+    text-transform none
+
+  // Fix WebKit bug in Android 4.0, inability to style clickable `input` in
+  // iOS and improve usability and consistency of cursor style.
+  button, html input[type='button'], input[type='reset'], input[type='submit']
+    cursor pointer
+    -webkit-appearance button
+
+  // Reset default cursor for disabled elements.
+  button[disabled], html input[disabled]
+    cursor default
+
+  // Remove inner padding and border in FF 4+.
+  button::-moz-focus-inner, input::-moz-focus-inner
+    border  0
+    padding 0
+
+  input // Reset line-height again FF 4+ UA stylsheet.
+    line-height normal
+
+  // Fix box sizing and excess padding in IE 8~10
+  input[type='checkbox'], input[type='radio']
+    box-sizing border-box
+    padding    0
+
+  // Fix the cursor style for Chrome's increment/decrement buttons.
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button
+    height auto
+
+  // Consistent appearance and box-sizing in Safari and Chrome.
+  input[type='search']
+    -webkit-appearance  textfield
+    -moz-box-sizing     content-box
+    -webkit-box-sizing  content-box
+    box-sizing          content-box
+
+  // No inner padding and search cancel button in Safari and Chrome on OS X.
+  input[type='search']::-webkit-search-cancel-button,
+  input[type='search']::-webkit-search-decoration
+    -webkit-appearance none
+
+  fieldset // Consistent border, margin, and padding.
+    border  1px solid #c0c0c0
+    margin  0 2px
+    padding 0.35em 0.625em 0.75em
+
+  legend // Hack to correct `color` not being inherited in IE 8/9/10/11.
+    border  0
+    padding 0
+
+  textarea // Remove default vertical scrollbar in IE 8~11.
+    overflow auto
+
+  optgroup // Don't inherit the `font-weight` applied above.
+    font-weight bold
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-groups()
+  figure // Margin should exist in IE 8~9 / Safari.
+    margin 1em 40px
+
+  hr // Consistency between FF and others.
+    -moz-box-sizing content-box
+    box-sizing      content-box
+    height          0
+
+  pre // Contain overflow and wrap words.
+    overflow auto
+
+  // Hack to fix odd `em`-unit font size rendering in all browsers.
+  code, kbd, pre, samp
+    font-family monospace, monospace
+    font-size   1em
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-html5()
+  // `block` display for HTML5 elements in IE 8~11 and FF.
+  article, details, section, summary,
+  aside, main, menu, nav, figcaption,
+  figure, footer, header, hgroup
+    display block
+
+  audio, canvas, progress, video
+    display inline-block // Set `inline-block` not defined in IE 8~9.
+    vertical-align  baseline // Fix v-align of `progress` in Chrome, FF, and O.
+
+  audio:not([controls])
+      display none // Prevent displaying `audio` without controls.
+      height  0 // Remove excess height in iOS 5 devices.
+
+  [hidden], // Address `[hidden]` styling not present in IE 8~10.
+  template  // Hide the `template` element in IE 8~11, Safari, and FF < 22.
+    display none
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-links()
+  a // No gray bg color in active links in IE 10.
+    background-color transparent
+    &:active, &:hover
+      outline 0 // + readability when focused.
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-tables()
+  table // Remove most spacing between table cells.
+    border-collapse collapse
+    border-spacing  0
+  td, th
+    padding 0
+
+
+// Based in Nicolas Gallagher's git.io/normalize
+normalize-text()
+  abbr[title] // + style not present in IE 8~11, Safari, and Chrome.
+    border-bottom 1px dotted
+
+  dfn // + style not present in Safari and Chrome.
+    font-style italic
+
+  mark // + style not present in IE 8/9.
+    background #ff0; color #000
+
+  b, strong // Fix `font-weight: bolder` in FF 4+, Safari, and Chrome.
+    font-weight bold
+
+  h1 // `h1` inside `section` and `article` fix for FF 4+, Safari & Chrome.
+    font-size 2em
+    margin    0.67em 0
+
+  small // Consistent font-size across browsers.
+    font-size 80%
+
+  sub, sup // Prevent `sub` and `sup` affecting `line-height`.
+    font-size       75%
+    line-height     0
+    position        relative
+    vertical-align  baseline
+  sup
+    top -0.5em
+  sub
+    bottom  -0.25em

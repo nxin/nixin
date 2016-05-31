@@ -3,10 +3,20 @@
 \* ------------------------------------------------------------------------ */
 
 
-column(cols, breakpoint)
+// @TODO change float cols with flex cols or create full grid system like
+// util.grid mixin for legacy support
+
+/**
+ * [column description]
+ * @param  {[type]} cols       [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+nix-column(cols, breakpoint)
   +above(nix.mq[breakpoint])
     if cols != nix.grid.cols
       float: left
+
     position: relative
     top: 0
     left: 0
@@ -16,12 +26,21 @@ column(cols, breakpoint)
     width: (100 / nix.grid.cols) * cols * 1%
 
 
-column--last(nth)
+/**
+ * [last description]
+ * @param  {[type]} nth [description]
+ * @return {[type]}     [description]
+ */
+nix-column--last(nth)
   &:nth-child({nth})
     clear: left
 
 
-column--equal() // @TODO doesn't work with jeet cols
+/**
+ * [equal description]
+ * @return {[type]} [description]
+ */
+nix-column--equal() // @TODO doesn't work with jeet cols
   / core--getParent()
       overflow-y: hidden
   &

@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.util.padding
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [padding description]
+ * @return {[type]} [description]
+ */
+nix-padding()
+  if null in arguments
+    padding-top: arguments[0] if arguments[0] != null
+    padding-right: arguments[1] if arguments[1] != null
+    if length(arguments) == 2
+      padding-bottom: arguments[0] if arguments[0] != null
+      padding-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      padding-bottom: arguments[2] if arguments[2] != null
+      padding-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      padding-bottom: arguments[2] if arguments[2] != null
+      padding-left: arguments[3] if arguments[3] != null
+  else
+    padding: arguments

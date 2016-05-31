@@ -113,12 +113,27 @@ $text-line-height: 1.55 !default;
 
 
 /**
+ * [pos description]
+ * @param  {[type]} type [description]
+ * @param  {[type]} args [description]
+ * @return {[type]}      [description]
+ */
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  for j in (1..4)
+    if length(args) > i
+      {args[i]}: args[i + 1] is a "unit" ? args[i += 1] : 0
+    i += 1
+
+
+/**
  * [getSize description]
  * @param  {[type]} property   [description]
  * @param  {[type]} expression [description]
  * @return {[type]}            [description]
  */
-nix-getSize(property, expression)
+-getSize(property, expression)
   property: -webkit-calc(expression)
   property: calc(expression)
 
@@ -129,7 +144,7 @@ nix-getSize(property, expression)
  * @param  {[type]} with =             "" [description]
  * @return {[type]}      [description]
  */
-nix-replaceInSelector(what, with = "")
+-replaceInSelector(what, with = "")
   /{replace(what, with , selector())}
     {block}
 
@@ -139,7 +154,7 @@ nix-replaceInSelector(what, with = "")
  * @param  {[type]} depth =             1 [description]
  * @return {[type]}       [description]
  */
-nix-getParent(depth = 1)
+-getParent(depth = 1)
   selectors = split(",", selector())
   for selector, i in selectors
     selector = split(" ", selector)
@@ -153,7 +168,7 @@ nix-getParent(depth = 1)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcPercentage(n)
+-calcPercentage(n)
   (n * 100) %
 
 
@@ -162,7 +177,7 @@ nix-calcPercentage(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcHalf(n)
+-calcHalf(n)
   return round(n / 2)
 
 
@@ -171,7 +186,7 @@ nix-calcHalf(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcQuarter(n)
+-calcQuarter(n)
   return round(n / 4)
 
 
@@ -180,7 +195,7 @@ nix-calcQuarter(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcDouble(n)
+-calcDouble(n)
   return round(n * 2)
 
 
@@ -189,5 +204,5 @@ nix-calcDouble(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcQuadruple(n)
+-calcQuadruple(n)
   return round(n * 4)
