@@ -56,9 +56,15 @@ nix.prefix = {
 
 
 /**
- * [vendor-prefixes]
+ * [vendor description]
+ * @type {Object}
  */
-nix.vendor-prefixes ?= webkit moz o ms official
+nix.vendor = {
+  "firefox": -moz
+  "webkit": -webkit
+  "opera": -o
+  "ie": -ms
+}
 
 
 /**
@@ -100,10 +106,6 @@ nix.z = {
   "bottom": 1
   "middle": 10
   "top": 100
-  "content": 200
-  "control": 300
-  "page": 400
-  "screen": 500
   "over": 9999
 }
 
@@ -203,7 +205,12 @@ nix.reset = {
 }
 
 
-// toReview
-nix.border.color = nix.colors.grey
-nix.border.radius = 4px
-nix.border.radius-rounded = 30em
+/**
+ * [border description]
+ * @type {Object}
+ */
+nix.borders = {
+  "radius": 4px
+  "rounded": 30em
+  "circle": 50%
+}

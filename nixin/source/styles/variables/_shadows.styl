@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------------------ *\
+   structure.variables.shadows
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [shadows description]
+ * @type {Object}
+ */
+nix.shadows = {}
+
+
+shadow--light = rgba(black, .2)
+shadow--normal = rgba(black, .3)
+shadow--dark = rgba(black, .7)
+shadow--darkness = rgba(black, .8)
+
+/**
+ * [shadows description]
+ * @type {Object}
+ */
+nix.shadows.default = 0 0 1px shadow--light
+nix.shadows.high = 0 0 1px shadow--dark, 0 5px 10px -3px
+nix.shadows.higher = 0 0 1px shadow--dark, 0 10px 25px -4px
+nix.shadows.highest = 0 0 1px shadow--dark, 0 20px 55px -8px shadow--darkness
+nix.shadows.solid = 0 0 1px shadow--normal
+nix.shadows.solid--high = 0 0 1px shadow--normal, 0 5px 10px -3px shadow--light
+nix.shadows.solid--higher = 0 0 1px shadow--normal, 0 10px 25px -4px shadow--light
+nix.shadows.solid--highest = 0 0 1px shadow--normal, 0 20px 55px -8px shadow--light

@@ -10,8 +10,8 @@
 nix-card()
   list--unstyled()
   display: block
-  box-shadow: nix.box-shadow
-  border-radius: nix.border.radius
+  box-shadow: nix.shadow.default
+  border-radius: nix.borders.radius
   overflow: hidden
 
 
@@ -44,8 +44,8 @@ nix-card__content()
  * @return {[type]} [description]
  */
 nix-card__content--divider()
-  background-color: nix.colors.dark-grey
-  color: nix.colors.white
+  background-color: nix.skin.gray--dark
+  color: nix.skin.white
   font-weight: nix.text.font-weight-heavy
 
 
@@ -55,8 +55,8 @@ nix-card__content--divider()
  */
 nix-card__item()
   nix-padding--all--sm()
-  &:not(:last-child) {
-    border-bottom: 1px solid nix.colors.light-grey
+  &:not(:last-child)
+    border-bottom: 1px solid nix.skin.gray--light
 
 
 /**
@@ -80,7 +80,7 @@ nix-card__item--hover()
  * @return {[type]} [description]
  */
 nix-card__item--active()
-  background-color: nix.colors.light-grey
+  background-color: nix.skin.gray--light
 
 
 /**

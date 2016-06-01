@@ -59,7 +59,7 @@ nix-toasts--bottom-right()
  * @param  {[type]} fg-color: nix.colors.white   [description]
  * @return {[type]}           [description]
  */
-nix-toast--color(bg-color: nix.colors.default, fg-color: nix.colors.white)
+nix-toast--color(bg-color: nix.skin.default, fg-color: nix.skin.white)
   background-color: bg-color
   color: fg-color
 
@@ -74,5 +74,5 @@ nix-toast()
   nix-margin--all--sm()
   display: block
   position: relative
-  border-radius: nix.border.radius
+  border-radius: nix.borders.radius
   cursor: pointer

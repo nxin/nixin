@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.alert
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [alert description]
+ * @return {[type]} [description]
+ */
+nix-alert()
+  position: relative
+  top: 0
+  right: 0
+  left: 0
+  width: 100%
+
+
+/**
+ * [color description]
+ * @param  {[type]} bg-color =             nix.skin.default [description]
+ * @param  {[type]} fg-color =             nix.skin.white   [description]
+ * @return {[type]}          [description]
+ */
+nix-alert__content--color(bg-color = nix.skin.default, fg-color = nix.skin.white)
+  color: fg-color
+  background-color: bg-color
+
+
+/**
+ * [alert__content description]
+ * @return {[type]} [description]
+ */
+nix-alert__content()
+  nix-alert__content--color()
+  position: relative
+  margin-bottom: spacing-medium
+  padding: spacing-medium
+  border-radius: border-radius

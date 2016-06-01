@@ -3,14 +3,11 @@
 \* ------------------------------------------------------------------------ */
 
 
-// settings
-nix.animation.duration-fast = 0.2s
-nix.animation.duration = 0.5s
-nix.animation.duration-slow = 0.9s
-nix.animation.easing = ease
-
-
-animation()
+/**
+ * [animation description]
+ * @return {[type]} [description]
+ */
+nix-animation()
   if nix.animations != ("off" || false)
     body
       animation-duration: 4s
@@ -22,7 +19,13 @@ animation()
       transition(all .1s ease-in)
 
 
-animation--create(selector, opt)
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @param  {[type]} opt      [description]
+ * @return {[type]}          [description]
+ */
+nix-animation--create(selector, opt)
   [{selector}~=\"{opt}\"]
-    animation--{opt}()
-    animation--{opt}__keyframes()
+    nix-animation--{opt}()
+    nix-animation--{opt}__keyframes()

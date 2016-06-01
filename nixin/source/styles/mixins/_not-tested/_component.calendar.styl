@@ -14,11 +14,11 @@ nix-calendar()
   nix-grid__cell--no-gutter()
   nix-padding--all--xs()
   text-align: center
-  background-color: nix.colors.white
-  border: 1px solid nix.border.color
-  border-radius: nix.border.radius
+  background-color: nix.skin.white
+  border: 1px solid nix.borders.color
+  border-radius: nix.borders.radius
   max-width: 400px
-  z-index: nix.z.control
+  z-index: nix.z.middle
 
 
 /**
@@ -27,7 +27,7 @@ nix-calendar()
  * @param  {[type]} fg-color =             color-black [description]
  * @return {[type]}          [description]
  */
-nix-calendar__control(bg-color = color-white, fg-color = color-black)
+nix-calendar__control(bg-color = nix.skin.white, fg-color = nix.skin.black)
   nix-button--color(bg-color, fg-color)
   nix-padding--vertical--md()
   nix-padding--horizontal--sm()
@@ -38,7 +38,7 @@ nix-calendar__control(bg-color = color-white, fg-color = color-black)
   outline: 0
   display: inline
   border: 1px solid transparent
-  border-radius: nix.border.radius
+  border-radius: nix.borders.radius
   cursor: pointer
   user-select: none
 
@@ -72,7 +72,7 @@ nix-calendar__day()
  * @return {[type]} [description]
  */
 nix-calendar__date()
-  nix-calendar__control(nix.colors.white, nix.colors.default)
+  nix-calendar__control(nix.skin.white, nix.skin.default)
 
 
 /**
@@ -80,7 +80,7 @@ nix-calendar__date()
  * @return {[type]} [description]
  */
 nix-calendar__date--hover()
-  border: 1px solid nix.border.color
+  border: 1px solid nix.skin.border
 
 
 /**
@@ -88,7 +88,7 @@ nix-calendar__date--hover()
  * @return {[type]} [description]
  */
 nix-calendar__date--in-month()
-  color: nix.colors.black
+  color: nix.skin.black
 
 
 /**
@@ -96,7 +96,7 @@ nix-calendar__date--in-month()
  * @return {[type]} [description]
  */
 nix-calendar__date--today()
-  border-color: nix.colors.light-grey
+  border-color: nix.skin.gray--light
 
 
 /**
@@ -104,8 +104,8 @@ nix-calendar__date--today()
  * @return {[type]} [description]
  */
 nix-calendar__date--selected()
-  border-color: nix.colors.primary
-  nix-button--color(nix.colors.primary, nix.colors.white)
+  border-color: nix.skin.primary
+  nix-button--color(nix.skin.primary, nix.skin.white)
 
 
 /**

@@ -1,14 +1,16 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.typography.core
+   structure.mixins.typography
 \* ------------------------------------------------------------------------ */
 
 
-nix.text.font-size = 1em
-nix.text.font-weight = normal
-nix.text.font-weight-heavy = bold
-nix.text.line-height = 1.55
-
-
+/**
+ * [font description]
+ * @param  {[type]} family [description]
+ * @param  {[type]} size   [description]
+ * @param  {[type]} style  =             normal [description]
+ * @param  {[type]} weight =             normal [description]
+ * @return {[type]}        [description]
+ */
 nix-typography--font(family, size, style = normal, weight = normal)
   font-family: family, nix.fonts.stack.default
   font-style: style
@@ -16,6 +18,14 @@ nix-typography--font(family, size, style = normal, weight = normal)
   font-size: size
 
 
+/**
+ * [face description]
+ * @param  {[type]} name   [description]
+ * @param  {[type]} path   [description]
+ * @param  {[type]} weight =             "normal" [description]
+ * @param  {[type]} style  =             "normal" [description]
+ * @return {[type]}        [description]
+ */
 nix-typography--face(name, path, weight = "normal", style = "normal")
   url-fallback = "url('" + path + ".eot')"
   url = "url('" + path + ".eot?#iefix') format('embedded-opentype'), "
@@ -31,14 +41,29 @@ nix-typography--face(name, path, weight = "normal", style = "normal")
     font-weight: unquote(weight)
 
 
+/**
+ * [family description]
+ * @param  {[type]} family [description]
+ * @return {[type]}        [description]
+ */
 nix-typography--family(family)
   font-family: family, nix.fonts.stack.default
 
 
+/**
+ * [size description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
 nix-typography--size(size)
-  fs: size
+  font-size: size
 
 
+/**
+ * [typography description]
+ * @param  {[type]} type [description]
+ * @return {[type]}      [description]
+ */
 nix-typography(type)
   font-size: type.size
   font-weight: type.weight
@@ -50,6 +75,11 @@ nix-typography(type)
   nix-typography--smoothing(type.smoothing)
 
 
+/**
+ * [smoothing description]
+ * @param  {[type]} value =             true [description]
+ * @return {[type]}       [description]
+ */
 nix-typography--smoothing(value = true)
   if value
     -webkit-font-smoothing: antialiased
@@ -59,6 +89,11 @@ nix-typography--smoothing(value = true)
     -moz-osx-font-smoothing: auto
 
 
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
 nix-typography--create(selector)
   html
     if(!nix.fonts.responsive)
