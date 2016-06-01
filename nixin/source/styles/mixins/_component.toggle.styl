@@ -36,8 +36,7 @@ nix-toggle__wrapper()
  * @return {[type]} [description]
  */
 nix-toggle__wrapper--right()
-  padding-right: 50px
-  padding-left: 0
+  nix-padding(null 50px null 0)
 
 
 /**
@@ -74,7 +73,7 @@ nix-toggle__track()
  * @return {[type]} [description]
  */
 nix-toggle__track--unchecked()
-  background-color: nix.colors.lighter-grey
+  background-color: lighten(nix.skin.gray, 20%)
 
 
 /**

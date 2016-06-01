@@ -12,9 +12,9 @@ nix-nav()
   nix-list--unstyled()
   nix-list--inline()
   width: 100%
-  color: nix.colors.white
-  background-color: nix.colors.black
-  z-index: nix.z.page
+  color: nix.skin.white
+  background-color: nix.skin.black
+  z-index: nix.z.top
 
 
 /**
@@ -32,7 +32,7 @@ nix-nav__item(bg-color: nix.colors.primary, fg-color: nix.colors.white)
       background-color: bg-color
 
     &:focus
-      box-shadow: inset 0 0 0 2px nix.colors.light-blue
+      box-shadow: inset 0 0 0 2px lighten(nix.skin.secondary, 20%)
 
     &:active
       background-color: darken(bg-color, color-tint)
@@ -59,7 +59,7 @@ nix-nav-inline-item()
  * @return {[type]} [description]
  */
 nix-nav__item--hover()
-  background-color: nix.colors.darker-primary
+  background-color: darken(nix.skin.primary, 20%)
   cursor: pointer
 
 
@@ -68,7 +68,7 @@ nix-nav__item--hover()
  * @return {[type]} [description]
  */
 nix-nav__item--active()
-  background-color: nix.colors.dark-primary
+  background-color: darken(nix.skin.primary, 30%)
 
 
 /**
@@ -116,7 +116,7 @@ nav--right()
  * @return {[type]} [description]
  */
 nav--high()
-  box-shadow: nix.shadows.high-solid
+  box-shadow: nix.shadows.solid--high
 
 
 /**
@@ -124,7 +124,7 @@ nav--high()
  * @return {[type]} [description]
  */
 nav--higher()
-  box-shadow: nix.shadows.higher-solid
+  box-shadow: nix.shadows.solid--higher
 
 
 /**
@@ -132,4 +132,4 @@ nav--higher()
  * @return {[type]} [description]
  */
 nav--highest()
-  box-shadow: nix.shadows.highest-solid
+  box-shadow: nix.shadows.solid--highest
