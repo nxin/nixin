@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.element.media
+\* ------------------------------------------------------------------------ */
+
+
+// block
+media =
+  width: 100%
+  height: 100%
+  border: none
+  position(absolute 0 0 0)
+
+
+iframe, embed, object, video
+  {media}
+
+/**
+ * [container description]
+ * @return {[type]} [description]
+ */
+nix-media()
+  display: block
+  overflow: hidden
+  position(relative)
+  reset(padding, height)
+
+
+/**
+ * [media__item description]
+ * @param  {[type]} size =             "all" [description]
+ * @return {[type]}      [description]
+ */
+nix-media__item(size = "all")
+  {media}
+
+  for key, value in nix.media.sizes
+    if size == key
+      padding-bottom: nix-calcPercentage(nix.media.sizes[key])
