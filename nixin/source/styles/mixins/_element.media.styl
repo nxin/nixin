@@ -3,7 +3,11 @@
 \* ------------------------------------------------------------------------ */
 
 
-media--container()
+/**
+ * [container description]
+ * @return {[type]} [description]
+ */
+nix-media--container()
   [{selector}~=\"container\"]
     display: block
     overflow: hidden
@@ -11,7 +15,12 @@ media--container()
     reset(padding, height)
 
 
-media__item(size = "all")
+/**
+ * [media__item description]
+ * @param  {[type]} size =             "all" [description]
+ * @return {[type]}      [description]
+ */
+nix-media__item(size = "all")
   baseStyle =
     width: 100%
     height: 100%
@@ -25,15 +34,20 @@ media__item(size = "all")
     if size == key
       [{selector}~=\"__item--{key}\"]
         {baseStyle}
-        padding-bottom: calcPercentage(value)
+        padding-bottom: nix-calcPercentage(value)
       return
 
     else if size == "all"
       [{selector}~=\"__item--{key}\"]
         {baseStyle}
-        padding-bottom: calcPercentage(value)
+        padding-bottom: nix-calcPercentage(value)
 
 
-media--create(selector)
-  media--container()
-  media__item()
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-media--create(selector)
+  nix-media--container()
+  nix-media__item()

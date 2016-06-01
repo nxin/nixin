@@ -1,57 +1,81 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.component.bubble
+   structure.mixins.bubble
 \* ------------------------------------------------------------------------ */
 
 
-bubble()
+/**
+ * [bubble description]
+ * @return {[type]} [description]
+ */
+nix-bubble()
+  nix-padding--all--md()
   position: relative
   display: inline-block
-  background-color: color-black
-  color: $color-white
+  border-radius: nix.border.radius
+  background-color: nix.colors.black
+  color: nix.colors.white
   text-align: center
   white-space: nowrap
-  border-radius: border-radius
-  +window-box--medium()
 
 
-bubble__arrow()
+/**
+ * [bubble__arrow description]
+ * @return {[type]} [description]
+ */
+nix-bubble__arrow()
   &:after
-    content: ""
     position: absolute
     display: block
     width: 0
     height: 0
     border: 10px solid transparent
+    content: ""
 
 
-bubble__arrow--top()
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+nix-bubble__arrow--top()
   &:after
     bottom: -20px
     left: 50%
     transform: translate3d(-50%, 0, 0)
-    border-top-color: color-black
+    border-top-color: nix.colors.black
 
 
-bubble__arrow--right()
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-bubble__arrow--right()
   &:after
     top: 50%
     left: -20px
     transform: translate3d(0, -50%, 0)
-    border-right-color: color-black
+    border-right-color: nix.colors.black
 
 
-bubble__arrow--bottom()
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+nix-bubble__arrow--bottom()
   &:after
     top: -20px
     left: 50%
     transform: translate3d(-50%, 0, 0)
-    border-bottom-color: color-black
+    border-bottom-color: nix.colors.black
 
 
 
-bubble__arrow--left()
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-bubble__arrow--left()
   &:after
     top: 50%
     right: -20px
     transform: translate3d(0, -50%, 0)
-    border-left-color: color-black
+    border-left-color: nix.colors.black

@@ -3,91 +3,150 @@
 \* ------------------------------------------------------------------------ */
 
 
-drawer()
+/**
+ * [drawer description]
+ * @return {[type]} [description]
+ */
+nix-drawer()
   position: absolute
-  overflow-y: auto
+  z-index: nix.z.over
   overflow-x: hidden
+  overflow-y: auto
   -webkit-overflow-scrolling: touch
-  background-color: $color-white
-  color: $color-black
-  z-index: $z-over-everything
+  background-color: nix.colors.white
+  color: nix.colors.black
 
 
-drawer--bottom()
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+nix-drawer--bottom()
   top: 100%
   left: 0
-  height: auto
-  width: 80%
   margin-left: 10%
+  width: 80%
+  height: auto
   transform: translate3d(0, 0, 0)
 
 
-drawer--bottom--visible()
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+nix-drawer--bottom--visible()
   transform: translate3d(0, -99%, 0)
 
 
-drawer--top()
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+nix-drawer--top()
   bottom: 100%
   left: 0
-  height: auto
-  width: 80%
   margin-left: 10%
+  width: 80%
+  height: auto
   transform: translate3d(0, 0, 0)
 
 
-drawer--top--visible()
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+nix-drawer--top--visible()
   transform: translate3d(0, 99%, 0)
 
 
-drawer--left()
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-drawer--left()
   top: 0
   left: 0
-  height: 100%
   width: 260px
+  height: 100%
   transform: translate3d(-100%, 0, 0)
 
 
-drawer--left--visible()
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+nix-drawer--left--visible()
   transform: translate3d(-1%, 0, 0)
 
 
-drawer--right()
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-drawer--right()
   top: 0;
-  left: 100%;
-  height: 100%;
-  width: 260px;
+  left: 100%
+  width: 260px
+  height: 100%
   transform: translate3d(0, 0, 0)
 
 
-drawer--right--visible()
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+nix-drawer--right--visible()
   transform: translate3d(-99%, 0, 0)
 
 
-drawer__heading()
-  window-box--medium()
-  margin: 0
+/**
+ * [drawer__heading description]
+ * @return {[type]} [description]
+ */
+nix-drawer__heading()
+  nix-padding--all--md()
+  nix-margin--all--0()
   text-align: center
 
 
-drawer__menu()
+/**
+ * [drawer__menu description]
+ * @return {[type]} [description]
+ */
+nix-drawer__menu()
+  nix-border--radius(0)
+  nix-margin--all--0()
+  nix-border--horizontal--0()
   display: block
-  margin: 0
-  border-left: 0
-  border-right: 0
-  border-radius: 0
 
 
-drawer__body()
-  window-box--medium()
+/**
+ * [drawer__body description]
+ * @return {[type]} [description]
+ */
+nix-drawer__body()
+  nix-padding--all--md()
 
 
-drawer--high()
-  box-shadow: $box-shadow-high-solid
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+nix-drawer--high()
+  box-shadow: nix.shadows.high-solid
 
 
-drawer--higher()
-  box-shadow: $box-shadow-higher-solid
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+nix-drawer--higher()
+  box-shadow: nix.shadows.higher-solid
 
 
-drawer--highest()
-  box-shadow: $box-shadow-highest-solid
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+nix-drawer--highest()
+  box-shadow: nix.shadows.highest-solid

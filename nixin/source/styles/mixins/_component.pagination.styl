@@ -3,43 +3,77 @@
 \* ------------------------------------------------------------------------ */
 
 
-pagination()
-  window-box--medium()
+/**
+ * [pagination description]
+ * @return {[type]} [description]
+ */
+nix-pagination()
+  nix-padding--all--md()
   display: block
   width: 100%
   text-align: center
-  font-size: $text-font-size * .8
+  font-size: nix.text.font-size * .8
 
 
-pagination__controls()
+/**
+ * [pagination__controls description]
+ * @return {[type]} [description]
+ */
+nix-pagination__controls()
   display: inline-block
   text-align: center
 
 
-pagination__controls--backward()
+/**
+ * [backward description]
+ * @return {[type]} [description]
+ */
+nix-pagination__controls--backward()
   float: left
   text-align: left
 
 
-pagination__controls--forward()
+/**
+ * [forward description]
+ * @return {[type]} [description]
+ */
+nix-pagination__controls--forward()
   float: right
   text-align: right
 
 
-pagination__control($color: $color-grey)
+/**
+ * [pagination__control description]
+ * @param  {[type]} color: nix.colors.grey [description]
+ * @return {[type]}         [description]
+ */
+nix-pagination__control(color: nix.colors.grey)
+  nix-button()
+  nix-button--ghost(color)
+  nix-button--rounded()
   min-width: 2.4em
-  button()
-  button--ghost($color)
-  button--rounded()
-
-pagination__page()
-  pagination__control($color-primary)
 
 
-pagination__page--current()
-  background-color: $color-primary
-  color: $color-white
+/**
+ * [pagination__page description]
+ * @return {[type]} [description]
+ */
+nix-pagination__page()
+  nix-pagination__control(nix.colors.primary)
 
 
-pagination__ellipsis()
-  pillar-box--medium()
+/**
+ * [current description]
+ * @return {[type]} [description]
+ */
+nix-pagination__page--current()
+  background-color: nix.colors.primary
+  color: nix.colors.white
+
+
+/**
+ * [pagination__ellipsis description]
+ * @return {Boolean} [description]
+ */
+nix-pagination__ellipsis()
+  nix-padding--vertical--md()

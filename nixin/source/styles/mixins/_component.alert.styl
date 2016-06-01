@@ -1,9 +1,9 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.component.alert
+   structure.mixins.alert
 \* ------------------------------------------------------------------------ */
 
 
-alert()
+nix-alert()
   position: relative
   top: 0
   right: 0
@@ -11,14 +11,14 @@ alert()
   width: 100%
 
 
-alert__content--color(bg-color: color-default, fg-color: color-white)
+nix-alert__content--color(bg-color: color-default, fg-color: color-white)
   color: fg-color
   background-color: bg-color
 
 
-alert__content()
+nix-alert__content()
   position: relative
   margin-bottom: spacing-medium
   padding: spacing-medium
   border-radius: border-radius
-  +alert__content--color()
+  +nix-alert__content--color()

@@ -1,10 +1,7 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.util.column
+   structure.mixins.column
 \* ------------------------------------------------------------------------ */
 
-
-// @TODO change float cols with flex cols or create full grid system like
-// util.grid mixin for legacy support
 
 /**
  * [column description]
@@ -41,7 +38,7 @@ nix-column--last(nth)
  * @return {[type]} [description]
  */
 nix-column--equal() // @TODO doesn't work with jeet cols
-  / core--getParent()
+  / nix--getParent()
       overflow-y: hidden
   &
     margin-bottom: -9999px

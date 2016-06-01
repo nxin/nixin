@@ -4,21 +4,723 @@
 
 
 /**
- * [margin description]
- * @return {[type]} [description]
+ * [set description]
  */
-nix-margin()
+nix-margin--set()
   if null in arguments
     margin-top: arguments[0] if arguments[0] != null
     margin-right: arguments[1] if arguments[1] != null
+
     if length(arguments) == 2
       margin-bottom: arguments[0] if arguments[0] != null
       margin-left: arguments[1] if arguments[1] != null
+
     else if length(arguments) == 3
       margin-bottom: arguments[2] if arguments[2] != null
       margin-left: arguments[1] if arguments[1] != null
+
     else if length(arguments) == 4
       margin-bottom: arguments[2] if arguments[2] != null
       margin-left: arguments[3] if arguments[3] != null
+
   else
     margin: arguments
+
+
+/**
+ * [margin description]
+ * @param  {[type]} direction [description]
+ * @param  {[type]} size      [description]
+ * @return {[type]}           [description]
+ */
+nix-margin(direction, size)
+  if direction == "all"
+    margin: size
+
+  else if direction == "vertical"
+    margin-top: size
+    margin-bottom: size
+
+  else if direction == "horizontal"
+    margin-right: size
+    margin-left: size
+
+  else if direction == "top"
+    margin-top: size
+
+  else if direction == "right"
+    margin-right: size
+
+  else if direction == "bottom"
+    margin-bottom: size
+
+  else
+    margin-left: size
+
+
+/**
+ * [top description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--top(size)
+  margin-top: size
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--xxxl()
+  margin-top: nix.sizes.xxxl
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--xxl()
+  margin-top: nix.sizes.xxl
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--xl()
+  margin-top: nix.sizes.xl
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--lg()
+  margin-top: nix.sizes.lg
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--md()
+  margin-top: nix.sizes.md
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--sm()
+  margin-top: nix.sizes.sm
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--xs()
+  margin-top: nix.sizes.xs
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--xxs()
+  margin-top: nix.sizes.xxs
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--xxxs()
+  margin-top: nix.sizes.xxxs
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--top--0()
+  margin-top: 0
+
+
+/**
+ * [right description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--right(size)
+  margin-right: size
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--xxxl()
+  margin-right: nix.sizes.xxxl
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--xxl()
+  margin-right: nix.sizes.xxl
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--xl()
+  margin-right: nix.sizes.xl
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--lg()
+  margin-right: nix.sizes.lg
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--md()
+  margin-right: nix.sizes.md
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--sm()
+  margin-right: nix.sizes.sm
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--xs()
+  margin-right: nix.sizes.xs
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--xxs()
+  margin-right: nix.sizes.xxs
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--xxxs()
+  margin-right: nix.sizes.xxxs
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--right--0()
+  margin-right: 0
+
+
+/**
+ * [bottom description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--bottom(size)
+  margin-bottom: size
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--xxxl()
+  margin-bottom: nix.sizes.xxxl
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--xxl()
+  margin-bottom: nix.sizes.xxl
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--xl()
+  margin-bottom: nix.sizes.xl
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--lg()
+  margin-bottom: nix.sizes.lg
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--md()
+  margin-bottom: nix.sizes.md
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--sm()
+  margin-bottom: nix.sizes.sm
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--xs()
+  margin-bottom: nix.sizes.xs
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--xxs()
+  margin-bottom: nix.sizes.xxs
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--xxxs()
+  margin-bottom: nix.sizes.xxxs
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--bottom--0()
+  margin-bottom: 0
+
+
+/**
+ * [left description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--left(size)
+  margin-left: size
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--xxxl()
+  margin-left: nix.sizes.xxxl
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--xxl()
+  margin-left: nix.sizes.xxl
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--xl()
+  margin-left: nix.sizes.xl
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--lg()
+  margin-left: nix.sizes.lg
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--md()
+  margin-left: nix.sizes.md
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--sm()
+  margin-left: nix.sizes.sm
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--xs()
+  margin-left: nix.sizes.xs
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--xxs()
+  margin-left: nix.sizes.xxs
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--xxxs()
+  margin-left: nix.sizes.xxxs
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--left--0()
+  margin-left: 0
+
+
+/**
+ * [vertical description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--vertical(size)
+  nix-margin--top(size)
+  nix-margin--bottom(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--xxxl()
+  nix-margin--top--xxxl()
+  nix-margin--bottom--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--xxl()
+  nix-margin--top--xxl()
+  nix-margin--bottom--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--xl()
+  nix-margin--top--xl()
+  nix-margin--bottom--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--lg()
+  nix-margin--top--lg()
+  nix-margin--bottom--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--md()
+  nix-margin--top--md()
+  nix-margin--bottom--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--sm()
+  nix-margin--top--sm()
+  nix-margin--bottom--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--xs()
+  nix-margin--top--xs()
+  nix-margin--bottom--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--xxs()
+  nix-margin--top--xxs()
+  nix-margin--bottom--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--xxxs()
+  nix-margin--top--xxxs()
+  nix-margin--bottom--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--vertical--0()
+  nix-margin--top--0()
+  nix-margin--bottom--0()
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--horizontal(size)
+  nix-margin--right(size)
+  nix-margin--left(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--xxxl()
+  nix-margin--right--xxxl()
+  nix-margin--left--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--xxl()
+  nix-margin--right--xxl()
+  nix-margin--left--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--xl()
+  nix-margin--right--xl()
+  nix-margin--left--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--lg()
+  nix-margin--right--lg()
+  nix-margin--left--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--md()
+  nix-margin--right--md()
+  nix-margin--left--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--sm()
+  nix-margin--right--sm()
+  nix-margin--left--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--xs()
+  nix-margin--right--xs()
+  nix-margin--left--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--xxs()
+  nix-margin--right--xxs()
+  nix-margin--left--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--xxxs()
+  nix-margin--right--xxxs()
+  nix-margin--left--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--horizontal--0()
+  nix-margin--right--0()
+  nix-margin--left--0()
+
+
+/**
+ * [all description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-margin--all(size)
+  nix-margin--vertical(size)
+  nix-margin--horizontal(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--xxxl()
+  nix-margin--vertical--xxxl()
+  nix-margin--horizontal--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--xxl()
+  nix-margin--vertical--xxl()
+  nix-margin--horizontal--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--xl()
+  nix-margin--vertical--xl()
+  nix-margin--horizontal--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--lg()
+  nix-margin--vertical--lg()
+  nix-margin--horizontal--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--md()
+  nix-margin--vertical--md()
+  nix-margin--horizontal--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--sm()
+  nix-margin--vertical--sm()
+  nix-margin--horizontal--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--xs()
+  nix-margin--vertical--xs()
+  nix-margin--horizontal--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--xxs()
+  nix-margin--vertical--xxs()
+  nix-margin--horizontal--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--xxxs()
+  nix-margin--vertical--xxxs()
+  nix-margin--horizontal--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+nix-margin--all--0()
+  nix-margin--vertical--0()
+  nix-margin--horizontal--0()
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-margin--create(selector)
+  for dk, dv in nix.directions
+    for sk, sv in nix.sizes
+      [{selector}~=\"--{dv}--{sk}\"]
+        nix-margin(dk, sv)

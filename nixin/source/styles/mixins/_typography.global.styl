@@ -3,14 +3,20 @@
 \* ------------------------------------------------------------------------ */
 
 
-typography--font(family, size, style = normal, weight = normal)
+nix.text.font-size = 1em
+nix.text.font-weight = normal
+nix.text.font-weight-heavy = bold
+nix.text.line-height = 1.55
+
+
+nix-typography--font(family, size, style = normal, weight = normal)
   font-family: family, nix.fonts.stack.default
   font-style: style
   font-weight: weight
-  fs: size
+  font-size: size
 
 
-typography--face(name, path, weight = "normal", style = "normal")
+nix-typography--face(name, path, weight = "normal", style = "normal")
   url-fallback = "url('" + path + ".eot')"
   url = "url('" + path + ".eot?#iefix') format('embedded-opentype'), "
   url = url + "url('" + path + ".woff') format('woff'), "
@@ -25,15 +31,15 @@ typography--face(name, path, weight = "normal", style = "normal")
     font-weight: unquote(weight)
 
 
-typography--family(family)
+nix-typography--family(family)
   font-family: family, nix.fonts.stack.default
 
 
-typography--size(size)
+nix-typography--size(size)
   fs: size
 
 
-typography(type)
+nix-typography(type)
   font-size: type.size
   font-weight: type.weight
   font-family: type.family
@@ -44,7 +50,7 @@ typography(type)
   nix-typography--smoothing(type.smoothing)
 
 
-typography--smoothing(value = true)
+nix-typography--smoothing(value = true)
   if value
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -53,10 +59,10 @@ typography--smoothing(value = true)
     -moz-osx-font-smoothing: auto
 
 
-typography--create(selector)
+nix-typography--create(selector)
   html
     if(!nix.fonts.responsive)
-      typography(nix.typography)
+      nix-typography(nix.typography)
 
   h1, h2, h3, h4, h5, h6, p, .heading, .text
     margin: 0 0 .67rem 0
@@ -96,4 +102,4 @@ typography--create(selector)
   b, optgroup, strong, legend, th, dt
     font-weight: 500
 
-  text--create(nix.prefix.root + nix.prefix.util + "text")
+  nix-text--create(nix.prefix.root + nix.prefix.util + "text")

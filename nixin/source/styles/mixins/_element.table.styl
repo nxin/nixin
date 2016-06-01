@@ -3,7 +3,11 @@
 \* ------------------------------------------------------------------------ */
 
 
-table()
+/**
+ * [table description]
+ * @return {[type]} [description]
+ */
+nix-table()
   display: flex
   flex-wrap: wrap
   width: 100%
@@ -13,66 +17,110 @@ table()
   border-spacing: 0
 
 
-table__caption()
-  letter-box--small()
-  text--quiet()
+/**
+ * [table__caption description]
+ * @return {[type]} [description]
+ */
+nix-table__caption()
+  nix-padding--horizontal--sm()
+  nix-text--quiet()
   display: flex
   flex: 0 0 100%
   max-width: 100%
-  font-size: $text-font-size * .9
+  font-size: nix.text.font-size * .9
   text-align: left
 
 
-table__row()
+/**
+ * [table__row description]
+ * @return {[type]} [description]
+ */
+nix-table__row()
   display: flex
   flex-wrap: wrap
   flex: 0 0 100%
   max-width: 100%
 
 
-table__row--striped()
-  background-color: $color-lighter-grey
+/**
+ * [striped description]
+ * @return {[type]} [description]
+ */
+nix-table__row--striped()
+  background-color: nix.colors.lighter-grey
 
 
-table__cell()
-  window-box--small()
+/**
+ * [table__cell description]
+ * @return {[type]} [description]
+ */
+nix-table__cell()
+  nix-padding--all--sm()
   display: flex
   flex: 1
   text-align: left
   overflow: auto
 
 
-table__heading()
-  heading--xsmall()
+/**
+ * [table__heading description]
+ * @return {[type]} [description]
+ */
+nix-table__heading()
+  nix-heading--xsmall()
   display: flex
   flex: 1
   font-weight: bold
-  background-color: $color-light-grey
-  border-bottom: 1px solid $color-grey
+  background-color: nix.colors.light-grey
+  border-bottom: 1px solid nix.color.grey
 
 
-table__heading--striped()
+/**
+ * [striped description]
+ * @return {[type]} [description]
+ */
+nix-table__heading--striped()
   background-color: initial
 
 
-table-clickable()
-  color: $color-primary
+/**
+ * [clickable description]
+ * @return {[type]} [description]
+ */
+nix-table-clickable()
+  color: nix.colors.primary
   cursor: pointer
 
 
-table-inactive()
-  text--quiet()
+/**
+ * [inactive description]
+ * @return {[type]} [description]
+ */
+nix-table--inactive()
+  nix-text--quiet()
   cursor: default
 
 
-table-clickable--inactive()
-  text--quiet()
+/**
+ * [inactive description]
+ * @return {[type]} [description]
+ */
+nix-table--clickable--inactive()
+  nix-text--quiet()
   cursor: not-allowed
 
 
-table--condensed()
-  font-size: $text-font-size * .9
+/**
+ * [condensed description]
+ * @return {[type]} [description]
+ */
+nix-table--condensed()
+  font-size: nix.text.font-size * .9
 
 
-table__cell--condensed()
-  window-box--xsmall()
+/**
+ * [condensed description]
+ * @return {[type]} [description]
+ */
+nix-table__cell--condensed()
+  nix-padding--all--xs()

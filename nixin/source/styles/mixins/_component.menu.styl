@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.component.menu
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [menu description]
+ * @return {[type]} [description]
+ */
+nix-menu()
+  nix-list--unstyled()
+  nix-card()
+  display: block
+  width: 100%
+  margin-top: nix.sizes.xs
+  background-color: nix.colors.white
+  border-radius: nix.border.radius
+  overflow-y: auto
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  max-height: 280px
+  z-index: nix.z.over
+
+
+/**
+ * [menu__item description]
+ * @return {[type]} [description]
+ */
+nix-menu__item()
+  nix-card__item()
+  cursor: pointer
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+nix-menu__item--divider()
+  nix-text--quiet()
+  font-weight: nix.text.font-weight-heavy
+
+
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+nix-menu__item--hover()
+  nix-card__item--hover()
+  background-color: nix.colors.lighter-grey
+
+
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+nix-menu__item--active()
+  background-color: nix.colors.lighter-grey
+  font-weight: nix.text.font-weight-heavy
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-menu__item--disabled()
+  nix-text--quiet()
+  cursor: not-allowed
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+nix-menu--high()
+ nix-card--high()
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+nix-menu--higher()
+  nix-card--higher()
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+nix-menu--highest()
+  nix-card--highest()

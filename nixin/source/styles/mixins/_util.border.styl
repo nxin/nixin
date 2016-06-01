@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.util.border
+   structure.mixins.border
 \* ------------------------------------------------------------------------ */
 
 
@@ -77,15 +77,645 @@ nix-border-style()
 
 /**
  * [border description]
- * @param  {[type]} radius  =             none [description]
- * @param  {[type]} color   [description]
- * @param  {[type]} args... [description]
- * @return {[type]}         [description]
+ * @param  {[type]} direction =             "all" [description]
+ * @param  {[type]} size      [description]
+ * @param  {[type]} style     =             solid [description]
+ * @param  {[type]} radius    =             none  [description]
+ * @return {[type]}           [description]
  */
-border(radius = none, color, args...)
-  border--radius(radius)
+nix-border(direction = "all", size, style = solid, radius = none)
+  nix-border--radius(radius)
 
-  if color is a 'color'
-    border: 1px solid color args
+  border-style: style
+
+  if direction == "all"
+    border-width: size
+
+  else if direction == "vertical"
+    border-top-width: size
+    border-bottom-width: size
+
+  else if direction == "horizontal"
+    border-right-width: size
+    border-left-width: size
+
+  else if direction == "top"
+    border-top-width: size
+
+  else if direction == "right"
+    border-right-width: size
+
+  else if direction == "bottom"
+    border-bottom-width: size
+
   else
-    border: arguments
+    border-left-width: size
+
+
+/**
+ * [top description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--top(size, style = solid)
+  border-top: size + " " + style
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--top--xxxl(style = solid)
+  border-top: nix.sizes.xxxl + " " + style
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--top--xxl(style = solid)
+  border-top: nix.sizes.xxl + " " + style
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--top--xl(style = solid)
+  border-top: nix.sizes.xl + " " + style
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--top--lg(style = solid)
+  border-top: nix.sizes.lg + " " + style
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--top--md(style = solid)
+  border-top: nix.sizes.md + " " + style
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--top--sm(style = solid)
+  border-top: nix.sizes.sm + " " + style
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--top--xs(style = solid)
+  border-top: nix.sizes.xs + " " + style
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--top--xxs()
+  border-top: nix.sizes.xxs + " " + style
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--top--xxxs()
+  border-top: nix.sizes.xxxs + " " + style
+
+
+/**
+ * [right description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--right(size, style = solid)
+  border-right: size + " " + style
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--right--xxxl(style = solid)
+  border-right: nix.sizes.xxxl + " " + style
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--right--xxl(style = solid)
+  border-right: nix.sizes.xxl + " " + style
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--right--xl(style = solid)
+  border-right: nix.sizes.xl + " " + style
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--right--lg(style = solid)
+  border-right: nix.sizes.lg + " " + style
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--right--md(style = solid)
+  border-right: nix.sizes.md + " " + style
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--right--sm(style = solid)
+  border-right: nix.sizes.sm + " " + style
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--right--xs(style = solid)
+  border-right: nix.sizes.xs + " " + style
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--right--xxs(style = solid)
+  border-right: nix.sizes.xxs + " " + style
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--right--xxxs(style = solid)
+  border-right: nix.sizes.xxxs + " " + style
+
+
+/**
+ * [bottom description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--bottom(size, style = solid)
+  border-bottom: size + " " + style
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--xxxl(style = solid)
+  border-bottom: nix.sizes.xxxl + " " + style
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--xxl(style = solid)
+  border-bottom: nix.sizes.xxl + " " + style
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--xl(style = solid)
+  border-bottom: nix.sizes.xl + " " + style
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--lg()
+  border-bottom: nix.sizes.lg + " " + style
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--md(style = solid)
+  border-bottom: nix.sizes.md + " " + style
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--sm()
+  border-bottom: nix.sizes.sm + " " + style
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--xs()
+  border-bottom: nix.sizes.xs + " " + style
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--xxs()
+  border-bottom: nix.sizes.xxs + " " + style
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--bottom--xxxs()
+  border-bottom: nix.sizes.xxxs + " " + style
+
+
+/**
+ * [left description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--left(size, style)
+  border-left: size + " " + style
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--left--xxxl(style = solid)
+  border-left: nix.sizes.xxxl + " " + style
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--left--xxl(style = solid)
+  border-left: nix.sizes.xxl + " " + style
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--left--xl(style = solid)
+  border-left: nix.sizes.xl + " " + style
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--left--lg(style = solid)
+  border-left: nix.sizes.lg + " " + style
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--left--md(style = solid)
+  border-left: nix.sizes.md + " " + style
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--left--sm(style = solid)
+  border-left: nix.sizes.sm + " " + style
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--left--xs(style = solid)
+  border-left: nix.sizes.xs + " " + style
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--left--xxs(style = solid)
+  border-left: nix.sizes.xxs + " " + style
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--left--xxxs(style = solid)
+  border-left: nix.sizes.xxxs + " " + style
+
+
+/**
+ * [vertical description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--vertical(size, style = solid)
+  nix-border--top(size)
+  nix-border--bottom(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--xxxl()
+  nix-border--top--xxxl()
+  nix-border--bottom--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--xxl()
+  nix-border--top--xxl()
+  nix-border--bottom--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--xl()
+  nix-border--top--xl()
+  nix-border--bottom--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--lg()
+  nix-border--top--lg()
+  nix-border--bottom--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--md()
+  nix-border--top--md()
+  nix-border--bottom--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--sm()
+  nix-border--top--sm()
+  nix-border--bottom--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--xs()
+  nix-border--top--xs()
+  nix-border--bottom--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--xxs()
+  nix-border--top--xxs()
+  nix-border--bottom--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--vertical--xxxs()
+  nix-border--top--xxxs()
+  nix-border--bottom--xxxs()
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--horizontal(size, style = solid)
+  nix-border--right(size)
+  nix-border--left(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--xxxl()
+  nix-border--right--xxxl()
+  nix-border--left--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--xxl()
+  nix-border--right--xxl()
+  nix-border--left--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--xl()
+  nix-border--right--xl()
+  nix-border--left--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--lg()
+  nix-border--right--lg()
+  nix-border--left--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--md()
+  nix-border--right--md()
+  nix-border--left--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--sm()
+  nix-border--right--sm()
+  nix-border--left--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--xs()
+  nix-border--right--xs()
+  nix-border--left--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--xxs()
+  nix-border--right--xxs()
+  nix-border--left--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--horizontal--xxxs()
+  nix-border--right--xxxs()
+  nix-border--left--xxxs()
+
+
+/**
+ * [all description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+nix-border--all(size)
+  nix-border--vertical(size)
+  nix-border--horizontal(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+nix-border--all--xxxl()
+  nix-border--vertical--xxxl()
+  nix-border--horizontal--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+nix-border--all--xxl()
+  nix-border--vertical--xxl()
+  nix-border--horizontal--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+nix-border--all--xl()
+  nix-border--vertical--xl()
+  nix-border--horizontal--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+nix-border--all--lg()
+  nix-border--vertical--lg()
+  nix-border--horizontal--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+nix-border--all--md()
+  nix-border--vertical--md()
+  nix-border--horizontal--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+nix-border--all--sm()
+  nix-border--vertical--sm()
+  nix-border--horizontal--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+nix-border--all--xs()
+  nix-border--vertical--xs()
+  nix-border--horizontal--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+nix-border--all--xxs()
+  nix-border--vertical--xxs()
+  nix-border--horizontal--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+nix-border--all--xxxs()
+  nix-borderr--vertical--xxxs()
+  nix-border--horizontal--xxxs()
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+nix-border--create(selector)
+  for dk, dv in nix.directions
+    for sk, sv in nix.sizes
+      [{selector}~=\"--{dv}--{sk}\"]
+        nix-border(dk, sv)

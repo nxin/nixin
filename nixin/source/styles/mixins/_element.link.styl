@@ -3,24 +3,33 @@
 \* ------------------------------------------------------------------------ */
 
 
-link--color($fg-color: $color-dark-primary)
-  color: $fg-color
+/**
+ * [color description]
+ * @param  {[type]} fg-color: nix.color.dark-primary [description]
+ * @return {[type]}           [description]
+ */
+nix-link--color(fg-color: nix.color.dark-primary)
+  color: fg-color
   background-color: transparent
 
   &:visited
-    color: darken($fg-color, $color-tint)
+    color: darken(fg-color, color-tint)
 
 
   &:hover
-    color: lighten($fg-color, $color-tint)
+    color: lighten(fg-color, color-tint)
 
 
   &:active
-    color: lighten($fg-color, $color-tint)
+    color: lighten(fg-color, color-tint)
 
 
-link()
-  link--color()
+/**
+ * [link description]
+ * @return {[type]} [description]
+ */
+nix-link()
+  nix-link--color()
   text-decoration: none
   cursor: pointer
 

@@ -1,82 +1,132 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.component.calendar
+   structure.mixins.calendar
 \* ------------------------------------------------------------------------ */
 
 
-calendar()
+/**
+ * [calendar description]
+ * @return {[type]} [description]
+ */
+nix-calendar()
+  nix-grid()
+  nix-grid--wrap()
+  nix-grid--center()
+  nix-grid__cell--no-gutter()
+  nix-padding--all--xs()
   text-align: center
-  background-color: color-white
-  border: 1px solid border-color
-  border-radius: border-radius
+  background-color: nix.colors.white
+  border: 1px solid nix.border.color
+  border-radius: nix.border.radius
   max-width: 400px
-  z-index: z-over-control
-  grid()
-  grid--wrap()
-  grid--center()
-  grid__cell--no-gutter()
-  window-box--xsmall()
+  z-index: nix.z.control
 
 
-calendar__control(bg-color = color-white, fg-color = color-black)
+/**
+ * [calendar__control description]
+ * @param  {[type]} bg-color =             color-white [description]
+ * @param  {[type]} fg-color =             color-black [description]
+ * @return {[type]}          [description]
+ */
+nix-calendar__control(bg-color = color-white, fg-color = color-black)
+  nix-button--color(bg-color, fg-color)
+  nix-padding--vertical--md()
+  nix-padding--horizontal--sm()
+  nix-text-size--medium()
   flex: 0 0 14.28%
   max-width: 14.28%
   margin: 0
   outline: 0
   display: inline
   border: 1px solid transparent
-  border-radius: border-radius
+  border-radius: nix.border.radius
   cursor: pointer
   user-select: none
-  button--color(bg-color, fg-color)
-  letter-box--medium()
-  pillar-box--small()
-  text-size--medium()
 
 
- calendar__header()
-  grid__cell()
-  grid__cell--no-gutter()
-  grid__cell--width-70()
-  letter-box--small()
+/**
+ * [calendar__header description]
+ * @return {[type]} [description]
+ */
+ nix-calendar__header()
+  nix-grid__cell()
+  nix-grid__cell--no-gutter()
+  nix-grid__cell--width-70()
+  nix-padding--horizontal--sm()
 
 
-calendar__day()
+/**
+ * [calendar__day description]
+ * @return {[type]} [description]
+ */
+nix-calendar__day()
+  nix-grid__cell()
+  nix-grid__cell--no-gutter()
+  nix-padding--horizontal--sm()
   flex: 0 0 14.28%
   max-width: 14.28%
-  font-weight: text-font-weight-heavy
-  grid__cell()
-  grid__cell--no-gutter()
-  letter-box--small()
+  font-weight: 700
 
 
-calendar__date()
-  calendar__control(color-white, color-default)
+/**
+ * [calendar__date description]
+ * @return {[type]} [description]
+ */
+nix-calendar__date()
+  nix-calendar__control(nix.colors.white, nix.colors.default)
 
 
-calendar__date--hover()
-  border: 1px solid border-color
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+nix-calendar__date--hover()
+  border: 1px solid nix.border.color
 
 
-calendar__date--in-month()
-  color: color-black
+/**
+ * [month description]
+ * @return {[type]} [description]
+ */
+nix-calendar__date--in-month()
+  color: nix.colors.black
 
 
-calendar__date--today()
-  border-color: color-light-grey
+/**
+ * [today description]
+ * @return {[type]} [description]
+ */
+nix-calendar__date--today()
+  border-color: nix.colors.light-grey
 
 
-calendar__date--selected()
-  border-color: color-primary
-  button--color(color-primary, color-white)
+/**
+ * [selected description]
+ * @return {[type]} [description]
+ */
+nix-calendar__date--selected()
+  border-color: nix.colors.primary
+  nix-button--color(nix.colors.primary, nix.colors.white)
 
 
-calendar--high()
-  box-shadow: box-shadow-high
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+nix-calendar--high()
+  box-shadow: nix.shadows.high
 
 
-calendar--higher()
-  box-shadow: box-shadow-higher
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+nix-calendar--higher()
+  box-shadow: nix.shadows.higher
 
 
-calendar--highest()
-  box-shadow: box-shadow-highest
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+nix-calendar--highest()
+  box-shadow: nix.shadows.highest

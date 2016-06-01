@@ -2,6 +2,7 @@
    structure.variables.colors
 \* ------------------------------------------------------------------------ */
 
+
 /**
  * [colors description]
  * @type {Object}
@@ -271,3 +272,83 @@ nix.palettes = {
     "base": #000000
   }
 }
+
+
+color-tint = 9
+
+
+nix.colors.black = #111111
+nix.colors.white = #FFFFFF
+nix.colors.red = #EF4F52
+nix.colors.pink = #EC65C3
+nix.colors.purple = #AB47BC
+nix.colors.blue = #42A5F5
+nix.colors.green = #66BB6A
+nix.colors.yellow = #F6ED30
+nix.colors.orange = #FF7043
+nix.colors.brown = #8D6E63
+nix.colors.grey = lighten(nix.colors.black, 70)
+
+
+nix.colors.dark-grey = darken(nix.colors.grey, color-tint)
+nix.colors.dark-red = darken(nix.colors.red, color-tint)
+nix.colors.dark-pink = darken(nix.colors.pink, color-tint)
+nix.colors.dark-purple = darken(nix.colors.purple, color-tint)
+nix.colors.dark-blue = darken(nix.colors.blue, color-tint)
+nix.colors.dark-green = darken(nix.colors.green, color-tint)
+nix.colors.dark-yellow = darken(nix.colors.yellow, color-tint)
+nix.colors.dark-orange = darken(nix.colors.orange, color-tint)
+nix.colors.dark-brown = darken(nix.colors.brown, color-tint)
+
+
+nix.colors.light-grey = lighten(nix.colors.grey, color-tint)
+nix.colors.light-red = lighten(nix.colors.red, color-tint)
+nix.colors.light-pink = lighten(nix.colors.pink, color-tint)
+nix.colors.light-purple = lighten(nix.colors.purple, color-tint)
+nix.colors.light-blue = lighten(nix.colors.blue, color-tint)
+nix.colors.light-green = lighten(nix.colors.green, color-tint)
+nix.colors.light-yellow = lighten(nix.colors.yellow, color-tint)
+nix.colors.light-orange = lighten(nix.colors.orange, color-tint)
+nix.colors.light-brown = lighten(nix.colors.brown, color-tint)
+
+
+nix.colors.lighter-grey = lighten(nix.colors.light-grey, color-tint)
+nix.colors.lighter-red = lighten(nix.colors.light-red, color-tint)
+nix.colors.lighter-pink = lighten(nix.colors.light-pink, color-tint)
+nix.colors.lighter-purple = lighten(nix.colors.light-purple, color-tint)
+nix.colors.lighter-blue = lighten(nix.colors.light-blue, color-tint)
+nix.colors.lighter-green = lighten(nix.colors.light-green, color-tint)
+nix.colors.lighter-yellow = lighten(nix.colors.light-yellow, color-tint)
+nix.colors.lighter-orange = lighten(nix.colors.light-orange, color-tint)
+nix.colors.lighter-brown = lighten(nix.colors.light-brown, color-tint)
+
+
+nix.colors.default = nix.colors.darker-grey
+nix.colors.primary = nix.colors.blue
+nix.colors.secondary = nix.colors.orange
+nix.colors.success = nix.colors.green
+nix.colors.error = nix.colors.red
+
+
+nix.colors.dark-primary = darken(nix.colors.primary, color-tint)
+nix.colors.darker-primary = darken(nix.colors.dark-primary, color-tint)
+nix.colors.light-primary = lighten(nix.colors.primary, color-tint)
+nix.colors.lighter-primary = lighten(nix.colors.light-primary, color-tint)
+
+
+nix.colors.dark-secondary = darken(nix.colors.secondary, color-tint)
+nix.colors.darker-secondary = darken(nix.colors.dark-secondary, color-tint)
+nix.colors.light-secondary = lighten(nix.colors.secondary, color-tint)
+nix.colors.lighter-secondary = lighten(nix.colors.light-secondary, color-tint)
+
+
+nix.colors.dark-success: darken(nix.colors.success, color-tint)
+nix.colors.darker-success: darken(nix.colors.dark-success, color-tint)
+nix.colors.light-success: lighten(nix.colors.success, color-tint)
+nix.colors.lighter-success: lighten(nix.colors.light-success, color-tint)
+
+
+nix.colors.dark-error: darken(nix.colors.error, color-tint)
+nix.colors.darker-error: darken(nix.colors.dark-error, color-tint)
+nix.colors.light-error: lighten(nix.colors.error, color-tint)
+nix.colors.lighter-error: lighten(nix.colors.light-error, color-tint)

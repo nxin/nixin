@@ -1,59 +1,107 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.component.card
+   structure.mixins.card
 \* ------------------------------------------------------------------------ */
 
 
-card()
-  display: block
-  box-shadow: $box-shadow
-  border-radius: $border-radius
-  overflow: hidden
+/**
+ * [card description]
+ * @return {[type]} [description]
+ */
+nix-card()
   list--unstyled()
+  display: block
+  box-shadow: nix.box-shadow
+  border-radius: nix.border.radius
+  overflow: hidden
 
 
-card-spacing()
-  margin-top: spacing-medium
+/**
+ * [spacing description]
+ * @return {[type]} [description]
+ */
+nix-card-spacing()
+  margin-top: nix.sizes.md
 
 
-card-first-last-paragraph()
+/**
+ * [paragraph description]
+ * @return {[type]} [description]
+ */
+nix-card-first-last-paragraph()
   padding: 0
 
 
-card__content()
-  window-box--small()
+/**
+ * [card__content description]
+ * @return {[type]} [description]
+ */
+nix-card__content()
+  nix-padding--all--sm()
 
 
-card__content--divider()
-  background-color: color-dark-grey
-  color: color-white
-  font-weight: text-font-weight-heavy
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+nix-card__content--divider()
+  background-color: nix.colors.dark-grey
+  color: nix.colors.white
+  font-weight: nix.text.font-weight-heavy
 
 
-card__item()
-  window-box--small()
+/**
+ * [card__item description]
+ * @return {[type]} [description]
+ */
+nix-card__item()
+  nix-padding--all--sm()
   &:not(:last-child) {
-    border-bottom: 1px solid color-light-grey
+    border-bottom: 1px solid nix.colors.light-grey
 
 
-card__item--divider()
-  card__content--divider()
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+nix-card__item--divider()
+  nix-card__content--divider()
 
 
-card__item--hover()
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+nix-card__item--hover()
   cursor: pointer
 
 
-card__item--active()
-  background-color: color-light-grey
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+nix-card__item--active()
+  background-color: nix.colors.light-grey
 
 
-card--high()
-  box-shadow: box-shadow-high
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+nix-card--high()
+  box-shadow: nix.shadows.high
 
 
-card--higher()
-  box-shadow: box-shadow-higher
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+nix-card--higher()
+  box-shadow: nix.shadows.higher
 
 
-card--highest()
-  box-shadow: box-shadow-highest
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+nix-card--highest()
+  box-shadow: nix.shadows.highest

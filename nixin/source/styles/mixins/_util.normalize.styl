@@ -4,7 +4,7 @@
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-base()
+nix-normalize--base()
   html // Prevent iOS text size adjust after orientation change.
     font-family sans-serif
     -ms-text-size-adjust 100%
@@ -14,7 +14,7 @@ normalize-base()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-embed()
+nix-normalize--embed()
   img // No border when inside `a` in IE 8~10.
     border 0
 
@@ -23,7 +23,7 @@ normalize-embed()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-forms()
+nix-normalize--forms()
   // Known limitation: Chrome and Safari on OS X allow very limited
   // styling of `select`, unless a `border` property is set.
   button, input, optgroup, select, textarea
@@ -94,7 +94,7 @@ normalize-forms()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-groups()
+nix-normalize--groups()
   figure // Margin should exist in IE 8~9 / Safari.
     margin 1em 40px
 
@@ -113,7 +113,7 @@ normalize-groups()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-html5()
+nix-normalize--html5()
   // `block` display for HTML5 elements in IE 8~11 and FF.
   article, details, section, summary,
   aside, main, menu, nav, figcaption,
@@ -134,7 +134,7 @@ normalize-html5()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-links()
+nix-normalize--links()
   a // No gray bg color in active links in IE 10.
     background-color transparent
     &:active, &:hover
@@ -142,7 +142,7 @@ normalize-links()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-tables()
+nix-normalize--tables()
   table // Remove most spacing between table cells.
     border-collapse collapse
     border-spacing  0
@@ -151,7 +151,7 @@ normalize-tables()
 
 
 // Based in Nicolas Gallagher's git.io/normalize
-normalize-text()
+nix-normalize--text()
   abbr[title] // + style not present in IE 8~11, Safari, and Chrome.
     border-bottom 1px dotted
 

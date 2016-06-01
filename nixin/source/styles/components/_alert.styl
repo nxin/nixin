@@ -11,6 +11,29 @@ name = "alert"
 class = prefix + name
 
 
-/**
- * styles
- */
+/* mixins
+\* ------------------------------------------------------------------------ */
+
+nix-alert()
+  position: relative
+  top: 0
+  right: 0
+  left: 0
+  width: 100%
+
+
+nix-alert__content--color(bg-color: color-default, fg-color: color-white)
+  color: fg-color
+  background-color: bg-color
+
+
+nix-alert__content()
+  position: relative
+  margin-bottom: spacing-medium
+  padding: spacing-medium
+  border-radius: border-radius
+  +nix-alert__content--color()
+
+
+/* styles
+\* ------------------------------------------------------------------------ */

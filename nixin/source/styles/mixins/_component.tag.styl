@@ -3,39 +3,61 @@
 \* ------------------------------------------------------------------------ */
 
 
-tags()
+/**
+ * [tag description]
+ * @return {[type]} [description]
+ */
+nix-tag()
+  nix-padding--all--sm()
+  padding-right: nix.sizes.lg
+  position: relative
+  margin: nix.sizes.xs
+  text-transform: none
+
+
+/**
+ * [tag__close description]
+ * @return {[type]} [description]
+ */
+nix-tag__close()
+  nix-position(absolute 7px 5px null null)
+  color: nix.colors.light-grey
+
+
+/**
+ * [tags description]
+ * @return {[type]} [description]
+ */
+nix-tags()
   position: relative
   width: 100%
   text-align: left
 
 
-tags-menu()
+/**
+ * [menu description]
+ * @return {[type]} [description]
+ */
+nix-tags--menu()
   position: absolute
   width: 100%
 
 
-tags__container()
+/**
+ * [tags__container description]
+ * @return {[type]} [description]
+ */
+nix-tags__container()
   display: inline-block
+  padding-right: nix.sizes.xs
   max-width: 70%
-  padding-right: $spacing-xsmall
 
 
-tag()
-  window-box--small()
-  padding-right: $spacing-large
-  position: relative
-  margin: $spacing-tiny
-  text-transform: none
-
-
-tag__close()
-  position: absolute
-  right: 5px
-  top: 7px
-  color: $color-light-grey
-
-
-tags__field-container()
+/**
+ * [container description]
+ * @return {[type]} [description]
+ */
+nix-tags__field-container()
   position: absolute
   width: 30%
   display: inline-block

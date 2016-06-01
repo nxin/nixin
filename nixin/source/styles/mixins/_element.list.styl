@@ -3,52 +3,92 @@
 \* ------------------------------------------------------------------------ */
 
 
-list()
+/**
+ * [list description]
+ * @return {[type]} [description]
+ */
+nix-list()
   display: block
   margin: 0
-  padding: 0 0 0 $spacing-medium
+  padding: 0 0 0 nix.sizes.md
   list-style-position: outside
 
 
-list--unstyled()
+/**
+ * [unstyled description]
+ * @return {[type]} [description]
+ */
+nix-list--unstyled()
   padding: 0
   list-style: none
 
 
-list--nested()
-  padding: 0 0 0 $spacing-medium
+/**
+ * [nested description]
+ * @return {[type]} [description]
+ */
+nix-list--nested()
+  padding: 0 0 0 nix.sizes.md
 
 
-list__item()
+/**
+ * [list__item description]
+ * @return {[type]} [description]
+ */
+nix-list__item()
   padding: 0
 
 
-list__item--unstyled()
+/**
+ * [unstyled description]
+ * @return {[type]} [description]
+ */
+nix-list__item--unstyled()
   list-style: none
 
 
-list--ordered()
-  list--unstyled()
+/**
+ * [ordered description]
+ * @return {[type]} [description]
+ */
+nix-list--ordered()
+  nix-list--unstyled()
   counter-reset: ordered
 
 
-list-ordered-item
+/**
+ * [ordered__item description]
+ * @return {[type]} [description]
+ */
+nix-list--ordered__item()
   &:before
     counter-increment: ordered
     content: counters(ordered, ".") " "
-    padding: 0 $spacing-small 0 0
+    padding: 0 nix.sizes.sm 0 0
 
 
-list--inline()
+/**
+ * [inline description]
+ * @return {[type]} [description]
+ */
+nix-list--inline()
   padding: 0
 
 
-list-inline-item()
+/**
+ * [inline__item description]
+ * @return {[type]} [description]
+ */
+nix-list--inline__item()
   display: inline-block
-  padding-right: $spacing-medium
+  padding-right: nix.sizes.md
   width: auto
 
 
-list-inline-item-bullet()
+/**
+ * [bullet description]
+ * @return {[type]} [description]
+ */
+nix-list--inline__item-bullet()
   content: "\2022"
-  padding: 0 $spacing-small 0 0
+  padding: 0 nix.sizes.sm 0 0

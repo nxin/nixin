@@ -1,18 +1,28 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.component.badge
+   structure.mixins.badge
 \* ------------------------------------------------------------------------ */
 
 
-badge--color(bg-color = color-default, fg-color = $color-white)
+/**
+ * [color description]
+ * @param  {[type]} bg-color =             color-default    [description]
+ * @param  {[type]} fg-color =             nix.colors.white [description]
+ * @return {[type]}          [description]
+ */
+nix-badge--color(bg-color = color-default, fg-color = nix.colors.white)
   background-color: bg-color
   color: fg-color
 
 
-badge()
+/**
+ * [badge description]
+ * @return {[type]} [description]
+ */
+nix-badge()
+  nix-margin--all-0()
+  nix-padding--all--xs()
+  nix-badge--color()
   display: inline-block
-  margin: 0
-  padding: spacing-xsmall spacing-small
   border-radius: 4px
-  font-weight: text-font-weight-heavy
-  font-size: text-font-size * .8
-  +badge--color()
+  font-weight: nix.text.font-weight-heavy
+  font-size: nix.text.font-size * .8

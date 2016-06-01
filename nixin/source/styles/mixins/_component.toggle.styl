@@ -3,7 +3,11 @@
 \* ------------------------------------------------------------------------ */
 
 
-toggle()
+/**
+ * [toggle description]
+ * @return {[type]} [description]
+ */
+nix-toggle()
   letter-box--small()
   display: block
   width: 60px
@@ -15,7 +19,11 @@ toggle()
   user-select: none
 
 
-toggle__wrapper()
+/**
+ * [toggle__wrapper description]
+ * @return {[type]} [description]
+ */
+nix-toggle__wrapper()
   position: absolute
   cursor: pointer
   width: auto
@@ -23,61 +31,94 @@ toggle__wrapper()
   padding-left: 50px
 
 
-toggle__wrapper--right()
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-toggle__wrapper--right()
   padding-right: 50px
   padding-left: 0
 
 
-toggle__checkbox()
+/**
+ * [toggle__checkbox description]
+ * @return {[type]} [description]
+ */
+nix-toggle__checkbox()
   display: none
 
 
-toggle__track--color($track-color: $color-default)
-  background-color: $track-color
+/**
+ * [color description]
+ * @param  {[type]} track-color: nix.colors.default [description]
+ * @return {[type]}              [description]
+ */
+nix-toggle__track--color(track-color: nix.colors.default)
+  background-color: track-color
 
 
-toggle__track()
-  toggle__track--color()
-  position: absolute
-  top: 50%
-  bottom: 0
-  left: 0
-  right: 0
-  width: 40px
-  height: 10px
+/**
+ * [toggle__track description]
+ * @return {[type]} [description]
+ */
+nix-toggle__track()
+  nix-toggle__track--color()
+  nix-position(absolute 50% 0 0 0)
+  nix-size(40px 40px)
   margin-top: -5px
   border-radius: 30em
 
 
-toggle__track--unchecked()
-  background-color: $color-lighter-grey
+/**
+ * [unchecked description]
+ * @return {[type]} [description]
+ */
+nix-toggle__track--unchecked()
+  background-color: nix.colors.lighter-grey
 
 
-toggle__track--right()
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-toggle__track--right()
   left: auto
 
 
-toggle__track--disabled()
-  background-color: $color-lighter-grey
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-toggle__track--disabled()
+  background-color: nix.colors.lighter-grey
   cursor: not-allowed
 
 
-toggle__handle()
-  position: absolute
-  top: -5px
-  left: 0
-  width: 20px
-  height: 20px
-  background-color: $color-white
+/**
+ * [toggle__handle description]
+ * @return {[type]} [description]
+ */
+nix-toggle__handle()
+  nix-position(absolute -5px null null 0)
+  nix-size(20px 20px)
+  background-color: nix.colors.white
   border-radius: 30em
-  box-shadow: 0 1px 4px -1px $color-black
+  box-shadow: 0 1px 4px -1px nix.colors.black
   transform: translate3d(100%, 0, 0)
 
 
-toggle__handle--unchecked()
+/**
+ * [unchecked description]
+ * @return {[type]} [description]
+ */
+nix-toggle__handle--unchecked()
   transform: translate3d(0, 0, 0)
 
 
-toggle__handle--disabled()
-  background-color: $color-lighter-grey
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-toggle__handle--disabled()
+  background-color: nix.colors.lighter-grey
   cursor: not-allowed

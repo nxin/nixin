@@ -3,69 +3,109 @@
 \* ------------------------------------------------------------------------ */
 
 
-label()
+/**
+ * [label description]
+ * @return {[type]} [description]
+ */
+nix-form--label()
   display: block
   width: 100%
 
 
-labelfor()
-  label()
-  letter-box--small()
+/**
+ * [labelfor description]
+ * @return {[type]} [description]
+ */
+nix-form--labelfor()
+  nix-form--label()
+  nix-padding--all--sm()
   cursor: pointer
 
 
-field()
-  window-box--small()
-  text-size--medium()
+/**
+ * [field description]
+ * @return {[type]} [description]
+ */
+nix-field()
+  nix-padding--all--sm()
+  nix-text-size--medium()
   outline: 0
   display: block
   width: 100%
   margin: 0
-  font-weight: $text-font-weight
+  font-weight: nix.text.font-weight
   font-family: inherit
-  background-color: $color-white
-  border: 1px solid $border-color
-  border-radius: $border-radius
+  background-color: nix.colors.white
+  border: 1px solid nix.border.color
+  border-radius: nix.border.radius
   resize: vertical
   appearance: none
 
   &:focus
-    border: 1px solid $color-blue;
-    box-shadow: inset 0 0 0 2px $color-light-blue
+    border: 1px solid nix.colors.blue;
+    box-shadow: inset 0 0 0 2px nix.colors.light-blue
 
 
-field-spacing()
-  margin-top: $spacing-medium
+/**
+ * [spacing description]
+ * @return {[type]} [description]
+ */
+nix-form--field-spacing()
+  margin-top: nix.sizes.md
 
 
-label__field()
-  field()
-  margin-top: $spacing-small
+/**
+ * [label__field description]
+ * @return {[type]} [description]
+ */
+nix-form--label__field()
+  nix-form--field()
+  margin-top: nix.sizes.sm
 
 
-disabled()
-  text--quiet()
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-form--disabled()
+  nix-text--quiet()
   cursor: not-allowed
 
 
-field--disabled()
-  disabled()
-  background-color: $color-lighter-grey
-  border: 1px solid $border-color
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-form--field--disabled()
+  nix-form--disabled()
+  background-color: nix.colors.lighter-grey
+  border: 1px solid nix.border.color
 
 
-field--error()
-  border: 1px solid $color-error
-  color: $color-error
+/**
+ * [error description]
+ * @return {[type]} [description]
+ */
+nix-form--field--error()
+  border: 1px solid nix.colors.error
+  color: nix.colors.error
 
 
-field--success()
-  border: 1px solid $color-success
+/**
+ * [success description]
+ * @return {[type]} [description]
+ */
+nix-form--field--success()
+  border: 1px solid nix.colors.success
 
 
-choice()
-  letter-box--small()
-  text-size--medium()
+/**
+ * [choice description]
+ * @return {[type]} [description]
+ */
+nix-form--choice()
+  nix-padding--all--sm()
+  nix-text-size--medium()
   outline: 0
   display: block
   margin: 0
@@ -73,152 +113,268 @@ choice()
   appearance: none
 
   &:focus
-    border: 1px solid $color-blue
-    box-shadow: inset 0 0 0 2px $color-light-blue
+    border: 1px solid nix.colors.blue
+    box-shadow: inset 0 0 0 2px nix.colors.light-blue
 
 
-
-choice--disabled()
-  disabled()
-
-
-choice--error()
-  color: $color-error
-
-
-choice--success()
-  color: $color-success
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-form--choice--disabled()
+  nix-form--disabled()
 
 
-select()
-  choice()
+/**
+ * [error description]
+ * @return {[type]} [description]
+ */
+nix-form--choice--error()
+  color: nix.colors.error
+
+
+/**
+ * [success description]
+ * @return {[type]} [description]
+ */
+nix-form--choice--success()
+  color: nix.colors.success
+
+
+/**
+ * [select description]
+ * @return {[type]} [description]
+ */
+nix-form--select()
+  nix-form--choice()
   outline: 0
   appearance: menulist
   height: 2.5em
 
   &:focus
-    border: 1px solid $color-blue
-    box-shadow: inset 0 0 0 2px $color-light-blue
+    border: 1px solid nix.colors.blue
+    box-shadow: inset 0 0 0 2px nix.colors.light-blue
 
 
-select--disabled()
-  field--disabled()
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-form--select--disabled()
+  nix-form--field--disabled()
 
 
-select--error()
-  field--error()
+/**
+ * [error description]
+ * @return {[type]} [description]
+ */
+nix-form--select--error()
+  nix-form--field--error()
 
 
-select--success()
-  field--success()
+/**
+ * [success description]
+ * @return {[type]} [description]
+ */
+nix-form--select--success()
+  nix-form--field--success()
 
 
-checkbox()
+/**
+ * [checkbox description]
+ * @return {[type]} [description]
+ */
+nix-form--checkbox()
   outline: 0
-  margin-right: $spacing-tiny
-  font-size: $text-font-size * 2
+  margin-right: nix.sizes.xs
+  font-size: nix.text.font-size * 2
 
   &:focus
-    border: 1px solid $color-blue
-    box-shadow: inset 0 0 0 2px $color-light-blue
+    border: 1px solid nix.colors.blue
+    box-shadow: inset 0 0 0 2px nix.colors.light-blue
 
 
+/**
+ * [group description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group()
+  display: flex
 
-input-group()
-  display: flex;
 
-
-input-group__field()
+/**
+ * [group__field description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group__field()
   flex: 1
   height: 100%
 
 
-input-group__field--center()
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group__field--center()
   border-radius: 0
   border-right: 0
   border-left: 0
 
 
-input-group__field--left()
-  border-radius: $border-radius 0 0 $border-radius
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group__field--left()
+  border-radius: nix.border.radius 0 0 nix.border.radius
   border-right: 0
 
 
-input-group__field--right()
-  border-radius: 0 $border-radius $border-radius 0
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group__field--right()
+  border-radius: 0 nix.border.radius nix.border.radius 0
   border-left: 0
 
 
-input-group__button--left()
-  border-radius: $border-radius 0 0 $border-radius
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group__button--left()
+  border-radius: nix.border.radius 0 0 nix.border.radius
   border-width: 1px
 
 
-input-group__button--right()
-  border-radius: 0 $border-radius $border-radius 0
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group__button--right()
+  border-radius: 0 nix.border.radius nix.border.radius 0
   border-width: 1px
 
 
-input-group-rounded--left()
-  border-radius: $border-radius-rounded 0 0 $border-radius-rounded
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group-rounded--left()
+  border-radius: nix.border.radius-rounded 0 0 nix.border.radius-rounded
 
 
-input-group-rounded--right()
-  border-radius: 0 $border-radius-rounded $border-radius-rounded 0
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-form--input-group-rounded--right()
+  border-radius: 0 nix.border.radius-rounded nix.border.radius-rounded 0
 
 
-field-group()
+/**
+ * [group description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group()
   display: block
 
 
-field-group__field--center()
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group__field--center()
   border-radius: 0
 
 
-field-group__field--top()
-  border-radius: $border-radius $border-radius 0 0
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group__field--top()
+  border-radius: nix.border.radius nix.border.radius 0 0
 
 
-field-group__field--bottom()
-  border-radius: 0 0 $border-radius $border-radius
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group__field--bottom()
+  border-radius: 0 0 nix.border.radius nix.border.radius
 
 
-field-group__field()
+/**
+ * [group__field description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group__field()
   border-top: 0
 
 
-field-group-inline()
+/**
+ * [inline description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group-inline()
   display: flex
 
 
-field-group-inline__field--center()
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group-inline__field--center()
   border-radius: 0
 
 
-field-group-inline__field--left()
-  border-radius: $border-radius 0 0 $border-radius
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group-inline__field--left()
+  border-radius: nix.border.radius 0 0 nix.border.radius
 
 
-field-group-inline__field--right()
-  border-radius: 0 $border-radius $border-radius 0
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group-inline__field--right()
+  border-radius: 0 nix.border.radius nix.border.radius 0
 
 
-field-group-inline__field()
+/**
+ * [inline__field description]
+ * @return {[type]} [description]
+ */
+nix-form--field-group-inline__field()
   border-left: 0
 
 
-fieldset()
+/**
+ * [fieldset description]
+ */
+nix-form--fieldset()
   display: block
   width: 100%
   border: 0
   padding: 0
-  margin: $spacing-small 0
+  margin: nix.sizes.sm 0
 
 
-fieldset__legend()
-  label()
-  letter-box--xsmall()
+/**
+ * [fieldset__legend description]
+ */
+nix-form--fieldset__legend()
+  nix-form--label()
+  nix-padding--all--xs()
 
 
-fieldset--disabled()
-  field--disabled()
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-form--fieldset--disabled()
+  nix-form--field--disabled()

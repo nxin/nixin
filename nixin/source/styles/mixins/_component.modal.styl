@@ -1,0 +1,111 @@
+/* ------------------------------------------------------------------------ *\
+   structure.mixins.module.modal
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [modal description]
+ * @return {[type]} [description]
+ */
+nix-modal()
+  nix-center-block__content()
+  z-index: nix.z.over
+  display: block
+  overflow: hidden
+  max-width: 800px
+  width: 80%
+  border-radius: nix.border.radius
+  background-color: nix.colors.white
+
+
+/**
+ * [modal__header description]
+ * @return {[type]} [description]
+ */
+nix-modal__header()
+  position: relative
+  text-align: center
+
+
+/**
+ * [modal__close description]
+ * @return {[type]} [description]
+ */
+nix-modal__close()
+  top: .7em
+
+
+/**
+ * [modal__body description]
+ * @return {[type]} [description]
+ */
+nix-modal__body()
+  nix-padding--all--md()
+
+
+/**
+ * [modal__footer description]
+ * @return {[type]} [description]
+ */
+nix-modal__footer()
+  nix-padding--all--md()
+
+
+/**
+ * [block description]
+ * @return {[type]} [description]
+ */
+nix-modal__footer--block()
+  nix-grid()
+  nix-grid__cell--no-gutter()
+  padding: nix.sizes.lg 0 0 0
+
+
+/**
+ * [block description]
+ * @return {[type]} [description]
+ */
+nix-modal__footer-button--block()
+  nix-grid__cell()
+  border-radius: 0
+
+
+/**
+ * [ghost description]
+ * @return {[type]} [description]
+ */
+nix-modal--ghost()
+  background-color: transparent
+  color: nix.colors.white
+
+
+/**
+ * [ghost description]
+ * @return {[type]} [description]
+ */
+nix-modal__heading--ghost()
+  color: nix.colors.white
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+nix-modal--high()
+  box-shadow: nix.shadows.high-solid
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+nix-modal--higher()
+  box-shadow: nix.shadows.higher-solid
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+nix-modal--highest()
+  box-shadow: nix.shadows.highest-solid

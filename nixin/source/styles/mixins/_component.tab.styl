@@ -3,36 +3,65 @@
 \* ------------------------------------------------------------------------ */
 
 
-tabs()
+/**
+ * [tabs description]
+ * @return {[type]} [description]
+ */
+nix-tabs()
   display: block
 
 
-tabs__headings()
+/**
+ * [tabs__headings description]
+ * @return {[type]} [description]
+ */
+nix-tabs__headings()
   display: flex
   text-align: center
   cursor: pointer
 
 
-tab-heading()
-  window-box--medium()
+/**
+ * [heading description]
+ * @return {[type]} [description]
+ */
+nix-tab-heading()
+  nix-padding--all--md()
   flex: 1
   margin: 0
-  box-shadow: 0 -.2em 0 0 $color-lighter-grey inset
+  box-shadow: 0 -.2em 0 0 nix.colors.lighter-grey inset
 
 
-tab-heading--color($active-color: $color-default)
-  box-shadow: 0 -.2em 0 0 $active-color inset
+/**
+ * [color description]
+ * @param  {[type]} active-color =             nix.colors.default [description]
+ * @return {[type]}              [description]
+ */
+tab-heading--color(active-color = nix.colors.default)
+  box-shadow: 0 -.2em 0 0 active-color inset
 
 
-tab-heading--disabled()
-  text--quiet()
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+nix-tab-heading--disabled()
+  nix-text--quiet()
   cursor: not-allowed
 
 
-tabs__tab()
+/**
+ * [tabs__tab description]
+ * @return {[type]} [description]
+ */
+nix-tabs__tab()
+  nix-padding--all--md()
   display: none
-  window-box--medium()
 
 
-tabs__tab--active()
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+nix-tabs__tab--active()
   display: block

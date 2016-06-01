@@ -1,13 +1,16 @@
 /* ------------------------------------------------------------------------ *\
-   animations.global
+   structure.mixins.animation
 \* ------------------------------------------------------------------------ */
 
 
-/**
- * [animation description]
- * @return {[type]} [description]
- */
-nix-animation()
+// settings
+nix.animation.duration-fast = 0.2s
+nix.animation.duration = 0.5s
+nix.animation.duration-slow = 0.9s
+nix.animation.easing = ease
+
+
+animation()
   if nix.animations != ("off" || false)
     body
       animation-duration: 4s
@@ -19,11 +22,7 @@ nix-animation()
       transition(all .1s ease-in)
 
 
-/**
- * [create description]
- * @return {[type]} [description]
- */
-nix-animation--create(selector, opt)
+animation--create(selector, opt)
   [{selector}~=\"{opt}\"]
-    nix-animation--{opt}()
-    nix-animation--{opt}__keyframes()
+    animation--{opt}()
+    animation--{opt}__keyframes()

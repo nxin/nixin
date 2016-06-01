@@ -3,30 +3,47 @@
 \* ------------------------------------------------------------------------ */
 
 
-overlay--color($bg-color: $color-black)
-  background-color: transparentize($bg-color, .6)
+/**
+ * [color description]
+ * @param  {[type]} bg-color =             nix.colors.black [description]
+ * @return {[type]}          [description]
+ */
+nix-overlay--color(bg-color = nix.colors.black)
+  background-color: transparentify(bg-color, .6)
 
 
-overlay()
-  overlay--color()
+/**
+ * [overlay description]
+ * @return {[type]} [description]
+ */
+nix-overlay()
+  nix-overlay--color()
+  nix-position(absolute 0 0 0 0)
   display: block
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
   width: 100%
   height: 100%
-  z-index: $z-over-screen
+  z-index: nix.z.control
 
 
-overlay--fullpage()
+/**
+ * [fullpage description]
+ * @return {[type]} [description]
+ */
+nix-overlay--fullpage()
   position: fixed
 
 
-overlay--transparent()
+/**
+ * [transparent description]
+ * @return {[type]} [description]
+ */
+nix-overlay--transparent()
   background-color: transparent
 
 
-overlay--dismissable()
+/**
+ * [dismissable description]
+ * @return {[type]} [description]
+ */
+nix-overlay--dismissable()
   cursor: pointer

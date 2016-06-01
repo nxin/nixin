@@ -3,45 +3,76 @@
 \* ------------------------------------------------------------------------ */
 
 
-toasts()
+/**
+ * [toasts description]
+ * @return {[type]} [description]
+ */
+nix-toasts()
   display: block
   position: absolute
   width: 250px
   max-height: 100%
   overflow-y: auto
   background-color: transparent
-  z-index: $z-over-page
+  z-index: nix.z.page
 
-toasts--topleft()
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-toasts--top-left()
   top: 0
   left: 0
 
 
-toasts--topright()
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-toasts--top-right()
   top: 0
   right: 0
 
 
-toasts--bottomleft()
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-toasts--bottom-left()
   bottom: 0
   left: 0
 
 
-toasts--bottomright()
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-toasts--bottom-right()
   bottom: 0
   right: 0
 
 
-toast--color($bg-color: $color-default, $fg-color: $color-white)
-  background-color: $bg-color
-  color: $fg-color
+/**
+ * [color description]
+ * @param  {[type]} bg-color: nix.colors.default [description]
+ * @param  {[type]} fg-color: nix.colors.white   [description]
+ * @return {[type]}           [description]
+ */
+nix-toast--color(bg-color: nix.colors.default, fg-color: nix.colors.white)
+  background-color: bg-color
+  color: fg-color
 
 
-toast()
+/**
+ * [toast description]
+ * @return {[type]} [description]
+ */
+nix-toast()
+  nix-toast--color()
+  nix-padding--all--md()
+  nix-margin--all--sm()
   display: block
   position: relative
-  @include window-box--medium
-  margin: $spacing-small
-  @include toast--color
-  border-radius: $border-radius
+  border-radius: nix.border.radius
   cursor: pointer

@@ -3,39 +3,71 @@
 \* ------------------------------------------------------------------------ */
 
 
-heading()
-  text-size--medium()
-  font-weight: $text-font-weight
+/**
+ * [heading description]
+ * @return {[type]} [description]
+ */
+nix-heading()
+  nix-text-size--medium()
+  font-weight: nix.text.font-weight
   margin: 0
-  padding: $spacing-medium 0 $spacing-small
+  padding: nix.sizes.md 0 nix.sizes.sm
 
 
-heading__subheading()
-  heading()
-  text--quiet()
-  padding: $spacing-small 0
-  font-size: $text-font-size * .8
+/**
+ * [heading__subheading description]
+ * @return {[type]} [description]
+ */
+nix-heading__subheading()
+  nix-heading()
+  nix-text--quiet()
+  padding: nix.sizes.sm 0
+  font-size: nix.text.font-size * .8
 
 
-heading--super()
-  font-size: $text-font-size * 4
+/**
+ * [super description]
+ * @return {[type]} [description]
+ */
+nix-heading--super()
+  font-size: nix.text.font-size * 4
 
 
-heading--xlarge()
-  font-size: $text-font-size * 3
+/**
+ * [xlarge description]
+ * @return {[type]} [description]
+ */
+nix-heading--xlarge()
+  font-size: nix.text.font-size * 3
 
 
-heading--large()
-  font-size: $text-font-size * 2
+/**
+ * [large description]
+ * @return {[type]} [description]
+ */
+nix-heading--large()
+  font-size: nix.text.font-size * 2
 
 
-heading--medium()
-  font-size: $text-font-size * 1.5
+/**
+ * [medium description]
+ * @return {[type]} [description]
+ */
+nix-heading--medium()
+  font-size: nix.text.font-size * 1.5
 
 
-heading--small()
-  font-size: $text-font-size * 1.25
+/**
+ * [small description]
+ * @return {[type]} [description]
+ */
+nix-heading--small()
+  font-size: nix.text.font-size * 1.25
 
 
-heading--xsmall()
-  font-size: $text-font-size * 1.05
+/**
+ * [xsmall description]
+ * @return {[type]} [description]
+ */
+nix-heading--xsmall()
+  font-size: nix.text.font-size * 1.05

@@ -1,9 +1,15 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.element.button
+   structure.mixins.button
 \* ------------------------------------------------------------------------ */
 
 
-button--color(bg-color: color-default, fg-color: color-white)
+/**
+ * [color description]
+ * @param  {[type]} bg-color: color-default [description]
+ * @param  {[type]} fg-color: color-white   [description]
+ * @return {[type]}           [description]
+ */
+nix-button--color(bg-color: color-default, fg-color: color-white)
   background-color: bg-color
   color: fg-color
   border: 1px solid transparent
@@ -20,7 +26,13 @@ button--color(bg-color: color-default, fg-color: color-white)
       background-color: darken(bg-color, color-tint)
 
 
-button--ghost(color: color-default, hover-text-color: color-white)
+/**
+ * [ghost description]
+ * @param  {[type]} color:            color-default [description]
+ * @param  {[type]} hover-text-color: color-white   [description]
+ * @return {[type]}                   [description]
+ */
+nix-button--ghost(color: color-default, hover-text-color: color-white)
   background-color: transparent
   border: 1px solid color
   color: color
@@ -41,82 +53,118 @@ button--ghost(color: color-default, hover-text-color: color-white)
       color: hover-text-color
 
 
-button()
-  outline: 0
+/**
+ * [button description]
+ * @return {[type]} [description]
+ */
+nix-button()
+  +nix-padding--all--sm()
+  +nix-text-size--medium()
+  +nix-button--color()
   display: inline
   margin: 0
   max-width: 100%
+  border-radius: nix.border.radius
   border: 0
-  border-radius: border-radius
+  outline: 0
+  overflow: hidden
   text-decoration: none
   text-transform: uppercase
-  overflow: hidden
   text-overflow: ellipsis
   white-space: nowrap
   vertical-align: middle
   cursor: pointer
   user-select: none
   appearance: none
-  +window-box--small()
-  +text-size--medium()
-  +button--color()
 
 
   &:disabled
-    background-color: color-lighter-grey
+    background-color: nix.colors.lighter-grey
     font-style: italic
     cursor: not-allowed
-    +text--quiet()
+    +nix-text--quiet()
 
 
-button--rounded()
-  border-radius: border-radius-rounded
+/**
+ * [rounded description]
+ * @return {[type]} [description]
+ */
+nix-button--rounded()
+  border-radius: nix.border.radius-rounded
 
 
-button--close()
+/**
+ * [close description]
+ * @return {[type]} [description]
+ */
+nix-button--close()
+  +nix-button--color(transparent, inherit);
+  +nix-text--loud()
+  +nix-padding--all--0()
   outline: 0
   position: absolute
-  right: spacing-medium
+  right: nix.sizes.md
   font-size: 1.4em
   line-height: 1
-  +button--color(transparent, inherit);
-  +text--loud()
-  +window-box--none()
 
 
-button--block()
+/**
+ * [block description]
+ * @return {[type]} [description]
+ */
+nix-button--block()
   display: inline-block
   width: 100%
 
 
-button-group()
+/**
+ * [group description]
+ * @return {[type]} [description]
+ */
+nix-button-group()
   display: inline-flex
 
 
-button--grouped()
+/**
+ * [grouped description]
+ * @return {[type]} [description]
+ */
+nix-button--grouped()
   border-radius: 0
 
   &:first-child
-    border-radius: border-radius 0 0 border-radius
+    border-radius: nix.border.radius 0 0 nix.border.radius
 
 
   &:last-child {
-    border-radius: 0 border-radius border-radius 0
+    border-radius: 0 nix.border.radius nix.border.radius 0
 
 
-button-group--rounded()
+/**
+ * [rounded description]
+ * @return {[type]} [description]
+ */
+nix-button-group--rounded()
   border-radius: 0
 
   &:first-child
-    border-radius: border-radius-rounded 0 0 border-radius-rounded
+    border-radius: nix.border.radius-rounded 0 0 nix.border.radius-rounded
 
   &:last-child
-    border-radius: 0 border-radius-rounded border-radius-rounded 0
+    border-radius: 0 nix.border.radius-rounded nix.border.radius-rounded 0
 
 
-button__icon-left()
-  padding-right: spacing-small
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+nix-button__icon-left()
+  padding-right: nix.sizes.sm
 
 
-button__icon-right()
-  padding-left: spacing-small
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+nix-button__icon-right()
+  padding-left: nix.sizes.sm
