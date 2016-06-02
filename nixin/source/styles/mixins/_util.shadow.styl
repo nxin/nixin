@@ -3,25 +3,13 @@
 \* ------------------------------------------------------------------------ */
 
 
-// Box shadows
-nix.shadows.box = 0 0 1px transparentify(nix.colors.black, .7)
-nix.shadows.box-high = 0 0 1px transparentify(nix.colors.black, .7), 0 5px 10px -3px transparentify(nix.colors.black, .8)
-nix.shadows.box-higher = 0 0 1px transparentify(nix.colors.black, .7), 0 10px 25px -4px transparentify(nix.colors.black, .8)
-nix.shadow.box-highest = 0 0 1px transparentify(nix.colors.black, .7), 0 20px 55px -8px transparentify(nix.colors.black, .8)
-
-nix.shadows.box-solid = 0 0 1px transparentify(nix.colors.black, .3)
-nix.shadows.box-high-solid = 0 0 1px transparentify(nix.color.black, .3), 0 5px 10px -3px transparentify(nix.colors.black, .2)
-nix.shadows.box-higher-solid = 0 0 1px transparentify(nix.color.black, .3), 0 10px 25px -4px transparentify(nix.colors.black, .2)
-nix.shadows.box-shadow-highest-solid = 0 0 1px transparentify(nix.color.black, .3), 0 20px 55px -8px transparentify(nix.color.black, .2)
-
-
 /**
  * [shadow description]
  * @param  {[type]} offset-x [description]
  * @param  {[type]} args...  [description]
  * @return {[type]}          [description]
  */
-shadow(offset-x, args...)
+nix-shadow(offset-x, args...)
   got-offset-x: offset-x
   -webkit-box-shadow: offset-x args
   -moz-box-shadow: offset-x args
