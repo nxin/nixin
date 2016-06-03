@@ -11,7 +11,7 @@ nix-text()
   font-family: nix.typography.family
   font-weight: nix.typography.weight
   color: nix.skin.color.black
-  line-height: nix.typography.height
+  line-height: nix.typography.line-height
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
@@ -53,7 +53,7 @@ nix-text--direction(direction)
  * @return {[type]} [description]
  */
 nix-text--mono()
-  font-family: nix.text.family
+  font-family: nix.text.family.mono
 
 
 /**
@@ -80,7 +80,7 @@ nix-text--quiet()
  * @return {[type]} [description]
  */
 nix-text--loud()
-  font-weight: nix.text.font-weight-heavy
+  font-weight: nix.text.font.weight--heavy
 
 
 /**
@@ -97,7 +97,7 @@ nix-text--help()
  * @return {[type]} [description]
  */
 nix-text--size--xxxl()
-  font-size: nix.text.font-size * 4
+  font-size: nix.text.font.size * 4
 
 
 /**
@@ -105,7 +105,7 @@ nix-text--size--xxxl()
  * @return {[type]} [description]
  */
 nix-text--size--xxl()
-  font-size: nix.text.font-size * 3
+  font-size: nix.text.font.size * 3
 
 
 /**
@@ -113,7 +113,7 @@ nix-text--size--xxl()
  * @return {[type]} [description]
  */
 nix-text--size--xl()
-  font-size: nix.text.font-size * 2
+  font-size: nix.text.font.size * 2
 
 
 /**
@@ -121,7 +121,7 @@ nix-text--size--xl()
  * @return {[type]} [description]
  */
 nix-text--size--lg()
-  font-size: nix.text.font-size * 1.5
+  font-size: nix.text.font.size * 1.5
 
 
 /**
@@ -129,7 +129,7 @@ nix-text--size--lg()
  * @return {[type]} [description]
  */
 nix-text--size--md()
-  font-size: nix.text.font-size
+  font-size: nix.text.font.size
 
 
 /**
@@ -137,7 +137,7 @@ nix-text--size--md()
  * @return {[type]} [description]
  */
 nix-text--size--sm()
-  font-size: nix.text.font-size * .9
+  font-size: nix.text.font.size * .9
 
 
 /**
@@ -145,7 +145,7 @@ nix-text--size--sm()
  * @return {[type]} [description]
  */
 nix-text--size--xs()
-  font-size: nix.text.font-size * .7
+  font-size: nix.text.font.size * .7
 
 
 /**
@@ -153,7 +153,7 @@ nix-text--size--xs()
  * @return {[type]} [description]
  */
 nix-text--size--xxs()
-  font-size: nix.text.font-size * .6
+  font-size: nix.text.font.size * .6
 
 
 /**
@@ -161,7 +161,7 @@ nix-text--size--xxs()
  * @return {[type]} [description]
  */
 nix-text--size--xxxs()
-  font-size: nix.text.font-size * .5
+  font-size: nix.text.font.size * .5
 
 
 /**
@@ -183,8 +183,8 @@ nix-text--code()
   nix-text--highlight()
   display: inline
   background-color: nix.skin.color.gray--light
-  font-family: nix.text.font-family-mono
-  font-weight: nix.text.font-weight
+  font-family: nix.text.family.mono
+  font-weight: nix.text.font.weight
 
 
 /**
@@ -220,7 +220,7 @@ nix-text--quotation()
   margin: 0
   padding: nix.sizes.md nix.sizes.lg
   border-left: 5px solid nix.skin.color.gray
-  font-family: nix.text.font-family-serif
+  font-family: nix.text.family.primary
 
 
 /**
@@ -229,7 +229,7 @@ nix-text--quotation()
  */
 nix-text--quotation__body()
   nix-text--paragraph()
-  font-size: nix.text.font-size * 1.3
+  font-size: nix.text.font.size * 1.3
 
 
 /**
@@ -248,6 +248,6 @@ nix-text--quotation__footer()
  * @return {[type]}          [description]
  */
 nix-text--create(selector)
-  for size in nix.fonts.sizes
+  for size in nix.text.sizes
     [{selector}~=\"--{size}\"]
-      font-size: nix.fonts.sizes[size]
+      font-size: nix.text.sizes[size]

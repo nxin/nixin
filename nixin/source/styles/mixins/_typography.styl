@@ -12,7 +12,7 @@
  * @return {[type]}        [description]
  */
 nix-typography--font(family, size, style = normal, weight = normal)
-  font-family: family, nix.fonts.stack.default
+  font-family: family, nix.text.family.default
   font-style: style
   font-weight: weight
   font-size: size
@@ -47,7 +47,7 @@ nix-typography--face(name, path, weight = "normal", style = "normal")
  * @return {[type]}        [description]
  */
 nix-typography--family(family)
-  font-family: family, nix.fonts.stack.default
+  font-family: family, nix.text.family.default
 
 
 /**
@@ -68,7 +68,7 @@ nix-typography(type)
   font-size: type.size
   font-weight: type.weight
   font-family: type.family
-  line-height: type.height
+  line-height: type.line-height
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
   -webkit-tap-highlight-color: rgba(128, 203, 196, .1)
@@ -96,7 +96,7 @@ nix-typography--smoothing(value = true)
  */
 nix-typography--create(selector)
   html
-    if(!nix.fonts.responsive)
+    if(!nix.text.responsive)
       nix-typography(nix.typography)
 
   h1, h2, h3, h4, h5, h6, p, .heading, .text
@@ -106,25 +106,25 @@ nix-typography--create(selector)
     line-height: 1.75
 
   h1
-    font-size: nix.fonts.sizes["lg"]
+    font-size: nix.text.sizes["lg"]
 
   h2
-    font-size: nix.fonts.sizes["md"]
+    font-size: nix.text.sizes["md"]
 
   h3
-    font-size: nix.fonts.sizes["sm"]
+    font-size: nix.text.sizes["sm"]
 
   h4
-    font-size: nix.fonts.sizes["xs"]
+    font-size: nix.text.sizes["xs"]
 
   h5
-    font-size: nix.fonts.sizes["xxs"]
+    font-size: nix.text.sizes["xxs"]
 
   h6
-    font-size: nix.fonts.sizes["xxxs"]
+    font-size: nix.text.sizes["xxxs"]
 
   p
-    font-size: nix.fonts.sizes["xs"]
+    font-size: nix.text.sizes["xs"]
     letter-spacing: .3px
 
     &:last-child, &[nix.prefix.root + nix.prefix.util + "-grid"~="__cell"]
