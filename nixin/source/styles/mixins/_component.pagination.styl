@@ -47,7 +47,7 @@ nix-pagination__controls--forward()
  * @param  {[type]} color: nix.colors.grey [description]
  * @return {[type]}         [description]
  */
-nix-pagination__control(color = nix.skin.gray)
+nix-pagination__control(color = nix.skin.color.gray)
   nix-button()
   nix-button--ghost(color)
   nix-button--rounded()
@@ -59,7 +59,7 @@ nix-pagination__control(color = nix.skin.gray)
  * @return {[type]} [description]
  */
 nix-pagination__page()
-  nix-pagination__control(nix.skin.primary)
+  nix-pagination__control(nix.skin.color.primary)
 
 
 /**
@@ -67,8 +67,8 @@ nix-pagination__page()
  * @return {[type]} [description]
  */
 nix-pagination__page--current()
-  background-color: nix.skin.primary
-  color: nix.skin.white
+  background-color: nix.skin.color.primary
+  color: nix.skin.color.white
 
 
 /**

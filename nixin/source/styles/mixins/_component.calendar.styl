@@ -14,7 +14,7 @@ nix-calendar()
   nix-grid__cell--no-gutter()
   nix-padding--all--xs()
   text-align: center
-  background-color: nix.skin.white
+  background-color: nix.skin.color.white
   border: 1px solid nix.borders.color
   border-radius: nix.borders.radius
   max-width: 400px
@@ -27,7 +27,7 @@ nix-calendar()
  * @param  {[type]} fg-color =             color-black [description]
  * @return {[type]}          [description]
  */
-nix-calendar__control(bg-color = nix.skin.white, fg-color = nix.skin.black)
+nix-calendar__control(bg-color = nix.skin.color.white, fg-color = nix.skin.color.black)
   nix-button--color(bg-color, fg-color)
   nix-padding--vertical--md()
   nix-padding--horizontal--sm()
@@ -72,7 +72,7 @@ nix-calendar__day()
  * @return {[type]} [description]
  */
 nix-calendar__date()
-  nix-calendar__control(nix.skin.white, nix.skin.default)
+  nix-calendar__control(nix.skin.color.white, nix.skin.color.default)
 
 
 /**
@@ -80,7 +80,7 @@ nix-calendar__date()
  * @return {[type]} [description]
  */
 nix-calendar__date--hover()
-  border: 1px solid nix.skin.border
+  border: 1px solid nix.skin.color.border
 
 
 /**
@@ -88,7 +88,7 @@ nix-calendar__date--hover()
  * @return {[type]} [description]
  */
 nix-calendar__date--in-month()
-  color: nix.skin.black
+  color: nix.skin.color.black
 
 
 /**
@@ -96,7 +96,7 @@ nix-calendar__date--in-month()
  * @return {[type]} [description]
  */
 nix-calendar__date--today()
-  border-color: nix.skin.gray--light
+  border-color: nix.skin.color.gray--light
 
 
 /**
@@ -104,8 +104,8 @@ nix-calendar__date--today()
  * @return {[type]} [description]
  */
 nix-calendar__date--selected()
-  border-color: nix.skin.primary
-  nix-button--color(nix.skin.primary, nix.skin.white)
+  border-color: nix.skin.color.primary
+  nix-button--color(nix.skin.color.primary, nix.skin.color.white)
 
 
 /**

@@ -6,10 +6,12 @@
 /**
  * settings
  */
-prefix = nix.prefix.component
 name = "alert"
-class = prefix + name
+selector = prefix + name
 
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}]
+  nix-alert()

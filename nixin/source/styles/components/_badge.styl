@@ -6,10 +6,11 @@
 /**
  * settings
  */
-prefix = nix.prefix.component
 name = "badge"
-class = prefix + name
+selector = prefix + name
 
 
 /* styles
 \* ------------------------------------------------------------------------ */
+[{selector}]
+  nix-badge()

@@ -10,7 +10,7 @@
 nix-text()
   font-family: nix.typography.family
   font-weight: nix.typography.weight
-  color: nix.skin.black
+  color: nix.skin.color.black
   line-height: nix.typography.height
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
@@ -63,7 +63,7 @@ nix-text--mono()
 nix-text--highlight()
   nix-padding(nix.sizes.sm nix.sizes.xs  nix.sizes.xs)
   margin: 0 -(nix.sizes.xxs)
-  background-color: saturate(nix.skin.selection, 30%)
+  background-color: saturate(nix.skin.color.selection, 30%)
   color: nix.colors.black
 
 
@@ -72,7 +72,7 @@ nix-text--highlight()
  * @return {[type]} [description]
  */
 nix-text--quiet()
-  color: nix.skin.default
+  color: nix.skin.color.default
 
 
 /**
@@ -89,7 +89,7 @@ nix-text--loud()
  */
 nix-text--help()
   cursor: help
-  border-bottom: 1px dashed nix.skin.gray--dark
+  border-bottom: 1px dashed nix.skin.color.gray--dark
 
 
 /**
@@ -182,7 +182,7 @@ nix-text--paragraph()
 nix-text--code()
   nix-text--highlight()
   display: inline
-  background-color: nix.skin.gray--light
+  background-color: nix.skin.color.gray--light
   font-family: nix.text.font-family-mono
   font-weight: nix.text.font-weight
 
@@ -205,10 +205,10 @@ nix-text--code--multiline()
  */
 nix-text--keyboard-keys()
   nix-text--code()
-  background-color: nix.skin.primary
-  color: nix.skin.white
+  background-color: nix.skin.color.primary
+  color: nix.skin.color.white
   border-radius: 4px
-  border-bottom: 2px solid darken(nix.skin.primary, 20%)
+  border-bottom: 2px solid darken(nix.skin.color.primary, 20%)
 
 
 /**
@@ -219,7 +219,7 @@ nix-text--quotation()
   display: block
   margin: 0
   padding: nix.sizes.md nix.sizes.lg
-  border-left: 5px solid nix.skin.gray
+  border-left: 5px solid nix.skin.color.gray
   font-family: nix.text.font-family-serif
 
 

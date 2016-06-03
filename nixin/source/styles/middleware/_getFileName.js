@@ -1,14 +1,12 @@
 module.exports = function() {
 
-    function getFile(style) {
+    return function(style) {
         /**
          * use("getFile") into stylus file
          */
-        style.define('getFile', function() {
+        style.define('getFileName', function() {
             return this.currentBlock.filename;
         });
-    }
-
-    return getFile;
+    };
 
 };

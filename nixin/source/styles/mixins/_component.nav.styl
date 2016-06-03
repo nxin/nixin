@@ -12,8 +12,8 @@ nix-nav()
   nix-list--unstyled()
   nix-list--inline()
   width: 100%
-  color: nix.skin.white
-  background-color: nix.skin.black
+  color: nix.skin.color.white
+  background-color: nix.skin.color.black
   z-index: nix.z.top
 
 
@@ -32,7 +32,7 @@ nix-nav__item(bg-color = nix.colors.primary, fg-color = nix.colors.white)
       background-color: bg-color
 
     &:focus
-      box-shadow: inset 0 0 0 2px lighten(nix.skin.secondary, 20%)
+      box-shadow: inset 0 0 0 2px lighten(nix.skin.color.secondary, 20%)
 
     &:active
       background-color: darken(bg-color, color-tint)
@@ -59,7 +59,7 @@ nix-nav-inline-item()
  * @return {[type]} [description]
  */
 nix-nav__item--hover()
-  background-color: darken(nix.skin.primary, 20%)
+  background-color: darken(nix.skin.color.primary, 20%)
   cursor: pointer
 
 
@@ -68,7 +68,7 @@ nix-nav__item--hover()
  * @return {[type]} [description]
  */
 nix-nav__item--active()
-  background-color: darken(nix.skin.primary, 30%)
+  background-color: darken(nix.skin.color.primary, 30%)
 
 
 /**

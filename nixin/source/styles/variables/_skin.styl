@@ -1,42 +1,46 @@
-// /**
-//  * [skin description]
-//  * @type {Object}
-//  */
-// nix.skin = {}
-//
-//
-// /**
-//  * [name description]
-//  * @type {[type]}
-//  */
-// nix.skin.name = "global"
-//
-//
-// nix.skin.tint = 9
-//
-// /**
-//  * [skin description]
-//  * @type {Object}
-//  */
-// nix.skin.color = {
-//   "default"     :   nix.palette.gray--cold.light--20
-//   "selection"   :   nix.palette.orange.light--30
-//   "divider"     :   nix.palette.gray--cold.light--20
-//   "border"      :   nix.palette.gray--cold.light--30
-//   "link"        :   nix.palette.orange.core
-//   "hover"       :   nix.palette.yellow.core
-//   "primary"     :   nix.palette.orange.core
-//   "secondary"   :   nix.palette.blue.core
-//   "heading"     :   nix.palette.gray.dark--20
-//   "paragraph"   :   nix.palette.gray.dark--10
-//   "light"       :   nix.palette.gray.dark--30
-//   "heavy"       :   nix.palette.gray.dark--30
-//   "success"     :   nix.palette.green.core
-//   "error"       :   nix.palette.red.core
-//   "warning"     :   nix.palette.yellow.core
-//   "white"       :   nix.colors.white
-//   "gray--light" :   nix.palette.gray--cold.light--30
-//   "gray"        :   nix.palette.gray--cold
-//   "gray--dark"  :   nix.palette.gray--cold.dark--30
-//   "black"       :   nix.colors.black
-// }
+/* ------------------------------------------------------------------------ *\
+   skins.global
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * settings
+ */
+prefix = nix.prefix.root + nix.prefix.skin
+name = "global"
+selector = prefix + name
+
+
+/**
+ * [skin description]
+ * @type {Object}
+ */
+nix.skin = {}
+
+
+/**
+ * [name description]
+ * @type {[type]}
+ */
+nix.skin.name = name
+nix.skin.tint = 9
+nix.skin.color = {
+  "default"     :   nix.palette.gray--cold.core
+  "selection"   :   nix.palette.orange.light--20
+  "divider"     :   nix.palette.gray--cold.light--50
+  "border"      :   nix.palette.gray--cold.light--50
+  "link"        :   nix.palette.orange.core
+  "hover"       :   nix.palette.yellow.core
+  "primary"     :   nix.palette.orange.core
+  "secondary"   :   nix.palette.blue.core
+  "heading"     :   nix.palette.gray--cold.dark--50
+  "paragraph"   :   nix.palette.gray--cold.dark--10
+  "light"       :   nix.palette.gray--cold.light--50
+  "heavy"       :   nix.palette.gray--cold.dark--50
+  "success"     :   nix.palette.green.core
+  "error"       :   nix.palette.red.core
+  "warning"     :   nix.palette.yellow.core
+  "white"       :   nix.colors.white
+  "black"       :   nix.colors.black
+  "gray"        :   nix.colors.gray--cold
+}

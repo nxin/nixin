@@ -33,7 +33,7 @@ nix-tree__item()
     content: "–"
     display: inline-block
     padding: 0 nix.sizes.sm 0 0
-    color: nix.skin.gray--light
+    color: nix.skin.color.gray--light
     transform-origin: 30% 50%
 
 
@@ -43,7 +43,7 @@ nix-tree__item()
  */
 nix-tree__item--expandable()
   &:before
-    color: nix.skin.gray
+    color: nix.skin.color.gray
     content: "\276F"
 
 
@@ -53,6 +53,6 @@ nix-tree__item--expandable()
  */
 nix-tree__item--expanded()
   &:before
-    color: nix.skin.gray--light
+    color: nix.skin.color.gray--light
     content: "\276F"
     transform: rotate(90deg)
