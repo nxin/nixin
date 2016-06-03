@@ -40,19 +40,22 @@ nix-debug()
  */
 nix-debug--create(selector)
   [{selector}~="--xxs"]
-    background: nix.palette.orange.light--20
+    background: nix.palette.orange.light--30
 
   [{selector}~="--xs"]
-    background: nix.palette.orange.light--10
+    background: nix.palette.orange.light--20
 
   [{selector}~="--sm"]
-    background: nix.palette.orange.core
+    background: nix.palette.orange.light--10
 
   [{selector}~="--md"]
-    background: nix.palette.orange.dark--10
+    background: nix.palette.orange.core
 
   [{selector}~="--lg"]
-    background: nix.palette.orange.dark--20
+    background: nix.palette.orange.dark--10
 
   [{selector}~="--xl"]
+    background: nix.palette.orange.dark--20
+
+  [{selector}~="--xxl"]
     background: nix.palette.orange.dark--30
