@@ -12,3 +12,51 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}]
+  nix-calendar()
+
+
+[{selector}~=\"__control\"]
+  nix-calendar__control()
+
+
+[{selector}~=\"__header\"]
+  nix-calendar__header()
+
+
+[{selector}~=\"__day\"]
+    nix-calendar__day()
+
+
+[{selector}~=\"__date\"]
+    nix-calendar__date()
+
+  &:hover
+    nix-calendar__date--hover()
+
+
+  &[{selector}~=\"--in-month\"]
+    nix-calendar__date--in-month()
+
+
+  &[{selector}~=\"--today\"]
+    nix-calendar__date--today()
+
+
+  &[{selector}~=\"--selected\"],
+  &[{selector}~=\"--selected\"]:hover
+    nix-calendar__date--selected()
+
+
+[{selector}~=\"--high\"]
+  nix-calendar--high()
+
+
+[{selector}~=\"--higher\"]
+  nix-calendar--higher()
+
+
+[{selector}~=\"--highest\"]
+  nix-calendar--highest()
+  

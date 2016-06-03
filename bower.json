@@ -1,0 +1,34 @@
+{
+  "name": "nixin",
+  "version": "1.0.0",
+  "description": "A Modular Agnostic BEMIT Framework",
+  "main": "nixin",
+  "authors": [
+    "Fabio Cencetti"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nixin",
+    "stylus",
+    "browserify",
+    "node",
+    "html5",
+    "css",
+    "bem",
+    "itcss",
+    "bemit",
+    "ui",
+    "ux",
+    "framework",
+    "components",
+    "modules"
+  ],
+  "homepage": "http://nixin.io",
+  "moduleType": [],
+  "ignore": [
+    "*.*",
+    "node_modules",
+    "bower_components",
+    "demo"
+  ]
+}

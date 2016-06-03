@@ -1,7 +1,7 @@
 {
   "name": "nixin",
   "version": "1.0.0",
-  "description": "Agnostic bemit framework",
+  "description": "A Modular Agnostic BEMIT Framework",
   "main": "index.js",
   "scripts": {
     "stylus": "stylus --sourcemap-inline nixin/source/styles/index.styl -o nixin/_dist/app.css",
@@ -16,14 +16,19 @@
   },
   "keywords": [
     "nixin",
-    "gulp",
-    "global",
-    "tasks",
     "stylus",
     "browserify",
     "node",
+    "html5",
+    "css",
+    "bem",
+    "itcss",
     "bemit",
-    "framework"
+    "ui",
+    "ux",
+    "framework",
+    "components",
+    "modules"
   ],
   "author": "@kreo - Fabio Cencetti <hey@kreo.me>",
   "license": "MIT",
