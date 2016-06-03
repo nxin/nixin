@@ -2,6 +2,8 @@
    structure.mixins.component.debug
 \* ------------------------------------------------------------------------ */
 
+@require "_util.mediaquery"
+
 
 /**
  * [debug description]
@@ -12,11 +14,12 @@ nix-debug()
     display: none
 
   else
+    +nix-mq--max("sm")
+      text-align: center
+
     position: relative
     color: white
 
-    +nix-mq--max("sm")
-      text-align: center
 
     &__heading
       font-size: 18px
