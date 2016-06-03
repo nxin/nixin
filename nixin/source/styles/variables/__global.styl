@@ -53,6 +53,7 @@ nix.prefix = {
   "mixin": "nix-"
   "override": "\!-"
   "javascript": "js-"
+  "test": "test-"
 }
 
 
@@ -145,11 +146,29 @@ nix.sizes = {
 
 
 /**
+ * [dist description]
+ * @type {Object}
+ */
+nix.dist = {
+  "path": "/_dist"
+}
+
+
+/**
  * [images description]
  * @type {Object}
  */
 nix.images = {
-  "path": "/_dist/images/"
+  "path": "/_dist/images"
+}
+
+
+/**
+ * [fonts description]
+ * @type {Object}
+ */
+nix.fonts = {
+  "path": "/_dist/fonts"
 }
 
 
