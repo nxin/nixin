@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.util.margin
+   mixins.util.margin
 \* ------------------------------------------------------------------------ */
 
 
@@ -10,19 +10,15 @@ nix-margin--set()
   if null in arguments
     margin-top: arguments[0] if arguments[0] != null
     margin-right: arguments[1] if arguments[1] != null
-
     if length(arguments) == 2
       margin-bottom: arguments[0] if arguments[0] != null
       margin-left: arguments[1] if arguments[1] != null
-
     else if length(arguments) == 3
       margin-bottom: arguments[2] if arguments[2] != null
       margin-left: arguments[1] if arguments[1] != null
-
     else if length(arguments) == 4
       margin-bottom: arguments[2] if arguments[2] != null
       margin-left: arguments[3] if arguments[3] != null
-
   else
     margin: arguments
 
@@ -35,27 +31,25 @@ nix-margin--set()
  */
 nix-margin(direction, size)
   if direction == "all"
-    margin: size
+    nix-margin--set(size)
 
   else if direction == "vertical"
-    margin-top: size
-    margin-bottom: size
+    nix-margin--set(size null)
 
   else if direction == "horizontal"
-    margin-right: size
-    margin-left: size
+    nix-margin--set(null size)
 
   else if direction == "top"
-    margin-top: size
+    nix-margin--set(size null null null)
 
   else if direction == "right"
-    margin-right: size
+    nix-margin--set(null size null null)
 
   else if direction == "bottom"
-    margin-bottom: size
+    nix-margin--set(null null size null)
 
   else
-    margin-left: size
+    nix-margin--set(null null null size)
 
 
 /**
@@ -64,7 +58,7 @@ nix-margin(direction, size)
  * @return {[type]}      [description]
  */
 nix-margin--top(size)
-  margin-top: size
+  nix-margin("top", size)
 
 
 /**
@@ -72,7 +66,7 @@ nix-margin--top(size)
  * @return {[type]} [description]
  */
 nix-margin--top--xxxl()
-  margin-top: nix.sizes.xxxl
+  nix-margin("top", nix.sizes.xxxl)
 
 
 /**
@@ -80,7 +74,7 @@ nix-margin--top--xxxl()
  * @return {[type]} [description]
  */
 nix-margin--top--xxl()
-  margin-top: nix.sizes.xxl
+  nix-margin("top", nix.sizes.xxl)
 
 
 /**
@@ -88,7 +82,7 @@ nix-margin--top--xxl()
  * @return {[type]} [description]
  */
 nix-margin--top--xl()
-  margin-top: nix.sizes.xl
+  nix-margin("top", nix.sizes.xl)
 
 
 /**
@@ -96,7 +90,7 @@ nix-margin--top--xl()
  * @return {[type]} [description]
  */
 nix-margin--top--lg()
-  margin-top: nix.sizes.lg
+  nix-margin("top", nix.sizes.lg)
 
 
 /**
@@ -104,7 +98,7 @@ nix-margin--top--lg()
  * @return {[type]} [description]
  */
 nix-margin--top--md()
-  margin-top: nix.sizes.md
+  nix-margin("top", nix.sizes.md)
 
 
 /**
@@ -112,7 +106,7 @@ nix-margin--top--md()
  * @return {[type]} [description]
  */
 nix-margin--top--sm()
-  margin-top: nix.sizes.sm
+nix-margin("top", nix.sizes.sm)
 
 
 /**
@@ -120,7 +114,7 @@ nix-margin--top--sm()
  * @return {[type]} [description]
  */
 nix-margin--top--xs()
-  margin-top: nix.sizes.xs
+  nix-margin("top", nix.sizes.xs)
 
 
 /**
@@ -128,7 +122,7 @@ nix-margin--top--xs()
  * @return {[type]} [description]
  */
 nix-margin--top--xxs()
-  margin-top: nix.sizes.xxs
+  nix-margin("top", nix.sizes.xxs)
 
 
 /**
@@ -136,7 +130,7 @@ nix-margin--top--xxs()
  * @return {[type]} [description]
  */
 nix-margin--top--xxxs()
-  margin-top: nix.sizes.xxxs
+  nix-margin("top", nix.sizes.xxxs)
 
 
 /**
@@ -144,16 +138,16 @@ nix-margin--top--xxxs()
  * @return {[type]} [description]
  */
 nix-margin--top--0()
-  margin-top: 0
+  nix-margin("top", 0)
 
 
 /**
- * [right description]
+ * [horizontal description]
  * @param  {[type]} size [description]
  * @return {[type]}      [description]
  */
 nix-margin--right(size)
-  margin-right: size
+  nix-margin("right", size)
 
 
 /**
@@ -161,7 +155,7 @@ nix-margin--right(size)
  * @return {[type]} [description]
  */
 nix-margin--right--xxxl()
-  margin-right: nix.sizes.xxxl
+  nix-margin("right", nix.sizes.xxxl)
 
 
 /**
@@ -169,7 +163,7 @@ nix-margin--right--xxxl()
  * @return {[type]} [description]
  */
 nix-margin--right--xxl()
-  margin-right: nix.sizes.xxl
+  nix-margin("right", nix.sizes.xxl)
 
 
 /**
@@ -177,7 +171,7 @@ nix-margin--right--xxl()
  * @return {[type]} [description]
  */
 nix-margin--right--xl()
-  margin-right: nix.sizes.xl
+  nix-margin("right", nix.sizes.xl)
 
 
 /**
@@ -185,7 +179,7 @@ nix-margin--right--xl()
  * @return {[type]} [description]
  */
 nix-margin--right--lg()
-  margin-right: nix.sizes.lg
+  nix-margin("right", nix.sizes.lg)
 
 
 /**
@@ -193,7 +187,7 @@ nix-margin--right--lg()
  * @return {[type]} [description]
  */
 nix-margin--right--md()
-  margin-right: nix.sizes.md
+  nix-margin("right", nix.sizes.md)
 
 
 /**
@@ -201,7 +195,7 @@ nix-margin--right--md()
  * @return {[type]} [description]
  */
 nix-margin--right--sm()
-  margin-right: nix.sizes.sm
+  nix-margin("right", nix.sizes.sm)
 
 
 /**
@@ -209,7 +203,7 @@ nix-margin--right--sm()
  * @return {[type]} [description]
  */
 nix-margin--right--xs()
-  margin-right: nix.sizes.xs
+  nix-margin("right", nix.sizes.xs)
 
 
 /**
@@ -217,7 +211,7 @@ nix-margin--right--xs()
  * @return {[type]} [description]
  */
 nix-margin--right--xxs()
-  margin-right: nix.sizes.xxs
+  nix-margin("right", nix.sizes.xxs)
 
 
 /**
@@ -225,7 +219,7 @@ nix-margin--right--xxs()
  * @return {[type]} [description]
  */
 nix-margin--right--xxxs()
-  margin-right: nix.sizes.xxxs
+  nix-margin("right", nix.sizes.xxxs)
 
 
 /**
@@ -233,16 +227,16 @@ nix-margin--right--xxxs()
  * @return {[type]} [description]
  */
 nix-margin--right--0()
-  margin-right: 0
+  nix-margin("right", 0)
 
 
 /**
- * [bottom description]
+ * [horizontal description]
  * @param  {[type]} size [description]
  * @return {[type]}      [description]
  */
 nix-margin--bottom(size)
-  margin-bottom: size
+  nix-margin("bottom", size)
 
 
 /**
@@ -250,7 +244,7 @@ nix-margin--bottom(size)
  * @return {[type]} [description]
  */
 nix-margin--bottom--xxxl()
-  margin-bottom: nix.sizes.xxxl
+  nix-margin("bottom", nix.sizes.xxxl)
 
 
 /**
@@ -258,7 +252,7 @@ nix-margin--bottom--xxxl()
  * @return {[type]} [description]
  */
 nix-margin--bottom--xxl()
-  margin-bottom: nix.sizes.xxl
+  nix-margin("bottom", nix.sizes.xxl)
 
 
 /**
@@ -266,7 +260,7 @@ nix-margin--bottom--xxl()
  * @return {[type]} [description]
  */
 nix-margin--bottom--xl()
-  margin-bottom: nix.sizes.xl
+  nix-margin("bottom", nix.sizes.xl)
 
 
 /**
@@ -274,7 +268,7 @@ nix-margin--bottom--xl()
  * @return {[type]} [description]
  */
 nix-margin--bottom--lg()
-  margin-bottom: nix.sizes.lg
+  nix-margin("bottom", nix.sizes.lg)
 
 
 /**
@@ -282,7 +276,7 @@ nix-margin--bottom--lg()
  * @return {[type]} [description]
  */
 nix-margin--bottom--md()
-  margin-bottom: nix.sizes.md
+  nix-margin("bottom", nix.sizes.md)
 
 
 /**
@@ -290,7 +284,7 @@ nix-margin--bottom--md()
  * @return {[type]} [description]
  */
 nix-margin--bottom--sm()
-  margin-bottom: nix.sizes.sm
+  nix-margin("bottom", nix.sizes.sm)
 
 
 /**
@@ -298,7 +292,7 @@ nix-margin--bottom--sm()
  * @return {[type]} [description]
  */
 nix-margin--bottom--xs()
-  margin-bottom: nix.sizes.xs
+  nix-margin("bottom", nix.sizes.xs)
 
 
 /**
@@ -306,7 +300,7 @@ nix-margin--bottom--xs()
  * @return {[type]} [description]
  */
 nix-margin--bottom--xxs()
-  margin-bottom: nix.sizes.xxs
+  nix-margin("bottom", nix.sizes.xxs)
 
 
 /**
@@ -314,7 +308,7 @@ nix-margin--bottom--xxs()
  * @return {[type]} [description]
  */
 nix-margin--bottom--xxxs()
-  margin-bottom: nix.sizes.xxxs
+  nix-margin("bottom", nix.sizes.xxxs)
 
 
 /**
@@ -322,16 +316,16 @@ nix-margin--bottom--xxxs()
  * @return {[type]} [description]
  */
 nix-margin--bottom--0()
-  margin-bottom: 0
+  nix-margin("bottom", 0)
 
 
 /**
- * [left description]
+ * [horizontal description]
  * @param  {[type]} size [description]
  * @return {[type]}      [description]
  */
 nix-margin--left(size)
-  margin-left: size
+  nix-margin("left", size)
 
 
 /**
@@ -339,7 +333,7 @@ nix-margin--left(size)
  * @return {[type]} [description]
  */
 nix-margin--left--xxxl()
-  margin-left: nix.sizes.xxxl
+  nix-margin("left", nix.sizes.xxxl)
 
 
 /**
@@ -347,7 +341,7 @@ nix-margin--left--xxxl()
  * @return {[type]} [description]
  */
 nix-margin--left--xxl()
-  margin-left: nix.sizes.xxl
+  nix-margin("left", nix.sizes.xxl)
 
 
 /**
@@ -355,7 +349,7 @@ nix-margin--left--xxl()
  * @return {[type]} [description]
  */
 nix-margin--left--xl()
-  margin-left: nix.sizes.xl
+  nix-margin("left", nix.sizes.xl)
 
 
 /**
@@ -363,7 +357,7 @@ nix-margin--left--xl()
  * @return {[type]} [description]
  */
 nix-margin--left--lg()
-  margin-left: nix.sizes.lg
+  nix-margin("left", nix.sizes.lg)
 
 
 /**
@@ -371,7 +365,7 @@ nix-margin--left--lg()
  * @return {[type]} [description]
  */
 nix-margin--left--md()
-  margin-left: nix.sizes.md
+  nix-margin("left", nix.sizes.md)
 
 
 /**
@@ -379,7 +373,7 @@ nix-margin--left--md()
  * @return {[type]} [description]
  */
 nix-margin--left--sm()
-  margin-left: nix.sizes.sm
+  nix-margin("left", nix.sizes.sm)
 
 
 /**
@@ -387,7 +381,7 @@ nix-margin--left--sm()
  * @return {[type]} [description]
  */
 nix-margin--left--xs()
-  margin-left: nix.sizes.xs
+  nix-margin("left", nix.sizes.xs)
 
 
 /**
@@ -395,7 +389,7 @@ nix-margin--left--xs()
  * @return {[type]} [description]
  */
 nix-margin--left--xxs()
-  margin-left: nix.sizes.xxs
+  nix-margin("left", nix.sizes.xxs)
 
 
 /**
@@ -403,7 +397,7 @@ nix-margin--left--xxs()
  * @return {[type]} [description]
  */
 nix-margin--left--xxxs()
-  margin-left: nix.sizes.xxxs
+  nix-margin("left", nix.sizes.xxxs)
 
 
 /**
@@ -411,7 +405,7 @@ nix-margin--left--xxxs()
  * @return {[type]} [description]
  */
 nix-margin--left--0()
-  margin-left: 0
+  nix-margin("left", 0)
 
 
 /**

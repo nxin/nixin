@@ -12,3 +12,41 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}]
+  nix-card()
+
+  + [{selector}]
+    nix-card--spacing()
+
+  [{prefix}paragraph]:first-child,
+  [{prefix}paragraph]:last-child
+    nix-card__first-last-paragraph()
+
+
+[{selector}~="__content"]
+  nix-card__content()
+
+  &[{selector}~="--divider"]
+    nix-card__content--divider()
+
+
+[{selector}~="__item"]
+  nix-card__item()
+
+
+[{selector}~="__item"]
+  &[{selector}~="--divider"]
+    nix-card__item--divider()
+
+
+[{selector}~="--high"]
+  nix-card--high()
+
+
+[{selector}~="--higher"]
+  nix-card--higher()
+
+
+[{selector}~="--highest"]
+  nix-card--highest()

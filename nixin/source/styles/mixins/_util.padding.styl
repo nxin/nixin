@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   structure.mixins.util.padding
+   mixins.util.padding
 \* ------------------------------------------------------------------------ */
 
 
@@ -31,27 +31,25 @@ nix-padding--set()
  */
 nix-padding(direction, size)
   if direction == "all"
-    padding: size
+    nix-padding--set(size)
 
   else if direction == "vertical"
-    padding-top: size
-    padding-bottom: size
+    nix-padding--set(size null)
 
   else if direction == "horizontal"
-    padding-right: size
-    padding-left: size
+    nix-padding--set(null size)
 
   else if direction == "top"
-    padding-top: size
+    nix-padding--set(size null null null)
 
   else if direction == "right"
-    padding-right: size
+    nix-padding--set(null size null null)
 
   else if direction == "bottom"
-    padding-bottom: size
+    nix-padding--set(null null size null)
 
   else
-    padding-left: size
+    nix-padding--set(null null null size)
 
 
 /**
@@ -60,7 +58,7 @@ nix-padding(direction, size)
  * @return {[type]}      [description]
  */
 nix-padding--top(size)
-  padding-top: size
+  nix-padding("top", size)
 
 
 /**
@@ -68,7 +66,7 @@ nix-padding--top(size)
  * @return {[type]} [description]
  */
 nix-padding--top--xxxl()
-  padding-top: nix.sizes.xxxl
+  nix-padding("top", nix.sizes.xxxl)
 
 
 /**
@@ -76,7 +74,7 @@ nix-padding--top--xxxl()
  * @return {[type]} [description]
  */
 nix-padding--top--xxl()
-  padding-top: nix.sizes.xxl
+  nix-padding("top", nix.sizes.xxl)
 
 
 /**
@@ -84,7 +82,7 @@ nix-padding--top--xxl()
  * @return {[type]} [description]
  */
 nix-padding--top--xl()
-  padding-top: nix.sizes.xl
+  nix-padding("top", nix.sizes.xl)
 
 
 /**
@@ -92,7 +90,7 @@ nix-padding--top--xl()
  * @return {[type]} [description]
  */
 nix-padding--top--lg()
-  padding-top: nix.sizes.lg
+  nix-padding("top", nix.sizes.lg)
 
 
 /**
@@ -100,7 +98,7 @@ nix-padding--top--lg()
  * @return {[type]} [description]
  */
 nix-padding--top--md()
-  padding-top: nix.sizes.md
+  nix-padding("top", nix.sizes.md)
 
 
 /**
@@ -108,7 +106,7 @@ nix-padding--top--md()
  * @return {[type]} [description]
  */
 nix-padding--top--sm()
-  padding-top: nix.sizes.sm
+nix-padding("top", nix.sizes.sm)
 
 
 /**
@@ -116,7 +114,7 @@ nix-padding--top--sm()
  * @return {[type]} [description]
  */
 nix-padding--top--xs()
-  padding-top: nix.sizes.xs
+  nix-padding("top", nix.sizes.xs)
 
 
 /**
@@ -124,7 +122,7 @@ nix-padding--top--xs()
  * @return {[type]} [description]
  */
 nix-padding--top--xxs()
-  padding-top: nix.sizes.xxs
+  nix-padding("top", nix.sizes.xxs)
 
 
 /**
@@ -132,7 +130,7 @@ nix-padding--top--xxs()
  * @return {[type]} [description]
  */
 nix-padding--top--xxxs()
-  padding-top: nix.sizes.xxxs
+  nix-padding("top", nix.sizes.xxxs)
 
 
 /**
@@ -140,7 +138,7 @@ nix-padding--top--xxxs()
  * @return {[type]} [description]
  */
 nix-padding--top--0()
-  padding-top: 0
+  nix-padding("top", 0)
 
 
 /**
@@ -149,7 +147,7 @@ nix-padding--top--0()
  * @return {[type]}      [description]
  */
 nix-padding--right(size)
-  padding-right: size
+  nix-padding("right", size)
 
 
 /**
@@ -157,7 +155,7 @@ nix-padding--right(size)
  * @return {[type]} [description]
  */
 nix-padding--right--xxxl()
-  padding-right: nix.sizes.xxxl
+  nix-padding("right", nix.sizes.xxxl)
 
 
 /**
@@ -165,7 +163,7 @@ nix-padding--right--xxxl()
  * @return {[type]} [description]
  */
 nix-padding--right--xxl()
-  padding-right: nix.sizes.xxl
+  nix-padding("right", nix.sizes.xxl)
 
 
 /**
@@ -173,7 +171,7 @@ nix-padding--right--xxl()
  * @return {[type]} [description]
  */
 nix-padding--right--xl()
-  padding-right: nix.sizes.xl
+  nix-padding("right", nix.sizes.xl)
 
 
 /**
@@ -181,7 +179,7 @@ nix-padding--right--xl()
  * @return {[type]} [description]
  */
 nix-padding--right--lg()
-  padding-right: nix.sizes.lg
+  nix-padding("right", nix.sizes.lg)
 
 
 /**
@@ -189,7 +187,7 @@ nix-padding--right--lg()
  * @return {[type]} [description]
  */
 nix-padding--right--md()
-  padding-right: nix.sizes.md
+  nix-padding("right", nix.sizes.md)
 
 
 /**
@@ -197,7 +195,7 @@ nix-padding--right--md()
  * @return {[type]} [description]
  */
 nix-padding--right--sm()
-  padding-right: nix.sizes.sm
+  nix-padding("right", nix.sizes.sm)
 
 
 /**
@@ -205,7 +203,7 @@ nix-padding--right--sm()
  * @return {[type]} [description]
  */
 nix-padding--right--xs()
-  padding-right: nix.sizes.xs
+  nix-padding("right", nix.sizes.xs)
 
 
 /**
@@ -213,7 +211,7 @@ nix-padding--right--xs()
  * @return {[type]} [description]
  */
 nix-padding--right--xxs()
-  padding-right: nix.sizes.xxs
+  nix-padding("right", nix.sizes.xxs)
 
 
 /**
@@ -221,7 +219,7 @@ nix-padding--right--xxs()
  * @return {[type]} [description]
  */
 nix-padding--right--xxxs()
-  padding-right: nix.sizes.xxxs
+  nix-padding("right", nix.sizes.xxxs)
 
 
 /**
@@ -229,7 +227,7 @@ nix-padding--right--xxxs()
  * @return {[type]} [description]
  */
 nix-padding--right--0()
-  padding-right: 0
+  nix-padding("right", 0)
 
 
 /**
@@ -238,7 +236,7 @@ nix-padding--right--0()
  * @return {[type]}      [description]
  */
 nix-padding--bottom(size)
-  padding-bottom: size
+  nix-padding("bottom", size)
 
 
 /**
@@ -246,7 +244,7 @@ nix-padding--bottom(size)
  * @return {[type]} [description]
  */
 nix-padding--bottom--xxxl()
-  padding-bottom: nix.sizes.xxxl
+  nix-padding("bottom", nix.sizes.xxxl)
 
 
 /**
@@ -254,7 +252,7 @@ nix-padding--bottom--xxxl()
  * @return {[type]} [description]
  */
 nix-padding--bottom--xxl()
-  padding-bottom: nix.sizes.xxl
+  nix-padding("bottom", nix.sizes.xxl)
 
 
 /**
@@ -262,7 +260,7 @@ nix-padding--bottom--xxl()
  * @return {[type]} [description]
  */
 nix-padding--bottom--xl()
-  padding-bottom: nix.sizes.xl
+  nix-padding("bottom", nix.sizes.xl)
 
 
 /**
@@ -270,7 +268,7 @@ nix-padding--bottom--xl()
  * @return {[type]} [description]
  */
 nix-padding--bottom--lg()
-  padding-bottom: nix.sizes.lg
+  nix-padding("bottom", nix.sizes.lg)
 
 
 /**
@@ -278,7 +276,7 @@ nix-padding--bottom--lg()
  * @return {[type]} [description]
  */
 nix-padding--bottom--md()
-  padding-bottom: nix.sizes.md
+  nix-padding("bottom", nix.sizes.md)
 
 
 /**
@@ -286,7 +284,7 @@ nix-padding--bottom--md()
  * @return {[type]} [description]
  */
 nix-padding--bottom--sm()
-  padding-bottom: nix.sizes.sm
+  nix-padding("bottom", nix.sizes.sm)
 
 
 /**
@@ -294,7 +292,7 @@ nix-padding--bottom--sm()
  * @return {[type]} [description]
  */
 nix-padding--bottom--xs()
-  padding-bottom: nix.sizes.xs
+  nix-padding("bottom", nix.sizes.xs)
 
 
 /**
@@ -302,7 +300,7 @@ nix-padding--bottom--xs()
  * @return {[type]} [description]
  */
 nix-padding--bottom--xxs()
-  padding-bottom: nix.sizes.xxs
+  nix-padding("bottom", nix.sizes.xxs)
 
 
 /**
@@ -310,7 +308,7 @@ nix-padding--bottom--xxs()
  * @return {[type]} [description]
  */
 nix-padding--bottom--xxxs()
-  padding-bottom: nix.sizes.xxxs
+  nix-padding("bottom", nix.sizes.xxxs)
 
 
 /**
@@ -318,7 +316,7 @@ nix-padding--bottom--xxxs()
  * @return {[type]} [description]
  */
 nix-padding--bottom--0()
-  padding-bottom: 0
+  nix-padding("bottom", 0)
 
 
 /**
@@ -327,7 +325,7 @@ nix-padding--bottom--0()
  * @return {[type]}      [description]
  */
 nix-padding--left(size)
-  padding-left: size
+  nix-padding("left", size)
 
 
 /**
@@ -335,7 +333,7 @@ nix-padding--left(size)
  * @return {[type]} [description]
  */
 nix-padding--left--xxxl()
-  padding-left: nix.sizes.xxxl
+  nix-padding("left", nix.sizes.xxxl)
 
 
 /**
@@ -343,7 +341,7 @@ nix-padding--left--xxxl()
  * @return {[type]} [description]
  */
 nix-padding--left--xxl()
-  padding-left: nix.sizes.xxl
+  nix-padding("left", nix.sizes.xxl)
 
 
 /**
@@ -351,7 +349,7 @@ nix-padding--left--xxl()
  * @return {[type]} [description]
  */
 nix-padding--left--xl()
-  padding-left: nix.sizes.xl
+  nix-padding("left", nix.sizes.xl)
 
 
 /**
@@ -359,7 +357,7 @@ nix-padding--left--xl()
  * @return {[type]} [description]
  */
 nix-padding--left--lg()
-  padding-left: nix.sizes.lg
+  nix-padding("left", nix.sizes.lg)
 
 
 /**
@@ -367,7 +365,7 @@ nix-padding--left--lg()
  * @return {[type]} [description]
  */
 nix-padding--left--md()
-  padding-left: nix.sizes.md
+  nix-padding("left", nix.sizes.md)
 
 
 /**
@@ -375,7 +373,7 @@ nix-padding--left--md()
  * @return {[type]} [description]
  */
 nix-padding--left--sm()
-  padding-left: nix.sizes.sm
+  nix-padding("left", nix.sizes.sm)
 
 
 /**
@@ -383,7 +381,7 @@ nix-padding--left--sm()
  * @return {[type]} [description]
  */
 nix-padding--left--xs()
-  padding-left: nix.sizes.xs
+  nix-padding("left", nix.sizes.xs)
 
 
 /**
@@ -391,7 +389,7 @@ nix-padding--left--xs()
  * @return {[type]} [description]
  */
 nix-padding--left--xxs()
-  padding-left: nix.sizes.xxs
+  nix-padding("left", nix.sizes.xxs)
 
 
 /**
@@ -399,7 +397,7 @@ nix-padding--left--xxs()
  * @return {[type]} [description]
  */
 nix-padding--left--xxxs()
-  padding-left: nix.sizes.xxxs
+  nix-padding("left", nix.sizes.xxxs)
 
 
 /**
@@ -407,7 +405,7 @@ nix-padding--left--xxxs()
  * @return {[type]} [description]
  */
 nix-padding--left--0()
-  padding-left: 0
+  nix-padding("left", 0)
 
 
 /**
