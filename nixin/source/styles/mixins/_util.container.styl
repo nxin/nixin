@@ -7,77 +7,15 @@
  * [container description]
  * @return {[type]} [description]
  */
-nix-container()
+nix-container(size = nix.mq.lg)
   margin: auto
+  max-width: size
 
 
 /**
- * [xxxs description]
- * @return {[type]} [description]
+ * automatic mixins generation
+ * nix-container--{size}()
  */
-nix-container--xxxs()
-  max-width: nix.mq.xxxs
-
-
-/**
- * [xxs description]
- * @return {[type]} [description]
- */
-nix-container--xxs()
-  max-width: nix.mq.xxs
-
-
-/**
- * [xs description]
- * @return {[type]} [description]
- */
-nix-container--xs()
-  max-width: nix.mq.xs
-
-
-/**
- * [sm description]
- * @return {[type]} [description]
- */
-nix-container--sm()
-  max-width: nix.mq.sm
-
-
-/**
- * [md description]
- * @return {[type]} [description]
- */
-nix-container--md()
-  max-width: nix.mq.md
-
-
-/**
- * [lg description]
- * @return {[type]} [description]
- */
-nix-container--lg()
-  max-width: nix.mq.lg
-
-
-/**
- * [xl description]
- * @return {[type]} [description]
- */
-nix-container--xl()
-  max-width: nix.mq.xl
-
-
-/**
- * [xxl description]
- * @return {[type]} [description]
- */
-nix-container--xxl()
-  max-width: nix.mq.xxl
-
-
-/**
- * [xxxl description]
- * @return {[type]} [description]
- */
-nix-container--xxxl()
-  max-width: nix.mq.xxxl
+for key, value in nix.sizes
+  nix-container--{key}()
+    nix-container(value)

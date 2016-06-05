@@ -44,3 +44,236 @@ nix-column--equal() // @TODO doesn't work with jeet cols
     margin-bottom: -9999px
     padding-bottom: 9999px
     height: 100%
+
+
+/**
+ * [width description]
+ * @param  {[type]} number-of-columns [description]
+ * @return {[type]}                   [description]
+ */
+nix-column--width(number-of-columns)
+  width: number-of-columns / 100 * 100%
+
+
+/**
+ * [fractional description]
+ * @param  {[type]} numerator   [description]
+ * @param  {[type]} denominator [description]
+ * @return {[type]}             [description]
+ */
+nix-column--width--fractional(numerator, denominator)
+  width: numerator / denominator * 100%
+
+
+/**
+ * [offset description]
+ * @param {[type]} number-of-columns [description]
+ */
+nix-column--offset(number-of-columns)
+  margin-left: number-of-columns / 100 * 100%
+
+
+/**
+ * [fractional description]
+ * @param  {[type]} numerator   [description]
+ * @param  {[type]} denominator [description]
+ * @return {[type]}             [description]
+ */
+nix-column--offset--fractional(numerator, denominator)
+  margin-left: numerator / denominator * 100%
+
+
+nix-column--one()
+  nix-column--width(1)
+
+
+nix-column--two()
+  nix-column--width(2)
+
+
+nix-column--three()
+  nix-column--width(3)
+
+
+nix-column--four()
+  nix-column--width(4)
+
+
+nix-column--five()
+  nix-column--width(5)
+
+
+nix-column--six()
+  nix-column--width(6)
+
+
+nix-column--seven()
+  nix-column--width(7)
+
+
+nix-column--eight()
+  nix-column--width(8)
+
+
+nix-column--nine()
+  nix-column--width(9)
+
+
+nix-column--ten()
+  nix-column--width(10)
+
+
+nix-column--eleven()
+  nix-column--width(11)
+
+
+nix-column--twelve()
+  nix-column--width(12)
+
+
+nix-column--1-1()
+  nix-column--width--fractional(1, 1)
+
+
+nix-column--1-2()
+  nix-column--width--fractional(1, 2)
+
+
+nix-column--1-3()
+  nix-column--width--fractional(1, 3)
+
+
+nix-column--2-3()
+  nix-column--width--fractional(2, 3)
+
+
+nix-column--1-4()
+  nix-column--width--fractional(1, 4)
+
+
+nix-column--3-4()
+  nix-column--width--fractional(3, 4)
+
+
+nix-column--1-5()
+  nix-column--width--fractional(1, 5)
+
+
+nix-column--2-5()
+  nix-column--width--fractional(2, 5)
+
+
+nix-column--3-5()
+  nix-column--width--fractional(3, 5)
+
+
+nix-column--4-5()
+  nix-column--width--fractional(4, 5)
+
+
+nix-column--offest-1()
+  nix-column--offset(1)
+
+
+nix-column--offest-2()
+  nix-column--offset(2)
+
+
+nix-column--offest-3()
+  nix-column--offset(3)
+
+
+nix-column--offest-4()
+  nix-column--offset(4)
+
+
+nix-column--offest-5()
+  nix-column--offset(5)
+
+
+nix-column--offest-6()
+  nix-column--offset(6)
+
+
+nix-column--offest-7()
+  nix-column--offset(7)
+
+
+nix-column--offest-8()
+  nix-column--offset(8)
+
+
+nix-column--offest-9()
+  nix-column--offset(9)
+
+
+nix-column--offest-10()
+  nix-column--offset(10)
+
+
+nix-column--offest-11()
+  nix-column--offset(11)
+
+
+nix-column--offest-12()
+  nix-column--offset(12)
+
+
+nix-column--offest-1-2()
+  nix-column--offset--fractional(1, 2)
+
+
+nix-column--offest-1-3()
+  nix-column--offset--fractional(1, 3)
+
+
+nix-column--offest-2-3()
+  nix-column--offset--fractional(2, 3)
+
+
+nix-column--offest-1-4()
+  nix-column--offset(1, 4)
+
+
+nix-column--offest-3-4()
+  nix-column--offset(3, 4)
+
+
+nix-column--offest-1-5()
+  nix-column--offset(1, 5)
+
+
+nix-column--offest-2-5()
+  nix-column--offset(2, 5)
+
+
+nix-column--offest-3-5()
+  nix-column--offset(3, 5)
+
+
+nix-column--offest-4-5()
+  nix-column--offset(4, 5)
+
+
+nix-column--offest-7()
+  nix-column--offset(7)
+
+
+nix-column--offest-8()
+  nix-column--offset(8)
+
+
+nix-column--offest-9()
+  nix-column--offset(9)
+
+
+nix-column--offest-10()
+  nix-column--offset(10)
+
+
+nix-column--offest-11()
+  nix-column--offset(11)
+
+
+nix-column--offest-12()
+  nix-column--offset(12)
