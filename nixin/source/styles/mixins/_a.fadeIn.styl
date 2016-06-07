@@ -1,0 +1,120 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.fadeIn
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [fadeIn__keyframes description]
+ * @return {[type]} [description]
+ */
+a-fadein__keyframes()
+  @-webkit-keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+  @keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+
+/**
+ * [fadeIn description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+a-fadein()
+  animation-name: fadeIn
+
+
+/**
+ * [fadeInLeft__keyframes description]
+ * @return {[type]} [description]
+ */
+a-fadein--left__keyframes()
+  @-webkit-keyframes fadeInLeft
+    0%
+      opacity: 0
+      transform: translate3d(-15px, 0, 0)
+    100%
+      opacity: 1
+      transform: none
+
+  @keyframes fadeInLeft
+    0%
+      opacity: 0
+      transform: translate3d(-15px, 0, 0)
+    100%
+      opacity: 1
+      transform: none
+
+
+/**
+ * [fadeInLeft description]
+ * @return {[type]} [description]
+ */
+a-fadein--left()
+  animation-name: fadeInLeft
+
+
+/**
+ * [fadeInDown__keyframes description]
+ * @return {[type]} [description]
+ */
+a-fadein--down__keyframes()
+  @-webkit-keyframes fadeInDown
+    0%
+      opacity: 0
+      transform: translate3d(0, -10px, 0)
+    100%
+      opacity: 1
+      transform: none
+
+  @keyframes fadeInDown
+    0%
+      opacity: 0
+      transform: translate3d(0, -10px, 0)
+    100%
+      opacity: 1
+      transform: none
+
+
+/**
+ * [fadeInDown description]
+ * @return {[type]} [description]
+ */
+a-fadein--down()
+  animation-name: fadeInDown
+
+
+/**
+ * [fadeInUp__keyframes description]
+ * @return {[type]} [description]
+ */
+a-fadein--up__keyframes()
+  @-webkit-keyframes fadeInUp
+    0%
+      opacity: 0
+      transform: translate3d(0, 100%, 0)
+    100%
+      opacity: 1
+      transform: none
+
+  @keyframes fadeInUp
+    0%
+      opacity: 0
+      transform: translate3d(0, 100%, 0)
+    100%
+      opacity: 1
+      transform: none
+
+
+/**
+ * [fadeInUp description]
+ * @return {[type]} [description]
+ */
+a-fadein--up()
+  animation-name: fadeInUp

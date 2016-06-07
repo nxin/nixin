@@ -1,0 +1,123 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.toggle
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [toggle description]
+ * @return {[type]} [description]
+ */
+c-toggle()
+  u-padding--horizontal--sm()
+  display: block
+  width: 60px
+  height: 20px
+  margin: 0
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+
+/**
+ * [toggle__wrapper description]
+ * @return {[type]} [description]
+ */
+c-toggle__wrapper()
+  position: absolute
+  cursor: pointer
+  width: auto
+  min-height: 1em
+  padding-left: 50px
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-toggle__wrapper--right()
+  u-padding(null 50px null 0)
+
+
+/**
+ * [toggle__checkbox description]
+ * @return {[type]} [description]
+ */
+c-toggle__checkbox()
+  display: none
+
+
+/**
+ * [color description]
+ * @param  {[type]} track-color: nix.colors.default [description]
+ * @return {[type]}              [description]
+ */
+c-toggle__track--color(track-color = nix.skin.color.default)
+  background-color: track-color
+
+
+/**
+ * [toggle__track description]
+ * @return {[type]} [description]
+ */
+c-toggle__track()
+  c-toggle__track--color()
+  u-position(absolute 50% 0 0 0)
+  u-size(40px 40px)
+  margin-top: -5px
+  border-radius: 30em
+
+
+/**
+ * [unchecked description]
+ * @return {[type]} [description]
+ */
+c-toggle__track--unchecked()
+  background-color: nix.skin.color.gray--light
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-toggle__track--right()
+  left: auto
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+c-toggle__track--disabled()
+  background-color: nix.skin.color.gray--light
+  cursor: not-allowed
+
+
+/**
+ * [toggle__handle description]
+ * @return {[type]} [description]
+ */
+c-toggle__handle()
+  u-position(absolute -5px null null 0)
+  u-size(20px 20px)
+  background-color: nix.skin.color.white
+  border-radius: 30em
+  box-shadow: 0 1px 4px -1px nix.skin.color.black
+  transform: translate3d(100%, 0, 0)
+
+
+/**
+ * [unchecked description]
+ * @return {[type]} [description]
+ */
+c-toggle__handle--unchecked()
+  transform: translate3d(0, 0, 0)
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+c-toggle__handle--disabled()
+  background-color: nix.skin.color.gray--light
+  cursor: not-allowed

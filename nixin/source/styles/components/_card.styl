@@ -13,40 +13,40 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 
-[{selector}]
-  nix-card()
+[{selector}~="container"]
+  c-card()
 
-  + [{selector}]
-    nix-card--spacing()
+  + [{selector}~="container"]
+    c-card--spacing()
 
   [{prefix}paragraph]:first-child,
   [{prefix}paragraph]:last-child
-    nix-card__first-last-paragraph()
+    c-card__first-last-paragraph()
 
 
 [{selector}~="__content"]
-  nix-card__content()
+  c-card__content()
 
   &[{selector}~="--divider"]
-    nix-card__content--divider()
+    c-card__content--divider()
 
 
 [{selector}~="__item"]
-  nix-card__item()
+  c-card__item()
 
 
 [{selector}~="__item"]
   &[{selector}~="--divider"]
-    nix-card__item--divider()
+    c-card__item--divider()
 
 
 [{selector}~="--high"]
-  nix-card--high()
+  c-card--high()
 
 
 [{selector}~="--higher"]
-  nix-card--higher()
+  c-card--higher()
 
 
 [{selector}~="--highest"]
-  nix-card--highest()
+  c-card--highest()

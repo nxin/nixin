@@ -13,33 +13,33 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 
-[{selector}]
-  nix-alert()
+[{selector}~="container"]
+  c-alert()
 
 
-[{selector}~=\"{__content}\"]
-  nix-alert__content()
+[{selector}~="__content"]
+  c-alert__content()
 
 
-[{selector}~=\"{--primary}\"]
-  nix-alert__content--color(nix.skin.color.primary)
+[{selector}~="--primary"]
+  c-alert__content--color(nix.skin.color.primary)
 
 
-[{selector}~=\"{--secondary}\"]
-  nix-alert__content--color(nix.skin.color.secondary)
+[{selector}~="--secondary"]
+  c-alert__content--color(nix.skin.color.secondary)
 
 
-[{selector}~=\"{--success}\"]
-  nix-alert__content--color(nix.skin.color.success)
+[{selector}~="--success"]
+  c-alert__content--color(nix.skin.color.success)
 
 
-[{selector}~=\"{--warning}\"]
-  nix-alert__content--color(nix.skin.color.warning)
+[{selector}~="--warning"]
+  c-alert__content--color(nix.skin.color.warning)
 
 
-[{selector}~=\"{--error}\"]
-  nix-alert__content--color(nix.skin.color.error)
+[{selector}~="--error"]
+  c-alert__content--color(nix.skin.color.error)
 
 
-// [{selector}~=\"{--info}\"]
-//   nix-alert__content--color(nix.skin.color.info)
+// [{selector}~="--info"]
+//   c-alert__content--color(nix.skin.color.info)

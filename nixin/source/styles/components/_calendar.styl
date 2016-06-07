@@ -13,49 +13,49 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 
-[{selector}]
-  nix-calendar()
+[{selector}~="container"]
+  c-calendar()
 
 
-[{selector}~=\"__control\"]
-  nix-calendar__control()
+[{selector}~="__control"]
+  c-calendar__control()
 
 
-[{selector}~=\"__header\"]
-  nix-calendar__header()
+[{selector}~="__header"]
+  c-calendar__header()
 
 
-[{selector}~=\"__day\"]
-    nix-calendar__day()
+[{selector}~="__day"]
+  c-calendar__day()
 
 
-[{selector}~=\"__date\"]
-  nix-calendar__date()
+[{selector}~="__date"]
+  c-calendar__date()
 
   &:hover
-    nix-calendar__date--hover()
+    c-calendar__date--hover()
 
 
-  &[{selector}~=\"--in-month\"]
-    nix-calendar__date--in-month()
+  &[{selector}~="--in-month"]
+    c-calendar__date--in-month()
 
 
-  &[{selector}~=\"--today\"]
-    nix-calendar__date--today()
+  &[{selector}~="--today"]
+    c-calendar__date--today()
 
 
-  &[{selector}~=\"--selected\"],
-  &[{selector}~=\"--selected\"]:hover
-    nix-calendar__date--selected()
+  &[{selector}~="--selected"],
+  &[{selector}~="--selected"]:hover
+    c-calendar__date--selected()
 
 
-[{selector}~=\"--high\"]
-  nix-calendar--high()
+[{selector}~="--high"]
+  c-calendar--high()
 
 
-[{selector}~=\"--higher\"]
-  nix-calendar--higher()
+[{selector}~="--higher"]
+  c-calendar--higher()
 
 
-[{selector}~=\"--highest\"]
-  nix-calendar--highest()
+[{selector}~="--highest"]
+  c-calendar--highest()

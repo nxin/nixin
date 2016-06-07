@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.bubble
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [bubble__keyframes description]
+ * @return {[type]} [description]
+ */
+a-bubble__keyframes()
+  @keyframes bubble
+    from
+      transform: scale3d(0, 0, 0)
+      opacity: 0
+
+    50%
+      transform: scale3d(1.02, 1.02, 1.02)
+
+    80%
+      transform: scale3d(.95, .95, .95)
+
+    to
+      transform: scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [bubble description]
+ * @return {[type]} [description]
+ */
+a-bubble()
+  animation-name: bubble
+  animation-duration: nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+a-bubble--top()
+  transform-origin: center bottom
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+a-bubble--bottom()
+  transform-origin: center top
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+a-bubble--left()
+  transform-origin: right center
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+a-bubble--right()
+  transform-origin: left center
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+a-bubble--slow()
+  animation-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+a-bubble--fast()
+  animation-duration: nix.animations.duration-fast

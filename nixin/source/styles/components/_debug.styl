@@ -12,5 +12,24 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
-.debug
-  nix-debug()
+[{selector}~="container"]
+  c-debug()
+
+
+[{selector}~="__heading"]
+  c-debug__heading()
+
+
+[{selector}~="__close"]
+  c-debug__close()
+
+
+/* styles
+\* ------------------------------------------------------------------------ */
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+c-debug--create(selector)

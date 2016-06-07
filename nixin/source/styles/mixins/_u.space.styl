@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.space
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [space description]
+ * @param  {[type]} size =             nix.sizes.md [description]
+ * @return {[type]}      [description]
+ */
+u-space(size = nix.sizes.md)
+  u-reset--clearfix()
+  u-size--height(size)
+
+
+/**
+ * automatic mixins generation
+ * u-space--{size}()
+ */
+for key, value in nix.sizes
+  u-space--{key}()
+    u-space(value)
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+u-space--create(selector)
+  u-reset--clearfix()
+
+  for key, value in nix.sizes
+    [{selector}~=\"--{key}\"]
+      u-size--height(value)

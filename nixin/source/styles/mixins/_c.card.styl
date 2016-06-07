@@ -1,0 +1,107 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.card
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [card description]
+ * @return {[type]} [description]
+ */
+c-card()
+  e-list--unstyled()
+  display: block
+  box-shadow: nix.shadows.default
+  border-radius: nix.borders.radius
+  overflow: hidden
+
+
+/**
+ * [spacing description]
+ * @return {[type]} [description]
+ */
+c-card--spacing()
+  margin-top: nix.sizes.md
+
+
+/**
+ * [paragraph description]
+ * @return {[type]} [description]
+ */
+c-card__first-last-paragraph()
+  u-padding--all--0()
+
+
+/**
+ * [card__content description]
+ * @return {[type]} [description]
+ */
+c-card__content()
+  u-padding--all--sm()
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+c-card__content--divider()
+  background-color: nix.skin.color.gray--dark
+  color: nix.skin.color.white
+  font-weight: nix.text.font.weight--heavy
+
+
+/**
+ * [card__item description]
+ * @return {[type]} [description]
+ */
+c-card__item()
+  u-padding--all--sm()
+  &:not(:last-child)
+    border-bottom: 1px solid nix.skin.color.gray--light
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+c-card__item--divider()
+  c-card__content--divider()
+
+
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+c-card__item--hover()
+  cursor: pointer
+
+
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+c-card__item--active()
+  background-color: nix.skin.color.gray--light
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+c-card--high()
+  box-shadow: nix.shadows.high
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+c-card--higher()
+  box-shadow: nix.shadows.higher
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+c-card--highest()
+  box-shadow: nix.shadows.highest

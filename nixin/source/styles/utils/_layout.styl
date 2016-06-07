@@ -5,7 +5,6 @@
 /**
  * settings
  */
-prefix = nix.prefix.root + nix.prefix.util
 name = "layout"
 selector = prefix + name
 
@@ -44,6 +43,7 @@ selector = prefix + name
  * boxed: boxed content
  */
 [{selector}~="__wrap"]
+  u-reset--clearfix()
   position: relative
   overflow-x: hidden
   box-sizing: border-box
@@ -54,7 +54,6 @@ selector = prefix + name
   min-height: 1px
   max-width: 100%
   width: nix.grid.width
-  nix-reset--clearfix()
 
 
 /**
@@ -62,7 +61,7 @@ selector = prefix + name
  * boxed: boxed cols
  */
 [{selector}~="__row"]
+  u-reset--clearfix()
   min-height: 1px
   max-width: 100%
   width: auto
-  nix-reset--clearfix()

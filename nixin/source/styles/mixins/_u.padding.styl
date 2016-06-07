@@ -1,0 +1,79 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.padding
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [set description]
+ */
+u-padding--set()
+  if null in arguments
+    padding-top: arguments[0] if arguments[0] != null
+    padding-right: arguments[1] if arguments[1] != null
+    if length(arguments) == 2
+      padding-bottom: arguments[0] if arguments[0] != null
+      padding-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      padding-bottom: arguments[2] if arguments[2] != null
+      padding-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      padding-bottom: arguments[2] if arguments[2] != null
+      padding-left: arguments[3] if arguments[3] != null
+  else
+    padding: arguments
+
+
+/**
+ * [padding description]
+ * @param  {[type]} direction [description]
+ * @param  {[type]} size      [description]
+ * @return {[type]}           [description]
+ */
+u-padding(direction, size)
+  if direction == "all"
+    u-padding--set(size)
+
+  else if direction == "vertical"
+    u-padding--set(size null)
+
+  else if direction == "horizontal"
+    u-padding--set(null size)
+
+  else if direction == "top"
+    u-padding--set(size null null null)
+
+  else if direction == "right"
+    u-padding--set(null size null null)
+
+  else if direction == "bottom"
+    u-padding--set(null null size null)
+
+  else
+    u-padding--set(null null null size)
+
+
+
+/**
+ * automatic mixins generation
+ * u-padding--{direction}(size)
+ * u-padding--{direction}--{size}()
+ */
+for dk in nix.directions
+  u-padding--{dk}(size)
+    u-padding(dk, size)
+
+  for sk in nix.sizes
+    u-padding--{dk}--{sk}()
+      u-padding(dk, nix.sizes[sk])
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+u-padding--create(selector)
+  for dk, dv in nix.directions
+    for sk, sv in nix.sizes
+      [{selector}~=\"--{dv}--{sk}\"]
+        u-padding(dk, sv)

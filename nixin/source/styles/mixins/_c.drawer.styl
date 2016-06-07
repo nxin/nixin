@@ -1,0 +1,152 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.drawer
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [drawer description]
+ * @return {[type]} [description]
+ */
+c-drawer()
+  position: absolute
+  z-index: nix.z.over
+  overflow-x: hidden
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  background-color: nix.skin.color.white
+  color: nix.skin.color.black
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+c-drawer--bottom()
+  top: 100%
+  left: 0
+  margin-left: 10%
+  width: 80%
+  height: auto
+  transform: translate3d(0, 0, 0)
+
+
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+c-drawer--bottom--visible()
+  transform: translate3d(0, -99%, 0)
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+c-drawer--top()
+  bottom: 100%
+  left: 0
+  margin-left: 10%
+  width: 80%
+  height: auto
+  transform: translate3d(0, 0, 0)
+
+
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+c-drawer--top--visible()
+  transform: translate3d(0, 99%, 0)
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+c-drawer--left()
+  top: 0
+  left: 0
+  width: 260px
+  height: 100%
+  transform: translate3d(-100%, 0, 0)
+
+
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+c-drawer--left--visible()
+  transform: translate3d(-1%, 0, 0)
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-drawer--right()
+  top: 0;
+  left: 100%
+  width: 260px
+  height: 100%
+  transform: translate3d(0, 0, 0)
+
+
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+c-drawer--right--visible()
+  transform: translate3d(-99%, 0, 0)
+
+
+/**
+ * [drawer__heading description]
+ * @return {[type]} [description]
+ */
+c-drawer__heading()
+  u-padding--all--md()
+  u-margin--all--0()
+  text-align: center
+
+
+/**
+ * [drawer__menu description]
+ * @return {[type]} [description]
+ */
+c-drawer__menu()
+  u-border--radius(0)
+  u-margin--all--0()
+  u-border--horizontal--0()
+  display: block
+
+
+/**
+ * [drawer__body description]
+ * @return {[type]} [description]
+ */
+c-drawer__body()
+  u-padding--all--md()
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+c-drawer--high()
+  box-shadow: nix.shadows.solid--high
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+c-drawer--higher()
+  box-shadow: nix.shadows.solid--higher
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+c-drawer--highest()
+  box-shadow: nix.shadows.solid--highest

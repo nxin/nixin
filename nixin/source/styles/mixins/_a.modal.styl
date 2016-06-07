@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.modal
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [modal__keyframes description]
+ * @return {[type]} [description]
+ */
+a-modal__keyframes()
+  @keyframes modal
+    from
+      transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0)
+      opacity: 0
+
+    50%
+      transform: translate3d(-50%, -50%, 0) scale3d(1.02, 1.02, 1.02)
+
+    80%
+      transform: translate3d(-50%, -50%, 0) scale3d(.95, .95, .95)
+
+    to
+      transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [modal description]
+ * @return {[type]} [description]
+ */
+a-modal()
+  animation-name: modal
+  animation-duration: nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+a-modal--top()
+  transform-origin: center top
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+a-modal--bottom()
+  transform-origin: center bottom
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+a-modal--left()
+  transform-origin: left center
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+a-modal--right()
+  transform-origin: right center
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+a-modal--slow()
+  animation-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+a-modal--fast()
+  animation-duration: nix.animations.duration-fast

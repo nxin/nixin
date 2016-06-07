@@ -7,23 +7,9 @@
  */
 if nix.debug.tags
   if nix.debug.mq
-    .page
-      &.--boxed
-        padding: 15px
-        box-shadow: none
-
-    .debug
-      display: block
-      margin: 0
-      padding: 0 20px
-      width: 100%
-      color: white
-      text-align: center
-      white-space: pre
-      font-size: 2.6rem
-      &.active
-        display: block
-
+    [nix-u-layout~="--boxed"]
+      padding: 15px
+      box-shadow: none
 
     +above(nix.mq.xxs)
       body, .debug

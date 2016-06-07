@@ -12,3 +12,12 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}~="container"]
+  a-overlay()
+
+  &[{selector}~="--slow"]
+    a-overlay--slow()
+
+  &[{selector}~="--fast"]
+    a-overlay--fast()

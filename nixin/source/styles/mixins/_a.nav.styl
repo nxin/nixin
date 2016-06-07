@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.nav
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [nav__item description]
+ * @return {[type]} [description]
+ */
+a-nav__item()
+  transition: background-color
+  transition-timing-function: nix.animations.easing
+  transition-duration: nix.animations.duration
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+a-nav__item--slow()
+  transition-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+a-nav__item--fast()
+  transition-duration: nix.animations.duration-fast

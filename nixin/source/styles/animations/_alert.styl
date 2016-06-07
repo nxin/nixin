@@ -12,3 +12,53 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}~="container"]
+  [c-alert~="__alert"]
+    a-alert()
+
+  &[{selector}~="--top"]
+    [c-alert~="__alert"]
+      a-alert--top()
+
+  &[{selector}~="--bottom"]
+    [c-alert~="__alert"]
+      a-alert--bottom()
+
+  &[{selector}~="--left"]
+    [c-alert~="__alert"]
+      a-alert--left()
+
+  &[{selector}~="--right"]
+    [c-alert~="__alert"]
+      a-alert--right()
+
+  &[{selector}~="--slow"]
+    [c-alert~="__alert"]
+      a-alert--slow()
+
+  &[{selector}~="--fast"]
+    [c-alert~="__alert"]
+      a-alert--fast()
+
+
+[{selector}~="__alert"]
+  a-alert()
+
+  &[{selector}~="--top"]
+    a-alert--top()
+
+  &[{selector}~="--bottom"]
+    a-alert--bottom()
+
+  &[{selector}~="--left"]
+    a-alert--left()
+
+  &[{selector}~="--right"]
+    a-alert--right()
+
+  &[{selector}~="--slow"]
+    a-alert--slow()
+
+  &[{selector}~="--fast"]
+    a-alert--fast()

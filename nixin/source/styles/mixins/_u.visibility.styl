@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.visibility
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [show description]
+ * @return {[type]} [description]
+ */
+u-visibility--show()
+  display: block
+
+
+/**
+ * [hide description]
+ * @return {[type]} [description]
+ */
+u-visibility--hide()
+  display: none
+
+
+/**
+ * [visible description]
+ * @return {[type]} [description]
+ */
+u-visibility--visible()
+  visibility: visible
+
+
+/**
+ * [invisible description]
+ * @return {[type]} [description]
+ */
+u-visibility--invisible()
+  visibility: hidden
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @param  {[type]} name     [description]
+ * @return {[type]}          [description]
+ */
+u-visibility--create(selector, name)
+  property = null
+  value = null
+
+  if (name == "hide")
+    u-visibility--hide()
+
+  else if (name == "show")
+    u-visibility--show()
+
+  else if (name == "visible")
+    u-visibility--visible()
+
+  else if (name == "invisible")
+    u-visibility--invisible()
+
+  for breakpoint in nix.mq
+    +above(nix.mq[breakpoint])
+      [{selector}~=\"--{name}@{breakpoint}\"]
+        u-visibility--{name}()

@@ -13,29 +13,29 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 
-[{selector}]
-  nix-badge()
+[{selector}~="container"]
+  c-badge()
 
 
-[{selector}~=\"--primary\"]
-  nix-badge--color(nix.skin.color.primary)
+[{selector}~="--primary"]
+  c-badge--color(nix.skin.color.primary)
 
 
-[{selector}~=\"--secondary\"]
-  nix-badge--color(nix.skin.color.secondary)
+[{selector}~="--secondary"]
+  c-badge--color(nix.skin.color.secondary)
 
 
-[{selector}~=\"--success\"]
-  nix-badge--color(nix.skin.color.success)
+[{selector}~="--success"]
+  c-badge--color(nix.skin.color.success)
 
 
-[{selector}~=\"--warning\"]
-  nix-badge--color(nix.skin.color.warning)
+[{selector}~="--warning"]
+  c-badge--color(nix.skin.color.warning)
 
 
-[{selector}~=\"--error\"]
-  nix-badge--color(nix.skin.color.error)
+[{selector}~="--error"]
+  c-badge--color(nix.skin.color.error)
 
 
-// [{selector}~=\"--info\"]
-//   nix-badge--color(nix.skin.color.info)
+// [{selector}~="--info"]
+//   c-badge--color(nix.skin.color.info)

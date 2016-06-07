@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.global
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [animation description]
+ * @return {[type]} [description]
+ */
+a-global()
+  if nix.animations != ("off" || false)
+    body
+      animation-duration: 4s
+      animation-fill-mode: both
+
+    a,
+    a:before,
+    a:after
+      transition(all .1s ease-in)
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @param  {[type]} opt      [description]
+ * @return {[type]}          [description]
+ */
+a-global--create(selector, opt)
+  [{selector}~=\"{opt}\"]
+    a-{opt}()
+    a-{opt}__keyframes()

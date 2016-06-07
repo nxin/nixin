@@ -6,7 +6,6 @@
 /**
  * settings
  */
-prefix = nix.prefix.root + nix.prefix.util
 name = "grid"
 selector = prefix + name
 
@@ -14,89 +13,89 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 [{selector}~="container"]
-  nix-grid()
+  u-grid()
 
 
   &[{selector}~="--wrap"]
-    nix-grid--wrap()
+    u-grid--wrap()
 
 
   &[{selector}~="--top"]
-    nix-grid--top()
+    u-grid--top()
 
 
   &[{selector}~="--center"]
-    nix-grid--center()
+    u-grid--center()
 
 
   &[{selector}~="--bottom"]
-    nix-grid--bottom()
+    u-grid--bottom()
 
 
   &[{selector}~="--no-gutter"]
     [{selector}~="__cell"]
-      nix-grid__cell--no-gutter()
+      u-grid__cell--no-gutter()
 
 
   +above(nix.mq.xxs)
     &[{selector}~="--fit@xs"] > [{selector}~="__cell"]:not("--width")
-      nix-grid__cell--fit()
+      u-grid__cell--fit()
 
     &[{selector}~="--full@xs"]
-      nix-grid--full()
+      u-grid--full()
 
       > [{selector}~="__cell"]
-        nix-grid__cell--full()
+        u-grid__cell--full()
 
 
   +above(nix.mq.sm)
     &[{selector}~="--fit@sm"] > [{selector}~="__cell"]:not("--width")
-      nix-grid__cell--fit()
+      u-grid__cell--fit()
 
     &[{selector}~="--full@sm"]
-      nix-grid--full()
+      u-grid--full()
 
       > [{selector}~="__cell"]
-        nix-grid__cell--full()
+        u-grid__cell--full()
 
 
   +above(nix.mq.md)
     &[{selector}~="--fit@md"] > [{selector}~="__cell"]:not("--width")
-      nix-grid__cell--fit()
+      u-grid__cell--fit()
 
     &[{selector}~="--full@md"]
-      nix-grid--full()
+      u-grid--full()
 
       > [{selector}~="__cell"]
-        nix-grid__cell--full()
+        u-grid__cell--full()
 
 
   +above(nix.mq.lg)
     &[{selector}~="--fit@lg"] > [{selector}~="__cell"]:not("--width")
-      nix-grid__cell--fit()
+      u-grid__cell--fit()
 
     &[{selector}~="--full@lg"]
-      nix-grid--full()
+      u-grid--full()
 
       > [{selector}~="__cell"]
-        nix-grid__cell--full()
+        u-grid__cell--full()
 
 
   [{selector}~="__cell"]
-    nix-grid__cell()
+    u-grid__cell()
     margin-bottom: 0
 
     &[{selector}~="--top"]
-      nix-grid__cell--top()
+      u-grid__cell--top()
 
     &[{selector}~="--center"]
-      nix-grid__cell--center()
+      u-grid__cell--center()
 
     &[{selector}~="--bottom"]
-      nix-grid__cell--bottom()
+      u-grid__cell--bottom()
 
       &[{selector}~="--gutter"]
-        nix-grid__cell--no-gutter()
+        u-grid__cell--no-gutter()
 
 
-    nix-grid__cell--create(selector)
+    u-grid__cell--create(selector)

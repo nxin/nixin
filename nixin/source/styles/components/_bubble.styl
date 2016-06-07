@@ -13,21 +13,21 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 
-[{selector}]
-  nix-bubble()
+[{selector}~="container"]
+  c-bubble()
 
 
-[{selector}~=\"__arrow\"]
-  nix-bubble__arrow()
+[{selector}~="__arrow"]
+  c-bubble__arrow()
 
-  &[{selector}~=\"--top\"]
-    nix-bubble__arrow--top()
+  &[{selector}~="--top"]
+    c-bubble__arrow--top()
 
-  &[{selector}~=\"--right\"]
-    nix-bubble__arrow--right()
+  &[{selector}~="--right"]
+    c-bubble__arrow--right()
 
-  &[{selector}~=\"--bottom\"]
-    nix-bubble__arrow--bottom()
+  &[{selector}~="--bottom"]
+    c-bubble__arrow--bottom()
 
-  &[{selector}~=\"--left\"]
-    nix-bubble__arrow--left()
+  &[{selector}~="--left"]
+    c-bubble__arrow--left()

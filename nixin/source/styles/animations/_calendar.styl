@@ -12,3 +12,24 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}~="container"]
+  a-calendar()
+
+  &[{selector}~="--top"]
+    a-calendar--top()
+
+  &[{selector}~="--bottom"]
+    a-calendar--bottom()
+
+  &[{selector}~="--left"]
+    a-calendar--left()
+
+  &[{selector}~="--right"]
+    a-calendar--right()
+
+  &[{selector}~="--slow"]
+    a-calendar--slow()
+
+  &[{selector}~="--fast"]
+    a-calendar--fast()

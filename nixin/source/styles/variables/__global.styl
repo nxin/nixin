@@ -15,9 +15,9 @@ nix = {}
  * @type {Object}
  */
 nix.debug = {
-  "tags": false
-  "mq": true
-  "depth": false
+  "tags"         :  false
+  "mq"           :  true
+  "depth"        :  false
 }
 
 
@@ -26,8 +26,8 @@ nix.debug = {
  * @type {Object}
  */
 nix.legacy = {
-  "ie": false
-  "supported": 10
+  "ie"           :  false
+  "supported"    :  10
 }
 
 
@@ -36,24 +36,23 @@ nix.legacy = {
  * @type {Object}
  */
 nix.prefix = {
-  "root": "nix-"
-  "animation": "a-"
-  "element": "e-"
-  "component": "c-"
-  "module": "m-"
-  "page": "page"
-  "util": "u-"
-  "hack": "hack"
-  "skin": "skin"
-  "typography": "typography"
-  "ui": "ui-"
-  "state": "is-"
-  "scope": "has-"
-  "reset": "no-"
-  "mixin": "nix-"
-  "override": "\!-"
-  "javascript": "js-"
-  "test": "test-"
+  "root"         :  "nix-"
+  "animation"    :  "a-"
+  "element"      :  "e-"
+  "component"    :  "c-"
+  "module"       :  "m-"
+  "page"         :  "p-"
+  "util"         :  "u-"
+  "hack"         :  "h-"
+  "skin"         :  "s-"
+  "typography"   :  "t-"
+  "gui"          :  "g-"
+  "debug"        :  "d-"
+  "state"        :  "is-"
+  "scope"        :  "has-"
+  "reset"        :  "no-"
+  "override"     :  "\!-"
+  "javascript"   :  "js-"
 }
 
 
@@ -62,10 +61,10 @@ nix.prefix = {
  * @type {Object}
  */
 nix.vendor = {
-  "firefox": -moz
-  "webkit": -webkit
-  "opera": -o
-  "ie": -ms
+  "firefox"      :  -moz
+  "webkit"       :  -webkit
+  "opera"        :  -o
+  "ie"           :  -ms
 }
 
 
@@ -74,13 +73,13 @@ nix.vendor = {
  * @type {Object}
  */
 nix.mq = {
-  "xxs": 20em // XXSmall (portrait phones 320px)
-  "xs": 34em  // XSmall (portrait phones 544px)
-  "sm": 48em  // Small (landscape phones 768px)
-  "md": 62em  // Medium (tablet 992px)
-  "lg": 80em  // Large (desktop 1280px)
-  "xl": 116em // XLarge (desktop big 1920px)
-  "xxl": 160em // XXLarge (desktop super 2560px)
+  "xxs"          :  20em // XXSmall (portrait phones 320px)
+  "xs"           :  34em  // XSmall (portrait phones 544px)
+  "sm"           :  48em  // Small (landscape phones 768px)
+  "md"           :  62em  // Medium (tablet 992px)
+  "lg"           :  80em  // Large (desktop 1280px)
+  "xl"           :  116em // XLarge (desktop big 1920px)
+  "xxl"          :  160em // XXLarge (desktop super 2560px)
 }
 
 
@@ -89,12 +88,12 @@ nix.mq = {
  * @type {Object}
  */
 nix.grid = {
-  "cols": 100
-  "interval": 5
-  "gutter": .9375rem
-  "width": 100%
-  "min-width": nix.mq.xxs //0.3rem
-  "max-width": nix.mq.lg  //80rem
+  "cols"         :  100
+  "interval"     :  5
+  "gutter"       :  .9375rem
+  "width"        :  100%
+  "min-width"    :  nix.mq.xxs //0.3rem
+  "max-width"    :  nix.mq.lg  //80rem
 }
 
 
@@ -103,12 +102,12 @@ nix.grid = {
  * @type {Object}
  */
 nix.z = {
-  "under": -1
-  "base": 0
-  "bottom": 1
-  "middle": 10
-  "top": 100
-  "over": 9999
+  "under"        :  -1
+  "base"         :  0
+  "bottom"       :  1
+  "middle"       :  10
+  "top"          :  100
+  "over"         :  9999
 }
 
 
@@ -117,13 +116,13 @@ nix.z = {
  * @type {Object}
  */
 nix.directions = {
-  "all": "all"
-  "vertical": "vertical"
-  "horizontal": "horizontal"
-  "top": "top"
-  "right": "right"
-  "bottom": "bottom"
-  "left": "left"
+  "all"         :  "all"
+  "vertical"    :  "vertical"
+  "horizontal"  :  "horizontal"
+  "top"         :  "top"
+  "right"       :  "right"
+  "bottom"      :  "bottom"
+  "left"        :  "left"
 }
 
 
@@ -132,16 +131,16 @@ nix.directions = {
  * @type {Object}
  */
 nix.sizes = {
-  "0": 0
-  "xxxs": .1em
-  "xxs": .3em
-  "xs": .5em
-  "sm": 1em
-  "md": 1.5em
-  "lg": 2em
-  "xl": 3em
-  "xxl": 4em
-  "xxxl": 6em
+  "0"                : 0
+  "xxxs"             : .1em
+  "xxs"              : .3em
+  "xs"               : .5em
+  "sm"               : 1em
+  "md"               : 1.5em
+  "lg"               : 2em
+  "xl"               : 3em
+  "xxl"              : 4em
+  "xxxl"             : 6em
 }
 
 
@@ -150,7 +149,7 @@ nix.sizes = {
  * @type {Object}
  */
 nix.dist = {
-  "path": "/_dist"
+  "path"             : "/_dist"
 }
 
 
@@ -159,7 +158,7 @@ nix.dist = {
  * @type {Object}
  */
 nix.images = {
-  "path": "/_dist/images"
+  "path"             : "/_dist/images"
 }
 
 
@@ -168,7 +167,7 @@ nix.images = {
  * @type {Object}
  */
 nix.fonts = {
-  "path": "/_dist/fonts"
+  "path"             : "/_dist/fonts"
 }
 
 
@@ -177,13 +176,13 @@ nix.fonts = {
  * @type {Object}
  */
 nix.media = {
-  "path": "/dist/media/"
+  "path"            : "/dist/media/"
   "sizes": {
-    "1/1": (1 / 1)
-    "3/4": (4 / 3)
-    "9/16": (16 / 9)
-    "10/16": (16 / 10)
-    "9/21": (21 / 9)
+    "1/1"           : (1 / 1)
+    "3/4"           : (4 / 3)
+    "9/16"          : (16 / 9)
+    "10/16"         : (16 / 10)
+    "9/21"          : (21 / 9)
   }
 }
 
@@ -193,11 +192,11 @@ nix.media = {
  * @type {Boolean}
  */
 nix.animations = {
-  "state": "on"
-  "easing": "ease"
-  "duration-slow": .9s
-  "duration": .5s
-  "duration-fast": .2s
+  "state"          : "on"
+  "easing"         : "ease"
+  "duration-slow"  : .9s
+  "duration"       : .5s
+  "duration-fast"  : .2s
 }
 
 
@@ -206,22 +205,22 @@ nix.animations = {
  * @type {Object}
  */
 nix.reset = {
-  "border": none
-  "background": none
-  "border-radius": 0
-  "padding": 0
-  "margin": 0
-  "width": auto
-  "height": auto
-  "z-index": 0
-  "font-size": initial
-  "font-weight": normal
-  "text-shadow": none
-  "box-shadow": none
-  "visibility": visible
-  "display": inline-block
-  "position": static
-  "float": none
+  "border"         : none
+  "background"     : none
+  "border-radius"  : 0
+  "padding"        : 0
+  "margin"         : 0
+  "width"          : auto
+  "height"         : auto
+  "z-index"        : 0
+  "font-size"      : initial
+  "font-weight"    : normal
+  "text-shadow"    : none
+  "box-shadow"     : none
+  "visibility"     : visible
+  "display"        : inline-block
+  "position"       : static
+  "float"          : none
 }
 
 
@@ -230,7 +229,7 @@ nix.reset = {
  * @type {Object}
  */
 nix.borders = {
-  "radius": 4px
-  "rounded": 30em
-  "circle": 50%
+  "radius"         : 4px
+  "rounded"        : 30em
+  "circle"         : 50%
 }

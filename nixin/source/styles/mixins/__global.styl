@@ -9,7 +9,7 @@
  * @param  {[type]} expression [description]
  * @return {[type]}            [description]
  */
-nix-getSize(property, expression)
+__getSize(property, expression)
   property: -webkit-calc(expression)
   property: calc(expression)
 
@@ -20,7 +20,7 @@ nix-getSize(property, expression)
  * @param  {[type]} with =             "" [description]
  * @return {[type]}      [description]
  */
-nix-replaceInSelector(what, with = "")
+__replaceInSelector(what, with = "")
   /{replace(what, with , selector())}
     {block}
 
@@ -30,7 +30,7 @@ nix-replaceInSelector(what, with = "")
  * @param  {[type]} depth =             1 [description]
  * @return {[type]}       [description]
  */
-nix-getParent(depth = 1)
+__getParent(depth = 1)
   selectors = split(",", selector())
   for selector, i in selectors
     selector = split(" ", selector)
@@ -44,7 +44,7 @@ nix-getParent(depth = 1)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcPercentage(n)
+__calcPercentage(n)
   (n * 100) %
 
 
@@ -53,7 +53,7 @@ nix-calcPercentage(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcHalf(n)
+__calcHalf(n)
   return round(n / 2)
 
 
@@ -62,7 +62,7 @@ nix-calcHalf(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcQuarter(n)
+__calcQuarter(n)
   return round(n / 4)
 
 
@@ -71,7 +71,7 @@ nix-calcQuarter(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcDouble(n)
+__calcDouble(n)
   return round(n * 2)
 
 
@@ -80,5 +80,5 @@ nix-calcDouble(n)
  * @param  {[type]} n [description]
  * @return {[type]}   [description]
  */
-nix-calcQuadruple(n)
+__calcQuadruple(n)
   return round(n * 4)

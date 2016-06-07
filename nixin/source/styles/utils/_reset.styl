@@ -6,7 +6,6 @@
 /**
  * settings
  */
-prefix = nix.prefix.root + nix.prefix.util
 name = "reset"
 selector = prefix + name
 
@@ -14,11 +13,11 @@ selector = prefix + name
 /* styles
 \* ------------------------------------------------------------------------ */
 [{selector}~="--clear"]
-  nix-reset--clear()
+  u-reset--clear()
 
 
 [{selector}~="--clearfix"]
-  nix-reset--clearfix()
+  u-reset--clearfix()
 
 
-nix-reset--create(selector)
+u-reset--create(selector)

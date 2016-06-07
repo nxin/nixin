@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.tree
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [tree__keyframes description]
+ * @return {[type]} [description]
+ */
+a-tree__keyframes()
+  @keyframes tree
+    from
+      opacity: 0
+
+    to
+      opacity: 1
+
+
+/**
+ * [tree description]
+ * @return {[type]} [description]
+ */
+a-tree()
+  animation-name: tree
+  animation-duration: nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: nix.animations.easing
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+a-tree--slow()
+  animation-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+a-tree--fast()
+  animation-duration: nix.animations.duration-fast
+
+
+/**
+ * [tree__item description]
+ * @return {[type]} [description]
+ */
+a-tree__item()
+  transition-timing-function: nix.animations.easing
+  transition-duration: nix.animations.duration
+  transition-property: color, transform
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+a-tree__item--slow()
+  transition-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+a-tree__item--fast()
+  transition-duration: nix.animations.duration-fast

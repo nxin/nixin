@@ -1,0 +1,135 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.nav
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [nav description]
+ * @return {[type]} [description]
+ */
+c-nav()
+  e-list()
+  e-list--unstyled()
+  e-list--inline()
+  width: 100%
+  color: nix.skin.color.white
+  background-color: nix.skin.color.black
+  z-index: nix.z.top
+
+
+/**
+ * [nav__item description]
+ * @param  {[type]} bg-color: nix.colors.primary [description]
+ * @param  {[type]} fg-color: nix.colors.white   [description]
+ * @return {[type]}           [description]
+ */
+c-nav__item(bg-color = nix.colors.primary, fg-color = nix.colors.white)
+  u-padding--all--md()
+  color: fg-color
+
+  &:not(:disabled)
+    &:hover
+      background-color: bg-color
+
+    &:focus
+      box-shadow: inset 0 0 0 2px lighten(nix.skin.color.secondary, 20%)
+
+    &:active
+      background-color: darken(bg-color, color-tint)
+
+
+/**
+ * [inline description]
+ * @return {[type]} [description]
+ */
+c-nav--inline()
+  e-list--inline()
+
+
+/**
+ * [item description]
+ * @return {[type]} [description]
+ */
+c-nav-inline-item()
+  e-list-inline-item()
+
+
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+c-nav__item--hover()
+  background-color: darken(nix.skin.color.primary, 20%)
+  cursor: pointer
+
+
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+c-nav__item--active()
+  background-color: darken(nix.skin.color.primary, 30%)
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-nav__item--right()
+  float: right
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+c-nav--top()
+  u-position(fixed 0 0 auto 0)
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+c-nav--bottom()
+  u-position(fixed auto 0 0 0)
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+c-nav--left()
+  u-position(fixed 0 auto 0 0)
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-nav--right()
+  u-position(fixed 0 0 0 auto)
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+c-nav--high()
+  box-shadow: nix.shadows.solid--high
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+c-nav--higher()
+  box-shadow: nix.shadows.solid--higher
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+c-nav--highest()
+  box-shadow: nix.shadows.solid--highest

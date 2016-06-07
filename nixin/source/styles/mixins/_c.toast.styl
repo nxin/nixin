@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.toast
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [toasts description]
+ * @return {[type]} [description]
+ */
+c-toast()
+  display: block
+  position: absolute
+  width: 250px
+  max-height: 100%
+  overflow-y: auto
+  background-color: transparent
+  z-index: nix.z.top
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+c-toast--top-left()
+  top: 0
+  left: 0
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-toast--top-right()
+  top: 0
+  right: 0
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+c-toast--bottom-left()
+  bottom: 0
+  left: 0
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+c-toast--bottom-right()
+  bottom: 0
+  right: 0
+
+
+/**
+ * [color description]
+ * @param  {[type]} bg-color: nix.colors.default [description]
+ * @param  {[type]} fg-color: nix.colors.white   [description]
+ * @return {[type]}           [description]
+ */
+c-toast--color(bg-color = nix.skin.color.default, fg-color = nix.skin.color.white)
+  background-color: bg-color
+  color: fg-color
+
+
+/**
+ * [toast description]
+ * @return {[type]} [description]
+ */
+c-toast()
+  c-toast--color()
+  u-padding--all--md()
+  u-margin--all--sm()
+  display: block
+  position: relative
+  border-radius: nix.borders.radius
+  cursor: pointer

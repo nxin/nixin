@@ -12,3 +12,24 @@ selector = prefix + name
 
 /* styles
 \* ------------------------------------------------------------------------ */
+
+[{selector}~="container"]
+  a-bubble()
+
+  &[{selector}~="--top"]
+    a-bubble--top()
+
+  &[{selector}~="--bottom"]
+    a-bubble--bottom()
+
+  &[{selector}~="--left"]
+    a-bubble--left()
+
+  &[{selector}~="--right"]
+    a-bubble--right()
+
+  &[{selector}~="--slow"]
+    a-bubble--slow()
+
+  &[{selector}~="--fast"]
+    a-bubble--fast()

@@ -1,0 +1,16 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.shadow
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [shadow description]
+ * @param  {[type]} offset-x [description]
+ * @param  {[type]} args...  [description]
+ * @return {[type]}          [description]
+ */
+u-shadow(offset-x, args...)
+  got-offset-x: offset-x
+  -webkit-box-shadow: offset-x args
+  -moz-box-shadow: offset-x args
+  box-shadow: offset-x args

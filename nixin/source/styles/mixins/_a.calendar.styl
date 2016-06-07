@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.animation.calendar
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [calendar__keyframes description]
+ * @return {[type]} [description]
+ */
+a-calendar__keyframes()
+  @keyframes calendar
+    from
+      transform: scale3d(0, 0, 0)
+      opacity: 0
+
+    to
+      transform: scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [calendar description]
+ * @return {[type]} [description]
+ */
+a-calendar()
+  animation-name: calendar
+  animation-duration: nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+a-calendar--top()
+  transform-origin: top
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+a-calendar--bottom()
+  transform-origin: bottom
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+a-calendar--left()
+  transform-origin: left
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+a-calendar--right()
+  transform-origin: right
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+a-calendar--slow()
+  animation-duration: nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+a-calendar--fast()
+  animation-duration: nix.animations.duration-fast

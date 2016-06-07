@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.container
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [container description]
+ * @return {[type]} [description]
+ */
+u-container(size = nix.mq.lg)
+  margin: auto
+  max-width: size
+
+
+/**
+ * automatic mixins generation
+ * u-container--{size}()
+ */
+for key, value in nix.sizes
+  u-container--{key}()
+    u-container(value)

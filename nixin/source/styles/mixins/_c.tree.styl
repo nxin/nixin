@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.tree
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [tree description]
+ * @return {[type]} [description]
+ */
+c-tree()
+  u-padding--all--0()
+  display: block
+  margin: 0
+  list-style: none
+
+
+/**
+ * [nested description]
+ * @return {[type]} [description]
+ */
+c-tree--nested()
+  padding: 0 0 0 nix.sizes.md
+
+
+/**
+ * [tree__item description]
+ * @return {[type]} [description]
+ */
+c-tree__item()
+  u-padding--all--0()
+
+  &:before
+    content: "–"
+    display: inline-block
+    padding: 0 nix.sizes.sm 0 0
+    color: nix.skin.color.gray--light
+    transform-origin: 30% 50%
+
+
+/**
+ * [expandable description]
+ * @return {[type]} [description]
+ */
+c-tree__item--expandable()
+  &:before
+    color: nix.skin.color.gray
+    content: "\276F"
+
+
+/**
+ * [expanded description]
+ * @return {[type]} [description]
+ */
+c-tree__item--expanded()
+  &:before
+    color: nix.skin.color.gray--light
+    content: "\276F"
+    transform: rotate(90deg)
