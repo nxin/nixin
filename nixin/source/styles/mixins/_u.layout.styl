@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.layout
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [layout description]
+ * @return {[type]} [description]
+ */
+u-layout()
+  position: relative
+  margin: auto
+  min-height: 1px
+
+
+/**
+ * [boxed description]
+ * @return {[type]} [description]
+ */
+u-layout--boxed()
+  max-width: nix.grid.max-width
+
+
+/**
+ * [unboxed__wrap description]
+ * @return {[type]} [description]
+ */
+u-layout--unboxed__wrap()
+  max-width: nix.grid.max-width
+
+
+/**
+ * [layout__wrap description]
+ * @return {[type]} [description]
+ */
+u-layout__wrap()
+  u-reset--clearfix()
+  u-padding--horizontal(nix.grid.gutter)
+  position: relative
+  overflow-x: hidden
+  box-sizing: border-box
+  margin: auto
+  min-width: nix.grid.min-width
+  min-height: 1px
+  max-width: 100%
+  width: nix.grid.width
+
+
+/**
+ * [layout__row description]
+ * @return {[type]} [description]
+ */
+u-layout__row()
+  u-reset--clearfix()
+  min-height: 1px
+  max-width: 100%
+  width: auto

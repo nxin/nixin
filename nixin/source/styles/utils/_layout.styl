@@ -16,10 +16,8 @@ selector = prefix + name
  * page
  * a. default: 100% content
  */
-[{selector}~="page"]
-  position: relative
-  margin: auto
-  min-height: 1px
+[{selector}~="container"]
+  u-layout()
 
 
 /**
@@ -27,7 +25,7 @@ selector = prefix + name
  * b. --unboxed: 100% with boxed content
  */
 [{selector}~="--unboxed"] [{selector}~="__wrap"]
-  max-width: nix.grid.max-width
+  u-layout--unboxed__wrap()
 
 
 /**
@@ -35,7 +33,7 @@ selector = prefix + name
  * c. --boxed: totally boxed content
  */
 [{selector}~="--boxed"]
-  max-width: nix.grid.max-width
+  u-layout--boxed()
 
 
 /**
@@ -43,17 +41,7 @@ selector = prefix + name
  * boxed: boxed content
  */
 [{selector}~="__wrap"]
-  u-reset--clearfix()
-  position: relative
-  overflow-x: hidden
-  box-sizing: border-box
-  margin: auto
-  padding-right: nix.grid.gutter
-  padding-left: nix.grid.gutter
-  min-width: nix.grid.min-width
-  min-height: 1px
-  max-width: 100%
-  width: nix.grid.width
+  u-layout__wrap()
 
 
 /**
@@ -61,7 +49,4 @@ selector = prefix + name
  * boxed: boxed cols
  */
 [{selector}~="__row"]
-  u-reset--clearfix()
-  min-height: 1px
-  max-width: 100%
-  width: auto
+  u-layout__row()
