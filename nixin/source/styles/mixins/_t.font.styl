@@ -58,23 +58,6 @@ t-font--size(size)
 
 
 /**
- * [typography description]
- * @param  {[type]} type [description]
- * @return {[type]}      [description]
- */
-t-font(type)
-  t-font--smoothing(type.smoothing)
-  font-size: type.size
-  font-weight: type.weight
-  font-family: type.family
-  line-height: type.line-height
-  -ms-text-size-adjust: 100%
-  -webkit-text-size-adjust: 100%
-  -webkit-tap-highlight-color: rgba(128, 203, 196, .1)
-
-
-
-/**
  * [smoothing description]
  * @param  {[type]} value =             true [description]
  * @return {[type]}       [description]
@@ -89,51 +72,16 @@ t-font--smoothing(value = true)
 
 
 /**
- * [create description]
- * @param  {[type]} selector [description]
- * @return {[type]}          [description]
+ * [typography description]
+ * @param  {[type]} type [description]
+ * @return {[type]}      [description]
  */
-t-font--create(selector)
-  html
-    if(!nix.text.responsive)
-      t-font(nix.typography)
-
-  h1, h2, h3, h4, h5, h6, p, .heading, .text
-    margin: 0 0 .67rem 0
-    font-weight: 200
-    font-family: nix.typography.family
-    line-height: 1.75
-
-  h1
-    font-size: nix.text.sizes["lg"]
-
-  h2
-    font-size: nix.text.sizes["md"]
-
-  h3
-    font-size: nix.text.sizes["sm"]
-
-  h4
-    font-size: nix.text.sizes["xs"]
-
-  h5
-    font-size: nix.text.sizes["xxs"]
-
-  h6
-    font-size: nix.text.sizes["xxxs"]
-
-  p
-    font-size: nix.text.sizes["xs"]
-    letter-spacing: .3px
-
-    &:last-child, &[nix.prefix.root + nix.prefix.util + "-grid"~="__cell"]
-      margin-bottom: 0
-
-  code, kbd, pre, samp
-    font-family: monospace, monospace
-    font-size: 1em
-
-  b, optgroup, strong, legend, th, dt
-    font-weight: 500
-
-  e-text--create(nix.prefix.root + nix.prefix.util + "text")
+t-font(type)
+  t-font--smoothing(type.smoothing)
+  font-size: type.size
+  font-weight: type.weight
+  font-family: type.family
+  line-height: type.line-height
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -webkit-tap-highlight-color: rgba(128, 203, 196, .1)

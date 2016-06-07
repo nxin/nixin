@@ -142,11 +142,8 @@ u-reset--html5()
  * @return {[type]} [description]
  */
 u-reset--tags()
-  html
+  html, *:before, *:after
     box-sizing: border-box
-
-  *, *:before, *:after
-    box-sizing: inherit
 
   body
     margin: 0
@@ -172,6 +169,7 @@ u-reset--clear--fix()
   &:after
     content: ""
     display: table
+
   &:after
     clear: both
 

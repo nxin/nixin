@@ -13,13 +13,13 @@
 // font-size = nix.type.size
 // font-color = nix.type.color
 
-normalize-css()
-border-box-html()
+// normalize-css()
+// border-box-html()
 fluid-media()
 
 
 /* --- Rupture ------------------------------------------------------------ */
-rupture.scale = nix.mq.xxs nix.mq.xs nix.mq.sm nix.mq.md nix.mq.lg
+rupture.scale = nix.mq.xxs nix.mq.xs nix.mq.sm nix.mq.md nix.mq.lg nix.mq.xl nix.mq.xxl
 rupture.scale-names = keys(nix.mq)
 rupture.enable-em-breakpoints = true
 
@@ -34,16 +34,16 @@ rupture.enable-em-breakpoints = true
 // font-fira = nix.text.family.secondary + "," + nix.text.family.default
 
 // config
-$line-height-ratio   = 1.75
+$line-height-ratio   = nix.text.font.line-height
 $heading-ratio       = $golden
-// $body-font           = font-roboto
-$body-font-weight    = 300
-// $heading-font        = font-fira
-$heading-font-weight = 300
-$min-font            = 13px
-$max-font            = 17px
+$body-font-weight    = nix.text.font.weight
+$heading-font-weight = nix.text.font.weight
+$min-font            = nix.text.font.size-min
+$max-font            = nix.text.font.size-max
 $min-width           = 320px
-$max-width           = 1200px
+$max-width           = 1280px
 $vertical-rhythm     = true
+// $body-font           = font-roboto
+// $heading-font        = font-fira
 
 typographic()
