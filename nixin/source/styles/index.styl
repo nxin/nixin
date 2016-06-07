@@ -9,8 +9,10 @@
 
 @require "variables"
 @require "mixins"
-@require "animations"
-@require "structure"
-@require "elements"
-@require "components"
-@require "utils"
+
+if nix.styles != false
+  @require "animations"
+  @require "structure"
+  @require "elements"
+  @require "components"
+  @require "utils"
