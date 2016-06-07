@@ -1,17 +1,16 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.typography
+   mixins.typography.font
 \* ------------------------------------------------------------------------ */
 
 
 /**
- * [font description]
- * @param  {[type]} family [description]
- * @param  {[type]} size   [description]
- * @param  {[type]} style  =             normal [description]
- * @param  {[type]} weight =             normal [description]
- * @return {[type]}        [description]
+ * [set description]
+ * @param {[type]} family [description]
+ * @param {[type]} size   [description]
+ * @param {[type]} style  =             normal [description]
+ * @param {[type]} weight =             normal [description]
  */
-t-global--font(family, size, style = normal, weight = normal)
+t-font--set(family, size, style = normal, weight = normal)
   font-family: family, nix.text.family.default
   font-style: style
   font-weight: weight
@@ -21,22 +20,21 @@ t-global--font(family, size, style = normal, weight = normal)
 /**
  * [face description]
  * @param  {[type]} name   [description]
- * @param  {[type]} path   [description]
  * @param  {[type]} weight =             "normal" [description]
  * @param  {[type]} style  =             "normal" [description]
  * @return {[type]}        [description]
  */
-t-global--face(name, path, weight = "normal", style = "normal")
-  url-fallback = "url('" + path + ".eot')"
-  url = "url('" + path + ".eot?#iefix') format('embedded-opentype'), "
-  url = url + "url('" + path + ".woff') format('woff'), "
-  url = url + "url('" + path + ".ttf') format('truetype'), "
-  url = url + "url('" + path + ".svg#svg" + name + "') format('svg')"
+t-font--face(family, name, weight = "normal", style = "normal")
+  url-fallback = "url('" + nix.fonts.path + "/" + name + ".eot')"
+  url = "url('" + nix.fonts.path + "/" + name + ".eot?#iefix') format('embedded-opentype'), "
+  url = url + "url('" + nix.fonts.path + "/" + name + ".woff') format('woff'), "
+  url = url + "url('" + nix.fonts.path + "/" + name + ".ttf') format('truetype'), "
+  url = url + "url('" + nix.fonts.path + "/" + name + ".svg#svg" + name + "') format('svg')"
 
   @font-face
     src: unquote(url-fallback)
     src: unquote(url)
-    font-family: name
+    font-family: family
     font-style: unquote(style)
     font-weight: unquote(weight)
 
@@ -46,7 +44,7 @@ t-global--face(name, path, weight = "normal", style = "normal")
  * @param  {[type]} family [description]
  * @return {[type]}        [description]
  */
-t-global--family(family)
+t-font--family(family)
   font-family: family, nix.text.family.default
 
 
@@ -55,7 +53,7 @@ t-global--family(family)
  * @param  {[type]} size [description]
  * @return {[type]}      [description]
  */
-t-global--size(size)
+t-font--size(size)
   font-size: size
 
 
@@ -64,8 +62,8 @@ t-global--size(size)
  * @param  {[type]} type [description]
  * @return {[type]}      [description]
  */
-t-global(type)
-  t-global--smoothing(type.smoothing)
+t-font(type)
+  t-font--smoothing(type.smoothing)
   font-size: type.size
   font-weight: type.weight
   font-family: type.family
@@ -81,7 +79,7 @@ t-global(type)
  * @param  {[type]} value =             true [description]
  * @return {[type]}       [description]
  */
-t-global--smoothing(value = true)
+t-font--smoothing(value = true)
   if value
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -95,10 +93,10 @@ t-global--smoothing(value = true)
  * @param  {[type]} selector [description]
  * @return {[type]}          [description]
  */
-t-global--create(selector)
+t-font--create(selector)
   html
     if(!nix.text.responsive)
-      t-global(nix.typography)
+      t-font(nix.typography)
 
   h1, h2, h3, h4, h5, h6, p, .heading, .text
     margin: 0 0 .67rem 0

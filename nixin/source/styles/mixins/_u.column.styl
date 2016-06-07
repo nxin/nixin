@@ -29,9 +29,11 @@ u-column(cols, breakpoint = null)
   if breakpoint != null
     +above(nix.mq[breakpoint])
       u-column--set(cols)
+      u-column--width(cols)
 
   else
     u-column--set(cols)
+    u-column--width(cols)
 
 
 /**
@@ -96,21 +98,398 @@ u-column--offset--fractional(numerator, denominator)
 
 /**
  * [description]
- * automatic mixins generation
- * u-column--{cols}()
- * u-column--offset-{cols}()
- * @param  {[type]} nix.grid.cols /             nix.grid.interval [description]
- * @return {[type]}               [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
  */
-for cols in 1..(nix.grid.cols / nix.grid.interval)
-  cols = cols * nix.grid.interval
+u-column--width-5(breakpoint)
+  u-column(5, breakpoint)
 
-  u-column--{cols}()
-    u-column--set()
-    u-column--width(cols)
 
-  u-column--offset-{cols}()
-    u-column--offset(cols)
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-10(breakpoint)
+  u-column(10, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-15(breakpoint)
+  u-column(15, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-20(breakpoint)
+  u-column(20, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-25(breakpoint)
+  u-column(25, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-30(breakpoint)
+  u-column(30, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-33(breakpoint)
+  u-column(33.3333, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-35(breakpoint)
+  u-column(35, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-40(breakpoint)
+  u-column(40, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-45(breakpoint)
+  u-column(45, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-50(breakpoint)
+  u-column(50, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-55(breakpoint)
+  u-column(55, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-60(breakpoint)
+  u-column(60, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-65(breakpoint)
+  u-column(65, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-66(breakpoint)
+  u-column(66.6666, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-70(breakpoint)
+  u-column(70, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-75(breakpoint)
+  u-column(75, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-80(breakpoint)
+  u-column(80, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-85(breakpoint)
+  u-column(85, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-90(breakpoint)
+  u-column(90, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-95(breakpoint)
+  u-column(95, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--width-100(breakpoint)
+  u-column(100, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-5(breakpoint)
+  u-column--offset(5, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-10(breakpoint)
+  u-column--offset(10, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-15(breakpoint)
+  u-column--offset(15, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-20(breakpoint)
+  u-column--offset(20, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-25(breakpoint)
+  u-column--offset(25, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-30(breakpoint)
+  u-column--offset(30, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-33(breakpoint)
+  u-column--offset(33.3333, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-35(breakpoint)
+  u-column--offset(35, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-40(breakpoint)
+  u-column--offset(40, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-45(breakpoint)
+  u-column--offset(45, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-50(breakpoint)
+  u-column--offset(50, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-55(breakpoint)
+  u-column--offset(55, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-60(breakpoint)
+  u-column--offset(60, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-65(breakpoint)
+  u-column--offset(65, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-66(breakpoint)
+  u-column--offset(66.6666, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-70(breakpoint)
+  u-column--offset(70, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-75(breakpoint)
+  u-column--offset(75, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-80(breakpoint)
+  u-column--offset(80, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-85(breakpoint)
+  u-column--offset(85, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-90(breakpoint)
+  u-column--offset(90, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-95(breakpoint)
+  u-column--offset(95, breakpoint)
+
+
+/**
+ * [description]
+ * @param  {[type]} breakpoint [description]
+ * @return {[type]}            [description]
+ */
+u-column--offset-100(breakpoint)
+  u-column--offset(100, breakpoint)
 
 
 /**

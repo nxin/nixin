@@ -52,19 +52,660 @@ u-padding(direction, size)
     u-padding--set(null null null size)
 
 
+/**
+ * [top description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--top(size)
+  u-padding("top", size)
+
 
 /**
- * automatic mixins generation
- * u-padding--{direction}(size)
- * u-padding--{direction}--{size}()
+ * [xxxl description]
+ * @return {[type]} [description]
  */
-for dk in nix.directions
-  u-padding--{dk}(size)
-    u-padding(dk, size)
+u-padding--top--xxxl()
+  u-padding("top", nix.sizes.xxxl)
 
-  for sk in nix.sizes
-    u-padding--{dk}--{sk}()
-      u-padding(dk, nix.sizes[sk])
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--top--xxl()
+  u-padding("top", nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--top--xl()
+  u-padding("top", nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--top--lg()
+  u-padding("top", nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--top--md()
+  u-padding("top", nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--top--sm()
+u-padding("top", nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--top--xs()
+  u-padding("top", nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--top--xxs()
+  u-padding("top", nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--top--xxxs()
+  u-padding("top", nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--top--0()
+  u-padding("top", 0)
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--right(size)
+  u-padding("right", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+u-padding--right--xxxl()
+  u-padding("right", nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--right--xxl()
+  u-padding("right", nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--right--xl()
+  u-padding("right", nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--right--lg()
+  u-padding("right", nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--right--md()
+  u-padding("right", nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--right--sm()
+  u-padding("right", nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--right--xs()
+  u-padding("right", nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--right--xxs()
+  u-padding("right", nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--right--xxxs()
+  u-padding("right", nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--right--0()
+  u-padding("right", 0)
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--bottom(size)
+  u-padding("bottom", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--xxxl()
+  u-padding("bottom", nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--xxl()
+  u-padding("bottom", nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--xl()
+  u-padding("bottom", nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--lg()
+  u-padding("bottom", nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--md()
+  u-padding("bottom", nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--sm()
+  u-padding("bottom", nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--xs()
+  u-padding("bottom", nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--xxs()
+  u-padding("bottom", nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--xxxs()
+  u-padding("bottom", nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--bottom--0()
+  u-padding("bottom", 0)
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--left(size)
+  u-padding("left", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+u-padding--left--xxxl()
+  u-padding("left", nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--left--xxl()
+  u-padding("left", nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--left--xl()
+  u-padding("left", nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--left--lg()
+  u-padding("left", nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--left--md()
+  u-padding("left", nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--left--sm()
+  u-padding("left", nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--left--xs()
+  u-padding("left", nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--left--xxs()
+  u-padding("left", nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--left--xxxs()
+  u-padding("left", nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--left--0()
+  u-padding("left", 0)
+
+
+/**
+ * [vertical description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--vertical(size)
+  u-padding--top(size)
+  u-padding--bottom(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--xxxl()
+  u-padding--top--xxxl()
+  u-padding--bottom--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--xxl()
+  u-padding--top--xxl()
+  u-padding--bottom--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--xl()
+  u-padding--top--xl()
+  u-padding--bottom--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--lg()
+  u-padding--top--lg()
+  u-padding--bottom--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--md()
+  u-padding--top--md()
+  u-padding--bottom--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--sm()
+  u-padding--top--sm()
+  u-padding--bottom--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--xs()
+  u-padding--top--xs()
+  u-padding--bottom--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--xxs()
+  u-padding--top--xxs()
+  u-padding--bottom--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--xxxs()
+  u-padding--top--xxxs()
+  u-padding--bottom--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--vertical--0()
+  u-padding--top--0()
+  u-padding--bottom--0()
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--horizontal(size)
+  u-padding--right(size)
+  u-padding--left(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--xxxl()
+  u-padding--right--xxxl()
+  u-padding--left--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--xxl()
+  u-padding--right--xxl()
+  u-padding--left--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--xl()
+  u-padding--right--xl()
+  u-padding--left--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--lg()
+  u-padding--right--lg()
+  u-padding--left--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--md()
+  u-padding--right--md()
+  u-padding--left--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--sm()
+  u-padding--right--sm()
+  u-padding--left--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--xs()
+  u-padding--right--xs()
+  u-padding--left--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--xxs()
+  u-padding--right--xxs()
+  u-padding--left--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--xxxs()
+  u-padding--right--xxxs()
+  u-padding--left--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--horizontal--0()
+  u-padding--right--0()
+  u-padding--left--0()
+
+
+/**
+ * [all description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+u-padding--all(size)
+  u-padding--vertical(size)
+  u-padding--horizontal(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+u-padding--all--xxxl()
+  u-padding--vertical--xxxl()
+  u-padding--horizontal--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+u-padding--all--xxl()
+  u-padding--vertical--xxl()
+  u-padding--horizontal--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+u-padding--all--xl()
+  u-padding--vertical--xl()
+  u-padding--horizontal--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+u-padding--all--lg()
+  u-padding--vertical--lg()
+  u-padding--horizontal--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+u-padding--all--md()
+  u-padding--vertical--md()
+  u-padding--horizontal--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+u-padding--all--sm()
+  u-padding--vertical--sm()
+  u-padding--horizontal--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+u-padding--all--xs()
+  u-padding--vertical--xs()
+  u-padding--horizontal--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+u-padding--all--xxs()
+  u-padding--vertical--xxs()
+  u-padding--horizontal--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+u-padding--all--xxxs()
+  u-padding--vertical--xxxs()
+  u-padding--horizontal--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+u-padding--all--0()
+  u-padding--vertical--0()
+  u-padding--horizontal--0()
 
 
 /**
