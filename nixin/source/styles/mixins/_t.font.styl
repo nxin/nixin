@@ -4,13 +4,14 @@
 
 
 /**
- * [set description]
- * @param {[type]} family [description]
- * @param {[type]} size   [description]
- * @param {[type]} style  =             normal [description]
- * @param {[type]} weight =             normal [description]
+ * [font description]
+ * @param  {[type]} family [description]
+ * @param  {[type]} size   [description]
+ * @param  {[type]} style  =             normal [description]
+ * @param  {[type]} weight =             normal [description]
+ * @return {[type]}        [description]
  */
-t-font--set(family, size, style = normal, weight = normal)
+t-font(family, size, style = normal, weight = normal)
   font-family: family, nix.text.family.default
   font-style: style
   font-weight: weight
@@ -72,11 +73,11 @@ t-font--smoothing(value = true)
 
 
 /**
- * [typography description]
+ * [base description]
  * @param  {[type]} type [description]
  * @return {[type]}      [description]
  */
-t-font(type)
+t-font--base(type)
   t-font--smoothing(type.smoothing)
   font-size: type.size
   font-weight: type.weight
