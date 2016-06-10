@@ -45,18 +45,6 @@ u-visibility--create(selector, name)
   property = null
   value = null
 
-  if (name == "hide")
-    u-visibility--hide()
-
-  else if (name == "show")
-    u-visibility--show()
-
-  else if (name == "visible")
-    u-visibility--visible()
-
-  else if (name == "invisible")
-    u-visibility--invisible()
-
   for breakpoint in nix.mq
     +above(nix.mq[breakpoint])
       [{selector}~=\"--{name}@{breakpoint}\"]

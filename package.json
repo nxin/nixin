@@ -1,6 +1,6 @@
 {
   "name": "nixin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Modular Agnostic BEMIT Framework",
   "main": "index.js",
   "scripts": {
