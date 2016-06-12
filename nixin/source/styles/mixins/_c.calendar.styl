@@ -28,10 +28,10 @@ c-calendar()
  * @return {[type]}          [description]
  */
 c-calendar__control(bg-color = nix.skin.color.white, fg-color = nix.skin.color.black)
-  e-button--color(bg-color, fg-color)
+  c-button--color(bg-color, fg-color)
   u-padding--vertical--md()
   u-padding--horizontal--sm()
-  e-text--size--md()
+  c-text--size--md()
   flex: 0 0 14.28%
   max-width: 14.28%
   margin: 0
@@ -105,7 +105,7 @@ c-calendar__date--today()
  */
 c-calendar__date--selected()
   border-color: nix.skin.color.primary
-  e-button--color(nix.skin.color.primary, nix.skin.color.white)
+  c-button--color(nix.skin.color.primary, nix.skin.color.white)
 
 
 /**

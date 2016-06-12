@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.table
+   mixins.component.table
 \* ------------------------------------------------------------------------ */
 
 
@@ -7,7 +7,7 @@
  * [table description]
  * @return {[type]} [description]
  */
-e-table()
+c-table()
   display: flex
   flex-wrap: wrap
   width: 100%
@@ -21,9 +21,9 @@ e-table()
  * [table__caption description]
  * @return {[type]} [description]
  */
-e-table__caption()
+c-table__caption()
   u-padding--horizontal--sm()
-  e-text--quiet()
+  c-text--quiet()
   display: flex
   flex: 0 0 100%
   max-width: 100%
@@ -35,7 +35,7 @@ e-table__caption()
  * [table__row description]
  * @return {[type]} [description]
  */
-e-table__row()
+c-table__row()
   display: flex
   flex-wrap: wrap
   flex: 0 0 100%
@@ -46,7 +46,7 @@ e-table__row()
  * [striped description]
  * @return {[type]} [description]
  */
-e-table__row--striped()
+c-table__row--striped()
   background-color: nix.skin.color.grey--light
 
 
@@ -54,7 +54,7 @@ e-table__row--striped()
  * [table__cell description]
  * @return {[type]} [description]
  */
-e-table__cell()
+c-table__cell()
   u-padding--all--sm()
   display: flex
   flex: 1
@@ -66,8 +66,8 @@ e-table__cell()
  * [table__heading description]
  * @return {[type]} [description]
  */
-e-table__heading()
-  e-heading--xs()
+c-table__heading()
+  c-heading--xs()
   display: flex
   flex: 1
   font-weight: bold
@@ -79,7 +79,7 @@ e-table__heading()
  * [striped description]
  * @return {[type]} [description]
  */
-e-table__heading--striped()
+c-table__heading--striped()
   background-color: initial
 
 
@@ -87,7 +87,7 @@ e-table__heading--striped()
  * [clickable description]
  * @return {[type]} [description]
  */
-e-table-clickable()
+c-table-clickable()
   color: nix.skin.color.primary
   cursor: pointer
 
@@ -96,8 +96,8 @@ e-table-clickable()
  * [inactive description]
  * @return {[type]} [description]
  */
-e-table--inactive()
-  e-text--quiet()
+c-table--inactive()
+  c-text--quiet()
   cursor: default
 
 
@@ -105,8 +105,8 @@ e-table--inactive()
  * [inactive description]
  * @return {[type]} [description]
  */
-e-table--clickable--inactive()
-  e-text--quiet()
+c-table--clickable--inactive()
+  c-text--quiet()
   cursor: not-allowed
 
 
@@ -114,7 +114,7 @@ e-table--clickable--inactive()
  * [condensed description]
  * @return {[type]} [description]
  */
-e-table--condensed()
+c-table--condensed()
   font-size: nix.text.font.size * .9
 
 
@@ -122,5 +122,5 @@ e-table--condensed()
  * [condensed description]
  * @return {[type]} [description]
  */
-e-table__cell--condensed()
+c-table__cell--condensed()
   u-padding--all--xs()

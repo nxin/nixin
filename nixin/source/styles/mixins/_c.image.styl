@@ -7,7 +7,7 @@
  * [responsive description]
  * @return {[type]} [description]
  */
-e-image--responsive()
+c-image--responsive()
   display: block
   max-width: 100%
   height: auto
@@ -21,7 +21,7 @@ e-image--responsive()
  * @param  {[type]} repeat   =             no-repeat [description]
  * @return {[type]}          [description]
  */
-e-image--background(name, size = null, position = center, repeat = no-repeat)
+c-image--background(name, size = null, position = center, repeat = no-repeat)
   bg = nix.images.path + name
   background-image: url(bg)
 
@@ -30,3 +30,13 @@ e-image--background(name, size = null, position = center, repeat = no-repeat)
 
   background-position: position
   background-repeat: repeat
+
+
+/**
+ * [cover description]
+ * @return {[type]} [description]
+ */
+c-image--background--cover()
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat

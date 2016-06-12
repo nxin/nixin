@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.media
+   mixins.component.media
 \* ------------------------------------------------------------------------ */
 
 
@@ -18,7 +18,7 @@ iframe, embed, object, video
  * [container description]
  * @return {[type]} [description]
  */
-e-media()
+c-media()
   display: block
   overflow: hidden
   u-position(relative)
@@ -30,7 +30,7 @@ e-media()
  * @param  {[type]} size =             "all" [description]
  * @return {[type]}      [description]
  */
-e-media__item(size = "all")
+c-media__item(size = "all")
   {media}
 
   for key, value in nix.media.sizes

@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.link
+   mixins.component.link
 \* ------------------------------------------------------------------------ */
 
 
@@ -8,7 +8,7 @@
  * @param  {[type]} fg-color: nix.color.dark-primary [description]
  * @return {[type]}           [description]
  */
-e-link--color(fg-color = nix.skin.color.primary)
+c-link--color(fg-color = nix.skin.color.primary)
   color: fg-color
   background-color: transparent
 
@@ -28,8 +28,8 @@ e-link--color(fg-color = nix.skin.color.primary)
  * [link description]
  * @return {[type]} [description]
  */
-e-link()
-  e-link--color()
+c-link()
+  c-link--color()
   text-decoration: none
   cursor: pointer
 

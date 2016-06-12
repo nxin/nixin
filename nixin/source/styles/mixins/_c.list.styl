@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.list
+   mixins.component.list
 \* ------------------------------------------------------------------------ */
 
 
@@ -7,7 +7,7 @@
  * [list description]
  * @return {[type]} [description]
  */
-e-list()
+c-list()
   display: block
   margin: 0
   padding: 0 0 0 nix.sizes.md
@@ -18,7 +18,7 @@ e-list()
  * [unstyled description]
  * @return {[type]} [description]
  */
-e-list--unstyled()
+c-list--unstyled()
   padding: 0
   list-style: none
 
@@ -27,7 +27,7 @@ e-list--unstyled()
  * [nested description]
  * @return {[type]} [description]
  */
-e-list--nested()
+c-list--nested()
   padding: 0 0 0 nix.sizes.md
 
 
@@ -35,7 +35,7 @@ e-list--nested()
  * [list__item description]
  * @return {[type]} [description]
  */
-e-list__item()
+c-list__item()
   padding: 0
 
 
@@ -43,7 +43,7 @@ e-list__item()
  * [unstyled description]
  * @return {[type]} [description]
  */
-e-list__item--unstyled()
+c-list__item--unstyled()
   list-style: none
 
 
@@ -51,8 +51,8 @@ e-list__item--unstyled()
  * [ordered description]
  * @return {[type]} [description]
  */
-e-list--ordered()
-  e-list--unstyled()
+c-list--ordered()
+  c-list--unstyled()
   counter-reset: ordered
 
 
@@ -60,7 +60,7 @@ e-list--ordered()
  * [ordered__item description]
  * @return {[type]} [description]
  */
-e-list--ordered__item()
+c-list--ordered__item()
   &:before
     counter-increment: ordered
     content: counters(ordered, ".") " "
@@ -71,7 +71,7 @@ e-list--ordered__item()
  * [inline description]
  * @return {[type]} [description]
  */
-e-list--inline()
+c-list--inline()
   padding: 0
 
 
@@ -79,7 +79,7 @@ e-list--inline()
  * [inline__item description]
  * @return {[type]} [description]
  */
-e-list--inline__item()
+c-list--inline__item()
   display: inline-block
   padding-right: nix.sizes.md
   width: auto
@@ -89,6 +89,6 @@ e-list--inline__item()
  * [bullet description]
  * @return {[type]} [description]
  */
-e-list--inline__item-bullet()
+c-list--inline__item-bullet()
   content: "\2022"
   padding: 0 nix.sizes.sm 0 0

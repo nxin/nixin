@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.heading
+   mixins.component.heading
 \* ------------------------------------------------------------------------ */
 
 
@@ -7,8 +7,8 @@
  * [heading description]
  * @return {[type]} [description]
  */
-e-heading()
-  e-text--size--md()
+c-heading()
+  c-text--size--md()
   font-weight: nix.text.font.weight
   margin: 0
   padding: nix.sizes.md 0 nix.sizes.sm
@@ -18,9 +18,9 @@ e-heading()
  * [heading__sub description]
  * @return {[type]} [description]
  */
-e-heading__sub()
-  e-heading()
-  e-text--quiet()
+c-heading__sub()
+  c-heading()
+  c-text--quiet()
   padding: nix.sizes.sm 0
   font-size: nix.text.font.size * .8
 
@@ -29,7 +29,7 @@ e-heading__sub()
  * [xxxl description]
  * @return {[type]} [description]
  */
-e-heading--xxxl()
+c-heading--xxxl()
   font-size: nix.text.font.size * 5
 
 
@@ -37,7 +37,7 @@ e-heading--xxxl()
  * [xxl description]
  * @return {[type]} [description]
  */
-e-heading--xxl()
+c-heading--xxl()
   font-size: nix.text.font.size * 4
 
 
@@ -45,7 +45,7 @@ e-heading--xxl()
  * [xl description]
  * @return {[type]} [description]
  */
-e-heading--xl()
+c-heading--xl()
   font-size: nix.text.font.size * 3
 
 
@@ -53,7 +53,7 @@ e-heading--xl()
  * [lg description]
  * @return {[type]} [description]
  */
-e-heading--lg()
+c-heading--lg()
   font-size: nix.text.font.size * 2
 
 
@@ -61,7 +61,7 @@ e-heading--lg()
  * [md description]
  * @return {[type]} [description]
  */
-e-heading--md()
+c-heading--md()
   font-size: nix.text.font.size * 1.5
 
 
@@ -69,7 +69,7 @@ e-heading--md()
  * [sm description]
  * @return {[type]} [description]
  */
-e-heading--sm()
+c-heading--sm()
   font-size: nix.text.font.size * 1.25
 
 
@@ -77,7 +77,7 @@ e-heading--sm()
  * [xs description]
  * @return {[type]} [description]
  */
-e-heading--xs()
+c-heading--xs()
   font-size: nix.text.font.size * 1.05
 
 
@@ -85,7 +85,7 @@ e-heading--xs()
  * [xxs description]
  * @return {[type]} [description]
  */
-e-heading--xxs()
+c-heading--xxs()
   font-size: nix.text.font.size * .95
 
 
@@ -93,5 +93,5 @@ e-heading--xxs()
  * [xxxs description]
  * @return {[type]} [description]
  */
-e-heading--xxxs()
+c-heading--xxxs()
   font-size: nix.text.font.size * .75

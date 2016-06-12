@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.text
+   mixins.component.text
 \* ------------------------------------------------------------------------ */
 
 
@@ -7,7 +7,7 @@
  * [text description]
  * @return {[type]} [description]
  */
-e-text()
+c-text()
   font-family: nix.typography.family
   font-weight: nix.typography.weight
   color: nix.skin.color.black
@@ -22,7 +22,7 @@ e-text()
  * @param  {[type]}  no-wrap =             true [description]
  * @return {Boolean}         [description]
  */
-e-text--ellipsis(no-wrap = true)
+c-text--ellipsis(no-wrap = true)
   overflow: hidden
   text-overflow: ellipsis
   if no-wrap
@@ -33,7 +33,7 @@ e-text--ellipsis(no-wrap = true)
  * [hide description]
  * @return {[type]} [description]
  */
-e-text--hide()
+c-text--hide()
   overflow: hidden
   text-indent: 110%
   white-space: nowrap
@@ -44,7 +44,7 @@ e-text--hide()
  * @param  {[type]} direction [description]
  * @return {[type]}           [description]
  */
-e-text--direction(direction)
+c-text--direction(direction)
   text-align: direction
 
 
@@ -52,7 +52,7 @@ e-text--direction(direction)
  * [mono description]
  * @return {[type]} [description]
  */
-e-text--mono()
+c-text--mono()
   font-family: nix.text.family.mono
 
 
@@ -60,7 +60,7 @@ e-text--mono()
  * [highlight description]
  * @return {[type]} [description]
  */
-e-text--highlight()
+c-text--highlight()
   u-padding(nix.sizes.sm nix.sizes.xs  nix.sizes.xs)
   margin: 0 -(nix.sizes.xxs)
   background-color: saturate(nix.skin.color.selection, 30%)
@@ -71,7 +71,7 @@ e-text--highlight()
  * [quiet description]
  * @return {[type]} [description]
  */
-e-text--quiet()
+c-text--quiet()
   color: nix.skin.color.default
 
 
@@ -79,7 +79,7 @@ e-text--quiet()
  * [loud description]
  * @return {[type]} [description]
  */
-e-text--loud()
+c-text--loud()
   font-weight: nix.text.font.weight--heavy
 
 
@@ -87,7 +87,7 @@ e-text--loud()
  * [help description]
  * @return {[type]} [description]
  */
-e-text--help()
+c-text--help()
   cursor: help
   border-bottom: 1px dashed nix.skin.color.dark
 
@@ -96,7 +96,7 @@ e-text--help()
  * [xxxl description]
  * @return {[type]} [description]
  */
-e-text--size--xxxl()
+c-text--size--xxxl()
   font-size: nix.text.font.size * 4
 
 
@@ -104,7 +104,7 @@ e-text--size--xxxl()
  * [xxl description]
  * @return {[type]} [description]
  */
-e-text--size--xxl()
+c-text--size--xxl()
   font-size: nix.text.font.size * 3
 
 
@@ -112,7 +112,7 @@ e-text--size--xxl()
  * [xl description]
  * @return {[type]} [description]
  */
-e-text--size--xl()
+c-text--size--xl()
   font-size: nix.text.font.size * 2
 
 
@@ -120,7 +120,7 @@ e-text--size--xl()
  * [lg description]
  * @return {[type]} [description]
  */
-e-text--size--lg()
+c-text--size--lg()
   font-size: nix.text.font.size * 1.5
 
 
@@ -128,7 +128,7 @@ e-text--size--lg()
  * [md description]
  * @return {[type]} [description]
  */
-e-text--size--md()
+c-text--size--md()
   font-size: nix.text.font.size
 
 
@@ -136,7 +136,7 @@ e-text--size--md()
  * [sm description]
  * @return {[type]} [description]
  */
-e-text--size--sm()
+c-text--size--sm()
   font-size: nix.text.font.size * .9
 
 
@@ -144,7 +144,7 @@ e-text--size--sm()
  * [xs description]
  * @return {[type]} [description]
  */
-e-text--size--xs()
+c-text--size--xs()
   font-size: nix.text.font.size * .7
 
 
@@ -152,7 +152,7 @@ e-text--size--xs()
  * [xs description]
  * @return {[type]} [description]
  */
-e-text--size--xxs()
+c-text--size--xxs()
   font-size: nix.text.font.size * .6
 
 
@@ -160,7 +160,7 @@ e-text--size--xxs()
  * [xs description]
  * @return {[type]} [description]
  */
-e-text--size--xxxs()
+c-text--size--xxxs()
   font-size: nix.text.font.size * .5
 
 
@@ -168,7 +168,7 @@ e-text--size--xxxs()
  * [paragraph description]
  * @return {[type]} [description]
  */
-e-text--paragraph()
+c-text--paragraph()
   display: block
   padding: nix.sizes.sm 0
   margin: 0
@@ -179,8 +179,8 @@ e-text--paragraph()
  * [code description]
  * @return {[type]} [description]
  */
-e-text--code()
-  e-text--highlight()
+c-text--code()
+  c-text--highlight()
   display: inline
   background-color: nix.skin.color.light
   font-family: nix.text.family.mono
@@ -191,7 +191,7 @@ e-text--code()
  * [multiline description]
  * @return {[type]} [description]
  */
-e-text--code--multiline()
+c-text--code--multiline()
   display: block
   white-space: pre
   padding: nix.sizes.sm nix.sizes.md
@@ -203,8 +203,8 @@ e-text--code--multiline()
  * [keys description]
  * @return {[type]} [description]
  */
-e-text--keyboard-keys()
-  e-text--code()
+c-text--keyboard-keys()
+  c-text--code()
   background-color: nix.skin.color.primary
   color: nix.skin.color.white
   border-radius: 4px
@@ -215,7 +215,7 @@ e-text--keyboard-keys()
  * [quotation description]
  * @return {[type]} [description]
  */
-e-text--quotation()
+c-text--quotation()
   display: block
   margin: 0
   padding: nix.sizes.md nix.sizes.lg
@@ -227,8 +227,8 @@ e-text--quotation()
  * [quotation__body description]
  * @return {[type]} [description]
  */
-e-text--quotation__body()
-  e-text--paragraph()
+c-text--quotation__body()
+  c-text--paragraph()
   font-size: nix.text.font.size * 1.3
 
 
@@ -236,9 +236,9 @@ e-text--quotation__body()
  * [quotation__footer description]
  * @return {[type]} [description]
  */
-e-text--quotation__footer()
-  e-text--paragraph()
-  e-text--quiet()
+c-text--quotation__footer()
+  c-text--paragraph()
+  c-text--quiet()
   font-style: italic
 
 
@@ -247,7 +247,7 @@ e-text--quotation__footer()
  * @param  {[type]} selector [description]
  * @return {[type]}          [description]
  */
-e-text--create(selector)
+c-text--create(selector)
   for size in nix.text.sizes
     [{selector}~=\"--{size}\"]
       font-size: nix.text.sizes[size]

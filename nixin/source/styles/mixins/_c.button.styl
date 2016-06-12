@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.element.button
+   mixins.component.button
 \* ------------------------------------------------------------------------ */
 
 
@@ -9,7 +9,7 @@
  * @param  {[type]} fg-color: color-white   [description]
  * @return {[type]}           [description]
  */
-e-button--color(bg-color = nix.skin.color.default, fg-color = nix.skin.color.white)
+c-button--color(bg-color = nix.skin.color.default, fg-color = nix.skin.color.white)
   background-color: bg-color
   color: fg-color
   border: 1px solid transparent
@@ -33,7 +33,7 @@ e-button--color(bg-color = nix.skin.color.default, fg-color = nix.skin.color.whi
  * @param  {[type]} hover-text-color: color-white   [description]
  * @return {[type]}                   [description]
  */
-e-button--ghost(color = nix.skin.color.default, color-hover = nix.skin.color.white)
+c-button--ghost(color = nix.skin.color.default, color-hover = nix.skin.color.white)
   background-color: transparent
   border: 1px solid color
   color: color
@@ -58,9 +58,9 @@ e-button--ghost(color = nix.skin.color.default, color-hover = nix.skin.color.whi
  * [button description]
  * @return {[type]} [description]
  */
-e-button()
+c-button()
   u-padding--all--sm()
-  e-text--size--md()
+  c-text--size--md()
   u-button--color()
   display: inline
   margin: 0
@@ -79,7 +79,7 @@ e-button()
   appearance: none
 
   &:disabled
-    e-text--quiet()
+    c-text--quiet()
     background-color: nix.skin.color.light
     font-style: italic
     cursor: not-allowed
@@ -90,7 +90,7 @@ e-button()
  * [rounded description]
  * @return {[type]} [description]
  */
-e-button--rounded()
+c-button--rounded()
   border-radius: nix.borders.rounded
 
 
@@ -98,9 +98,9 @@ e-button--rounded()
  * [close description]
  * @return {[type]} [description]
  */
-e-button--close()
-  e-button--color(transparent, inherit);
-  e-text--loud()
+c-button--close()
+  c-button--color(transparent, inherit);
+  c-text--loud()
   u-padding--all--0()
   outline: 0
   position: absolute
@@ -113,7 +113,7 @@ e-button--close()
  * [block description]
  * @return {[type]} [description]
  */
-e-button--block()
+c-button--block()
   display: inline-block
   width: 100%
 
@@ -122,7 +122,7 @@ e-button--block()
  * [group description]
  * @return {[type]} [description]
  */
-e-button-group()
+c-button-group()
   display: inline-flex
 
 
@@ -130,7 +130,7 @@ e-button-group()
  * [grouped description]
  * @return {[type]} [description]
  */
-e-button--grouped()
+c-button--grouped()
   border-radius: 0
 
   &:first-child
@@ -145,7 +145,7 @@ e-button--grouped()
  * [rounded description]
  * @return {[type]} [description]
  */
-e-button-group--rounded()
+c-button-group--rounded()
   border-radius: 0
 
   &:first-child
@@ -159,7 +159,7 @@ e-button-group--rounded()
  * [left description]
  * @return {[type]} [description]
  */
-e-button__icon-left()
+c-button__icon-left()
   padding-right: nix.sizes.sm
 
 
@@ -167,5 +167,5 @@ e-button__icon-left()
  * [right description]
  * @return {[type]} [description]
  */
-e-button__icon-right()
+c-button__icon-right()
   padding-left: nix.sizes.sm
