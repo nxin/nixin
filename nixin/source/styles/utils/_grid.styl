@@ -38,6 +38,17 @@ selector = prefix + name
 
 
   +above(nix.mq.xxs)
+    &[{selector}~="--fit@xxs"] > [{selector}~="__cell"]:not("--width")
+      u-grid__cell--fit()
+
+    &[{selector}~="--full@xxs"]
+      u-grid--full()
+
+      > [{selector}~="__cell"]
+        u-grid__cell--full()
+
+
+  +above(nix.mq.xs)
     &[{selector}~="--fit@xs"] > [{selector}~="__cell"]:not("--width")
       u-grid__cell--fit()
 

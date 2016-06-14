@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------ *\
-   mixins.util.layout
+   mixins.util.skel
 \* ------------------------------------------------------------------------ */
 
 
@@ -7,7 +7,7 @@
  * [layout description]
  * @return {[type]} [description]
  */
-u-layout()
+u-skel()
   position: relative
   margin: auto
   min-height: 1px
@@ -17,7 +17,7 @@ u-layout()
  * [boxed description]
  * @return {[type]} [description]
  */
-u-layout--boxed()
+u-skel--boxed()
   max-width: nix.grid.max-width
 
 
@@ -25,7 +25,7 @@ u-layout--boxed()
  * [unboxed__wrap description]
  * @return {[type]} [description]
  */
-u-layout--unboxed__wrap()
+u-skel--unboxed__wrap()
   max-width: nix.grid.max-width
 
 
@@ -33,7 +33,7 @@ u-layout--unboxed__wrap()
  * [layout__wrap description]
  * @return {[type]} [description]
  */
-u-layout__wrap()
+u-skel__wrap()
   u-reset--clearfix()
   u-padding--horizontal(nix.grid.gutter)
   position: relative
@@ -50,7 +50,7 @@ u-layout__wrap()
  * [layout__row description]
  * @return {[type]} [description]
  */
-u-layout__row()
+u-skel__row()
   u-reset--clearfix()
   min-height: 1px
   max-width: 100%

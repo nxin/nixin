@@ -8,13 +8,13 @@
  * @return {[type]} [description]
  */
 c-debug()
-  position: relative
+  u-position(fixed null null 0 0)
   display: block
   margin: 0
   padding: 0 20px
   width: 100%
   color: white
-  text-align: center
+  text-align: left
 
   if !nix.debug.mq
     display: none
@@ -40,35 +40,38 @@ c-debug__heading()
 c-debug__close()
   u-position(absolute 0 5px auto auto)
   display: block
-  line-height: 1.5
+  line-height: nix.typography.line-height
 
   .icon
     color: nix.skin.color.white
 
 
-/**
- * [create description]
- * @param  {[type]} selector [description]
- * @return {[type]}          [description]
- */
-c-debug--create(selector)
-  [{selector}~="--xxs"]
-    background: nix.palette.orange.light--30
+c-debug--xxs()
+  background: nix.palette.orange.light--30
 
-  [{selector}~="--xs"]
-    background: nix.palette.orange.light--20
 
-  [{selector}~="--sm"]
-    background: nix.palette.orange.light--10
+c-debug--xs()
+  background: nix.palette.orange.light--20
 
-  [{selector}~="--md"]
-    background: nix.palette.orange.core
 
-  [{selector}~="--lg"]
-    background: nix.palette.orange.dark--10
+c-debug--sm()
+  background: nix.palette.orange.light--10
 
-  [{selector}~="--xl"]
-    background: nix.palette.orange.dark--20
 
-  [{selector}~="--xxl"]
-    background: nix.palette.orange.dark--30
+c-debug--md()
+  background: nix.palette.orange.core
+
+
+c-debug--lg()
+  background: nix.palette.orange.dark--10
+
+
+c-debug--xl()
+  background: nix.palette.orange.dark--20
+
+
+c-debug--xxl()
+  background: nix.palette.orange.dark--30
+
+
+

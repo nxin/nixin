@@ -24,12 +24,29 @@ selector = prefix + name
   c-debug__close()
 
 
-/* styles
-\* ------------------------------------------------------------------------ */
+[{selector}~="@xxs"]
+  c-debug--xxs()
 
-/**
- * [create description]
- * @param  {[type]} selector [description]
- * @return {[type]}          [description]
- */
-c-debug--create(selector)
+
+[{selector}~="@xs"]
+  c-debug--xs()
+
+
+[{selector}~="@sm"]
+  c-debug--sm()
+
+
+[{selector}~="@md"]
+  c-debug--md()
+
+
+[{selector}~="@lg"]
+  c-debug--lg()
+
+
+[{selector}~="@xl"]
+  c-debug--xl()
+
+
+[{selector}~="@xxl"]
+  c-debug--xxl()

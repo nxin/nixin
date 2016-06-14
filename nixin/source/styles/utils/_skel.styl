@@ -1,11 +1,11 @@
 /* ------------------------------------------------------------------------ *\
-   utils.layout
+   utils.skel
 \* ------------------------------------------------------------------------ */
 
 /**
  * settings
  */
-name = "layout"
+name = "skel"
 selector = prefix + name
 
 
@@ -17,7 +17,7 @@ selector = prefix + name
  * a. default: 100% content
  */
 [{selector}~="container"]
-  u-layout()
+  u-skel()
 
 
 /**
@@ -25,7 +25,7 @@ selector = prefix + name
  * b. --unboxed: 100% with boxed content
  */
 [{selector}~="--unboxed"] [{selector}~="__wrap"]
-  u-layout--unboxed__wrap()
+  u-skel--unboxed__wrap()
 
 
 /**
@@ -33,7 +33,7 @@ selector = prefix + name
  * c. --boxed: totally boxed content
  */
 [{selector}~="--boxed"]
-  u-layout--boxed()
+  u-skel--boxed()
 
 
 /**
@@ -41,7 +41,7 @@ selector = prefix + name
  * boxed: boxed content
  */
 [{selector}~="__wrap"]
-  u-layout__wrap()
+  u-skel__wrap()
 
 
 /**
@@ -49,4 +49,4 @@ selector = prefix + name
  * boxed: boxed cols
  */
 [{selector}~="__row"]
-  u-layout__row()
+  u-skel__row()
