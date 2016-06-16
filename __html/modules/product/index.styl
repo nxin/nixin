@@ -1,0 +1,273 @@
+// ------------------------------------------
+// module.product
+// ------------------------------------------
+.products
+  display: block
+  width: 100%
+  min-width: breakpoint.xxs
+  
+  &__cell
+    display: block
+    width: 100%
+
+
+// product--grid
+// ------------------------------------------  
+.products--grid  
+  &__cell
+    display: inline-block
+    width: 50%
+    margin: -1px -2.5px
+    
+    @media (min-width: breakpoint.xxxs)
+      width: 100%
+      
+    @media (min-width: breakpoint.xxs)
+      width: 100%  
+      
+    @media (min-width: breakpoint.xs)
+      width: 50% 
+     
+    @media (min-width: breakpoint.md)
+      width: 33.3333%
+      
+    @media (min-width: breakpoint.lg)
+      width: 25%
+    
+    @media (min-width: breakpoint.xl)
+      width: 20%
+      
+    @media (min-width: breakpoint.xxl)
+      width: 15%
+      
+    @media (min-width: breakpoint.xxl)
+      width: 10.07%
+        
+
+// product--list
+// ------------------------------------------
+.products--list
+  &__cell
+    display: block
+    width: 100%
+    
+    .product__media
+      display: inline-block
+      width: 33.3333%
+      
+    .product__info
+      display: inline-block
+      width: 66.6666%
+                               
+
+// product
+// ------------------------------------------
+.product
+  display: inline-block
+  position: relative
+  overflow: hidden
+  width: 100%
+  height: 365px
+  margin: 0
+  padding: 0
+  cursor: pointer
+  vertical-align: top
+  background: color.white
+  text-align: left
+  color: color.gray--light
+  font-weight: 400
+  // border: 1px solid #EDEADF
+  border: 10px solid #f5f3f1
+
+  &:hover
+    text-decoration: none
+    
+    .quantity, 
+    .product__caption
+      display: block
+    
+    .badge
+      display: none
+      
+
+// product__media    
+.product__media 
+  display: block   
+  position: relative
+  overflow: visible
+  zoom: 1
+  width: 100%
+  height: 205px
+  padding: 15px 0
+  margin-top: 0
+  user-select: none
+  
+  .image
+    display: inline-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%, -50%, 0)
+    width: auto
+    max-width: 100%
+    max-height: 205px
+    padding: 10px
+    
+    
+  .quantity
+    display: none
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 155px
+    color: color.white
+    font-weight: 300
+    background: rgba(0,0,0,0.5)
+  
+  .quantity__number
+    margin-top: 38px
+    font-size: 40px
+    display: block
+    text-align: center
+    line-height: 38px
+
+  .quantity__label
+    text-align: center
+    display: block
+    font-size: 16px
+    
+  .badge
+    display: block
+    position: absolute
+    top: 12px
+    left: 12px
+    z-index: 10
+    min-width: 10px
+    padding: 7px 5px
+    border-radius: 50%
+    background: color.green
+    color: #fff
+    font-size: 16px
+    text-align: center
+    font-weight: normal
+    text-rendering: optimizeLegibility
+    
+  .badge__quantity
+    display: inline-block
+    width: 21px
+
+    
+// product__caption  
+.product__caption
+  display: none
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 50px
+  padding: 0
+  border-top: 1px solid color.white
+  background-image: linear-gradient(rgba(255,255,255,0.75), color.white)
+  
+  .inner
+    padding: 10px 5px
+  
+  .button
+    padding: 5px 10px
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 0.1em
+    line-height: 20px
+  
+  .button--icon
+    padding: 5px 2px
+    font-size: 20px
+    
+    .icon
+      position: relative
+      top: -2px
+    
+  .button--favorite
+    margin-left: 5px
+    color: color.orange
+    
+    &:hover
+      color: color.orange--dark
+      
+  .button--detail
+    color: color.cyan
+    
+    &:hover
+      color: color.cyan--dark
+    
+      
+  .button--sub,
+  .button--add
+    display: inline-block
+    margin-right: 5px
+    
+  .button--add
+    margin-right: 10px
+  
+  .right
+    float: right
+    position: relative
+    right: 0
+    
+
+
+// product__info
+.product__info
+  min-height: 61px
+  padding: 5px 15px 0 15px
+  margin-bottom: 4px
+  font-size: 15px
+  line-height: 1.456789em
+  background: color.white
+  
+  .pricing
+    display: inline-block
+    margin-bottom: 4px
+    color: color.black
+    font-size: 17px
+    font-weight: 600
+    
+  .pricing__new
+    // color: color.red
+    
+  .pricing__old
+    display: inline-block
+    padding-left: 5px
+    text-decoration: line-through
+    font-weight: 400
+    color: color.gray--light
+    
+  .pricing__deal
+    height: 20px
+    line-height: 20px
+    background-color: #fff
+    color: color.red
+    text-align: left
+    font-weight: 700
+    font-size: 13px
+    letter-spacing: 0.01em
+    text-shadow: none
+    
+  .description
+    max-height: 60px
+    overflow: hidden
+    display: block
+    text-overflow: ellipsis
+    text-align: justify
+    
+  .description__text
+    margin-bottom: 2px
+    color: color.gray
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+    word-break: break-all
+    
+  .description__size  
+    color: color.gray--light  

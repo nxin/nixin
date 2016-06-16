@@ -3,6 +3,10 @@
 \* ------------------------------------------------------------------------ */
 
 
+@import "_u.padding"
+@import "_c.list"
+
+
 /**
  * [nav description]
  * @return {[type]} [description]
@@ -23,7 +27,7 @@ c-nav()
  * @param  {[type]} fg-color: nix.colors.white   [description]
  * @return {[type]}           [description]
  */
-c-nav__item(bg-color = nix.colors.primary, fg-color = nix.colors.white)
+c-nav__item(bg-color = nix.skin.color.primary, fg-color = nix.skin.color.white)
   u-padding--all--md()
   color: fg-color
 
@@ -35,7 +39,7 @@ c-nav__item(bg-color = nix.colors.primary, fg-color = nix.colors.white)
       box-shadow: inset 0 0 0 2px lighten(nix.skin.color.secondary, 20%)
 
     &:active
-      background-color: darken(bg-color, color-tint)
+      background-color: darken(bg-color, 9)
 
 
 /**
@@ -50,8 +54,8 @@ c-nav--inline()
  * [item description]
  * @return {[type]} [description]
  */
-c-nav-inline-item()
-  c-list-inline-item()
+c-nav-inline__item()
+  c-list--inline__item()
 
 
 /**

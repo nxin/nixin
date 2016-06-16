@@ -1,0 +1,29 @@
+// Mixins
+// ------------------------------------------
+color--set(color, background, border)    
+  color: color
+  background-color: background
+  border-color: border
+    
+  
+button--set(buttonType, buttonColor, buttonColorHover)
+  .button--{buttonType}
+    color--set(#fff, buttonColor, buttonColor)    
+
+  .button--{buttonType},
+  .button--{buttonType}.button--noFill
+    &:hover, 
+    &:focus, 
+    &.focus, 
+    &:active, 
+    &.active
+      color--set(#fff, buttonColorHover, buttonColorHover)  
+      
+  .open 
+    & > .button--{buttonType}.dropdown-toggle,
+    & > .button--{buttonType}.button--noFill.dropdown-toggle
+      color--set(#fff, buttonColorHover, buttonColorHover)    
+  
+  .button--noFill
+    &.button--{buttonType}
+      color--set(buttonColor, transparent, buttonColor)   

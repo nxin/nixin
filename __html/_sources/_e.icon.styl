@@ -1,0 +1,49 @@
+// element.icon
+// ------------------------------------------   
+[class^="icon-"], 
+[class*=" icon-"]
+  font-family: font.fontAwesome
+  font-weight: normal
+  font-style: normal
+  text-decoration: inherit
+  -webkit-font-smoothing: antialiased
+  display: inline
+  width: auto
+  height: auto
+  line-height: normal
+  vertical-align: baseline
+  background-image: none
+  background-position: 0% 0%
+  background-repeat: repeat
+  margin-top: 0    
+
+  &:before
+    text-decoration: inherit
+    display: inline-block
+    speak: none
+
+.font--simpleLine
+  font-family: font.simpleLine
+
+.font--fontAwesome
+  font-family: font.fontAwesome
+    
+.icon--minus:before
+  @extend .font--fontAwesome
+  content: "\f068"
+    
+.icon--plus:before
+  @extend .font--fontAwesome
+  content: "\f067"
+
+.icon--deal:before
+  @extend .font--simpleLine
+  content: "\e055"
+
+.icon--star:before
+  @extend .font--simpleLine
+  content: "\e09b"
+  
+.icon--info:before
+  @extend .font--simpleLine
+  content: "\e08b"
