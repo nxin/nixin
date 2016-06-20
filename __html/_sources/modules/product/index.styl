@@ -2,63 +2,76 @@
 // module.product
 // ------------------------------------------
 .products
+  position: relative
   display: block
   width: 100%
-  min-width: breakpoint.xxs
-  
-  &__cell
+  padding: 0 20px
+
+  .products__cell
     display: block
     width: 100%
+    
+  &.carousel
+    .product
+      border-top: none
+      border-bottom: none 
 
 
 // product--grid
-// ------------------------------------------  
-.products--grid  
-  &__cell
+// ------------------------------------------
+.products--grid
+  .products__cell
     display: inline-block
     width: 50%
     margin: -1px -2.5px
-    
+
     @media (min-width: breakpoint.xxxs)
       width: 100%
-      
+
     @media (min-width: breakpoint.xxs)
-      width: 100%  
-      
+      width: 100%
+
     @media (min-width: breakpoint.xs)
-      width: 50% 
-     
+      width: 50%
+
     @media (min-width: breakpoint.md)
       width: 33.3333%
-      
+
     @media (min-width: breakpoint.lg)
       width: 25%
-    
+
     @media (min-width: breakpoint.xl)
       width: 20%
-      
+
     @media (min-width: breakpoint.xxl)
-      width: 15%
-      
+      width: 16.6666%
+
     @media (min-width: breakpoint.xxl)
-      width: 10.07%
+      width: 11.1111%
         
 
 // product--list
 // ------------------------------------------
 .products--list
-  &__cell
+  .products__cell
     display: block
     width: 100%
-    
+
+    .product
+      height: auto
+
     .product__media
       display: inline-block
       width: 33.3333%
+      height: 400px
+
+      .image
+        max-height: 400px
       
     .product__info
       display: inline-block
-      width: 66.6666%
-                               
+      width: 66.6666%  
+
 
 // product
 // ------------------------------------------
@@ -76,13 +89,12 @@
   text-align: left
   color: color.gray--light
   font-weight: 400
-  // border: 1px solid #EDEADF
-  border: 10px solid #f5f3f1
+  border: 10px solid color.white--beige 
 
   &:hover
     text-decoration: none
     
-    .quantity, 
+    .overlay,
     .product__caption
       display: block
     
@@ -112,9 +124,8 @@
     max-width: 100%
     max-height: 205px
     padding: 10px
-    
-    
-  .quantity
+
+  .overlay
     display: none
     position: absolute
     left: 0
@@ -123,39 +134,19 @@
     height: 155px
     color: color.white
     font-weight: 300
-    background: rgba(0,0,0,0.5)
+    background: rgba(19, 10, 0, 0.65)
   
-  .quantity__number
+  .overlay__heading
     margin-top: 38px
     font-size: 40px
     display: block
     text-align: center
     line-height: 38px
 
-  .quantity__label
+  .overlay__label
     text-align: center
     display: block
     font-size: 16px
-    
-  .badge
-    display: block
-    position: absolute
-    top: 12px
-    left: 12px
-    z-index: 10
-    min-width: 10px
-    padding: 7px 5px
-    border-radius: 50%
-    background: color.green
-    color: #fff
-    font-size: 16px
-    text-align: center
-    font-weight: normal
-    text-rendering: optimizeLegibility
-    
-  .badge__quantity
-    display: inline-block
-    width: 21px
 
     
 // product__caption  
@@ -233,7 +224,7 @@
     font-weight: 600
     
   .pricing__new
-    // color: color.red
+    font-weight: bold
     
   .pricing__old
     display: inline-block
@@ -270,4 +261,29 @@
     word-break: break-all
     
   .description__size  
-    color: color.gray--light  
+    color: color.gray--light 
+    
+
+
+// is-mobile
+// -----------------------------------
+.is-mobile   
+  .product,
+  .product__media
+    height: auto
+    
+  .product__caption, 
+  .product__info,
+  .product__media .image 
+    display: block
+    position: static    
+
+  .product__media
+    .image
+      transform: none
+      margin: 0 auto
+  
+  .product__info
+    .description
+      margin-bottom: 25px    
+     

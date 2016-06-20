@@ -1,0 +1,151 @@
+.carousel
+    position: relative
+    width: 100%
+    
+    .slick-next.slick-disabled, .slick-prev.slick-disabled
+        opacity: .25
+
+    &__controls
+       display: none
+       position: absolute
+       top: 0
+       left: 0 
+       width: 100% 
+       height: calc(100% - 30px) // height - margin-bottom of carousel
+       margin-top: 0
+       
+       .carousel__prev,
+       .carousel__next 
+            position: absolute
+            top: 50%
+            z-index: 900
+            width: 50px
+            height: 365px
+            border: none
+            margin-top: 15px
+            padding: 0
+            font-family: font.simpleLine
+            font-size: 40px
+            text-align: center
+            border-width: 1px
+            border-style: solid 
+            Color(color.orange--light)
+            
+            &:before
+              visibility: visible
+              opacity: .75
+              font-size: 36px
+              font-family: font.simpleLine
+              font-weight: bold  
+              line-height: 1
+              Color(color.orange--light)
+            
+            &:focus,
+            &:hover
+                Color(color.orange--light)
+                
+                &:before
+                    Color(color.orange--light)
+                    
+            &.slick-disabled, &.slick-disabled:before
+                opacity: .25
+                        
+
+        .carousel__prev
+           left: -20px
+           border-left: none  
+           
+           &:before
+            content: "\e605"
+            
+        .carousel__next
+            right: -20px  
+            border-right: none
+        
+            &:before
+              content: "\e606"  
+            
+            .loading .spinner
+                width: 4em
+                height: 4em
+                border-left-color: #43B02A
+                background: #fcfcfc
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                margin: auto       
+       
+       &--center
+            .carousel__prev,
+            .carousel__next 
+                width: 60px
+                height: 70px 
+                
+            .carousel__next
+                border-radius: 50% 0 0 50% 
+                
+                &:before
+                    margin-left: 10px
+            
+            .carousel__prev
+                border-radius: 0 50% 50% 0     
+                
+                &:before
+                    margin-right: 10px
+           
+       // &--topRight    
+       // &--topLeft            
+
+    &:hover
+        .carousel__controls
+            display: block
+
+    &__items > *
+        overflow: hidden
+        border: none
+    
+    .slick-slider
+        position: relative
+        padding: 0
+        
+        &.slick-dotted
+            margin-bottom: 40px
+
+    .slick-dots
+        bottom: -40px
+        
+        li
+            width: 15px
+            height: 15px
+                
+            button 
+                width: 15px
+                height: 15px
+                border: 2px solid transparent
+                border-radius: 50%
+                
+                &:before
+                    opacity: .5
+                    line-height: 15px
+                    color: color.orange
+            
+            &.slick-active
+                button
+                    border-color: color.orange
+                    
+                    &:before
+                        color: transparent
+
+    .loading
+        top: 0
+        left: 0
+        right: 0
+        padding-top: 35px
+        min-height: 300px
+        vertical-align: middle
+        text-align: center
+        color: #555
+        font-weight: bold
+        font-size: 18px

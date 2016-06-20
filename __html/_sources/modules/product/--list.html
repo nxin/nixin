@@ -14,14 +14,24 @@
 
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
 
-  <link rel="stylesheet" href="../../_dist/app.css">
+  <link rel="stylesheet" href="../../../_dist/app.css">
 
 </head>
 <body>
   
+    <header class="header">
+    <img src="../../../_dist/header.png" class="img-responsive">
+  </header>
+
+  <div class="page">
+
+
+  <h1 style="text-align: center">Product--list</h1>
+  <hr>
+
+  
   <div class="products products--list">
-    
-    <div class="products--list__cell">
+    <div class="products__cell">
       <div class="product">
         
           <div class="product__media">
@@ -31,9 +41,9 @@
               </span>
             </div>
             <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="quantity" href="#productDetail">
-              <span class="quantity__number">3</span>
-              <span class="quantity__label">nel carrello</span>
+            <a class="overlay" href="#productDetail">
+              <span class="overlay__heading">3</span>
+              <span class="overlay__label">nel carrello</span>
             </a>
             <div class="product__caption">
               <div class="inner">
@@ -41,9 +51,9 @@
                   <i class="icon icon--star"></i>
                 </button>
                 
-                <button class="button button--detail button--icon">
+                <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </button>  
+                </a>  
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
@@ -81,9 +91,7 @@
      
       </div>
     </div>
-
   </div>
-
 
 </body>
 </html>
