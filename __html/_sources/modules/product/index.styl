@@ -5,49 +5,42 @@
   position: relative
   display: block
   width: 100%
-  padding: 0 20px
+  padding: 0 40px
 
   .products__cell
     display: block
     width: 100%
-    
-  &.carousel
-    .product
-      border-top: none
-      border-bottom: none 
 
 
 // product--grid
 // ------------------------------------------
 .products--grid
   .products__cell
+    box-sizing: content-box
     display: inline-block
     width: 50%
     margin: -1px -2.5px
 
-    @media (min-width: breakpoint.xxxs)
+    @media (min-width: app.breakpoint.xxxs)
       width: 100%
 
-    @media (min-width: breakpoint.xxs)
+    @media (min-width: app.breakpoint.xxs)
       width: 100%
 
-    @media (min-width: breakpoint.xs)
+    @media (min-width: app.breakpoint.xs)
       width: 50%
 
-    @media (min-width: breakpoint.md)
-      width: 33.3333%
+    @media (min-width: app.breakpoint.md)
+      width: 33.333333%
 
-    @media (min-width: breakpoint.lg)
+    @media (min-width: app.breakpoint.lg)
       width: 25%
 
-    @media (min-width: breakpoint.xl)
-      width: 20%
+    @media (min-width: app.breakpoint.xl)
+      width: 16.666666%
 
-    @media (min-width: breakpoint.xxl)
-      width: 16.6666%
-
-    @media (min-width: breakpoint.xxl)
-      width: 11.1111%
+    @media (min-width: app.breakpoint.xxl)
+      width: 11.111111%
         
 
 // product--list
@@ -60,17 +53,41 @@
     .product
       height: auto
 
-    .product__media
-      display: inline-block
-      width: 33.3333%
-      height: 400px
+  .product__media,
+  .product__info
+    float: left
 
-      .image
-        max-height: 400px
-      
-    .product__info
-      display: inline-block
-      width: 66.6666%  
+  .product__media
+    display: inline-block
+    width: 25%
+    border-right: 1px solid app.color.white--bronze
+
+    .overlay
+      height: 100%
+
+  .product__info
+    display: inline-block
+    width: 75%
+    padding: 20px
+    font-size: 16px
+
+    .pricing
+      font-size: 21px
+
+    .pricing__deal
+      height: 25px
+      line-height: 25px
+      font-size: 16px
+
+    .description
+      max-height: none
+
+  .product__caption
+    display: block
+    position: relative
+
+    .inner
+      padding: 15px 0
 
 
 // product
@@ -85,14 +102,24 @@
   padding: 0
   cursor: pointer
   vertical-align: top
-  background: color.white
+  background: app.color.white
   text-align: left
-  color: color.gray--light
+  color: app.color.gray--light
   font-weight: 400
-  border: 10px solid color.white--beige 
+  border: 1px solid app.color.white--bronze
+
+  &:after
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background: linear-gradient(transparent 250px, white)
 
   &:hover
     text-decoration: none
+    cursor: default
     
     .overlay,
     .product__caption
@@ -106,6 +133,7 @@
 .product__media 
   display: block   
   position: relative
+  z-index: 5
   overflow: visible
   zoom: 1
   width: 100%
@@ -123,30 +151,11 @@
     width: auto
     max-width: 100%
     max-height: 205px
-    padding: 10px
+    padding: 15px
 
   .overlay
     display: none
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 155px
-    color: color.white
-    font-weight: 300
-    background: rgba(19, 10, 0, 0.65)
-  
-  .overlay__heading
-    margin-top: 38px
-    font-size: 40px
-    display: block
-    text-align: center
-    line-height: 38px
-
-  .overlay__label
-    text-align: center
-    display: block
-    font-size: 16px
+    color: app.color.white
 
     
 // product__caption  
@@ -157,8 +166,8 @@
   width: 100%
   height: 50px
   padding: 0
-  border-top: 1px solid color.white
-  background-image: linear-gradient(rgba(255,255,255,0.75), color.white)
+  border-top: 1px solid app.color.white
+  background-image: linear-gradient(rgba(255,255,255,0.75), app.color.white)
   
   .inner
     padding: 10px 5px
@@ -180,16 +189,16 @@
     
   .button--favorite
     margin-left: 5px
-    color: color.orange
+    color: app.color.orange
     
     &:hover
-      color: color.orange--dark
+      color: app.color.orange--dark
       
   .button--detail
-    color: color.cyan
+    color: app.color.cyan
     
     &:hover
-      color: color.cyan--dark
+      color: app.color.cyan--dark
     
       
   .button--sub,
@@ -214,12 +223,12 @@
   margin-bottom: 4px
   font-size: 15px
   line-height: 1.456789em
-  background: color.white
+  background: app.color.white
   
   .pricing
     display: inline-block
     margin-bottom: 4px
-    color: color.black
+    color: app.color.black
     font-size: 17px
     font-weight: 600
     
@@ -231,13 +240,13 @@
     padding-left: 5px
     text-decoration: line-through
     font-weight: 400
-    color: color.gray--light
+    color: app.color.gray--light
     
   .pricing__deal
     height: 20px
     line-height: 20px
     background-color: #fff
-    color: color.red
+    color: app.color.red
     text-align: left
     font-weight: 700
     font-size: 13px
@@ -253,7 +262,7 @@
     
   .description__text
     margin-bottom: 2px
-    color: color.gray
+    color: app.color.gray
     -webkit-hyphens: auto
     -moz-hyphens: auto
     -ms-hyphens: auto
@@ -261,7 +270,7 @@
     word-break: break-all
     
   .description__size  
-    color: color.gray--light 
+    color: app.color.gray--light
     
 
 
@@ -285,5 +294,13 @@
   
   .product__info
     .description
-      margin-bottom: 25px    
+      margin-bottom: 25px
+
+
+
+// Effeckts
+[class*="hvr-"]
+  &:before
+    z-index: 50
+    background: app.color.orange--light
      

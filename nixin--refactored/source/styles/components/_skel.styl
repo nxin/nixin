@@ -1,0 +1,52 @@
+/* ------------------------------------------------------------------------ *\
+   utils.skel
+\* ------------------------------------------------------------------------ */
+
+/**
+ * settings
+ */
+$name = "skel"
+$s = $prefix + $name
+
+
+/* styles
+\* ------------------------------------------------------------------------ */
+
+/**
+ * page
+ * a. default: 100% content
+ */
+{$s}
+  skel()
+
+
+/**
+ * page
+ * b. --unboxed: 100% with boxed content
+ */
+{$s}--unboxed {$s}__wrap
+  skel--unboxed__wrap()
+
+
+/**
+ * page
+ * c. --boxed: totally boxed content
+ */
+{$s}--boxed
+  skel--boxed()
+
+
+/**
+ * __wrap
+ * boxed: boxed content
+ */
+{$s}__wrap
+  skel__wrap()
+
+
+/**
+ * __row
+ * boxed: boxed cols
+ */
+{$s}__row
+  skel__row()

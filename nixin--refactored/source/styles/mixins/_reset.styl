@@ -1,0 +1,185 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.reset
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [reset description]
+ */
+reset()
+  for prop, value in $nix.reset
+    for arg in arguments
+      if(prop == arg[0])
+        {arg[0]}: value
+
+
+/**
+ * [global description]
+ * @return {[type]} [description]
+ */
+reset--global()
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td
+    reset--box-model()
+    reset--font()
+
+  body
+    reset--body()
+
+  ol, ul
+    list-style: none
+
+  table
+    reset--table()
+
+  caption, th, td
+    reset--table-cell()
+
+  a img
+    border: none
+
+
+/**
+ * [nested description]
+ * @return {[type]} [description]
+ */
+reset--nested()
+  div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+  pre, a, abbr, acronym, address, code, del, dfn, em, img,
+  dl, dt, dd, ol, ul, li, fieldset, form, label,
+  legend, caption, tbody, tfoot, thead, tr
+    reset--box-model()
+    reset--font()
+
+  table
+    reset-table()
+
+  caption, th, td
+    reset-table-cell()
+
+  a img
+    border: none
+
+
+/**
+ * [model description]
+ * @return {[type]} [description]
+ */
+reset--box-model()
+  reset(margin, padding, border, outline)
+
+
+/**
+ * [font description]
+ * @return {[type]} [description]
+ */
+reset--font()
+  font-weight: inherit
+  font-style: inherit
+  font-family: inherit
+  font-size: 100%
+  vertical-align: baseline
+
+
+/**
+ * [body description]
+ * @return {[type]} [description]
+ */
+reset--body()
+  line-height: 1
+  color: black
+  background: white
+
+
+/**
+ * [table description]
+ * @return {[type]} [description]
+ */
+reset--table()
+  border-collapse: separate
+  border-spacing: 0
+  vertical-align: middle
+
+
+/**
+ * [cell description]
+ * @return {[type]} [description]
+ */
+reset--table-cell()
+  text-align: left
+  font-weight: normal
+  vertical-align: middle
+
+
+/**
+ * [html5 description]
+ * @return {[type]} [description]
+ */
+reset--html5()
+  article, aside, canvas, details, figcaption,
+  figure, footer, header, hgroup, menu, nav,
+  section, summary, main
+    reset--box-model()
+    display: block
+
+  audio, canvas, video
+    display inline-block
+    *display inline
+    *zoom 1
+
+  audio:not([controls]),[hidden]
+    display none
+
+
+/**
+ * [tags description]
+ * @return {[type]} [description]
+ */
+reset--tags()
+  html, *:before, *:after
+    box-sizing: border-box
+
+  body
+    margin: 0
+
+
+/**
+ * [clear description]
+ * @return {[type]} [description]
+ */
+reset--clear()
+  overflow: auto
+  zoom: 1
+
+
+/**
+ * [clearfix description]
+ * @return {[type]} [description]
+ */
+reset--clearfix()
+  zoom: 1 if $nix.legacy.ie
+
+  &:before
+  &:after
+    content: ""
+    display: table
+
+  &:after
+    clear: both
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+reset--create(selector)
+  for prop, value in $nix.reset
+    {selector}--{prop}
+      {prop}: value

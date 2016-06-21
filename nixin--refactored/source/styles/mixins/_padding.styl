@@ -1,0 +1,720 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.padding
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [set description]
+ */
+padding--set()
+  if null in arguments
+    padding-top: arguments[0] if arguments[0] != null
+    padding-right: arguments[1] if arguments[1] != null
+    if length(arguments) == 2
+      padding-bottom: arguments[0] if arguments[0] != null
+      padding-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 3
+      padding-bottom: arguments[2] if arguments[2] != null
+      padding-left: arguments[1] if arguments[1] != null
+    else if length(arguments) == 4
+      padding-bottom: arguments[2] if arguments[2] != null
+      padding-left: arguments[3] if arguments[3] != null
+  else
+    padding: arguments
+
+
+/**
+ * [padding description]
+ * @param  {[type]} direction [description]
+ * @param  {[type]} size      [description]
+ * @return {[type]}           [description]
+ */
+padding(direction, size)
+  if direction == "all"
+    padding--set(size)
+
+  else if direction == "vertical"
+    padding--set(size null)
+
+  else if direction == "horizontal"
+    padding--set(null size)
+
+  else if direction == "top"
+    padding--set(size null null null)
+
+  else if direction == "right"
+    padding--set(null size null null)
+
+  else if direction == "bottom"
+    padding--set(null null size null)
+
+  else
+    padding--set(null null null size)
+
+
+/**
+ * [top description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--top(size)
+  padding("top", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--top--xxxl()
+  padding("top", $nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--top--xxl()
+  padding("top", $nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--top--xl()
+  padding("top", $nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--top--lg()
+  padding("top", $nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--top--md()
+  padding("top", $nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--top--sm()
+ padding("top", $nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--top--xs()
+  padding("top", $nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--top--xxs()
+  padding("top", $nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--top--xxxs()
+  padding("top", $nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--top--0()
+  padding("top", 0)
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--right(size)
+  padding("right", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--right--xxxl()
+  padding("right", $nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--right--xxl()
+  padding("right", $nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--right--xl()
+  padding("right", $nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--right--lg()
+  padding("right", $nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--right--md()
+  padding("right", $nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--right--sm()
+  padding("right", $nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--right--xs()
+  padding("right", $nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--right--xxs()
+  padding("right", $nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--right--xxxs()
+  padding("right", $nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--right--0()
+  padding("right", 0)
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--bottom(size)
+  padding("bottom", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--bottom--xxxl()
+  padding("bottom", $nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--bottom--xxl()
+  padding("bottom", $nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--bottom--xl()
+  padding("bottom", $nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--bottom--lg()
+  padding("bottom", $nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--bottom--md()
+  padding("bottom", $nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--bottom--sm()
+  padding("bottom", $nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--bottom--xs()
+  padding("bottom", $nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--bottom--xxs()
+  padding("bottom", $nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--bottom--xxxs()
+  padding("bottom", $nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--bottom--0()
+  padding("bottom", 0)
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--left(size)
+  padding("left", size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--left--xxxl()
+  padding("left", $nix.sizes.xxxl)
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--left--xxl()
+  padding("left", $nix.sizes.xxl)
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--left--xl()
+  padding("left", $nix.sizes.xl)
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--left--lg()
+  padding("left", $nix.sizes.lg)
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--left--md()
+  padding("left", $nix.sizes.md)
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--left--sm()
+  padding("left", $nix.sizes.sm)
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--left--xs()
+  padding("left", $nix.sizes.xs)
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--left--xxs()
+  padding("left", $nix.sizes.xxs)
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--left--xxxs()
+  padding("left", $nix.sizes.xxxs)
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--left--0()
+  padding("left", 0)
+
+
+/**
+ * [vertical description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--vertical(size)
+  padding--top(size)
+  padding--bottom(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--vertical--xxxl()
+  padding--top--xxxl()
+  padding--bottom--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--vertical--xxl()
+  padding--top--xxl()
+  padding--bottom--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--vertical--xl()
+  padding--top--xl()
+  padding--bottom--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--vertical--lg()
+  padding--top--lg()
+  padding--bottom--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--vertical--md()
+  padding--top--md()
+  padding--bottom--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--vertical--sm()
+  padding--top--sm()
+  padding--bottom--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--vertical--xs()
+  padding--top--xs()
+  padding--bottom--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--vertical--xxs()
+  padding--top--xxs()
+  padding--bottom--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--vertical--xxxs()
+  padding--top--xxxs()
+  padding--bottom--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--vertical--0()
+  padding--top--0()
+  padding--bottom--0()
+
+
+/**
+ * [horizontal description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--horizontal(size)
+  padding--right(size)
+  padding--left(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--xxxl()
+  padding--right--xxxl()
+  padding--left--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--xxl()
+  padding--right--xxl()
+  padding--left--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--xl()
+  padding--right--xl()
+  padding--left--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--lg()
+  padding--right--lg()
+  padding--left--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--md()
+  padding--right--md()
+  padding--left--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--sm()
+  padding--right--sm()
+  padding--left--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--xs()
+  padding--right--xs()
+  padding--left--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--xxs()
+  padding--right--xxs()
+  padding--left--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--xxxs()
+  padding--right--xxxs()
+  padding--left--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--horizontal--0()
+  padding--right--0()
+  padding--left--0()
+
+
+/**
+ * [all description]
+ * @param  {[type]} size [description]
+ * @return {[type]}      [description]
+ */
+padding--all(size)
+  padding--vertical(size)
+  padding--horizontal(size)
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+padding--all--xxxl()
+  padding--vertical--xxxl()
+  padding--horizontal--xxxl()
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+padding--all--xxl()
+  padding--vertical--xxl()
+  padding--horizontal--xxl()
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+padding--all--xl()
+  padding--vertical--xl()
+  padding--horizontal--xl()
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+padding--all--lg()
+  padding--vertical--lg()
+  padding--horizontal--lg()
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+padding--all--md()
+  padding--vertical--md()
+  padding--horizontal--md()
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+padding--all--sm()
+  padding--vertical--sm()
+  padding--horizontal--sm()
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+padding--all--xs()
+  padding--vertical--xs()
+  padding--horizontal--xs()
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+padding--all--xxs()
+  padding--vertical--xxs()
+  padding--horizontal--xxs()
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+padding--all--xxxs()
+  padding--vertical--xxxs()
+  padding--horizontal--xxxs()
+
+
+/**
+ * [0 description]
+ * @return {[type]} [description]
+ */
+padding--all--0()
+  padding--vertical--0()
+  padding--horizontal--0()
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+padding--create(selector)
+  for dk, dv in $nix.directions
+    for sk, sv in $nix.sizes
+      {selector}--{dv}--{sk}
+        padding(dk, sv)

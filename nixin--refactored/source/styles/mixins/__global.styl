@@ -1,0 +1,84 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.global
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [getSize description]
+ * @param  {[type]} property   [description]
+ * @param  {[type]} expression [description]
+ * @return {[type]}            [description]
+ */
+getSize(property, expression)
+  property: -webkit-calc(expression)
+  property: calc(expression)
+
+
+/**
+ * [replaceInSelector description]
+ * @param  {[type]} what [description]
+ * @param  {[type]} with =             "" [description]
+ * @return {[type]}      [description]
+ */
+replaceInSelector(what, with = "")
+  /{replace(what, with , selector())}
+    {block}
+
+
+/**
+ * [getParent description]
+ * @param  {[type]} depth =             1 [description]
+ * @return {[type]}       [description]
+ */
+getParent(depth = 1)
+  selectors = split(",", selector())
+  for selector, i in selectors
+    selector = split(" ", selector)
+    selector = selector[0..length(selector) - (1 + depth)]
+    selectors[i] = join(" ", selector)
+  return "/" + join(",", selectors)
+
+
+/**
+ * [calcPercentage description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+calcPercentage(n)
+  (n * 100) %
+
+
+/**
+ * [calcHalf description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+calcHalf(n)
+  return round(n / 2)
+
+
+/**
+ * [calcQuarter description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+calcQuarter(n)
+  return round(n / 4)
+
+
+/**
+ * [calcDouble description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+calcDouble(n)
+  return round(n * 2)
+
+
+/**
+ * [calcQuadruple description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+calcQuadruple(n)
+  return round(n * 4)

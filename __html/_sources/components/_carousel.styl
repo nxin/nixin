@@ -1,8 +1,12 @@
 .carousel
     position: relative
+    clear: both
     width: 100%
+    margin-bottom: 70px
     
-    .slick-next.slick-disabled, .slick-prev.slick-disabled
+    .slick-next.slick-disabled,
+    .slick-prev.slick-disabled
+        display: none
         opacity: .25
 
     &__controls
@@ -19,47 +23,46 @@
             position: absolute
             top: 50%
             z-index: 900
-            width: 50px
+            width: 40px
             height: 365px
-            border: none
             margin-top: 15px
             padding: 0
-            font-family: font.simpleLine
+            font-family: app.font.simpleLine
             font-size: 40px
             text-align: center
             border-width: 1px
             border-style: solid 
-            Color(color.orange--light)
+            Color(app.color.orange--light)
             
             &:before
               visibility: visible
               opacity: .75
               font-size: 36px
-              font-family: font.simpleLine
+              font-family: app.font.simpleLine
               font-weight: bold  
               line-height: 1
-              Color(color.orange--light)
+              Color(app.color.orange--light)
             
             &:focus,
             &:hover
-                Color(color.orange--light)
+                Color(app.color.orange--light)
                 
                 &:before
-                    Color(color.orange--light)
+                    Color(app.color.orange--light)
                     
             &.slick-disabled, &.slick-disabled:before
                 opacity: .25
                         
 
         .carousel__prev
-           left: -20px
+           left: 0
            border-left: none  
            
            &:before
             content: "\e605"
             
         .carousel__next
-            right: -20px  
+            right: 0
             border-right: none
         
             &:before
@@ -68,8 +71,8 @@
             .loading .spinner
                 width: 4em
                 height: 4em
-                border-left-color: #43B02A
-                background: #fcfcfc
+                border-left-color: app.color.white
+                background: transparent
                 position: absolute
                 top: 0
                 left: 0
@@ -79,7 +82,7 @@
        
        &--center
             .carousel__prev,
-            .carousel__next 
+            .carousel__next
                 width: 60px
                 height: 70px 
                 
@@ -102,16 +105,24 @@
         .carousel__controls
             display: block
 
-    &__items > *
+    &__items
+      border-left: 1px solid app.color.white--bronze
+      border-right: 1px solid app.color.white--bronze
+
+      > *
         overflow: hidden
         border: none
+
+    .slick-slide
+      margin: 0 -1px
     
     .slick-slider
         position: relative
         padding: 0
+        margin: 0 -2px
         
         &.slick-dotted
-            margin-bottom: 40px
+            margin-bottom: 0
 
     .slick-dots
         bottom: -40px
@@ -129,11 +140,11 @@
                 &:before
                     opacity: .5
                     line-height: 15px
-                    color: color.orange
+                    color: app.color.orange
             
             &.slick-active
                 button
-                    border-color: color.orange
+                    border-color: app.color.orange
                     
                     &:before
                         color: transparent

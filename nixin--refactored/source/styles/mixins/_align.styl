@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.align
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * [block description]
+ * @return {[type]} [description]
+ */
+align()
+  position: relative
+  transform-style: preserve-3d
+
+
+/**
+ * [block__content description]
+ * @param  {[type]} direction =             "center" [description]
+ * @return {[type]}           [description]
+ */
+align__content(direction = "center")
+  position: absolute
+  margin: 0
+
+  if direction == "center"
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%, -50%, 0)
+
+  else if direction == "vertical"
+    transform: translateY(-50%)
+    left: auto
+
+  else if direction == "horizontal"
+    transform: translateX(-50%)
+    top: auto
+
+
+/**
+ * [flex description]
+ * @return {[type]} [description]
+ */
+align--flex()
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+align--create(selector)
+  {selector}
+    align()
+
+  {selector}__content
+    &--center
+      align__content("center")
+
+    &--vertical
+      align__content("vertical")
+
+    &--horizontal
+      align__content("horizontal")
+
+    &--flex
+      align__target("flex")

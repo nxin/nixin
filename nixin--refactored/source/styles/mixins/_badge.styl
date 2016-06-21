@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.badge
+\* ------------------------------------------------------------------------ */
+
+
+@import "_margin"
+@import "_padding"
+
+
+/**
+ * [color description]
+ * @param  {[type]} bg-color =             color-default    [description]
+ * @param  {[type]} fg-color =             $nix.colors.white [description]
+ * @return {[type]}          [description]
+ */
+badge--color(bg-color = $nix.skin.color.default, fg-color = $nix.skin.color.white)
+  background-color: bg-color
+  color: fg-color
+
+
+/**
+ * [badge description]
+ * @return {[type]} [description]
+ */
+badge()
+  margin--all-0()
+  padding--all--xs()
+  badge--color()
+  display: inline-block
+  border-radius: $nix.borders.radius
+  font-weight: $nix.text.font.weight--heavy
+  font-size: $nix.text.font.size * .8

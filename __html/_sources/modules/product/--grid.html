@@ -7,16 +7,11 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
-  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
   <link rel="stylesheet" href="../../../_dist/app.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 </head>
 <body>
@@ -28,14 +23,86 @@
   <div class="page">
 
 
+  <h1>Product--list</h1>
+  <hr>
+    <div class="products products--list">
+      <div class="products__cell">
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+                Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
   <h1>Product--grid</h1>
   <hr>
 
-  
+
   <div class="products products--grid">
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -44,18 +111,20 @@
             </div>
             <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
@@ -63,10 +132,10 @@
                     <i class="icon icon--plus"></i>
                   </button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -78,9 +147,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -88,44 +157,48 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
+              <div class="inner">
+                <span class="badge__quantity">
+                  3
+                </span>
+              </div>
             </div>
             <img class="image" src="http://falphool.com/wp-content/uploads/2015/06/broccoli.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -137,9 +210,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -147,44 +220,48 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
+            <div class="badge badge--starburst">
+              <div class="inner">
+                <span class="badge__quantity">
+                  3
+                </span>
+              </div>
             </div>
             <img class="image" src="http://www.saporinuovi.it/wp-content/uploads/2015/07/BUCCIA-ARANCIA.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -196,9 +273,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -206,15 +283,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -223,27 +300,29 @@
             </div>
             <img class="image" src="http://feelgrafix.com/data_images/out/28/975227-banana.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -255,9 +334,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -265,17 +344,17 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
 
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -284,18 +363,20 @@
             </div>
             <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
@@ -303,10 +384,10 @@
                     <i class="icon icon--plus"></i>
                   </button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -318,9 +399,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -328,15 +409,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -345,27 +426,29 @@
             </div>
             <img class="image" src="http://falphool.com/wp-content/uploads/2015/06/broccoli.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -377,9 +460,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -387,15 +470,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -404,27 +487,29 @@
             </div>
             <img class="image" src="http://www.saporinuovi.it/wp-content/uploads/2015/07/BUCCIA-ARANCIA.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -436,9 +521,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -446,15 +531,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -463,27 +548,29 @@
             </div>
             <img class="image" src="http://feelgrafix.com/data_images/out/28/975227-banana.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -495,9 +582,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -505,16 +592,16 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -523,18 +610,20 @@
             </div>
             <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
@@ -542,10 +631,10 @@
                     <i class="icon icon--plus"></i>
                   </button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -557,9 +646,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -567,15 +656,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -584,27 +673,29 @@
             </div>
             <img class="image" src="http://falphool.com/wp-content/uploads/2015/06/broccoli.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -616,9 +707,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -626,15 +717,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -643,27 +734,29 @@
             </div>
             <img class="image" src="http://www.saporinuovi.it/wp-content/uploads/2015/07/BUCCIA-ARANCIA.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -675,9 +768,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -685,15 +778,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -702,27 +795,29 @@
             </div>
             <img class="image" src="http://feelgrafix.com/data_images/out/28/975227-banana.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -734,9 +829,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -744,17 +839,17 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
 
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -763,18 +858,20 @@
             </div>
             <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
@@ -782,10 +879,10 @@
                     <i class="icon icon--plus"></i>
                   </button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -797,9 +894,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -807,15 +904,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -824,27 +921,29 @@
             </div>
             <img class="image" src="http://falphool.com/wp-content/uploads/2015/06/broccoli.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -856,9 +955,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -866,15 +965,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -883,27 +982,29 @@
             </div>
             <img class="image" src="http://www.saporinuovi.it/wp-content/uploads/2015/07/BUCCIA-ARANCIA.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -915,9 +1016,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -925,15 +1026,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -942,27 +1043,29 @@
             </div>
             <img class="image" src="http://feelgrafix.com/data_images/out/28/975227-banana.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -974,9 +1077,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -984,17 +1087,17 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
 
     </div>
 
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -1003,27 +1106,29 @@
             </div>
             <img class="image" src="http://falphool.com/wp-content/uploads/2015/06/broccoli.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -1035,9 +1140,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -1045,15 +1150,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -1062,27 +1167,29 @@
             </div>
             <img class="image" src="http://www.saporinuovi.it/wp-content/uploads/2015/07/BUCCIA-ARANCIA.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -1094,9 +1201,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -1104,15 +1211,15 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -1121,27 +1228,29 @@
             </div>
             <img class="image" src="http://feelgrafix.com/data_images/out/28/975227-banana.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -1153,9 +1262,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -1163,16 +1272,16 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
     </div>
-    
+
 
     <div class="products__cell">
-      <div class="product">
-        
+      <div class="product hvr-overline-from-right">
+
           <div class="product__media">
             <div class="badge">
               <span class="badge__quantity">
@@ -1181,27 +1290,29 @@
             </div>
             <img class="image" src="http://www.saporinuovi.it/wp-content/uploads/2015/07/BUCCIA-ARANCIA.jpg" title="succo tropicale">
             <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
             </a>
             <div class="product__caption">
               <div class="inner">
                 <button class="button button--favorite button--icon">
                   <i class="icon icon--star"></i>
                 </button>
-                
+
                 <a href="#productDetail" class="button button--detail button--icon">
                   <i class="icon icon--info"></i>
-                </a>  
+                </a>
 
                 <div class="right">
                   <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
                   <button href="#" class="button button--sm button--success button--add"><i class="icon icon--plus"></i></button>
                 </div>
-              </div>  
-            </div>  
+              </div>
+            </div>
           </div>
-          
+
           <div class="product__info">
             <div class="pricing">
               <span class="pricing__new">
@@ -1213,9 +1324,9 @@
               <div class="pricing__deal">
                 <i class="icon icon--deal"></i>
                 Sconto € 0.50
-              </div>  
+              </div>
             </div>
-            
+
             <div class="description">
               <div class="description__text">
               Pure Premium Original No Pulp Orange Juice
@@ -1223,1899 +1334,1364 @@
               <div class="description__size">
                 59 fl oz
               </div>
-            </div>  
+            </div>
           </div>
-     
+
       </div>
-    </div>    
+    </div>
 
   </div>
 
-  
+
+  <h1>Slick</h1>
+  <hr>
 
 
+  <div class="products carousel">
+
+    <div class="carousel__controls">
+      <button class="carousel__prev slick-prev slick-arrow js-carousel__prev"
+            type="button" data-role="none"  aria-label="Prev" role="button"></button>
+
+      <button class="carousel__next slick-next slick-arrow js-carousel__next"
+              type="button" data-role="none" aria-label="Next" role="button"></button>
+    </div>
+
+    <ul class="carousel__items js-carousel__items">
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+      <li>
+        <div class="product hvr-overline-from-right">
+
+          <div class="product__media">
+            <div class="badge">
+              <span class="badge__quantity">
+                3
+              </span>
+            </div>
+            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
+            <a class="overlay" href="#productDetail">
+              <div class="inner">
+                <span class="overlay__heading">3</span>
+                <span class="overlay__label">nel carrello</span>
+              </div>
+            </a>
+            <div class="product__caption">
+              <div class="inner">
+                <button class="button button--favorite button--icon">
+                  <i class="icon icon--star"></i>
+                </button>
+
+                <a href="#productDetail" class="button button--detail button--icon">
+                  <i class="icon icon--info"></i>
+                </a>
+
+                <div class="right">
+                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
+                  <button href="#" class="button button--sm button--success button--add">
+                    <i class="icon icon--plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <div class="pricing">
+              <span class="pricing__new">
+                € 6.99
+              </span>
+              <span class="pricing__old">
+                € 7.49
+              </span>
+              <div class="pricing__deal">
+                <i class="icon icon--deal"></i>
+                Sconto € 0.50
+              </div>
+            </div>
+
+            <div class="description">
+              <div class="description__text">
+              Pure Premium Original No Pulp Orange Juice
+              </div>
+              <div class="description__size">
+                59 fl oz
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </li>
+    </ul>
+  </div>
 
 
+</div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-<!-- 
-/////////////////////slick caorusel//////////////////////////
--->
+  <!--
+  /////////////////////slick caorusel//////////////////////////
+  -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 
   <script>
-  $(function() {
-    $('.js-carousel__items').slick({
-      autoplay: false,
-      autoplaySpeed: 2000,
-      dots: true,
-      infinite: false,
-      speed: 200,
-      slidesToShow: 9,
-      slidesToScroll: 9,
-      variableWidth: false,
-      lazyLoad: 'ondemand',
-      cssEase: 'ease-in-out',
-      mobileFirst: true,
-      centerMode: false,
-      prevArrow: $(".js-carousel__prev"),
-      nextArrow: $(".js-carousel__next"),
-      responsive: [
-        {
-          breakpoint: 0,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 321,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 481,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 993,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4
-          }
-        },
-        {
-          breakpoint: 1281,
-          settings: {
-            slidesToShow: 5,
-            slidesToScroll: 5
-          }
-        },
-        {
-          breakpoint: 1921,
-          settings: {
-            slidesToShow: 9,
-            slidesToScroll: 9
-          }
-        }
-      ]
-    });
-  });
+      $(function() {
+          $('.js-carousel__items').slick({
+              autoplay: false,
+              autoplaySpeed: 2000,
+              dots: true,
+              infinite: false,
+              speed: 200,
+              slidesToShow: 9,
+              slidesToScroll: 9,
+              variableWidth: false,
+              lazyLoad: 'ondemand',
+              cssEase: 'ease-in-out',
+              mobileFirst: true,
+              centerMode: false,
+              prevArrow: $(".js-carousel__prev"),
+              nextArrow: $(".js-carousel__next"),
+              responsive: [
+                  {
+                      breakpoint: 0,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          dots: false
+                      }
+                  },
+                  {
+                      breakpoint: 321,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          dots: false
+                      }
+                  },
+                  {
+                      breakpoint: 481,
+                      settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2,
+                          dots: false
+                      }
+                  },
+                  {
+                      breakpoint: 768,
+                      settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3,
+                          dots: false
+                      }
+                  },
+                  {
+                      breakpoint: 993,
+                      settings: {
+                          slidesToShow: 4,
+                          slidesToScroll: 4
+                      }
+                  },
+                  {
+                      breakpoint: 1281,
+                      settings: {
+                          slidesToShow: 6,
+                          slidesToScroll: 6
+                      }
+                  },
+                  {
+                      breakpoint: 1921,
+                      settings: {
+                          slidesToShow: 9,
+                          slidesToScroll: 9
+                      }
+                  }
+              ]
+          });
+      });
 
   </script>
-
-
-  <h1>Slick</h1>
-  <hr>
-  
-
-  <div class="products carousel">
-
-    <div class="carousel__controls">
-      <button class="carousel__prev slick-prev slick-arrow js-carousel__prev" 
-            type="button" data-role="none"  aria-label="Prev" role="button"></button>
-
-      <button class="carousel__next slick-next slick-arrow js-carousel__next" 
-              type="button" data-role="none" aria-label="Next" role="button"></button>
-    </div>
-
-    <ul class="carousel__items js-carousel__items"> 
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" data-lazy="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-    </ul>
-  </div>
-  
-
-</div>
-
-
-
-<!-- 
-/////////////////////owl caorusel//////////////////////////
--->
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.5/assets/owl.carousel.min.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.5/assets/owl.theme.default.min.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.5/owl.carousel.min.js"></script>
-
-  <script>
-  $(function() {
-    $(".js-owlCarousel").owlCarousel();
-  });
-  </script>
-  
-  <h1 style="text-align: center">Owl</h1>
-  <hr>
-  
-
-  <div class="products">
-    <ul class="owlCarousell owl-carousel owl-theme js-owlCarousel">
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-      <li>
-        <div class="product">
-        
-          <div class="product__media">
-            <div class="badge">
-              <span class="badge__quantity">
-                3
-              </span>
-            </div>
-            <img class="image" src="https://d2d8wwwkmhfcva.cloudfront.net/350x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_7305f03b-08a0-415e-a9b9-f76c1d22f2d0.JPG" title="succo tropicale">
-            <a class="overlay" href="#productDetail">
-              <span class="overlay__heading">3</span>
-              <span class="overlay__label">nel carrello</span>
-            </a>
-            <div class="product__caption">
-              <div class="inner">
-                <button class="button button--favorite button--icon">
-                  <i class="icon icon--star"></i>
-                </button>
-                
-                <a href="#productDetail" class="button button--detail button--icon">
-                  <i class="icon icon--info"></i>
-                </a>  
-
-                <div class="right">
-                  <button class="button button--sm button--danger button--noFill button--sub"><i class="icon icon--minus"></i></button>
-                  <button href="#" class="button button--sm button--success button--add">
-                    <i class="icon icon--plus"></i>
-                  </button>
-                </div>
-              </div>  
-            </div>  
-          </div>
-          
-          <div class="product__info">
-            <div class="pricing">
-              <span class="pricing__new">
-                € 6.99
-              </span>
-              <span class="pricing__old">
-                € 7.49
-              </span>
-              <div class="pricing__deal">
-                <i class="icon icon--deal"></i>
-                Sconto € 0.50
-              </div>  
-            </div>
-            
-            <div class="description">
-              <div class="description__text">
-              Pure Premium Original No Pulp Orange Juice
-              </div>
-              <div class="description__size">
-                59 fl oz
-              </div>
-            </div>  
-          </div>
-     
-      </div>
-      </li>
-    </ul>
-  </div>
-  
-
-</div> -->
-
 
 
 </body>

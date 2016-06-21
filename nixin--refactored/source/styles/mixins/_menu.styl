@@ -1,0 +1,96 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.menu
+\* ------------------------------------------------------------------------ */
+
+
+@import "_card"
+@import "_list"
+@import "_text"
+
+
+/**
+ * [menu description]
+ * @return {[type]} [description]
+ */
+menu()
+  list--unstyled()
+  card()
+  display: block
+  width: 100%
+  margin-top: $nix.sizes.xs
+  background-color: $nix.skin.color.white
+  border-radius: $nix.borders.radius
+  overflow-y: auto
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+  max-height: 280px
+  z-index: $nix.z.over
+
+
+/**
+ * [menu__item description]
+ * @return {[type]} [description]
+ */
+menu__item()
+  card__item()
+  cursor: pointer
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+menu__item--divider()
+  text--quiet()
+  font-weight: $nix.text.font.weight--heavy
+
+
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+menu__item--hover()
+  card__item--hover()
+  background-color: $nix.skin.color.light
+
+
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+menu__item--active()
+  background-color: $nix.skin.color.light
+  font-weight: $nix.text.font.weight--heavy
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+menu__item--disabled()
+  text--quiet()
+  cursor: not-allowed
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+menu--high()
+  card--high()
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+menu--higher()
+  card--higher()
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+menu--highest()
+  card--highest()

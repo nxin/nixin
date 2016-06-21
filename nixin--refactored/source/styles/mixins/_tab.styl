@@ -1,0 +1,71 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.tab
+\* ------------------------------------------------------------------------ */
+
+
+@import "_padding"
+@import "_text"
+
+
+/**
+ * [tabs description]
+ * @return {[type]} [description]
+ */
+tabs()
+  display: block
+
+
+/**
+ * [tabs__headings description]
+ * @return {[type]} [description]
+ */
+tabs__headings()
+  display: flex
+  text-align: center
+  cursor: pointer
+
+
+/**
+ * [heading description]
+ * @return {[type]} [description]
+ */
+tab-heading()
+  padding--all--md()
+  flex: 1
+  margin: 0
+  box-shadow: 0 -.2em 0 0 $nix.skin.color.gray inset
+
+
+/**
+ * [color description]
+ * @param  {[type]} active-color =             $nix.colors.default [description]
+ * @return {[type]}              [description]
+ */
+tab-heading--color(active-color = $nix.skin.color.default)
+  box-shadow: 0 -.2em 0 0 active-color inset
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+tab-heading--disabled()
+  text--quiet()
+  cursor: not-allowed
+
+
+/**
+ * [tabs__tab description]
+ * @return {[type]} [description]
+ */
+tabs__tab()
+  padding--all--md()
+  display: none
+
+
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+tabs__tab--active()
+  display: block

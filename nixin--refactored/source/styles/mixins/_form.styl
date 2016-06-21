@@ -1,0 +1,385 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.form
+\* ------------------------------------------------------------------------ */
+
+
+@import "_padding"
+@import "_text"
+
+
+/**
+ * [label description]
+ * @return {[type]} [description]
+ */
+form--label()
+  display: block
+  width: 100%
+
+
+/**
+ * [labelfor description]
+ * @return {[type]} [description]
+ */
+form--labelfor()
+  form--label()
+  padding--all--sm()
+  cursor: pointer
+
+
+/**
+ * [field description]
+ * @return {[type]} [description]
+ */
+form--field()
+  padding--all--sm()
+  margin--all--0()
+  text--size--md()
+  outline: 0
+  display: block
+  width: 100%
+  font-weight: $nix.text.font.weight
+  font-family: inherit
+  background-color: $nix.skin.color.white
+  border: 1px solid $nix.skin.color.light
+  border-radius: $nix.borders.radius
+  resize: vertical
+  appearance: none
+
+  &:focus
+    border: 1px solid $nix.skin.color.secondary
+    box-shadow: inset 0 0 0 2px lighten($nix.skin.color.secondary, 20%)
+
+
+/**
+ * [spacing description]
+ * @return {[type]} [description]
+ */
+form--field-spacing()
+  margin--top--md()
+
+
+/**
+ * [label__field description]
+ * @return {[type]} [description]
+ */
+form--label__field()
+  form--field()
+  margin--top--sm()
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+form--disabled()
+  text--quiet()
+  cursor: not-allowed
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+form--field--disabled()
+  form--disabled()
+  background-color: $nix.skin.color.light
+  border: 1px solid $nix.skin.color.border
+
+
+/**
+ * [error description]
+ * @return {[type]} [description]
+ */
+form--field--error()
+  border: 1px solid $nix.skin.color.error
+  color: $nix.skin.color.error
+
+
+/**
+ * [success description]
+ * @return {[type]} [description]
+ */
+form--field--success()
+  border: 1px solid $nix.skin.color.success
+  color: $nix.skin.color.success
+
+
+/**
+ * [choice description]
+ * @return {[type]} [description]
+ */
+form--choice()
+  padding--all--sm()
+  text--size--md()
+  outline: 0
+  display: block
+  margin: 0
+  cursor: pointer
+  appearance: none
+
+  &:focus
+    border: 1px solid $nix.skin.color.secondary
+    box-shadow: inset 0 0 0 2px lighten($nix.skin.color.secondary, 20%)
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+form--choice--disabled()
+  form--disabled()
+
+
+/**
+ * [error description]
+ * @return {[type]} [description]
+ */
+form--choice--error()
+  color: $nix.skin.color.error
+
+
+/**
+ * [success description]
+ * @return {[type]} [description]
+ */
+form--choice--success()
+  color: $nix.skin.color.success
+
+
+/**
+ * [select description]
+ * @return {[type]} [description]
+ */
+form--select()
+  form--choice()
+  outline: 0
+  appearance: menulist
+  height: 2.5em
+
+  &:focus
+    border: 1px solid $nix.skin.color.secondary
+    box-shadow: inset 0 0 0 2px lighten($nix.skin.color.secondary, 20%)
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+form--select--disabled()
+  form--field--disabled()
+
+
+/**
+ * [error description]
+ * @return {[type]} [description]
+ */
+form--select--error()
+  form--field--error()
+
+
+/**
+ * [success description]
+ * @return {[type]} [description]
+ */
+form--select--success()
+  form--field--success()
+
+
+/**
+ * [checkbox description]
+ * @return {[type]} [description]
+ */
+form--checkbox()
+  margin--right--xs()
+  outline: 0
+  font-size: $nix.text.font.size * 2
+
+  &:focus
+    border: 1px solid $nix.skin.color.secondary
+    box-shadow: inset 0 0 0 2px lighten($nix.skin.color.secondary, 20%)
+
+
+/**
+ * [group description]
+ * @return {[type]} [description]
+ */
+form--input-group()
+  display: flex
+
+
+/**
+ * [group__field description]
+ * @return {[type]} [description]
+ */
+form--input-group__field()
+  flex: 1
+  height: 100%
+
+
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+form--input-group__field--center()
+  border-radius: 0
+  border-right: 0
+  border-left: 0
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+form--input-group__field--left()
+  border-radius: $nix.borders.radius 0 0 $nix.borders.radius
+  border-right: 0
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+form--input-group__field--right()
+  border-radius: 0 $nix.borders.radius $nix.borders.radius 0
+  border-left: 0
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+form--input-group__button--left()
+  border-radius: $nix.borders.radius 0 0 $nix.borders.radius
+  border-width: 1px
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+form--input-group__button--right()
+  border-radius: 0 $nix.borders.radius $nix.borders.radius 0
+  border-width: 1px
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+form--input-group-rounded--left()
+  border-radius: $nix.borders.rounded 0 0 $nix.borders.rounded
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+form--input-group-rounded--right()
+  border-radius: 0 $nix.borders.rounded $nix.borders.rounded 0
+
+
+/**
+ * [group description]
+ * @return {[type]} [description]
+ */
+form--field-group()
+  display: block
+
+
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+form--field-group__field--center()
+  border-radius: 0
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+form--field-group__field--top()
+  border-radius: $nix.borders.radius $nix.borders.radius 0 0
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+form--field-group__field--bottom()
+  border-radius: 0 0 $nix.borders.radius $nix.borders.radius
+
+
+/**
+ * [group__field description]
+ * @return {[type]} [description]
+ */
+form--field-group__field()
+  border-top: 0
+
+
+/**
+ * [inline description]
+ * @return {[type]} [description]
+ */
+form--field-group-inline()
+  display: flex
+
+
+/**
+ * [center description]
+ * @return {[type]} [description]
+ */
+form--field-group-inline__field--center()
+  border-radius: 0
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+form--field-group-inline__field--left()
+  border-radius: $nix.borders.radius 0 0 $nix.borders.radius
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+form--field-group-inline__field--right()
+  border-radius: 0 $nix.borders.radius $nix.borders.radius 0
+
+
+/**
+ * [inline__field description]
+ * @return {[type]} [description]
+ */
+form--field-group-inline__field()
+  border-left: 0
+
+
+/**
+ * [fieldset description]
+ */
+form--fieldset()
+  margin--vertical--sm()
+  padding--all--0()
+  display: block
+  width: 100%
+  border: 0
+
+
+/**
+ * [fieldset__legend description]
+ */
+form--fieldset__legend()
+  form--label()
+  padding--all--xs()
+
+
+/**
+ * [disabled description]
+ * @return {[type]} [description]
+ */
+form--fieldset--disabled()
+  form--field--disabled()

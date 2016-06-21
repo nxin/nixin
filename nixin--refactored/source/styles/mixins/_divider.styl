@@ -1,0 +1,135 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.divider
+\* ------------------------------------------------------------------------ */
+
+
+@import "_margin"
+@import "_reset"
+@import "_border"
+@import "_container"
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+divider()
+  margin--vertical--md()
+  reset--clearfix()
+  width: 100%
+  line-height: $nix.sizes.sm
+
+
+/**
+ * [solid description]
+ * @return {[type]} [description]
+ */
+divider--thick--solid()
+  border--bottom(6px, solid)
+
+
+/**
+ * [dashed description]
+ * @return {[type]} [description]
+ */
+divider--thick--dashed()
+  border--bottom(6px, dashed)
+
+
+/**
+ * [dotted description]
+ * @return {[type]} [description]
+ */
+divider--thick--dotted()
+  border--bottom(6px, dotted)
+
+
+/**
+ * [solid description]
+ * @return {[type]} [description]
+ */
+divider--thin--solid()
+  border--bottom(1px, solid)
+
+
+/**
+ * [dashed description]
+ * @return {[type]} [description]
+ */
+divider--thin--dashed()
+  border--bottom(1px, dashed)
+
+
+/**
+ * [dotted description]
+ * @return {[type]} [description]
+ */
+divider--thin--dotted()
+  border--bottom(1px, dotted)
+
+
+/**
+ * [solid description]
+ * @return {[type]} [description]
+ */
+divider--single--solid()
+  border--vertical(1px, solid)
+  height: 1px
+
+
+/**
+ * [dashed description]
+ * @return {[type]} [description]
+ */
+divider--single--dashed()
+  border--vertical(1px, dashed)
+  height: 1px
+
+
+/**
+ * [dotted description]
+ * @return {[type]} [description]
+ */
+divider--single--dotted()
+  border--vertical(1px, dotted)
+  height: 1px
+
+
+/**
+ * [solid description]
+ * @return {[type]} [description]
+ */
+divider--double--solid()
+  border--vertical(2px, solid)
+  height: 6px
+
+
+/**
+ * [dashed description]
+ * @return {[type]} [description]
+ */
+divider--double--dashed()
+  border--vertical(2px, dashed)
+  height: 6px
+
+
+/**
+ * [double description]
+ * @param  {[type]} style =             dotted [description]
+ * @return {[type]}       [description]
+ */
+divider--double(style = dotted)
+  border--vertical(2px, style)
+  height: 6px
+
+
+/**
+ * [divider__content description]
+ * @return {[type]} [description]
+ */
+divider__content()
+  container()
+  display: inline-block
+  width: 100%
+  line-height: $nix.sizes.sm
+  background: #F0ECE8

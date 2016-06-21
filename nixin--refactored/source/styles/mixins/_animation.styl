@@ -1,0 +1,912 @@
+/**
+ * [animation description]
+ * @return {[type]} [description]
+ */
+animation()
+  if $nix.animations != ("off" || false)
+    body
+      animation-duration: 4s
+      animation-fill-mode: both
+
+    a,
+    a:before,
+    a:after
+      transition(all .1s ease-in)
+
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @param  {[type]} opt      [description]
+ * @return {[type]}          [description]
+ */
+animation--create(selector, opt)
+  {selector}--{opt}
+    animation--{opt}()
+    animation--{opt}__keyframes()
+
+
+/**
+ * [alert__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--alert__keyframes()
+  @keyframes alert
+    from
+      transform: scale3d(0, 0, 0)
+      opacity: 0
+
+    50%
+      transform: scale3d(1.02, 1.02, 1.02)
+
+    80%
+      transform: scale3d(.95, .95, .95)
+
+    to
+      transform: scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [alert description]
+ * @return {[type]} [description]
+ */
+animation--alert()
+  animation-name: alert
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+animation--alert--top()
+  transform-origin: center top
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+animation--alert--bottom()
+  transform-origin: center bottom
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+animation--alert--left()
+  transform-origin: left center
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+animation--alert--right()
+  transform-origin: right center
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--alert--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--alert--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [bubble__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--bubble__keyframes()
+  @keyframes bubble
+    from
+      transform: scale3d(0, 0, 0)
+      opacity: 0
+
+    50%
+      transform: scale3d(1.02, 1.02, 1.02)
+
+    80%
+      transform: scale3d(.95, .95, .95)
+
+    to
+      transform: scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [bubble description]
+ * @return {[type]} [description]
+ */
+animation--bubble()
+  animation-name: bubble
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+animation--bubble--top()
+  transform-origin: center bottom
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+animation--bubble--bottom()
+  transform-origin: center top
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+animation--bubble--left()
+  transform-origin: right center
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+animation--bubble--right()
+  transform-origin: left center
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--bubble--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--bubble--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [calendar__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--calendar__keyframes()
+  @keyframes calendar
+    from
+      transform: scale3d(0, 0, 0)
+      opacity: 0
+
+    to
+      transform: scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [calendar description]
+ * @return {[type]} [description]
+ */
+animation--calendar()
+  animation-name: calendar
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+animation--calendar--top()
+  transform-origin: top
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+animation--calendar--bottom()
+  transform-origin: bottom
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+animation--calendar--left()
+  transform-origin: left
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+animation--calendar--right()
+  transform-origin: right
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--calendar--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--calendar--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [drawer description]
+ * @return {[type]} [description]
+ */
+animation--drawer()
+  transition: transform
+  transition-timing-function: $nix.animations.easing
+  transition-duration: $nix.animations.duration
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--drawer--slow()
+  transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--drawer--fast()
+  transition-duration: $nix.animations.duration-fast
+
+
+/**
+ * [fadeIn__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--fadein__keyframes()
+  @-webkit-keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+  @keyframes fadeIn
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+
+/**
+ * [fadeIn description]
+ * @param  {[type]} class [description]
+ * @return {[type]}       [description]
+ */
+animation--fadein()
+  animation-name: fadeIn
+
+
+/**
+ * [fadeInLeft__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--fadein--left__keyframes()
+  @-webkit-keyframes fadeInLeft
+    0%
+      opacity: 0
+      transform: translate3d(-15px, 0, 0)
+    100%
+      opacity: 1
+      transform: none
+
+  @keyframes fadeInLeft
+    0%
+      opacity: 0
+      transform: translate3d(-15px, 0, 0)
+    100%
+      opacity: 1
+      transform: none
+
+
+/**
+ * [fadeInLeft description]
+ * @return {[type]} [description]
+ */
+animation--fadein--left()
+  animation-name: fadeInLeft
+
+
+/**
+ * [fadeInDown__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--fadein--down__keyframes()
+  @-webkit-keyframes fadeInDown
+    0%
+      opacity: 0
+      transform: translate3d(0, -10px, 0)
+    100%
+      opacity: 1
+      transform: none
+
+  @keyframes fadeInDown
+    0%
+      opacity: 0
+      transform: translate3d(0, -10px, 0)
+    100%
+      opacity: 1
+      transform: none
+
+
+/**
+ * [fadeInDown description]
+ * @return {[type]} [description]
+ */
+animation--fadein--down()
+  animation-name: fadeInDown
+
+
+/**
+ * [fadeInUp__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--fadein--up__keyframes()
+  @-webkit-keyframes fadeInUp
+    0%
+      opacity: 0
+      transform: translate3d(0, 100%, 0)
+    100%
+      opacity: 1
+      transform: none
+
+  @keyframes fadeInUp
+    0%
+      opacity: 0
+      transform: translate3d(0, 100%, 0)
+    100%
+      opacity: 1
+      transform: none
+
+
+/**
+ * [fadeInUp description]
+ * @return {[type]} [description]
+ */
+animation--fadein--up()
+  animation-name: fadeInUp
+
+
+/**
+ * [menu__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--menu__keyframes()
+  @keyframes menu
+    from
+      transform: scale3d(0, 0, 0)
+      opacity: 0
+
+    to
+      transform: scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [menu description]
+ * @return {[type]} [description]
+ */
+animation--menu()
+  animation-name: menu
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+animation--menu--top()
+  transform-origin: top
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+animation--menu--bottom()
+  transform-origin: bottom
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+animation--menu--left()
+  transform-origin: left
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+animation--menu--right()
+  transform-origin: right
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--menu--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--menu--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [modal__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--modal__keyframes()
+  @keyframes modal
+    from
+      transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0)
+      opacity: 0
+
+    50%
+      transform: translate3d(-50%, -50%, 0) scale3d(1.02, 1.02, 1.02)
+
+    80%
+      transform: translate3d(-50%, -50%, 0) scale3d(.95, .95, .95)
+
+    to
+      transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1)
+      opacity: 1
+
+
+/**
+ * [modal description]
+ * @return {[type]} [description]
+ */
+animation--modal()
+  animation-name: modal
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [top description]
+ * @return {[type]} [description]
+ */
+animation--modal--top()
+  transform-origin: center top
+
+
+/**
+ * [bottom description]
+ * @return {[type]} [description]
+ */
+animation--modal--bottom()
+  transform-origin: center bottom
+
+
+/**
+ * [left description]
+ * @return {[type]} [description]
+ */
+animation--modal--left()
+  transform-origin: left center
+
+
+/**
+ * [right description]
+ * @return {[type]} [description]
+ */
+animation--modal--right()
+  transform-origin: right center
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--modal--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--modal--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [nav__item description]
+ * @return {[type]} [description]
+ */
+animation--nav__item()
+  transition: background-color
+  transition-timing-function: $nix.animations.easing
+  transition-duration: $nix.animations.duration
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--nav__item--slow()
+  transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--nav__item--fast()
+  transition-duration: $nix.animations.duration-fast
+
+
+/**
+ * [overlay__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--overlay__keyframes()
+  @keyframes overlay
+    from
+      opacity: 0
+
+    to
+      opacity: 1
+
+
+/**
+ * [overlay description]
+ * @return {[type]} [description]
+ */
+animation--overlay()
+  animation-name: overlay
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--overlay--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--overlay--fast()
+  animation-duration: $nix.animations.duration-fast
+
+/**
+ * [rainbow__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--rainbow__keyframes()
+  @-webkit-keyframes rainbow
+    0%,
+    100%
+      background-color: hsl(87, 50%, 52%)
+    16%
+      background-color: hsl(174, 41%, 64%)
+    32%
+      background-color: hsl(14, 100%, 62%)
+    48%
+      background-color: hsl(291, 63%, 42%)
+    64%
+      background-color: hsl(0, 69%, 67%)
+
+  @keyframes rainbow
+    0%,
+    100%
+      background-color: hsl(87, 50%, 52%)
+    16%
+      background-color: hsl(174, 41%, 64%)
+    32%
+      background-color: hsl(14, 100%, 62%)
+    48%
+      background-color: hsl(291, 63%, 42%)
+    64%
+      background-color: hsl(0, 69%, 67%)
+
+
+/**
+ * [rainbow description]
+ * @return {[type]} [description]
+ */
+animation--rainbow()
+  animation-name: rainbow
+
+
+/**
+ * [range description]
+ * @return {[type]} [description]
+ */
+animation--range()
+  &::-webkit-slider-thumb
+    transition: transform
+    transition-timing-function: $nix.animations.easing
+    transition-duration: $nix.animations.duration
+
+  &::-moz-range-thumb
+    transition: transform
+    transition-timing-function: $nix.animations.easing
+    transition-duration: $nix.animations.duration
+
+  &::-ms-thumb
+    transition: transform
+    transition-timing-function: $nix.animations.easing
+    transition-duration: $nix.animations.duration
+
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--range--slow()
+  &::-webkit-slider-thumb
+    transition-duration: $nix.animations.duration-slow
+
+  &::-moz-range-thumb
+    transition-duration: $nix.animations.duration-slow
+
+  &::-ms-thumb
+    transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--range--fast()
+  &::-webkit-slider-thumb
+    transition-duration: $nix.animations.duration-fast
+
+  &::-moz-range-thumb
+    transition-duration: $nix.animations.duration-fast
+
+  &::-ms-thumb
+    transition-duration: $nix.animations.duration-fast
+
+
+/**
+ * [heading description]
+ * @return {[type]} [description]
+ */
+animation--tab__heading()
+  transition: box-shadow
+  transition-timing-function: $nix.animations.easing
+  transition-duration: $nix.animations.duration
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--tab__heading--slow()
+  transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--tab__heading--fast()
+  transition-duration: $nix.animations.duration-fast
+
+
+/**
+ * [toast__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--toast__keyframes()
+  @keyframes toast
+    from
+      opacity: 0
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+      animation-timing-function: ease-in
+
+    40%
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+      animation-timing-function: ease-in
+
+    60%
+      opacity: 1
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+
+    80%
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+
+    to
+      transform: perspective(400px)
+
+
+/**
+ * [toast description]
+ * @return {[type]} [description]
+ */
+animation--toast()
+  animation-name: toast
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+  backface-visibility: visible
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--toast--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--toast--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [toggle__track description]
+ * @return {[type]} [description]
+ */
+animation--toggle__track()
+  transition: background-color
+  transition-timing-function: $nix.animations.easing
+  transition-duration: $nix.animations.duration
+
+
+/**
+ * [toggle__handle description]
+ * @return {[type]} [description]
+ */
+animation--toggle__handle()
+  transition: transform
+  transition-timing-function: $nix.animations.easing
+  transition-duration: $nix.animations.duration
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--toggle__track--slow()
+  transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--toggle__handle--slow()
+  transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--toggle__track--fast()
+  transition-duration: $nix.animations.duration-fast
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--toggle__handle--fast()
+  transition-duration: $nix.animations.duration-fast
+
+
+/**
+ * [tree__keyframes description]
+ * @return {[type]} [description]
+ */
+animation--tree__keyframes()
+  @keyframes tree
+    from
+      opacity: 0
+
+    to
+      opacity: 1
+
+
+/**
+ * [tree description]
+ * @return {[type]} [description]
+ */
+animation--tree()
+  animation-name: tree
+  animation-duration: $nix.animations.duration
+  animation-fill-mode: both
+  animation-timing-function: $nix.animations.easing
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--tree--slow()
+  animation-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--tree--fast()
+  animation-duration: $nix.animations.duration-fast
+
+
+/**
+ * [tree__item description]
+ * @return {[type]} [description]
+ */
+animation--tree__item()
+  transition-timing-function: $nix.animations.easing
+  transition-duration: $nix.animations.duration
+  transition-property: color, transform
+
+
+/**
+ * [slow description]
+ * @return {[type]} [description]
+ */
+animation--tree__item--slow()
+  transition-duration: $nix.animations.duration-slow
+
+
+/**
+ * [fast description]
+ * @return {[type]} [description]
+ */
+animation--tree__item--fast()
+  transition-duration: $nix.animations.duration-fast

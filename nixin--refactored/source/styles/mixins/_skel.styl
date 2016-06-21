@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.util.skel
+\* ------------------------------------------------------------------------ */
+
+
+@import "_padding"
+@import "_reset"
+
+
+/**
+ * [layout description]
+ * @return {[type]} [description]
+ */
+skel()
+  position: relative
+  margin: auto
+  min-height: 1px
+
+
+/**
+ * [boxed description]
+ * @return {[type]} [description]
+ */
+skel--boxed()
+  max-width: $nix.grid.max-width
+
+
+/**
+ * [unboxed__wrap description]
+ * @return {[type]} [description]
+ */
+skel--unboxed__wrap()
+  max-width: $nix.grid.max-width
+
+
+/**
+ * [layout__wrap description]
+ * @return {[type]} [description]
+ */
+skel__wrap()
+  reset--clearfix()
+  padding--horizontal($nix.grid.gutter)
+  position: relative
+  overflow-x: hidden
+  box-sizing: border-box
+  margin: auto
+  min-width: $nix.grid.min-width
+  min-height: 1px
+  max-width: 100%
+  width: $nix.grid.width
+
+
+/**
+ * [layout__row description]
+ * @return {[type]} [description]
+ */
+skel__row()
+  reset--clearfix()
+  min-height: 1px
+  max-width: 100%
+  width: auto

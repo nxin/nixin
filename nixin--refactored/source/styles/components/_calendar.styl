@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------ *\
+   components.calendar
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * settings
+ */
+$name = "calendar"
+$s = $prefix + $name
+
+
+/* styles
+\* ------------------------------------------------------------------------ */
+
+{$s}
+  calendar()
+
+
+{$s}__control
+  calendar__control()
+
+
+{$s}__header
+  calendar__header()
+
+
+{$s}__day
+  calendar__day()
+
+
+{$s}__date
+  calendar__date()
+
+  &:hover
+    calendar__date--hover()
+
+
+  &--in-month
+    calendar__date--in-month()
+
+
+  &--today
+    calendar__date--today()
+
+
+  &--selected,
+  &--selected:hover
+    calendar__date--selected()
+
+
+{$s}--high
+  calendar--high()
+
+
+{$s}--higher
+  calendar--higher()
+
+
+{$s}--highest
+  calendar--highest()

@@ -1,0 +1,133 @@
+.color--green
+    Color(app.color.green)
+
+.color--red
+    Color(app.color.red)
+
+
+.badge
+    display: block
+    position: absolute
+    top: 12px
+    left: 12px
+    z-index: 10
+    min-width: 10px
+    border-radius: 50%
+    text-align: center
+    font-weight: normal
+    text-rendering: optimizeLegibility
+    align--center()
+
+    &, &:before, &:after
+        content: ""
+        z-index: 5
+        width: 24px
+        height: 24px
+        padding: 16px
+        font-size: 18px
+        text-align: center
+
+
+.badge__quantity
+    display: inline-block
+    z-index: 15
+    font-weight: bold
+    align--center__content()
+
+
+.badge--starburst
+    &:before
+        display: block
+        transform: rotate(30deg)
+        position: absolute
+        top: 0
+        left: 0
+
+    &:after
+        display: block
+        transform: rotate(60deg)
+        position: absolute
+        top: 0
+        left: 0
+
+    .inner
+        z-index: 10
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+
+
+.badge--xs
+    top: 10px
+    left: 10px
+    font-size: 15px
+
+    &, &:before, &:after
+        width: 20px
+        height: 20px
+        padding: 14px
+
+
+.badge--sm
+    top: 12px
+    left: 12px
+    font-size: 18px
+
+    &, &:before, &:after
+        width: 24px
+        height: 24px
+        padding: 16px
+
+
+.badge--md
+    top: 15px
+    left: 15px
+    font-size: 24px
+
+    &, &:before, &:after
+        width: 30px
+        height: 30px
+        padding: 20px
+
+
+.badge--lg
+    top: 20px
+    left: 20px
+    font-size: 30px
+
+    &, &:before, &:after
+        width: 40px
+        height: 40px
+        padding: 25px
+
+
+.badge--xl
+    top: 20px
+    left: 20px
+    font-size: 38px
+
+    &, &:before, &:after
+        width: 50px
+        height: 50px
+        padding: 30px
+
+
+.badge--xxl
+    top: 20px
+    left: 20px
+    font-size: 48px
+
+    &, &:before, &:after
+        width: 60px
+        height: 60px
+        padding: 35px
+
+
+.badge:not(.badge--starburst)
+    @extend .color--green
+
+.badge--starburst
+    &, &:before, &:after, .inner
+        @extend .color--red

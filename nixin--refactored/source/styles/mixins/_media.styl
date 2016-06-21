@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.media
+\* ------------------------------------------------------------------------ */
+
+
+@import "_position"
+@import "_reset"
+
+
+// block
+mediaBlock =
+  width: 100%
+  height: 100%
+  border: none
+  u-position(absolute 0 0 0)
+
+
+iframe, embed, object, video
+  {mediaBlock}
+
+/**
+ * [container description]
+ * @return {[type]} [description]
+ */
+media()
+  display: block
+  overflow: hidden
+  position(relative)
+  reset(padding, height)
+
+
+/**
+ * [media__item description]
+ * @param  {[type]} size =             "all" [description]
+ * @return {[type]}      [description]
+ */
+media__item(size = "all")
+  {mediaBlock}
+
+  for key, value in $nix.media.sizes
+    if size == key
+      padding-bottom: __calcPercentage($nix.media.sizes[key])

@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------------------ *\
+   utils.grid
+\* ------------------------------------------------------------------------ */
+
+
+/**
+ * settings
+ */
+$name = "grid"
+$s = $prefix + $name
+
+
+/* styles
+\* ------------------------------------------------------------------------ */
+
+{$s}
+  grid()
+
+
+{$s}--wrap
+  grid--wrap()
+
+
+{$s}--top
+  grid--top()
+
+
+{$s}--center
+  grid--center()
+
+
+{$s}--bottom
+  grid--bottom()
+
+
+{$s}--no-gutter {$s}__cell
+  grid__cell--no-gutter()
+
+
++above($nix.mq.xxs)
+  {$s}--fit\@xxs > {$s}__cell:not({$s}__cell--width)
+    grid__cell--fit()
+
+  {$s}--full\@xxs
+    grid--full()
+
+      > {$s}__cell
+        grid__cell--full()
+
+
++above($nix.mq.xs)
+  {$s}--fit\@xs > {$s}__cell:not({$s}__cell--width)
+    grid__cell--fit()
+
+  {$s}--full\@xs
+    grid--full()
+
+    > {$s}__cell
+      grid__cell--full()
+
+
++above($nix.mq.sm)
+  {$s}--fit\@sm > {$s}__cell:not({$s}__cell--width)
+    grid__cell--fit()
+
+  {$s}--full\@sm
+    grid--full()
+
+    > {$s}__cell
+      grid__cell--full()
+
+
++above($nix.mq.md)
+  {$s}--fit\@md > {$s}__cell:not({$s}__cell--width)
+    grid__cell--fit()
+
+  {$s}--full\@md
+    grid--full()
+
+    > {$s}__cell
+      grid__cell--full()
+
+
++above($nix.mq.lg)
+  {$s}--fit\@lg > {$s}__cell:not({$s}__cell--width)
+    grid__cell--fit()
+
+  {$s}--full\@lg
+    grid--full()
+
+    > {$s}__cell
+      grid__cell--full()
+
+  {$s}__cell
+    margin-bottom: 0
+    grid__cell()
+
+  {$s}__cell--top
+    grid__cell--top()
+
+  {$s}__cell--center
+    grid__cell--center()
+
+  {$s}__cell--bottom
+    grid__cell--bottom()
+
+  {$s}__cell--no-gutter
+    grid__cell--no-gutter()
+
+
+// generate classes
+grid__cell--create($s)

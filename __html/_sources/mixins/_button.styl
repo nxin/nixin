@@ -1,0 +1,23 @@
+@import "_color"
+
+Button(buttonType, buttonColor, buttonColorHover)
+    .button--{buttonType}
+      Color(buttonColor)
+
+    .button--{buttonType},
+    .button--{buttonType}.button--noFill
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active
+        Color(buttonColorHover)
+
+    .open
+      & > .button--{buttonType}.dropdown-toggle,
+      & > .button--{buttonType}.button--noFill.dropdown-toggle
+        Color(buttonColorHover)
+
+    .button--noFill
+      &.button--{buttonType}
+        Color--noFill(buttonColor)

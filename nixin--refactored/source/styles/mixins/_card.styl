@@ -1,0 +1,111 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.card
+\* ------------------------------------------------------------------------ */
+
+
+@import "_list"
+@import "_padding"
+
+
+/**
+ * [card description]
+ * @return {[type]} [description]
+ */
+card()
+  list--unstyled()
+  display: block
+  box-shadow: $nix.shadows.default
+  border-radius: $nix.borders.radius
+  overflow: hidden
+
+
+/**
+ * [spacing description]
+ * @return {[type]} [description]
+ */
+card--spacing()
+  margin-top: $nix.sizes.md
+
+
+/**
+ * [paragraph description]
+ * @return {[type]} [description]
+ */
+card__first-last-paragraph()
+  padding--all--0()
+
+
+/**
+ * [card__content description]
+ * @return {[type]} [description]
+ */
+card__content()
+  padding--all--sm()
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+card__content--divider()
+  background-color: $nix.skin.color.gray
+  color: $nix.skin.color.white
+  font-weight: $nix.text.font.weight--heavy
+
+
+/**
+ * [card__item description]
+ * @return {[type]} [description]
+ */
+card__item()
+  padding--all--sm()
+  &:not(:last-child)
+    border-bottom: 1px solid $nix.skin.color.light
+
+
+/**
+ * [divider description]
+ * @return {[type]} [description]
+ */
+card__item--divider()
+  card__content--divider()
+
+
+/**
+ * [hover description]
+ * @return {[type]} [description]
+ */
+card__item--hover()
+  cursor: pointer
+
+
+/**
+ * [active description]
+ * @return {[type]} [description]
+ */
+card__item--active()
+  background-color: $nix.skin.color.light
+
+
+/**
+ * [high description]
+ * @return {[type]} [description]
+ */
+card--high()
+  box-shadow: $nix.shadows.high
+
+
+/**
+ * [higher description]
+ * @return {[type]} [description]
+ */
+card--higher()
+  box-shadow: $nix.shadows.higher
+
+
+/**
+ * [highest description]
+ * @return {[type]} [description]
+ */
+card--highest()
+  box-shadow: $nix.shadows.highest

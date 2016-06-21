@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------------------ *\
+   mixins.component.heading
+\* ------------------------------------------------------------------------ */
+
+@import "_padding"
+@import "_margin"
+@import "_text"
+@import "_text"
+
+
+/**
+ * [heading description]
+ * @return {[type]} [description]
+ */
+heading()
+  padding($nix.sizes.md null $nix.sizes.sm)
+  margin--all--0()
+  text--size--md()
+  font-weight: $nix.text.font.weight
+
+
+/**
+ * [heading__sub description]
+ * @return {[type]} [description]
+ */
+heading__sub()
+  padding--vertical--sm()
+  padding--horizontal--0()
+  heading()
+  text--quiet()
+  font-size: $nix.text.font.size * .8
+
+
+/**
+ * [xxxl description]
+ * @return {[type]} [description]
+ */
+heading--xxxl()
+  font-size: $nix.text.font.size * 5
+
+
+/**
+ * [xxl description]
+ * @return {[type]} [description]
+ */
+heading--xxl()
+  font-size: $nix.text.font.size * 4
+
+
+/**
+ * [xl description]
+ * @return {[type]} [description]
+ */
+heading--xl()
+  font-size: $nix.text.font.size * 3
+
+
+/**
+ * [lg description]
+ * @return {[type]} [description]
+ */
+heading--lg()
+  font-size: $nix.text.font.size * 2
+
+
+/**
+ * [md description]
+ * @return {[type]} [description]
+ */
+heading--md()
+  font-size: $nix.text.font.size * 1.5
+
+
+/**
+ * [sm description]
+ * @return {[type]} [description]
+ */
+heading--sm()
+  font-size: $nix.text.font.size * 1.25
+
+
+/**
+ * [xs description]
+ * @return {[type]} [description]
+ */
+heading--xs()
+  font-size: $nix.text.font.size * 1.05
+
+
+/**
+ * [xxs description]
+ * @return {[type]} [description]
+ */
+heading--xxs()
+  font-size: $nix.text.font.size * .95
+
+
+/**
+ * [xxxs description]
+ * @return {[type]} [description]
+ */
+heading--xxxs()
+  font-size: $nix.text.font.size * .75
