@@ -24,15 +24,15 @@
 		.lead
 			color: #6d5441
 
-	.jumbotron--dark
-		background: rgba(#2b1405, 0.5)
+		&--dark
+			background: rgba(#2b1405, 0.5)
 
-		.heading
-			color: $color--white
+		&--yellow
+			background: rgba(60, 39, 6, 0.5)
 
-		.lead
-			color: rgba($color--white, .85)
+		&--dark, &--yellow
+			.heading
+				color: $color--white
 
-	.jumbotron--yellow
-		backgorund: rgba(#ffe5a4, 0.5)
-
+			.lead
+				color: rgba($color--white, .85)
