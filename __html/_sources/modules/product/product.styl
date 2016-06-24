@@ -145,6 +145,9 @@ $product__gutter = 5px //-1px
       display: block
       width: 100%
 
+    &:after
+      background: #efe8e1
+
     &:hover
       .badge
         display: block
@@ -194,8 +197,6 @@ $product__gutter = 5px //-1px
       line-height: 36px
       font-size: 17px
 
-
-
   @media (max-width: $breakpoint--md)
     .product__media,
     .product__info
@@ -224,12 +225,14 @@ $product__gutter = 5px //-1px
       .heading
         text-align: left
 
+
   .product__caption
+    float: none
     position: static
-    display: block
     z-index: $z--middle
+    display: inline-block
     width: auto
-    float: right
+    padding-left: 35px
 
     .inner
       padding: 0
@@ -292,7 +295,7 @@ $product__gutter = 5px //-1px
     
     .overlay,
     .product__caption
-      display: block
+      display: inline-block
     
     .badge
       display: none
@@ -401,6 +404,9 @@ $product__gutter = 5px //-1px
     color: $color--brownDark
     Text--ellipsis(90px)
     Text--mask()
+
+    .label
+      margin: 0 10px
     
   .heading__text
     margin-bottom: 2px

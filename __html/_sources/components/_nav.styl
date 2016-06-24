@@ -63,13 +63,20 @@
 
 
 .nav-pills
-	margin-bottom: -8px
 	Reset--clearfix()
 
-.nav-pills .nav-item.open .nav-link,
-.nav-pills .nav-item.open .nav-link:focus,
-.nav-pills .nav-item.open .nav-link:hover,
-.nav-pills .nav-link.active,
-.nav-pills .nav-link.active:focus,
-.nav-pills .nav-link.active:hover
-	background-color: #ffab21
+	.nav-link
+		border: 1px solid transparent
+		font-size: 18px
+
+		&:hover
+			background-color: #f9f6ee
+			border-color: #f3bf82
+
+	.nav-item.open .nav-link,
+	.nav-item.open .nav-link:focus,
+	.nav-item.open .nav-link:hover,
+	.nav-link.active,
+	.nav-link.active:focus,
+	.nav-link.active:hover
+		background-color: #ffab21
