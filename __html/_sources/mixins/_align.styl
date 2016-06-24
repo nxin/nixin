@@ -3,10 +3,26 @@
 \* ------------------------------------------------------------------------ */
 
 
-Align--center()
+Align--centerHorizontal(font-smoothig = subpixel-antialiased)
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  -webkit-font-smoothing: font-smoothig
+  -webkit-perspective: 1000
+
+
+Align--centerVertical(font-smoothig = subpixel-antialiased)
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  -webkit-font-smoothing: font-smoothig
+  -webkit-perspective: 1000
+
+
+Align--center(font-smoothig = subpixel-antialiased)
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  -webkit-font-smoothing: subpixel-antialiased
+  -webkit-font-smoothing: font-smoothig
   -webkit-perspective: 1000

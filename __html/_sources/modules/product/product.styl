@@ -4,7 +4,7 @@
 
 
 // variables
-$product__gutter = 5px
+$product__gutter = 5px //-1px
 
 
 .products
@@ -134,11 +134,20 @@ $product__gutter = 5px
 // ------------------------------------------------------------------------
 .products--detail
   padding: 0
+  color: $color--brownDark
 
   .product
     height: auto
     border-radius: 10px
     border: none
+
+    &:before, &:after
+      display: block
+      width: 100%
+
+    &:hover
+      .badge
+        display: block
 
   .product__media
     width: 40%
@@ -146,15 +155,20 @@ $product__gutter = 5px
     padding: 15px 0
 
     .image
-      max-height: 400px
+      max-height: 365px
       padding: 5%
 
   .product__info
+    overflow-y: auto
+    right: 0
+    left: auto
     width: 60%
-    height: 100%
-    max-height: 400px
+    height: auto
+    max-height: 365px
     padding: 25px
+    margin-top: -15px
     font-size: 17px
+    Align--centerVertical(antialiased)
 
     .heading
       max-height: 100%
@@ -162,7 +176,7 @@ $product__gutter = 5px
       font-size: 30px
       line-height: 1.2
       margin-bottom: 25px
-      color: $color--brown
+      color: $color--brownDark
 
       &:before, &:after
         display: none
@@ -179,6 +193,36 @@ $product__gutter = 5px
     .pricing__deal
       line-height: 36px
       font-size: 17px
+
+
+
+  @media (max-width: $breakpoint--md)
+    .product__media,
+    .product__info
+      float: none
+      position: relative
+      width: 100%
+
+    .product__media
+      max-height: 250px
+
+      .image
+        top: 0
+        min-width: auto
+        max-height: 250px
+        min-height: auto
+        padding: 0
+        transform: translate3d(-50%, 0, 0)
+
+
+    .product__info
+      top: 0
+      left: 0
+      margin-top: 0
+      transform: none
+
+      .heading
+        text-align: left
 
   .product__caption
     position: static
@@ -252,6 +296,9 @@ $product__gutter = 5px
     
     .badge
       display: none
+
+  &:focus
+    outline: none
       
 
 // product__media    
@@ -293,7 +340,7 @@ $product__gutter = 5px
   height: 50px
   padding: 0
   border-top: 1px solid $color--white
-  background-image: linear-gradient(rgba(255,255,255,0.75), $color--white)
+  background-image: linear-gradient(rgba(255, 255, 255, .8), $color--white)
   
   .inner
     padding: 10px 20px
@@ -351,7 +398,7 @@ $product__gutter = 5px
     
   .heading
     min-height: 90px
-    color: $color--brown
+    color: $color--brownDark
     Text--ellipsis(90px)
     Text--mask()
     

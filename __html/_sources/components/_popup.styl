@@ -8,15 +8,25 @@
 	background: transparent
 	z-index: $z--over
 
+.mfp-bg,
+.mfp-wrap
+	@media (max-width: $breakpoint--md)
+		z-index: $z--master + 1
+
+.mfp-container
+	@media (max-width: $breakpoint--md)
+		padding-left: 50px
+		padding-right: 50px
+
 
 .mfp-close
 	position: absolute
-	top: -50px
+	top: -55px
 	right: -55px
 	width: 60px
 	height: 60px
 	line-height: 60px
-	font-size: 60px
+	font-size: 70px
 
 	&:active
 		top: -50px

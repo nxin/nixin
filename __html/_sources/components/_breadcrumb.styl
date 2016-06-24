@@ -1,0 +1,17 @@
+.breadcrumb
+	margin: 0
+	background: #fffbed
+
+	&, > li , > li + li:before
+		color: #b98318
+
+	li
+		&:not(.active)
+			a
+				color: #b98318
+
+				&:hover
+					color: $color--orangeBright
+
+		&.active
+			color: $color--orangeBright

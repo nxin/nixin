@@ -274,7 +274,7 @@ $(function() {
     }
 
 
-    $('.product').on('click', ".button--detail", function (e) {
+    $('.product').on('click', ".js-button--detail", function (e) {
         e.preventDefault();
         open('.js-popup--detail');
     });
