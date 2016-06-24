@@ -1,8 +1,11 @@
-// element.icon
-// ------------------------------------------   
+/* ------------------------------------------------------------------------ *\
+   components.icon
+\* ------------------------------------------------------------------------ */
+
+
 [class^="icon-"], 
 [class*=" icon-"]
-  font-family: app.font.fontAwesome
+  font-family: $font--fontAwesome
   font-weight: normal
   font-style: normal
   text-decoration: inherit
@@ -16,18 +19,20 @@
   background-image: none
   background-position: 0% 0%
   background-repeat: repeat
-  margin-top: 0    
+  margin-top: 0
+  background: transparent
 
   &:before
     text-decoration: inherit
     display: inline-block
     speak: none
+    background: transparent
 
 .font--simpleLine
-  font-family: app.font.simpleLine
+  font-family: $font--simpleLine
 
 .font--fontAwesome
-  font-family: app.font.fontAwesome
+  font-family: $font--fontAwesome
     
 .icon--minus:before
   @extend .font--fontAwesome
@@ -48,3 +53,27 @@
 .icon--info:before
   @extend .font--simpleLine
   content: "\e08b"
+
+.icon--basket:before
+  @extend .font--simpleLine
+  content: "\e04e"
+
+.icon--bag:before
+  @extend .font--simpleLine
+  content: "\e04f"
+
+.icon--zoom:before
+  @extend .font--fontAwesome
+  content: "\f002"
+
+.icon--pin:before
+  @extend .font--simpleLine
+  content: "\e096"
+
+.icon--user:before
+  @extend .font--simpleLine
+  content: "\e005"
+
+.icon--hamburger:before
+  @extend .font--simpleLine
+  content: "\e601"

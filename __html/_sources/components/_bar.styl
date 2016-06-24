@@ -1,0 +1,119 @@
+.bar
+	display: block
+	position: relative
+	z-index: $z--over
+	width: 100%
+	height: auto
+	margin: 0
+	padding: 0 20px
+	line-height: 1
+	border-radius: 0
+
+	&::after
+		display: table
+		clear: both
+		content: ""
+
+	> *
+		float: left
+		padding: 8px 20px
+
+.bar--fixed
+	position: fixed
+	top: 0
+	left: 0
+
+.bar--master
+	z-index: $z--master
+	background: #FCC72E
+
+	.hamburger
+		display: none
+
+	.brand
+		padding-left: 0
+		padding-right: 0
+
+	.form--search
+		width: 48%
+
+		.button
+			margin: 8px 20px
+
+	.nav
+		&:hover
+			.nav__item
+				background: #F0B82D
+
+	.basket
+		padding: 0 0 0 20px
+
+		.nav__button
+			background-color: #FD9526
+			border-color: #ce791d
+			color: $color--white
+			text-transform: uppercase
+
+			&:hover
+				background-color: #ff7f00
+
+			.icon
+				font-size: 22px
+
+		.badge
+			background: #DF461A
+			border-color: #DF461A
+
+	.basket, .account, .zipCode
+		float: right
+
+	@media (min-width: 992px)
+		.form--search
+			width: 33%
+
+		.nav__item
+			padding-right: 8px
+			padding-left: 8px
+			font-size: 16px
+
+		.nav__button
+			font-size: 16px
+
+	@media (min-width: 1200px)
+		.form--search
+			width: 45%
+
+	@media (min-width: 1420px)
+		.form--search
+			width: 50%
+
+
+.bar--slave
+	z-index: $z--over
+	background: $color--white
+
+	.categories
+		padding-left: 0
+
+		.menu
+			margin-top: 0
+
+	.categories__button
+		text-transform: uppercase
+		background: #FFFAE7
+		border-color: #F6DF8C
+		color: #A9722F
+
+		.text
+			font-weight: 400
+
+
+.bar--fixed
+	position: fixed
+	left: 0
+
+	&.bar--master
+		top: 0
+
+	&.bar--slave
+		top: 52px

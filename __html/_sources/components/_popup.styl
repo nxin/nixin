@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------------------ *\
+   components.popup
+\* ------------------------------------------------------------------------ */
+
+
+.mfp-wrap
+	transition: opacity 0.3s
+	background: transparent
+	z-index: $z--over
+
+
+.mfp-close
+	position: absolute
+	top: -50px
+	right: -55px
+	width: 60px
+	height: 60px
+	line-height: 60px
+	font-size: 60px
+
+	&:active
+		top: -50px
+
+
+.mfp-close-btn-in .mfp-close
+	color: $color--white
+
+
+.popup
+	position: relative
+	width: auto
+	max-width: 992px
+	margin: 0 auto
+	padding: 0
+	border: none
+	transition-property: -webkit-transform
+	transition-property: transform
+	transition-duration: .3s
+	background-color: $color--white
+	box-shadow: 0 2px 5px rgba(0, 0, 0 , .06)
+	border-radius: .5em

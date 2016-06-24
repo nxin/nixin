@@ -1,0 +1,392 @@
+/* ------------------------------------------------------------------------ *\
+   modules.products
+\* ------------------------------------------------------------------------ */
+
+
+// variables
+$product__gutter = 5px
+
+
+.products
+  position: relative
+  overflow-x: hidden
+  display: block
+  width: 100%
+  padding: 20px
+  Reset--clearfix()
+
+  .products__cell
+    box-sizing: border-box
+    display: inline-block
+    float: left
+    width: 50%
+    margin: -1px -1px 0 0
+
+
+// ------------------------------------------------------------------------
+// products--grid
+// ------------------------------------------------------------------------
+.products--grid
+  .products__cell
+    margin: $product__gutter
+    width: 100%
+
+    @media (min-width: $breakpoint--xxxs - $breakpoint--offset)
+      width: 100%
+      width: "calc(100% - (%s * 2))" % $product__gutter
+
+    @media (min-width: $breakpoint--xs - $breakpoint--offset)
+      width: 50%
+      width: "calc(50% - (%s * 2))" % $product__gutter
+
+    @media (min-width: $breakpoint--md - $breakpoint--offset)
+      width: 33.3333%
+      width: "calc(33.3333% - (%s * 2))" % $product__gutter
+
+    @media (min-width: $breakpoint--lg - $breakpoint--offset)
+      width: 25%
+      width: "calc(25% - (%s * 2))" % $product__gutter
+
+    @media (min-width: $breakpoint--xl - $breakpoint--offset)
+      width: 16.6666%
+      width: "calc(16.6666% - (%s * 2))" % $product__gutter
+
+    @media (min-width: $breakpoint--xxl - $breakpoint--offset)
+      width: 11.1111%
+      width: "calc(11.1111% - (%s * 2))" % $product__gutter
+        
+
+
+// ------------------------------------------------------------------------
+// products--list
+// ------------------------------------------------------------------------
+.products--list
+  .products__cell
+    width: 100%
+
+    .product
+      height: auto
+
+  .product__media
+    display: inline-block
+    width: 30%
+    border-right: 1px solid $color--whiteBronze
+
+    .overlay
+      height: 100%
+
+  .product__info
+    display: inline-block
+    width: 70%
+    max-height: 205px
+    padding: 20px
+    margin: 0
+
+    .heading
+      min-height: 65px
+
+
+  .product__media,
+  .product__info
+    float: left
+    @media (max-width: $breakpoint--sm)
+      float: none
+      width: 100%
+
+
+  .product__caption
+    display: block
+    position: relative
+    z-index: $z--middle
+
+    .inner
+      padding: 15px 0
+
+
+  &.products--grid
+    .products__cell
+      @media (min-width: $breakpoint--xxxs - $breakpoint--offset)
+        width: 100%
+        width: "calc(100% - (%s * 2))" % $product__gutter
+
+      @media (min-width: $breakpoint--lg - $breakpoint--offset)
+        width: 50%
+        width: "calc(50% - (%s * 2))" % $product__gutter
+
+      @media (min-width: $breakpoint--xl - $breakpoint--offset)
+        width: 33.3333%
+        width: "calc(33.3333% - (%s * 2))" % $product__gutter
+
+      @media (min-width: $breakpoint--xxl - $breakpoint--offset)
+        width: 25%
+        width: "calc(25% - (%s * 2))" % $product__gutter
+
+      .product__media
+        border: none
+
+    &.products--reverse
+      .product__media
+        float: right
+
+
+// ------------------------------------------------------------------------
+// products--detail
+// ------------------------------------------------------------------------
+.products--detail
+  padding: 0
+
+  .product
+    height: auto
+    border-radius: 10px
+    border: none
+
+  .product__media
+    width: 40%
+    height: 400px
+    padding: 15px 0
+
+    .image
+      max-height: 400px
+      padding: 5%
+
+  .product__info
+    width: 60%
+    height: 100%
+    max-height: 400px
+    padding: 25px
+    font-size: 17px
+
+    .heading
+      max-height: 100%
+      height: auto
+      font-size: 30px
+      line-height: 1.2
+      margin-bottom: 25px
+      color: $color--brown
+
+      &:before, &:after
+        display: none
+        content: ""
+
+    .heading__size
+      font-size: 25px
+
+    .pricing
+      float: left
+      font-size: 25px
+      margin-bottom: 10px
+
+    .pricing__deal
+      line-height: 36px
+      font-size: 17px
+
+  .product__caption
+    position: static
+    display: block
+    z-index: $z--middle
+    width: auto
+    float: right
+
+    .inner
+      padding: 0
+
+    .button--icon
+      font-size: 25px
+
+    .right
+      float: none
+      width: 100%
+      margin: 0
+      padding: 0
+
+  .product__immagino
+    overflow-y: auto
+    height: 160px
+    width: 100%
+
+// ------------------------------------------
+// product
+// ------------------------------------------
+.product
+  display: inline-block
+  position: relative
+  overflow: hidden
+  width: 100%
+  height: 365px
+  margin: 0
+  padding: 0
+  cursor: pointer
+  vertical-align: top
+  background: $color--white
+  text-align: left
+  color: $color--brownLight
+  font-weight: 400
+  border: 1px solid $color--whiteBronze
+
+  if $product__gutter > 0
+    border-radius: 3px
+
+  &:after
+    content: " "
+    display: none
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background: $color--orange
+
+    if $product__gutter == -1px
+      bottom: 1px
+
+  &:hover
+    text-decoration: none
+    cursor: default
+
+    &:after
+      display: block
+    
+    .overlay,
+    .product__caption
+      display: block
+    
+    .badge
+      display: none
+      
+
+// product__media    
+.product__media 
+  display: block   
+  position: relative
+  z-index: $z--bottom
+  overflow: visible
+  zoom: 1
+  width: 100%
+  height: 205px
+  padding: 15px 0
+  margin-top: 0
+  user-select: none
+  
+  .image
+    display: inline-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%, -50%, 0)
+    width: auto
+    min-width: 50%
+    max-width: 100%
+    max-height: 205px
+    padding: 9%
+
+  .overlay
+    display: none
+    color: $color--white
+
+    
+// product__caption  
+.product__caption
+  display: none
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 50px
+  padding: 0
+  border-top: 1px solid $color--white
+  background-image: linear-gradient(rgba(255,255,255,0.75), $color--white)
+  
+  .inner
+    padding: 10px 20px
+  
+  .button
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 0.1em
+  
+  .button--icon
+    padding: 5px 2px
+    font-size: 20px
+    
+    .icon
+      position: relative
+      top: -2px
+    
+  .button--favorite
+    color: $color--orange
+    
+    &:hover
+      color: $color--orangeDark
+      
+  .button--detail
+    color: $color--cyan
+    
+    &:hover
+      color: $color--cyanDark
+    
+      
+  .button--sub,
+  .button--add
+    display: inline-block
+    margin-right: 5px
+    
+  .button--add
+    margin-right: 0
+  
+  .right
+    float: right
+    position: relative
+    right: 0
+    
+
+
+// product__info
+.product__info
+  display: block
+  min-height: 90px
+  padding: 5px 20px
+  margin-bottom: 4px
+  font-size: 16px
+  line-height: 1.456789em
+  background: $color--white
+    
+  .heading
+    min-height: 90px
+    color: $color--brown
+    Text--ellipsis(90px)
+    Text--mask()
+    
+  .heading__text
+    margin-bottom: 2px
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+    word-break: break-all
+    
+  .heading__size  
+    color: $color--brownLight
+
+
+// ------------------------------------------------------------------------
+// is-mobile
+// ------------------------------------------------------------------------
+.is-mobile   
+  .product,
+  .product__media
+    height: auto
+    
+  .product__caption, 
+  .product__info,
+  .product__media .image 
+    display: block
+    position: static    
+
+  .product__media
+    .image
+      transform: none
+      margin: 0 auto
+  
+  .product__info
+    .heading
+      margin-bottom: 25px
+     
