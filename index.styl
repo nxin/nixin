@@ -13,11 +13,13 @@
  |
  */
 
-module.exports = (opts) => {
-    let implicit = (!(opts && opts.implicit === false));
 
-    return (style) => {
-        style.include(__dirname);
-        if (implicit) style.import("nixin");
-    }
-};
+// Global Scope Object
+//$NIX = json('')
+$NIX = {}
+
+// External Plugins
+// ex. rupture
+
+// Mixins
+@require 'mixins'

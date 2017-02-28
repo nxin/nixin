@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------------------ *\
+   Skel
+\* ------------------------------------------------------------------------ */
+
+$NIX.Skel = {
+	'name'          : 'skel'
+	'grid'          : {
+		'float'       : 'float'
+		'flex'        : 'flex'
+		'calc'        : 'calc'
+		'table'       : 'table'
+	}
+	'wrap'          : {
+		'full'        : 'full'
+		'boxed'       : 'boxed'
+		'unboxed'     : 'unboxed'
+	}
+	'units'         : {
+		'percentage'  : '%'
+		'relative'    : 'rem'
+		'pixel'       : 'px'
+	}
+	'columns'       : 20
+	'interval'      : 10
+	'gutter'        : .9375rem
+	'border': {
+		'none'        : 0
+		'thin'        : 1
+		'light'       : 2
+		'thick'       : 4
+		'heavy'       : 8
+	}
+	'width'         : 100%
+	'min-width'     : 0
+	'max-width'     : 100%
+}
+
+Skel() {
+	box-sizing: border-box
+	position: relative
+	width: $NIX.Skel.width
+	min-width: $NIX.Skel.min-width
+	max-width: $NIX.Skel.max-width
+	min-height: 1px
+	margin: auto
+	padding: 0 $NIX.Skel.gutter
+}
+
+Skel__row() {
+	Reset--clearfix()
+}
+
+Skel--create() {
+	
+	+N($NIX.Skel.name, 'container') {
+		Skel()
+	}
+
+	+N($NIX.Skel.name,'--flex') {
+		Skel--flex()
+	}
+
+	+N($NIX.Skel.name,'--float') {
+		Skel--float()
+	}
+
+	+N($NIX.Skel.name,'__wrap') {
+		Skel__wrap()
+	}
+
+	+N($NIX.Skel.name,'__row'){
+		Skel__row()
+	}
+
+	+N($NIX.Skel.name,'__cell'){
+		Skel__cell()
+
+		& & {
+			Skel__cell()
+		}
+	}
+}

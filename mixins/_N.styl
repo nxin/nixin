@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------ *\
+   N
+\* ------------------------------------------------------------------------ */
+
+$NIX.N = {
+	'prefix': 'nix-'
+  'type': 'attr'
+	'pattern': 'bem'
+}
+
+N($name, $suffix)
+	$ctx = $NIX.N.prefix + $name
+
+	if $NIX.N.type == 'attr'
+		[{$ctx}~=\'{$suffix}\']
+			{block}
+
+	else if $suffix == 'container'
+		.{$ctx}
+			{block}
+
+	else
+		.{$ctx}{$suffix}
+			{block}

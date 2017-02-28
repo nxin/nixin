@@ -1,0 +1,229 @@
+/* ------------------------------------------------------------------------ *\
+   Reset
+\* ------------------------------------------------------------------------ */
+
+
+$NIX.Reset = {
+  'border'         : none
+  'background'     : none
+  'border-radius'  : 0
+  'padding'        : 0
+  'margin'         : 0
+  'width'          : auto
+  'height'         : auto
+  'z-index'        : 0
+  'font-size'      : initial
+  'font-weight'    : normal
+  'text-shadow'    : none
+  'box-shadow'     : none
+  'visibility'     : visible
+  'display'        : inline-block
+  'position'       : static
+  'float'          : none
+}
+
+
+/**
+ * [reset description]
+ */
+Reset() {
+	for prop, value in $NIX.Reset {
+		for arg in arguments {
+			if prop == arg[0] {
+				{arg [0]}: value
+			}
+		}
+	}
+}
+
+
+/**
+ * [global description]
+ * @return {[type]} [description]
+ */
+Reset--base()
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		Reset--boxModel()
+		Reset--font()
+	}
+		
+	body {
+		Reset--body()
+	}
+		
+	ol, ul {
+		list-style: none
+	}
+		
+	table {
+		Reset--table()
+	}
+		
+	caption, th, td {
+		Reset--table__cell()
+	}
+		
+	a img {
+		border: none
+	}
+
+/**
+ * [nested description]
+ * @return {[type]} [description]
+ */
+Reset--nested() {
+	div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	pre, a, abbr, acronym, address, code, del, dfn, em, img,
+	dl, dt, dd, ol, ul, li, fieldset, form, label,
+	legend, caption, tbody, tfoot, thead, tr {
+		Reset--boxModel()
+		Reset--font()
+	}
+	
+	table {
+		Reset--table()
+	}
+	
+	caption, th, td {
+		Reset--table__cell()
+	}
+	
+	a img{
+		border: none
+	}
+}
+	
+/**
+ * [model description]
+ * @return {[type]} [description]
+ */
+Reset--boxModel() {
+	Reset(margin, padding, border, outline)
+}
+
+/**
+ * [font description]
+ * @return {[type]} [description]
+ */
+Reset--font() {
+	font-weight: inherit
+	font-style: inherit
+	font-family: inherit
+	font-size: 100%
+	vertical-align: baseline
+}
+
+/**
+ * [body description]
+ * @return {[type]} [description]
+ */
+Reset--body() {
+	line-height: 1
+	color: black
+	background: white
+}
+
+/**
+ * [table description]
+ * @return {[type]} [description]
+ */
+Reset--table() {
+	border-collapse: separate
+	border-spacing: 0
+	vertical-align: middle
+}
+
+/**
+ * [cell description]
+ * @return {[type]} [description]
+ */
+Reset--table__cell() {
+	text-align: left
+	font-weight: normal
+	vertical-align: middle
+}
+
+/**
+ * [html5 description]
+ * @return {[type]} [description]
+ */
+Reset--html5() {
+	article, aside, canvas, details, figcaption,
+	figure, footer, header, hgroup, menu, nav,
+	section, summary, main {
+		Reset--boxModel()
+		display: block
+	}
+	
+	audio, canvas, video {
+		display inline-block
+		\*display inline
+		\*zoom 1
+	}
+	
+	audio:not([controls]), [hidden] {
+		display none
+	}
+}
+
+/**
+ * [tags description]
+ * @return {[type]} [description]
+ */
+Reset--tags() {
+	html, *:before, *:after {
+		box-sizing: border-box
+	}
+	
+	body {
+		margin: 0
+	}
+}
+
+/**
+ * [clear description]
+ * @return {[type]} [description]
+ */
+Reset--clear() {
+	overflow: auto
+	zoom: 1
+}
+
+
+/**
+ * [clearfix description]
+ * @return {[type]} [description]
+ */
+Reset--clearfix() {
+	//zoom: 1 if $NIX.legacy.ie
+	
+	&:before
+	&:after {
+		content: ""
+		display: table
+	}
+	
+	&:after {
+		clear: both
+	}
+}
+
+/**
+ * [create description]
+ * @param  {[type]} selector [description]
+ * @return {[type]}          [description]
+ */
+Reset--create(selector) {
+	for prop, value in $NIX.Reset {
+		{selector}--{prop} {
+			{prop}: value
+		}
+	}
+}
